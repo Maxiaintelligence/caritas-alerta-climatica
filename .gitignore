@@ -1,0 +1,17 @@
+# Dependencias de Node
+node_modules/
+package-lock.json
+
+# Compilación y temporales de Vite
+dist/
+dist-ssr/
+*.local
+.vite/
+.cache/
+
+# Archivos de sistema y editores
+.DS_Store
+Thumbs.db
+*.log
+.vscode/*
+!.vscode/extensions.json

@@ -1,0 +1,5821 @@
+{
+  "meta": {
+    "timestamp_utc": "2026-09-23T23:43:42.851Z",
+    "timestamp_local": "23/9/2026, 5:43:42 p.m.",
+    "institucion": "Cáritas Pastoral Social",
+    "total_poblaciones": 78,
+    "estado_fuentes": {
+      "open_meteo": "ok",
+      "smn_conagua": "ok",
+      "noaa_nhc": "sin_actividad"
+    }
+  },
+  "alerta_prioritaria": [
+    {
+      "id": "z10_ixhuatlan_madero",
+      "nombre": "Ixhuatlán de Madero",
+      "municipio": "Ixhuatlán de Madero",
+      "estado": "Veracruz",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "nivel": 3,
+      "nivel_nombre": "ALTO",
+      "color_hex": "#E67E22",
+      "modulo_dominante": "calor",
+      "accion_inmediata": "Activar protocolos preventivos y restringir traslados.",
+      "sinergias": []
+    },
+    {
+      "id": "z07_v_avila_camacho",
+      "nombre": "Villa Ávila Camacho",
+      "municipio": "Xicotepec",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "calor",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z07_zihuateutla",
+      "nombre": "Zihuateutla",
+      "municipio": "Zihuateutla",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "tormentas",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z07_chiconcuautla",
+      "nombre": "Chiconcuautla",
+      "municipio": "Chiconcuautla",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "tormentas",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z07_chicontla_jopala",
+      "nombre": "Chicontla / Jopala",
+      "municipio": "Jopala",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "calor",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z10_san_lorenzo_ach",
+      "nombre": "San Lorenzo Achiotepec",
+      "municipio": "Huehuetla",
+      "estado": "Hidalgo",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "inundacion",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z10_huehuetla",
+      "nombre": "Huehuetla",
+      "municipio": "Huehuetla",
+      "estado": "Hidalgo",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "inundacion",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    }
+  ],
+  "resumen_zonas": [
+    {
+      "zona_id": 1,
+      "nucleo_territorial": "Valle de Actopan",
+      "nivel_maximo": 1,
+      "color_maximo_hex": "#3498DB",
+      "total_poblaciones": 6,
+      "poblaciones_en_alerta": 0,
+      "lista_poblaciones_ids": [
+        "z01_actopan",
+        "z01_san_agustin",
+        "z01_chicavasco",
+        "z01_tornacuxtla",
+        "z01_el_arenal",
+        "z01_stgo_de_anaya"
+      ]
+    },
+    {
+      "zona_id": 2,
+      "nucleo_territorial": "Altiplano Hidalguense",
+      "nivel_maximo": 1,
+      "color_maximo_hex": "#3498DB",
+      "total_poblaciones": 9,
+      "poblaciones_en_alerta": 0,
+      "lista_poblaciones_ids": [
+        "z02_apan",
+        "z02_almoloya",
+        "z02_tepeapulco",
+        "z02_cd_sahagun",
+        "z02_emiliano_zapata",
+        "z02_tlanalapa",
+        "z02_singuilucan",
+        "z02_epazoyucan",
+        "z02_zempoala"
+      ]
+    },
+    {
+      "zona_id": 3,
+      "nucleo_territorial": "Corredor de Montaña",
+      "nivel_maximo": 1,
+      "color_maximo_hex": "#3498DB",
+      "total_poblaciones": 8,
+      "poblaciones_en_alerta": 0,
+      "lista_poblaciones_ids": [
+        "z03_mineral_chico",
+        "z03_omitlan",
+        "z03_atotonilco_gte",
+        "z03_huasca",
+        "z03_san_juan_huey",
+        "z03_acatlan",
+        "z03_alcholoya",
+        "z03_cerro_colorado"
+      ]
+    },
+    {
+      "zona_id": 4,
+      "nucleo_territorial": "Corredor Acaxochitlán–Tulancingo",
+      "nivel_maximo": 1,
+      "color_maximo_hex": "#3498DB",
+      "total_poblaciones": 10,
+      "poblaciones_en_alerta": 0,
+      "lista_poblaciones_ids": [
+        "z04_acaxochitlan",
+        "z04_los_reyes",
+        "z04_cuautepec",
+        "z04_sta_ma_nativitas",
+        "z04_san_lorenzo_say",
+        "z04_stgo_tulantepec",
+        "z04_tulancingo",
+        "z04_jaltepec",
+        "z04_el_susto",
+        "z04_metepec"
+      ]
+    },
+    {
+      "zona_id": 5,
+      "nucleo_territorial": "Zona Metropolitana de Pachuca",
+      "nivel_maximo": 1,
+      "color_maximo_hex": "#3498DB",
+      "total_poblaciones": 4,
+      "poblaciones_en_alerta": 0,
+      "lista_poblaciones_ids": [
+        "z05_pachuca",
+        "z05_m_de_la_reforma",
+        "z05_real_del_monte",
+        "z05_xochihuacan"
+      ]
+    },
+    {
+      "zona_id": 6,
+      "nucleo_territorial": "Corredor Tizayuca–Zapotlán",
+      "nivel_maximo": 1,
+      "color_maximo_hex": "#3498DB",
+      "total_poblaciones": 8,
+      "poblaciones_en_alerta": 0,
+      "lista_poblaciones_ids": [
+        "z06_tizayuca",
+        "z06_nuevo_tizayuca",
+        "z06_tolcayuca",
+        "z06_zapotlan",
+        "z06_v_de_tezontepec",
+        "z06_huitzila",
+        "z06_tepojaco",
+        "z06_tellez"
+      ]
+    },
+    {
+      "zona_id": 7,
+      "nucleo_territorial": "Sierra Norte de Puebla",
+      "nivel_maximo": 2,
+      "color_maximo_hex": "#F1C40F",
+      "total_poblaciones": 11,
+      "poblaciones_en_alerta": 4,
+      "lista_poblaciones_ids": [
+        "z07_huauchinango",
+        "z07_xicotepec",
+        "z07_juan_galindo",
+        "z07_necaxa",
+        "z07_v_avila_camacho",
+        "z07_tlaola",
+        "z07_zihuateutla",
+        "z07_naupan",
+        "z07_chiconcuautla",
+        "z07_tenanguito",
+        "z07_chicontla_jopala"
+      ]
+    },
+    {
+      "zona_id": 8,
+      "nucleo_territorial": "Chignahuapan–Aquixtla",
+      "nivel_maximo": 1,
+      "color_maximo_hex": "#3498DB",
+      "total_poblaciones": 6,
+      "poblaciones_en_alerta": 0,
+      "lista_poblaciones_ids": [
+        "z08_chignahuapan",
+        "z08_aquixtla",
+        "z08_ahuazotepec",
+        "z08_v_cuauhtemoc",
+        "z08_paredon",
+        "z08_ixtacamaxtitlan"
+      ]
+    },
+    {
+      "zona_id": 9,
+      "nucleo_territorial": "Sierra de Puebla–Pahuatlán",
+      "nivel_maximo": 1,
+      "color_maximo_hex": "#3498DB",
+      "total_poblaciones": 6,
+      "poblaciones_en_alerta": 0,
+      "lista_poblaciones_ids": [
+        "z09_honey",
+        "z09_tlaxco",
+        "z09_tlaquilotepec",
+        "z09_san_pablito",
+        "z09_xolotla",
+        "z09_pahuatlan"
+      ]
+    },
+    {
+      "zona_id": 10,
+      "nucleo_territorial": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "nivel_maximo": 3,
+      "color_maximo_hex": "#E67E22",
+      "total_poblaciones": 10,
+      "poblaciones_en_alerta": 3,
+      "lista_poblaciones_ids": [
+        "z10_san_lorenzo_ach",
+        "z10_agua_blanca",
+        "z10_tenango_doria",
+        "z10_san_bartolo_tut",
+        "z10_huehuetla",
+        "z10_sta_ma_asuncion",
+        "z10_zacualpan",
+        "z10_texcatepec",
+        "z10_huayacocotla",
+        "z10_ixhuatlan_madero"
+      ]
+    }
+  ],
+  "detalle_poblaciones": {
+    "z01_actopan": {
+      "id": "z01_actopan",
+      "nombre": "Actopan",
+      "municipio": "Actopan",
+      "estado": "Hidalgo",
+      "zona_id": 1,
+      "zona_nombre": "Valle de Actopan",
+      "coordenadas": {
+        "latitud": 20.2686,
+        "longitud": -98.9442,
+        "altitud_msnm": 2010
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z01_san_agustin": {
+      "id": "z01_san_agustin",
+      "nombre": "San Agustín Tlaxiaca",
+      "municipio": "San Agustín Tlaxiaca",
+      "estado": "Hidalgo",
+      "zona_id": 1,
+      "zona_nombre": "Valle de Actopan",
+      "coordenadas": {
+        "latitud": 20.1136,
+        "longitud": -98.8833,
+        "altitud_msnm": 2360
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z01_chicavasco": {
+      "id": "z01_chicavasco",
+      "nombre": "Chicavasco",
+      "municipio": "Actopan",
+      "estado": "Hidalgo",
+      "zona_id": 1,
+      "zona_nombre": "Valle de Actopan",
+      "coordenadas": {
+        "latitud": 20.1972,
+        "longitud": -98.9539,
+        "altitud_msnm": 2077
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z01_tornacuxtla": {
+      "id": "z01_tornacuxtla",
+      "nombre": "San Miguel Tornacuxtla",
+      "municipio": "San Agustín Tlaxiaca",
+      "estado": "Hidalgo",
+      "zona_id": 1,
+      "zona_nombre": "Valle de Actopan",
+      "coordenadas": {
+        "latitud": 20.1525,
+        "longitud": -98.8707,
+        "altitud_msnm": 2382
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z01_el_arenal": {
+      "id": "z01_el_arenal",
+      "nombre": "El Arenal",
+      "municipio": "El Arenal",
+      "estado": "Hidalgo",
+      "zona_id": 1,
+      "zona_nombre": "Valle de Actopan",
+      "coordenadas": {
+        "latitud": 20.2222,
+        "longitud": -98.9114,
+        "altitud_msnm": 2040
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z01_stgo_de_anaya": {
+      "id": "z01_stgo_de_anaya",
+      "nombre": "Santiago de Anaya",
+      "municipio": "Santiago de Anaya",
+      "estado": "Hidalgo",
+      "zona_id": 1,
+      "zona_nombre": "Valle de Actopan",
+      "coordenadas": {
+        "latitud": 20.3833,
+        "longitud": -98.9667,
+        "altitud_msnm": 2040
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=370 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z02_apan": {
+      "id": "z02_apan",
+      "nombre": "Apan",
+      "municipio": "Apan",
+      "estado": "Hidalgo",
+      "zona_id": 2,
+      "zona_nombre": "Altiplano Hidalguense",
+      "coordenadas": {
+        "latitud": 19.7114,
+        "longitud": -98.4511,
+        "altitud_msnm": 2490
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=810 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z02_almoloya": {
+      "id": "z02_almoloya",
+      "nombre": "Almoloya",
+      "municipio": "Almoloya",
+      "estado": "Hidalgo",
+      "zona_id": 2,
+      "zona_nombre": "Altiplano Hidalguense",
+      "coordenadas": {
+        "latitud": 19.7025,
+        "longitud": -98.3411,
+        "altitud_msnm": 2520
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=910 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z02_tepeapulco": {
+      "id": "z02_tepeapulco",
+      "nombre": "Tepeapulco",
+      "municipio": "Tepeapulco",
+      "estado": "Hidalgo",
+      "zona_id": 2,
+      "zona_nombre": "Altiplano Hidalguense",
+      "coordenadas": {
+        "latitud": 19.785,
+        "longitud": -98.5528,
+        "altitud_msnm": 2510
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=750 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z02_cd_sahagun": {
+      "id": "z02_cd_sahagun",
+      "nombre": "Ciudad Sahagún",
+      "municipio": "Tepeapulco",
+      "estado": "Hidalgo",
+      "zona_id": 2,
+      "zona_nombre": "Altiplano Hidalguense",
+      "coordenadas": {
+        "latitud": 19.7711,
+        "longitud": -98.575,
+        "altitud_msnm": 2450
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=470 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z02_emiliano_zapata": {
+      "id": "z02_emiliano_zapata",
+      "nombre": "Emiliano Zapata",
+      "municipio": "Emiliano Zapata",
+      "estado": "Hidalgo",
+      "zona_id": 2,
+      "zona_nombre": "Altiplano Hidalguense",
+      "coordenadas": {
+        "latitud": 19.6542,
+        "longitud": -98.5447,
+        "altitud_msnm": 2500
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=980 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z02_tlanalapa": {
+      "id": "z02_tlanalapa",
+      "nombre": "Tlanalapa",
+      "municipio": "Tlanalapa",
+      "estado": "Hidalgo",
+      "zona_id": 2,
+      "zona_nombre": "Altiplano Hidalguense",
+      "coordenadas": {
+        "latitud": 19.825,
+        "longitud": -98.6014,
+        "altitud_msnm": 2460
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=470 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z02_singuilucan": {
+      "id": "z02_singuilucan",
+      "nombre": "Singuilucan",
+      "municipio": "Singuilucan",
+      "estado": "Hidalgo",
+      "zona_id": 2,
+      "zona_nombre": "Altiplano Hidalguense",
+      "coordenadas": {
+        "latitud": 19.9678,
+        "longitud": -98.5186,
+        "altitud_msnm": 2620
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=660 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z02_epazoyucan": {
+      "id": "z02_epazoyucan",
+      "nombre": "Epazoyucan",
+      "municipio": "Epazoyucan",
+      "estado": "Hidalgo",
+      "zona_id": 2,
+      "zona_nombre": "Altiplano Hidalguense",
+      "coordenadas": {
+        "latitud": 20.0181,
+        "longitud": -98.6367,
+        "altitud_msnm": 2460
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=560 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z02_zempoala": {
+      "id": "z02_zempoala",
+      "nombre": "Zempoala",
+      "municipio": "Zempoala",
+      "estado": "Hidalgo",
+      "zona_id": 2,
+      "zona_nombre": "Altiplano Hidalguense",
+      "coordenadas": {
+        "latitud": 19.9142,
+        "longitud": -98.6694,
+        "altitud_msnm": 2470
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=480 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z03_mineral_chico": {
+      "id": "z03_mineral_chico",
+      "nombre": "Mineral del Chico",
+      "municipio": "Mineral del Chico",
+      "estado": "Hidalgo",
+      "zona_id": 3,
+      "zona_nombre": "Corredor de Montaña",
+      "coordenadas": {
+        "latitud": 20.215,
+        "longitud": -98.7314,
+        "altitud_msnm": 2340
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z03_omitlan": {
+      "id": "z03_omitlan",
+      "nombre": "Omitlán de Juárez",
+      "municipio": "Omitlán de Juárez",
+      "estado": "Hidalgo",
+      "zona_id": 3,
+      "zona_nombre": "Corredor de Montaña",
+      "coordenadas": {
+        "latitud": 20.1706,
+        "longitud": -98.6472,
+        "altitud_msnm": 2400
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z03_atotonilco_gte": {
+      "id": "z03_atotonilco_gte",
+      "nombre": "Atotonilco el Grande",
+      "municipio": "Atotonilco el Grande",
+      "estado": "Hidalgo",
+      "zona_id": 3,
+      "zona_nombre": "Corredor de Montaña",
+      "coordenadas": {
+        "latitud": 20.2861,
+        "longitud": -98.6681,
+        "altitud_msnm": 2160
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z03_huasca": {
+      "id": "z03_huasca",
+      "nombre": "Huasca de Ocampo",
+      "municipio": "Huasca de Ocampo",
+      "estado": "Hidalgo",
+      "zona_id": 3,
+      "zona_nombre": "Corredor de Montaña",
+      "coordenadas": {
+        "latitud": 20.2047,
+        "longitud": -98.5772,
+        "altitud_msnm": 2130
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=320 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z03_san_juan_huey": {
+      "id": "z03_san_juan_huey",
+      "nombre": "San Juan Hueyapan",
+      "municipio": "Huasca de Ocampo",
+      "estado": "Hidalgo",
+      "zona_id": 3,
+      "zona_nombre": "Corredor de Montaña",
+      "coordenadas": {
+        "latitud": 20.2283,
+        "longitud": -98.5564,
+        "altitud_msnm": 2100
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z03_acatlan": {
+      "id": "z03_acatlan",
+      "nombre": "Acatlán",
+      "municipio": "Acatlán",
+      "estado": "Hidalgo",
+      "zona_id": 3,
+      "zona_nombre": "Corredor de Montaña",
+      "coordenadas": {
+        "latitud": 20.1458,
+        "longitud": -98.4414,
+        "altitud_msnm": 2134
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=350 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z03_alcholoya": {
+      "id": "z03_alcholoya",
+      "nombre": "Alcholoya",
+      "municipio": "Acatlán",
+      "estado": "Hidalgo",
+      "zona_id": 3,
+      "zona_nombre": "Corredor de Montaña",
+      "coordenadas": {
+        "latitud": 20.2253,
+        "longitud": -98.4531,
+        "altitud_msnm": 2075
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z03_cerro_colorado": {
+      "id": "z03_cerro_colorado",
+      "nombre": "Cerro Colorado",
+      "municipio": "Huasca de Ocampo",
+      "estado": "Hidalgo",
+      "zona_id": 3,
+      "zona_nombre": "Corredor de Montaña",
+      "coordenadas": {
+        "latitud": 20.1981,
+        "longitud": -98.6189,
+        "altitud_msnm": 2520
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z04_acaxochitlan": {
+      "id": "z04_acaxochitlan",
+      "nombre": "Acaxochitlán",
+      "municipio": "Acaxochitlán",
+      "estado": "Hidalgo",
+      "zona_id": 4,
+      "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+      "coordenadas": {
+        "latitud": 20.1578,
+        "longitud": -98.2044,
+        "altitud_msnm": 2260
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=380 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z04_los_reyes": {
+      "id": "z04_los_reyes",
+      "nombre": "Los Reyes",
+      "municipio": "Acaxochitlán",
+      "estado": "Hidalgo",
+      "zona_id": 4,
+      "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+      "coordenadas": {
+        "latitud": 20.1783,
+        "longitud": -98.175,
+        "altitud_msnm": 2140
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=300 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z04_cuautepec": {
+      "id": "z04_cuautepec",
+      "nombre": "Cuautepec de Hinojosa",
+      "municipio": "Cuautepec de Hinojosa",
+      "estado": "Hidalgo",
+      "zona_id": 4,
+      "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+      "coordenadas": {
+        "latitud": 20.0353,
+        "longitud": -98.3106,
+        "altitud_msnm": 2270
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=550 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z04_sta_ma_nativitas": {
+      "id": "z04_sta_ma_nativitas",
+      "nombre": "Santa María Nativitas",
+      "municipio": "Cuautepec de Hinojosa",
+      "estado": "Hidalgo",
+      "zona_id": 4,
+      "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+      "coordenadas": {
+        "latitud": 20.0086,
+        "longitud": -98.2831,
+        "altitud_msnm": 2340
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=740 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z04_san_lorenzo_say": {
+      "id": "z04_san_lorenzo_say",
+      "nombre": "San Lorenzo Sayula",
+      "municipio": "Cuautepec de Hinojosa",
+      "estado": "Hidalgo",
+      "zona_id": 4,
+      "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+      "coordenadas": {
+        "latitud": 19.967,
+        "longitud": -98.35,
+        "altitud_msnm": 2350
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=630 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z04_stgo_tulantepec": {
+      "id": "z04_stgo_tulantepec",
+      "nombre": "Santiago Tulantepec",
+      "municipio": "Santiago Tulantepec",
+      "estado": "Hidalgo",
+      "zona_id": 4,
+      "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+      "coordenadas": {
+        "latitud": 20.0369,
+        "longitud": -98.3589,
+        "altitud_msnm": 2180
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=530 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z04_tulancingo": {
+      "id": "z04_tulancingo",
+      "nombre": "Tulancingo de Bravo",
+      "municipio": "Tulancingo de Bravo",
+      "estado": "Hidalgo",
+      "zona_id": 4,
+      "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+      "coordenadas": {
+        "latitud": 20.0833,
+        "longitud": -98.3667,
+        "altitud_msnm": 2140
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=530 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z04_jaltepec": {
+      "id": "z04_jaltepec",
+      "nombre": "Jaltepec",
+      "municipio": "Tulancingo de Bravo",
+      "estado": "Hidalgo",
+      "zona_id": 4,
+      "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+      "coordenadas": {
+        "latitud": 20.1042,
+        "longitud": -98.3967,
+        "altitud_msnm": 2160
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=350 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z04_el_susto": {
+      "id": "z04_el_susto",
+      "nombre": "El Susto",
+      "municipio": "Santiago Tulantepec",
+      "estado": "Hidalgo",
+      "zona_id": 4,
+      "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+      "coordenadas": {
+        "latitud": 20.0167,
+        "longitud": -98.4111,
+        "altitud_msnm": 2240
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=620 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z04_metepec": {
+      "id": "z04_metepec",
+      "nombre": "Metepec",
+      "municipio": "Metepec",
+      "estado": "Hidalgo",
+      "zona_id": 4,
+      "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+      "coordenadas": {
+        "latitud": 20.2389,
+        "longitud": -98.3278,
+        "altitud_msnm": 2180
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=530 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z05_pachuca": {
+      "id": "z05_pachuca",
+      "nombre": "Pachuca de Soto",
+      "municipio": "Pachuca de Soto",
+      "estado": "Hidalgo",
+      "zona_id": 5,
+      "zona_nombre": "Zona Metropolitana de Pachuca",
+      "coordenadas": {
+        "latitud": 20.1167,
+        "longitud": -98.7333,
+        "altitud_msnm": 2420
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=350 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z05_m_de_la_reforma": {
+      "id": "z05_m_de_la_reforma",
+      "nombre": "Mineral de la Reforma",
+      "municipio": "Mineral de la Reforma",
+      "estado": "Hidalgo",
+      "zona_id": 5,
+      "zona_nombre": "Zona Metropolitana de Pachuca",
+      "coordenadas": {
+        "latitud": 20.0833,
+        "longitud": -98.7167,
+        "altitud_msnm": 2380
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=350 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z05_real_del_monte": {
+      "id": "z05_real_del_monte",
+      "nombre": "Mineral del Monte",
+      "municipio": "Mineral del Monte",
+      "estado": "Hidalgo",
+      "zona_id": 5,
+      "zona_nombre": "Zona Metropolitana de Pachuca",
+      "coordenadas": {
+        "latitud": 20.1417,
+        "longitud": -98.6739,
+        "altitud_msnm": 2700
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z05_xochihuacan": {
+      "id": "z05_xochihuacan",
+      "nombre": "Xochihuacán",
+      "municipio": "Epazoyucan",
+      "estado": "Hidalgo",
+      "zona_id": 5,
+      "zona_nombre": "Zona Metropolitana de Pachuca",
+      "coordenadas": {
+        "latitud": 20.0461,
+        "longitud": -98.6811,
+        "altitud_msnm": 2390
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=370 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z06_tizayuca": {
+      "id": "z06_tizayuca",
+      "nombre": "Tizayuca",
+      "municipio": "Tizayuca",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "coordenadas": {
+        "latitud": 19.8375,
+        "longitud": -98.9808,
+        "altitud_msnm": 2270
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=440 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z06_nuevo_tizayuca": {
+      "id": "z06_nuevo_tizayuca",
+      "nombre": "Nuevo Tizayuca",
+      "municipio": "Tizayuca",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "coordenadas": {
+        "latitud": 19.8519,
+        "longitud": -98.9714,
+        "altitud_msnm": 2275
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=440 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z06_tolcayuca": {
+      "id": "z06_tolcayuca",
+      "nombre": "Tolcayuca",
+      "municipio": "Tolcayuca",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "coordenadas": {
+        "latitud": 19.9575,
+        "longitud": -98.9214,
+        "altitud_msnm": 2320
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=570 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z06_zapotlan": {
+      "id": "z06_zapotlan",
+      "nombre": "Zapotlán de Juárez",
+      "municipio": "Zapotlán de Juárez",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "coordenadas": {
+        "latitud": 19.9739,
+        "longitud": -98.8622,
+        "altitud_msnm": 2340
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=490 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z06_v_de_tezontepec": {
+      "id": "z06_v_de_tezontepec",
+      "nombre": "Villa de Tezontepec",
+      "municipio": "Villa de Tezontepec",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "coordenadas": {
+        "latitud": 19.9281,
+        "longitud": -98.8206,
+        "altitud_msnm": 2330
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=470 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z06_huitzila": {
+      "id": "z06_huitzila",
+      "nombre": "Huitzila",
+      "municipio": "Tizayuca",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "coordenadas": {
+        "latitud": 19.8136,
+        "longitud": -98.9667,
+        "altitud_msnm": 2260
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=430 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z06_tepojaco": {
+      "id": "z06_tepojaco",
+      "nombre": "Tepojaco",
+      "municipio": "Tizayuca",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "coordenadas": {
+        "latitud": 19.8058,
+        "longitud": -98.9408,
+        "altitud_msnm": 2265
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=430 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z06_tellez": {
+      "id": "z06_tellez",
+      "nombre": "Téllez",
+      "municipio": "Zempoala",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "coordenadas": {
+        "latitud": 20.0158,
+        "longitud": -98.7617,
+        "altitud_msnm": 2360
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=370 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_huauchinango": {
+      "id": "z07_huauchinango",
+      "nombre": "Huauchinango",
+      "municipio": "Huauchinango",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.1772,
+        "longitud": -98.0531,
+        "altitud_msnm": 1520
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=660 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_xicotepec": {
+      "id": "z07_xicotepec",
+      "nombre": "Xicotepec de Juárez",
+      "municipio": "Xicotepec",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.2764,
+        "longitud": -97.9589,
+        "altitud_msnm": 1180
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=990 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_juan_galindo": {
+      "id": "z07_juan_galindo",
+      "nombre": "Juan Galindo (Necaxa)",
+      "municipio": "Juan Galindo",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.2103,
+        "longitud": -98.005,
+        "altitud_msnm": 1240
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=660 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_necaxa": {
+      "id": "z07_necaxa",
+      "nombre": "Necaxa",
+      "municipio": "Juan Galindo",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.2167,
+        "longitud": -97.9897,
+        "altitud_msnm": 1160
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=990 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_v_avila_camacho": {
+      "id": "z07_v_avila_camacho",
+      "nombre": "Villa Ávila Camacho",
+      "municipio": "Xicotepec",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.3956,
+        "longitud": -97.8864,
+        "altitud_msnm": 280
+      },
+      "evaluacion": {
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "calor",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Ambiente caluroso: T_max=29.4°C"
+            ],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Probabilidad de tormenta eléctrica: CAPE=1460 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_tlaola": {
+      "id": "z07_tlaola",
+      "nombre": "Tlaola",
+      "municipio": "Tlaola",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.1492,
+        "longitud": -97.9131,
+        "altitud_msnm": 1260
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=990 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_zihuateutla": {
+      "id": "z07_zihuateutla",
+      "nombre": "Zihuateutla",
+      "municipio": "Zihuateutla",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.2547,
+        "longitud": -97.8889,
+        "altitud_msnm": 940
+      },
+      "evaluacion": {
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Probabilidad de tormenta eléctrica: CAPE=1270 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_naupan": {
+      "id": "z07_naupan",
+      "nombre": "Naupan",
+      "municipio": "Naupan",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.2181,
+        "longitud": -98.1189,
+        "altitud_msnm": 1600
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=430 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_chiconcuautla": {
+      "id": "z07_chiconcuautla",
+      "nombre": "Chiconcuautla",
+      "municipio": "Chiconcuautla",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.1008,
+        "longitud": -97.9867,
+        "altitud_msnm": 1480
+      },
+      "evaluacion": {
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Probabilidad de tormenta eléctrica: CAPE=1010 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_tenanguito": {
+      "id": "z07_tenanguito",
+      "nombre": "Tenanguito",
+      "municipio": "Huauchinango",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.2014,
+        "longitud": -98.0289,
+        "altitud_msnm": 1320
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=660 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_chicontla_jopala": {
+      "id": "z07_chicontla_jopala",
+      "nombre": "Chicontla / Jopala",
+      "municipio": "Jopala",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.2464,
+        "longitud": -97.8389,
+        "altitud_msnm": 440
+      },
+      "evaluacion": {
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "calor",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Ambiente caluroso: T_max=28.5°C"
+            ],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1480 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z08_chignahuapan": {
+      "id": "z08_chignahuapan",
+      "nombre": "Chignahuapan",
+      "municipio": "Chignahuapan",
+      "estado": "Puebla",
+      "zona_id": 8,
+      "zona_nombre": "Chignahuapan–Aquixtla",
+      "coordenadas": {
+        "latitud": 19.8375,
+        "longitud": -98.0319,
+        "altitud_msnm": 2260
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=420 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z08_aquixtla": {
+      "id": "z08_aquixtla",
+      "nombre": "Aquixtla",
+      "municipio": "Aquixtla",
+      "estado": "Puebla",
+      "zona_id": 8,
+      "zona_nombre": "Chignahuapan–Aquixtla",
+      "coordenadas": {
+        "latitud": 19.7892,
+        "longitud": -97.9406,
+        "altitud_msnm": 2180
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=460 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z08_ahuazotepec": {
+      "id": "z08_ahuazotepec",
+      "nombre": "Ahuazotepec",
+      "municipio": "Ahuazotepec",
+      "estado": "Puebla",
+      "zona_id": 8,
+      "zona_nombre": "Chignahuapan–Aquixtla",
+      "coordenadas": {
+        "latitud": 20.0528,
+        "longitud": -98.1489,
+        "altitud_msnm": 2300
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=610 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z08_v_cuauhtemoc": {
+      "id": "z08_v_cuauhtemoc",
+      "nombre": "Villa Cuauhtémoc",
+      "municipio": "Chignahuapan",
+      "estado": "Puebla",
+      "zona_id": 8,
+      "zona_nombre": "Chignahuapan–Aquixtla",
+      "coordenadas": {
+        "latitud": 19.8864,
+        "longitud": -98.0811,
+        "altitud_msnm": 2320
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=460 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z08_paredon": {
+      "id": "z08_paredon",
+      "nombre": "Paredón",
+      "municipio": "Chignahuapan",
+      "estado": "Puebla",
+      "zona_id": 8,
+      "zona_nombre": "Chignahuapan–Aquixtla",
+      "coordenadas": {
+        "latitud": 19.7542,
+        "longitud": -98.0772,
+        "altitud_msnm": 2380
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=470 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z08_ixtacamaxtitlan": {
+      "id": "z08_ixtacamaxtitlan",
+      "nombre": "Ixtacamaxtitlán",
+      "municipio": "Ixtacamaxtitlán",
+      "estado": "Puebla",
+      "zona_id": 8,
+      "zona_nombre": "Chignahuapan–Aquixtla",
+      "coordenadas": {
+        "latitud": 19.6,
+        "longitud": -97.8444,
+        "altitud_msnm": 2240
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=430 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z09_honey": {
+      "id": "z09_honey",
+      "nombre": "Honey (Chila Honey)",
+      "municipio": "Honey",
+      "estado": "Puebla",
+      "zona_id": 9,
+      "zona_nombre": "Sierra de Puebla–Pahuatlán",
+      "coordenadas": {
+        "latitud": 20.2589,
+        "longitud": -98.2144,
+        "altitud_msnm": 2160
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=300 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z09_tlaxco": {
+      "id": "z09_tlaxco",
+      "nombre": "Tlaxco",
+      "municipio": "Tlaxco",
+      "estado": "Puebla",
+      "zona_id": 9,
+      "zona_nombre": "Sierra de Puebla–Pahuatlán",
+      "coordenadas": {
+        "latitud": 20.4072,
+        "longitud": -98.0411,
+        "altitud_msnm": 1020
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=970 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z09_tlaquilotepec": {
+      "id": "z09_tlaquilotepec",
+      "nombre": "Tlacuilotepec",
+      "municipio": "Tlacuilotepec",
+      "estado": "Puebla",
+      "zona_id": 9,
+      "zona_nombre": "Sierra de Puebla–Pahuatlán",
+      "coordenadas": {
+        "latitud": 20.3547,
+        "longitud": -98.0506,
+        "altitud_msnm": 1220
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=330 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z09_san_pablito": {
+      "id": "z09_san_pablito",
+      "nombre": "San Pablito",
+      "municipio": "Pahuatlán",
+      "estado": "Puebla",
+      "zona_id": 9,
+      "zona_nombre": "Sierra de Puebla–Pahuatlán",
+      "coordenadas": {
+        "latitud": 20.3014,
+        "longitud": -98.1969,
+        "altitud_msnm": 1260
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=480 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z09_xolotla": {
+      "id": "z09_xolotla",
+      "nombre": "Xolotla",
+      "municipio": "Pahuatlán",
+      "estado": "Puebla",
+      "zona_id": 9,
+      "zona_nombre": "Sierra de Puebla–Pahuatlán",
+      "coordenadas": {
+        "latitud": 20.3167,
+        "longitud": -98.1528,
+        "altitud_msnm": 1180
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=480 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z09_pahuatlan": {
+      "id": "z09_pahuatlan",
+      "nombre": "Pahuatlán del Valle",
+      "municipio": "Pahuatlán",
+      "estado": "Puebla",
+      "zona_id": 9,
+      "zona_nombre": "Sierra de Puebla–Pahuatlán",
+      "coordenadas": {
+        "latitud": 20.2781,
+        "longitud": -98.1486,
+        "altitud_msnm": 1100
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=590 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z10_san_lorenzo_ach": {
+      "id": "z10_san_lorenzo_ach",
+      "nombre": "San Lorenzo Achiotepec",
+      "municipio": "Huehuetla",
+      "estado": "Hidalgo",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "coordenadas": {
+        "latitud": 20.5974,
+        "longitud": -98.0688,
+        "altitud_msnm": 539
+      },
+      "evaluacion": {
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Lluvia moderada: 24h=15.1mm, Humedad suelo=0.43"
+            ],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Ambiente caluroso: T_max=27.1°C"
+            ],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1740 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z10_agua_blanca": {
+      "id": "z10_agua_blanca",
+      "nombre": "Agua Blanca de Iturbide",
+      "municipio": "Agua Blanca de Iturbide",
+      "estado": "Hidalgo",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "coordenadas": {
+        "latitud": 20.3508,
+        "longitud": -98.3589,
+        "altitud_msnm": 2200
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=520 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z10_tenango_doria": {
+      "id": "z10_tenango_doria",
+      "nombre": "Tenango de Doria",
+      "municipio": "Tenango de Doria",
+      "estado": "Hidalgo",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "coordenadas": {
+        "latitud": 20.3392,
+        "longitud": -98.2272,
+        "altitud_msnm": 1660
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=380 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z10_san_bartolo_tut": {
+      "id": "z10_san_bartolo_tut",
+      "nombre": "San Bartolo Tutotepec",
+      "municipio": "San Bartolo Tutotepec",
+      "estado": "Hidalgo",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "coordenadas": {
+        "latitud": 20.4006,
+        "longitud": -98.2017,
+        "altitud_msnm": 1020
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=970 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z10_huehuetla": {
+      "id": "z10_huehuetla",
+      "nombre": "Huehuetla",
+      "municipio": "Huehuetla",
+      "estado": "Hidalgo",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "coordenadas": {
+        "latitud": 20.4611,
+        "longitud": -98.0764,
+        "altitud_msnm": 480
+      },
+      "evaluacion": {
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Lluvia moderada: 24h=16.6mm, Humedad suelo=0.44"
+            ],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Ambiente caluroso: T_max=27.2°C"
+            ],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1520 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z10_sta_ma_asuncion": {
+      "id": "z10_sta_ma_asuncion",
+      "nombre": "Santa María Asunción",
+      "municipio": "Tulancingo / Huehuetla",
+      "estado": "Hidalgo",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "coordenadas": {
+        "latitud": 20.1264,
+        "longitud": -98.3142,
+        "altitud_msnm": 2180
+      },
+      "evaluacion": {
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z10_zacualpan": {
+      "id": "z10_zacualpan",
+      "nombre": "Zacualpan",
+      "municipio": "Zacualpan",
+      "estado": "Veracruz",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "coordenadas": {
+        "latitud": 20.4503,
+        "longitud": -98.3556,
+        "altitud_msnm": 2120
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=390 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z10_texcatepec": {
+      "id": "z10_texcatepec",
+      "nombre": "Texcatepec",
+      "municipio": "Texcatepec",
+      "estado": "Veracruz",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "coordenadas": {
+        "latitud": 20.5847,
+        "longitud": -98.3478,
+        "altitud_msnm": 1440
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=390 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z10_huayacocotla": {
+      "id": "z10_huayacocotla",
+      "nombre": "Huayacocotla",
+      "municipio": "Huayacocotla",
+      "estado": "Veracruz",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "coordenadas": {
+        "latitud": 20.5367,
+        "longitud": -98.49,
+        "altitud_msnm": 2140
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=370 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z10_ixhuatlan_madero": {
+      "id": "z10_ixhuatlan_madero",
+      "nombre": "Ixhuatlán de Madero",
+      "municipio": "Ixhuatlán de Madero",
+      "estado": "Veracruz",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "coordenadas": {
+        "latitud": 20.8033,
+        "longitud": -98.0244,
+        "altitud_msnm": 260
+      },
+      "evaluacion": {
+        "nivel_final": 3,
+        "nivel_nombre": "ALTO",
+        "color_hex": "#E67E22",
+        "modulo_dominante": "calor",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Activar protocolos preventivos y restringir traslados.",
+        "protocolo_comunitario": "Restricción de traslados carreteros; traslado preventivo de personas vulnerables (adultos mayores, menores) a viviendas seguras o albergues.",
+        "protocolo_caritas": "Movilización del Comité Diocesano de Emergencias. Preposicionamiento físico de víveres, agua y botiquines en parroquias estratégicas. Apoyo en evacuación preventiva.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 3,
+            "color_hex": "#E67E22",
+            "variables_disparadoras": [
+              "Calor muy alto: T_max=29.7°C, Sensación térmica=36.1°C"
+            ],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1850 J/kg"
+            ],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    }
+  }
+}

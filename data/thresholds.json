@@ -1,0 +1,174 @@
+{
+  "version": "1.0.0",
+  "institucion": "Cáritas Pastoral Social",
+  "reglas_histeresis": {
+    "ciclos_descenso_requeridos": 2,
+    "horas_por_ciclo": 3
+  },
+  "semaforo_siat": [
+    {
+      "nivel": 0,
+      "nombre": "SIN RIESGO",
+      "color_hex": "#2ECC71",
+      "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+      "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+      "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal."
+    },
+    {
+      "nivel": 1,
+      "nombre": "BAJO",
+      "color_hex": "#3498DB",
+      "accion_corta": "Vigilar boletines y avisos preventivos.",
+      "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+      "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes."
+    },
+    {
+      "nivel": 2,
+      "nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "accion_corta": "Preparar protocolos y medidas de protección.",
+      "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+      "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal."
+    },
+    {
+      "nivel": 3,
+      "nombre": "ALTO",
+      "color_hex": "#E67E22",
+      "accion_corta": "Activar protocolos preventivos y restringir traslados.",
+      "protocolo_comunitario": "Restricción de traslados carreteros; traslado preventivo de personas vulnerables (adultos mayores, menores) a viviendas seguras o albergues.",
+      "protocolo_caritas": "Movilización del Comité Diocesano de Emergencias. Preposicionamiento físico de víveres, agua y botiquines en parroquias estratégicas. Apoyo en evacuación preventiva."
+    },
+    {
+      "nivel": 4,
+      "nombre": "CRÍTICO",
+      "color_hex": "#E74C3C",
+      "accion_corta": "Evacuación preventiva / Resguardo en refugio temporal.",
+      "protocolo_comunitario": "Evacuación preventiva prioritaria de zonas de alto riesgo (márgenes de ríos y pies de ladera). Resguardo total en construcciones firmes o albergues.",
+      "protocolo_caritas": "Operación plena al 100% de la red de albergues y comedores parroquiales. Despliegue de ayuda humanitaria y levantamiento EDAN en coordinación con Protección Civil y autoridades."
+    }
+  ],
+  "sinergias": [
+    {
+      "id": "sinergia_laderas_inundacion",
+      "modulo_a": "laderas",
+      "modulo_b": "inundacion",
+      "nivel_minimo": 3,
+      "incremento": 1,
+      "titulo": "ALERTA POR DESLIZAMIENTO DE LADERAS Y CRECIDA DE RÍOS",
+      "diagnostico": "Lluvias continuas sobre terrenos con acumulación crítica de humedad.",
+      "peligro": "Alto potencial de desprendimiento de tierra y rocas en taludes; acumulación de sedimentos que obstruyen cauces y puentes, provocando desbordamientos súbitos y cortes en caminos rurales.",
+      "medidas": [
+        "Evacue preventivamente si su vivienda se ubica al pie o sobre laderas inestables, o en las márgenes de ríos y arroyos.",
+        "Realice los traslados hacia los albergues de Cáritas Pastoral Social o inmuebles seguros en zonas altas durante las horas de luz natural.",
+        "Evite estrictamente cruzar arroyos, vados o puentes anegados ante la fuerza de arrastre de la corriente."
+      ]
+    },
+    {
+      "id": "sinergia_ciclon_lluvias",
+      "modulo_a": "ciclones",
+      "modulo_b": "inundacion",
+      "nivel_minimo": 3,
+      "incremento": 1,
+      "titulo": "ALERTA POR TEMPORAL CICLÓNICO Y VIENTOS SEVEROS",
+      "diagnostico": "Aproximación de un sistema ciclónico con precipitaciones intensas sostenidas y ráfagas de viento de consideración.",
+      "peligro": "Desprendimiento de techumbres y estructuras ligeras; caída de árboles y líneas de transmisión eléctrica con interrupción de energía y telecomunicaciones.",
+      "medidas": [
+        "Permanezca en construcciones sólidas con techo de concreto; manténgase alejado de ventanas y árboles de gran copa.",
+        "Asegure una reserva familiar de agua potable y alimentos no perecederos para un periodo mínimo de 72 horas.",
+        "Concluya cualquier desplazamiento hacia refugios temporales antes del incremento sostenido de la velocidad del viento."
+      ]
+    },
+    {
+      "id": "sinergia_calor_incendios",
+      "modulo_a": "calor",
+      "modulo_b": "incendios",
+      "nivel_minimo": 3,
+      "incremento": 1,
+      "titulo": "ALERTA POR CONDICIONES FAVORABLES PARA INCENDIOS FORESTALES",
+      "diagnostico": "Altas temperaturas combinadas con baja humedad relativa y presencia de viento continuo.",
+      "peligro": "Condiciones críticas para la generación y propagación acelerada de incendios forestales y de pastizales con avance hacia áreas pobladas y humo denso.",
+      "medidas": [
+        "Prohibición estricta de quemas agrícolas, quema de basura o encendido de fogatas.",
+        "En caso de detectarse un frente de fuego próximo, evacue de manera ordenada en dirección contraria al avance del humo hacia áreas despejadas.",
+        "Utilice protección respiratoria o paños húmedos para proteger vías respiratorias ante la presencia de ceniza y humo."
+      ]
+    },
+    {
+      "id": "sinergia_helada_viento",
+      "modulo_a": "heladas",
+      "modulo_b": "tormentas",
+      "nivel_minimo": 3,
+      "incremento": 1,
+      "titulo": "ALERTA POR HELADA SEVERA Y BAJA SENSACIÓN TÉRMICA",
+      "diagnostico": "Descenso marcado de temperatura acompañado de ráfagas de viento que reducen significativamente la sensación térmica.",
+      "peligro": "Riesgo agudo de hipotermia en personas vulnerables y formación de placas de hielo sobre puentes y tramos carreteros (pérdida de adherencia vehicular).",
+      "medidas": [
+        "Evite estrictamente el uso de anafres, carbón o calentadores de combustión en habitaciones cerradas para prevenir intoxicación por monóxido de carbono.",
+        "Acuda a los albergues temporales acondicionados por Cáritas Pastoral Social si habita en viviendas con aislamiento precario.",
+        "Suspenda la circulación vehicular nocturna y matutina en tramos de montaña ante la probabilidad de pavimento congelado."
+      ]
+    }
+  ],
+  "modulos": {
+    "inundacion": {
+      "factor_cuenca_inundable": 0.75,
+      "acciones_especificas": {
+        "2": "Colocar protecciones en accesos bajos; resguardar víveres y animales de granja en sitios elevados.",
+        "3": "Cortar suministros de gas y electricidad en zonas inundables; no transitar por calles anegadas.",
+        "4": "Evacuación inmediata a los albergues habilitados por Cáritas Pastoral Social antes del desbordamiento del río."
+      }
+    },
+    "heladas": {
+      "offset_exposicion_heladas": 1.0,
+      "noches_consecutivas_escalamiento": 2,
+      "acciones_especificas": {
+        "2": "Abrigarse por capas; proteger tomas de agua y animales de corral.",
+        "3": "Resguardo prioritario de niños y adultos mayores; extremar ventilación si se usan fuentes de calor.",
+        "4": "Traslado nocturno a albergues térmicos de Cáritas Pastoral Social; resguardo absoluto."
+      }
+    },
+    "calor": {
+      "dias_consecutivos_ola": 3,
+      "acciones_especificas": {
+        "2": "Hidratación constante con agua potable; evitar exposición solar directa entre 11:00 y 16:00 horas.",
+        "3": "Atención prioritaria a signos de deshidratación y golpe de calor en infantes y adultos mayores.",
+        "4": "Acudir a puntos de hidratación parroquiales y mantener ventilación cruzada en viviendas."
+      }
+    },
+    "laderas": {
+      "multiplicadores_pendiente": {
+        "alta": 1.0,
+        "media": 1.3,
+        "baja": 1.6
+      },
+      "acciones_especificas": {
+        "2": "Inspeccionar taludes y muros; vigilar si aparecen grietas nuevas o inclinación de postes.",
+        "3": "Desocupar preventivamente habitaciones que colinden con cortes de cerro.",
+        "4": "Evacuar de inmediato viviendas ubicadas al pie o sobre laderas inestables hacia albergues seguros."
+      }
+    },
+    "incendios": {
+      "meses_temporada_estiaje": [11, 12, 1, 2, 3, 4, 5],
+      "acciones_especificas": {
+        "2": "Prohibido arrojar colillas o botellas de vidrio en zonas de pastizal y orillas de carretera.",
+        "3": "Vigilancia comunitaria en perímetros forestales; reportar columnas de humo a las autoridades.",
+        "4": "Evacuación preventiva ante proximidad de columnas de fuego; mantener rutas despejadas para brigadas."
+      }
+    },
+    "tormentas": {
+      "acciones_especificas": {
+        "2": "Desconectar aparatos electrónicos; resguardar mascotas y objetos ligeros en patios.",
+        "3": "No refugiarse debajo de árboles aislados ni postes; buscar refugio en construcciones techadas.",
+        "4": "Permanecer en el interior de edificaciones firmes lejos de ventanas y techos de lámina."
+      }
+    },
+    "ciclones": {
+      "radio_alerta_max_km": 300.0,
+      "acciones_especificas": {
+        "2": "Fijar techumbres de lámina; retirar macetas y objetos que puedan ser proyectados por el viento.",
+        "3": "Confinamiento familiar preventivo; contar con reserva de agua, alimentos y radio de baterías.",
+        "4": "Evacuación obligatoria hacia los refugios temporales de Protección Civil y Cáritas Pastoral Social."
+      }
+    }
+  }
+}

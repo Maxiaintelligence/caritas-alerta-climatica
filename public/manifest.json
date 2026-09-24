@@ -1,0 +1,16 @@
+{
+  "name": "Cáritas Alerta Climática",
+  "short_name": "Cáritas Clima",
+  "description": "Sistema Preventivo de Alerta Temprana y Riesgo Climático",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#020617",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}

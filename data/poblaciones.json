@@ -1,0 +1,1250 @@
+[
+  {
+    "id": "z01_actopan",
+    "nombre": "Actopan",
+    "municipio": "Actopan",
+    "estado": "Hidalgo",
+    "zona_id": 1,
+    "zona_nombre": "Valle de Actopan",
+    "coordenadas": { "latitud": 20.2686, "longitud": -98.9442, "altitud_msnm": 2010 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z01_san_agustin",
+    "nombre": "San Agustín Tlaxiaca",
+    "municipio": "San Agustín Tlaxiaca",
+    "estado": "Hidalgo",
+    "zona_id": 1,
+    "zona_nombre": "Valle de Actopan",
+    "coordenadas": { "latitud": 20.1136, "longitud": -98.8833, "altitud_msnm": 2360 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z01_chicavasco",
+    "nombre": "Chicavasco",
+    "municipio": "Actopan",
+    "estado": "Hidalgo",
+    "zona_id": 1,
+    "zona_nombre": "Valle de Actopan",
+    "coordenadas": { "latitud": 20.1972, "longitud": -98.9539, "altitud_msnm": 2077 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z01_tornacuxtla",
+    "nombre": "San Miguel Tornacuxtla",
+    "municipio": "San Agustín Tlaxiaca",
+    "estado": "Hidalgo",
+    "zona_id": 1,
+    "zona_nombre": "Valle de Actopan",
+    "coordenadas": { "latitud": 20.1525, "longitud": -98.8707, "altitud_msnm": 2382 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z01_el_arenal",
+    "nombre": "El Arenal",
+    "municipio": "El Arenal",
+    "estado": "Hidalgo",
+    "zona_id": 1,
+    "zona_nombre": "Valle de Actopan",
+    "coordenadas": { "latitud": 20.2222, "longitud": -98.9114, "altitud_msnm": 2040 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z01_stgo_de_anaya",
+    "nombre": "Santiago de Anaya",
+    "municipio": "Santiago de Anaya",
+    "estado": "Hidalgo",
+    "zona_id": 1,
+    "zona_nombre": "Valle de Actopan",
+    "coordenadas": { "latitud": 20.3833, "longitud": -98.9667, "altitud_msnm": 2040 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z02_apan",
+    "nombre": "Apan",
+    "municipio": "Apan",
+    "estado": "Hidalgo",
+    "zona_id": 2,
+    "zona_nombre": "Altiplano Hidalguense",
+    "coordenadas": { "latitud": 19.7114, "longitud": -98.4511, "altitud_msnm": 2490 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z02_almoloya",
+    "nombre": "Almoloya",
+    "municipio": "Almoloya",
+    "estado": "Hidalgo",
+    "zona_id": 2,
+    "zona_nombre": "Altiplano Hidalguense",
+    "coordenadas": { "latitud": 19.7025, "longitud": -98.3411, "altitud_msnm": 2520 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z02_tepeapulco",
+    "nombre": "Tepeapulco",
+    "municipio": "Tepeapulco",
+    "estado": "Hidalgo",
+    "zona_id": 2,
+    "zona_nombre": "Altiplano Hidalguense",
+    "coordenadas": { "latitud": 19.785, "longitud": -98.5528, "altitud_msnm": 2510 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z02_cd_sahagun",
+    "nombre": "Ciudad Sahagún",
+    "municipio": "Tepeapulco",
+    "estado": "Hidalgo",
+    "zona_id": 2,
+    "zona_nombre": "Altiplano Hidalguense",
+    "coordenadas": { "latitud": 19.7711, "longitud": -98.575, "altitud_msnm": 2450 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z02_emiliano_zapata",
+    "nombre": "Emiliano Zapata",
+    "municipio": "Emiliano Zapata",
+    "estado": "Hidalgo",
+    "zona_id": 2,
+    "zona_nombre": "Altiplano Hidalguense",
+    "coordenadas": { "latitud": 19.6542, "longitud": -98.5447, "altitud_msnm": 2500 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z02_tlanalapa",
+    "nombre": "Tlanalapa",
+    "municipio": "Tlanalapa",
+    "estado": "Hidalgo",
+    "zona_id": 2,
+    "zona_nombre": "Altiplano Hidalguense",
+    "coordenadas": { "latitud": 19.825, "longitud": -98.6014, "altitud_msnm": 2460 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z02_singuilucan",
+    "nombre": "Singuilucan",
+    "municipio": "Singuilucan",
+    "estado": "Hidalgo",
+    "zona_id": 2,
+    "zona_nombre": "Altiplano Hidalguense",
+    "coordenadas": { "latitud": 19.9678, "longitud": -98.5186, "altitud_msnm": 2620 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z02_epazoyucan",
+    "nombre": "Epazoyucan",
+    "municipio": "Epazoyucan",
+    "estado": "Hidalgo",
+    "zona_id": 2,
+    "zona_nombre": "Altiplano Hidalguense",
+    "coordenadas": { "latitud": 20.0181, "longitud": -98.6367, "altitud_msnm": 2460 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z02_zempoala",
+    "nombre": "Zempoala",
+    "municipio": "Zempoala",
+    "estado": "Hidalgo",
+    "zona_id": 2,
+    "zona_nombre": "Altiplano Hidalguense",
+    "coordenadas": { "latitud": 19.9142, "longitud": -98.6694, "altitud_msnm": 2470 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z03_mineral_chico",
+    "nombre": "Mineral del Chico",
+    "municipio": "Mineral del Chico",
+    "estado": "Hidalgo",
+    "zona_id": 3,
+    "zona_nombre": "Corredor de Montaña",
+    "coordenadas": { "latitud": 20.215, "longitud": -98.7314, "altitud_msnm": 2340 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z03_omitlan",
+    "nombre": "Omitlán de Juárez",
+    "municipio": "Omitlán de Juárez",
+    "estado": "Hidalgo",
+    "zona_id": 3,
+    "zona_nombre": "Corredor de Montaña",
+    "coordenadas": { "latitud": 20.1706, "longitud": -98.6472, "altitud_msnm": 2400 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z03_atotonilco_gte",
+    "nombre": "Atotonilco el Grande",
+    "municipio": "Atotonilco el Grande",
+    "estado": "Hidalgo",
+    "zona_id": 3,
+    "zona_nombre": "Corredor de Montaña",
+    "coordenadas": { "latitud": 20.2861, "longitud": -98.6681, "altitud_msnm": 2160 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z03_huasca",
+    "nombre": "Huasca de Ocampo",
+    "municipio": "Huasca de Ocampo",
+    "estado": "Hidalgo",
+    "zona_id": 3,
+    "zona_nombre": "Corredor de Montaña",
+    "coordenadas": { "latitud": 20.2047, "longitud": -98.5772, "altitud_msnm": 2130 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z03_san_juan_huey",
+    "nombre": "San Juan Hueyapan",
+    "municipio": "Huasca de Ocampo",
+    "estado": "Hidalgo",
+    "zona_id": 3,
+    "zona_nombre": "Corredor de Montaña",
+    "coordenadas": { "latitud": 20.2283, "longitud": -98.5564, "altitud_msnm": 2100 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z03_acatlan",
+    "nombre": "Acatlán",
+    "municipio": "Acatlán",
+    "estado": "Hidalgo",
+    "zona_id": 3,
+    "zona_nombre": "Corredor de Montaña",
+    "coordenadas": { "latitud": 20.1458, "longitud": -98.4414, "altitud_msnm": 2134 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z03_alcholoya",
+    "nombre": "Alcholoya",
+    "municipio": "Acatlán",
+    "estado": "Hidalgo",
+    "zona_id": 3,
+    "zona_nombre": "Corredor de Montaña",
+    "coordenadas": { "latitud": 20.2253, "longitud": -98.4531, "altitud_msnm": 2075 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z03_cerro_colorado",
+    "nombre": "Cerro Colorado",
+    "municipio": "Huasca de Ocampo",
+    "estado": "Hidalgo",
+    "zona_id": 3,
+    "zona_nombre": "Corredor de Montaña",
+    "coordenadas": { "latitud": 20.1981, "longitud": -98.6189, "altitud_msnm": 2520 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z04_acaxochitlan",
+    "nombre": "Acaxochitlán",
+    "municipio": "Acaxochitlán",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "coordenadas": { "latitud": 20.1578, "longitud": -98.2044, "altitud_msnm": 2260 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z04_los_reyes",
+    "nombre": "Los Reyes",
+    "municipio": "Acaxochitlán",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "coordenadas": { "latitud": 20.1783, "longitud": -98.175, "altitud_msnm": 2140 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z04_cuautepec",
+    "nombre": "Cuautepec de Hinojosa",
+    "municipio": "Cuautepec de Hinojosa",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "coordenadas": { "latitud": 20.0353, "longitud": -98.3106, "altitud_msnm": 2270 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z04_sta_ma_nativitas",
+    "nombre": "Santa María Nativitas",
+    "municipio": "Cuautepec de Hinojosa",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "coordenadas": { "latitud": 20.0086, "longitud": -98.2831, "altitud_msnm": 2340 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z04_san_lorenzo_say",
+    "nombre": "San Lorenzo Sayula",
+    "municipio": "Cuautepec de Hinojosa",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "coordenadas": { "latitud": 19.967, "longitud": -98.35, "altitud_msnm": 2350 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z04_stgo_tulantepec",
+    "nombre": "Santiago Tulantepec",
+    "municipio": "Santiago Tulantepec",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "coordenadas": { "latitud": 20.0369, "longitud": -98.3589, "altitud_msnm": 2180 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z04_tulancingo",
+    "nombre": "Tulancingo de Bravo",
+    "municipio": "Tulancingo de Bravo",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "coordenadas": { "latitud": 20.0833, "longitud": -98.3667, "altitud_msnm": 2140 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z04_jaltepec",
+    "nombre": "Jaltepec",
+    "municipio": "Tulancingo de Bravo",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "coordenadas": { "latitud": 20.1042, "longitud": -98.3967, "altitud_msnm": 2160 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z04_el_susto",
+    "nombre": "El Susto",
+    "municipio": "Santiago Tulantepec",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "coordenadas": { "latitud": 20.0167, "longitud": -98.4111, "altitud_msnm": 2240 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z04_metepec",
+    "nombre": "Metepec",
+    "municipio": "Metepec",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "coordenadas": { "latitud": 20.2389, "longitud": -98.3278, "altitud_msnm": 2180 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z05_pachuca",
+    "nombre": "Pachuca de Soto",
+    "municipio": "Pachuca de Soto",
+    "estado": "Hidalgo",
+    "zona_id": 5,
+    "zona_nombre": "Zona Metropolitana de Pachuca",
+    "coordenadas": { "latitud": 20.1167, "longitud": -98.7333, "altitud_msnm": 2420 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z05_m_de_la_reforma",
+    "nombre": "Mineral de la Reforma",
+    "municipio": "Mineral de la Reforma",
+    "estado": "Hidalgo",
+    "zona_id": 5,
+    "zona_nombre": "Zona Metropolitana de Pachuca",
+    "coordenadas": { "latitud": 20.0833, "longitud": -98.7167, "altitud_msnm": 2380 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z05_real_del_monte",
+    "nombre": "Mineral del Monte",
+    "municipio": "Mineral del Monte",
+    "estado": "Hidalgo",
+    "zona_id": 5,
+    "zona_nombre": "Zona Metropolitana de Pachuca",
+    "coordenadas": { "latitud": 20.1417, "longitud": -98.6739, "altitud_msnm": 2700 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z05_xochihuacan",
+    "nombre": "Xochihuacán",
+    "municipio": "Epazoyucan",
+    "estado": "Hidalgo",
+    "zona_id": 5,
+    "zona_nombre": "Zona Metropolitana de Pachuca",
+    "coordenadas": { "latitud": 20.0461, "longitud": -98.6811, "altitud_msnm": 2390 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z06_tizayuca",
+    "nombre": "Tizayuca",
+    "municipio": "Tizayuca",
+    "estado": "Hidalgo",
+    "zona_id": 6,
+    "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "coordenadas": { "latitud": 19.8375, "longitud": -98.9808, "altitud_msnm": 2270 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z06_nuevo_tizayuca",
+    "nombre": "Nuevo Tizayuca",
+    "municipio": "Tizayuca",
+    "estado": "Hidalgo",
+    "zona_id": 6,
+    "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "coordenadas": { "latitud": 19.8519, "longitud": -98.9714, "altitud_msnm": 2275 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z06_tolcayuca",
+    "nombre": "Tolcayuca",
+    "municipio": "Tolcayuca",
+    "estado": "Hidalgo",
+    "zona_id": 6,
+    "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "coordenadas": { "latitud": 19.9575, "longitud": -98.9214, "altitud_msnm": 2320 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z06_zapotlan",
+    "nombre": "Zapotlán de Juárez",
+    "municipio": "Zapotlán de Juárez",
+    "estado": "Hidalgo",
+    "zona_id": 6,
+    "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "coordenadas": { "latitud": 19.9739, "longitud": -98.8622, "altitud_msnm": 2340 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z06_v_de_tezontepec",
+    "nombre": "Villa de Tezontepec",
+    "municipio": "Villa de Tezontepec",
+    "estado": "Hidalgo",
+    "zona_id": 6,
+    "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "coordenadas": { "latitud": 19.9281, "longitud": -98.8206, "altitud_msnm": 2330 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z06_huitzila",
+    "nombre": "Huitzila",
+    "municipio": "Tizayuca",
+    "estado": "Hidalgo",
+    "zona_id": 6,
+    "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "coordenadas": { "latitud": 19.8136, "longitud": -98.9667, "altitud_msnm": 2260 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z06_tepojaco",
+    "nombre": "Tepojaco",
+    "municipio": "Tizayuca",
+    "estado": "Hidalgo",
+    "zona_id": 6,
+    "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "coordenadas": { "latitud": 19.8058, "longitud": -98.9408, "altitud_msnm": 2265 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z06_tellez",
+    "nombre": "Téllez",
+    "municipio": "Zempoala",
+    "estado": "Hidalgo",
+    "zona_id": 6,
+    "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "coordenadas": { "latitud": 20.0158, "longitud": -98.7617, "altitud_msnm": 2360 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "bajo"
+    }
+  },
+  {
+    "id": "z07_huauchinango",
+    "nombre": "Huauchinango",
+    "municipio": "Huauchinango",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.1772, "longitud": -98.0531, "altitud_msnm": 1520 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z07_xicotepec",
+    "nombre": "Xicotepec de Juárez",
+    "municipio": "Xicotepec",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.2764, "longitud": -97.9589, "altitud_msnm": 1180 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z07_juan_galindo",
+    "nombre": "Juan Galindo (Necaxa)",
+    "municipio": "Juan Galindo",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.2103, "longitud": -98.005, "altitud_msnm": 1240 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z07_necaxa",
+    "nombre": "Necaxa",
+    "municipio": "Juan Galindo",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.2167, "longitud": -97.9897, "altitud_msnm": 1160 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z07_v_avila_camacho",
+    "nombre": "Villa Ávila Camacho",
+    "municipio": "Xicotepec",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.3956, "longitud": -97.8864, "altitud_msnm": 280 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z07_tlaola",
+    "nombre": "Tlaola",
+    "municipio": "Tlaola",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.1492, "longitud": -97.9131, "altitud_msnm": 1260 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z07_zihuateutla",
+    "nombre": "Zihuateutla",
+    "municipio": "Zihuateutla",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.2547, "longitud": -97.8889, "altitud_msnm": 940 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z07_naupan",
+    "nombre": "Naupan",
+    "municipio": "Naupan",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.2181, "longitud": -98.1189, "altitud_msnm": 1600 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z07_chiconcuautla",
+    "nombre": "Chiconcuautla",
+    "municipio": "Chiconcuautla",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.1008, "longitud": -97.9867, "altitud_msnm": 1480 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z07_tenanguito",
+    "nombre": "Tenanguito",
+    "municipio": "Huauchinango",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.2014, "longitud": -98.0289, "altitud_msnm": 1320 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z07_chicontla_jopala",
+    "nombre": "Chicontla / Jopala",
+    "municipio": "Jopala",
+    "estado": "Puebla",
+    "zona_id": 7,
+    "zona_nombre": "Sierra Norte de Puebla",
+    "coordenadas": { "latitud": 20.2464, "longitud": -97.8389, "altitud_msnm": 440 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z08_chignahuapan",
+    "nombre": "Chignahuapan",
+    "municipio": "Chignahuapan",
+    "estado": "Puebla",
+    "zona_id": 8,
+    "zona_nombre": "Chignahuapan–Aquixtla",
+    "coordenadas": { "latitud": 19.8375, "longitud": -98.0319, "altitud_msnm": 2260 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z08_aquixtla",
+    "nombre": "Aquixtla",
+    "municipio": "Aquixtla",
+    "estado": "Puebla",
+    "zona_id": 8,
+    "zona_nombre": "Chignahuapan–Aquixtla",
+    "coordenadas": { "latitud": 19.7892, "longitud": -97.9406, "altitud_msnm": 2180 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z08_ahuazotepec",
+    "nombre": "Ahuazotepec",
+    "municipio": "Ahuazotepec",
+    "estado": "Puebla",
+    "zona_id": 8,
+    "zona_nombre": "Chignahuapan–Aquixtla",
+    "coordenadas": { "latitud": 20.0528, "longitud": -98.1489, "altitud_msnm": 2300 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z08_v_cuauhtemoc",
+    "nombre": "Villa Cuauhtémoc",
+    "municipio": "Chignahuapan",
+    "estado": "Puebla",
+    "zona_id": 8,
+    "zona_nombre": "Chignahuapan–Aquixtla",
+    "coordenadas": { "latitud": 19.8864, "longitud": -98.0811, "altitud_msnm": 2320 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z08_paredon",
+    "nombre": "Paredón",
+    "municipio": "Chignahuapan",
+    "estado": "Puebla",
+    "zona_id": 8,
+    "zona_nombre": "Chignahuapan–Aquixtla",
+    "coordenadas": { "latitud": 19.7542, "longitud": -98.0772, "altitud_msnm": 2380 },
+    "factores_riesgo": {
+      "perfil_pendiente": "baja",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z08_ixtacamaxtitlan",
+    "nombre": "Ixtacamaxtitlán",
+    "municipio": "Ixtacamaxtitlán",
+    "estado": "Puebla",
+    "zona_id": 8,
+    "zona_nombre": "Chignahuapan–Aquixtla",
+    "coordenadas": { "latitud": 19.6, "longitud": -97.8444, "altitud_msnm": 2240 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z09_honey",
+    "nombre": "Honey (Chila Honey)",
+    "municipio": "Honey",
+    "estado": "Puebla",
+    "zona_id": 9,
+    "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "coordenadas": { "latitud": 20.2589, "longitud": -98.2144, "altitud_msnm": 2160 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z09_tlaxco",
+    "nombre": "Tlaxco",
+    "municipio": "Tlaxco",
+    "estado": "Puebla",
+    "zona_id": 9,
+    "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "coordenadas": { "latitud": 20.4072, "longitud": -98.0411, "altitud_msnm": 1020 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z09_tlaquilotepec",
+    "nombre": "Tlacuilotepec",
+    "municipio": "Tlacuilotepec",
+    "estado": "Puebla",
+    "zona_id": 9,
+    "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "coordenadas": { "latitud": 20.3547, "longitud": -98.0506, "altitud_msnm": 1220 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z09_san_pablito",
+    "nombre": "San Pablito",
+    "municipio": "Pahuatlán",
+    "estado": "Puebla",
+    "zona_id": 9,
+    "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "coordenadas": { "latitud": 20.3014, "longitud": -98.1969, "altitud_msnm": 1260 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z09_xolotla",
+    "nombre": "Xolotla",
+    "municipio": "Pahuatlán",
+    "estado": "Puebla",
+    "zona_id": 9,
+    "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "coordenadas": { "latitud": 20.3167, "longitud": -98.1528, "altitud_msnm": 1180 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z09_pahuatlan",
+    "nombre": "Pahuatlán del Valle",
+    "municipio": "Pahuatlán",
+    "estado": "Puebla",
+    "zona_id": 9,
+    "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "coordenadas": { "latitud": 20.2781, "longitud": -98.1486, "altitud_msnm": 1100 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z10_san_lorenzo_ach",
+    "nombre": "San Lorenzo Achiotepec",
+    "municipio": "Huehuetla",
+    "estado": "Hidalgo",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "coordenadas": { "latitud": 20.5974, "longitud": -98.0688, "altitud_msnm": 539 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z10_agua_blanca",
+    "nombre": "Agua Blanca de Iturbide",
+    "municipio": "Agua Blanca de Iturbide",
+    "estado": "Hidalgo",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "coordenadas": { "latitud": 20.3508, "longitud": -98.3589, "altitud_msnm": 2200 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z10_tenango_doria",
+    "nombre": "Tenango de Doria",
+    "municipio": "Tenango de Doria",
+    "estado": "Hidalgo",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "coordenadas": { "latitud": 20.3392, "longitud": -98.2272, "altitud_msnm": 1660 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z10_san_bartolo_tut",
+    "nombre": "San Bartolo Tutotepec",
+    "municipio": "San Bartolo Tutotepec",
+    "estado": "Hidalgo",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "coordenadas": { "latitud": 20.4006, "longitud": -98.2017, "altitud_msnm": 1020 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z10_huehuetla",
+    "nombre": "Huehuetla",
+    "municipio": "Huehuetla",
+    "estado": "Hidalgo",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "coordenadas": { "latitud": 20.4611, "longitud": -98.0764, "altitud_msnm": 480 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z10_sta_ma_asuncion",
+    "nombre": "Santa María Asunción",
+    "municipio": "Tulancingo / Huehuetla",
+    "estado": "Hidalgo",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "coordenadas": { "latitud": 20.1264, "longitud": -98.3142, "altitud_msnm": 2180 },
+    "factores_riesgo": {
+      "perfil_pendiente": "media",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": false,
+      "combustible_forestal": "medio"
+    }
+  },
+  {
+    "id": "z10_zacualpan",
+    "nombre": "Zacualpan",
+    "municipio": "Zacualpan",
+    "estado": "Veracruz",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "coordenadas": { "latitud": 20.4503, "longitud": -98.3556, "altitud_msnm": 2120 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z10_texcatepec",
+    "nombre": "Texcatepec",
+    "municipio": "Texcatepec",
+    "estado": "Veracruz",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "coordenadas": { "latitud": 20.5847, "longitud": -98.3478, "altitud_msnm": 1440 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z10_huayacocotla",
+    "nombre": "Huayacocotla",
+    "municipio": "Huayacocotla",
+    "estado": "Veracruz",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "coordenadas": { "latitud": 20.5367, "longitud": -98.49, "altitud_msnm": 2140 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": false,
+      "exposicion_heladas": true,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  },
+  {
+    "id": "z10_ixhuatlan_madero",
+    "nombre": "Ixhuatlán de Madero",
+    "municipio": "Ixhuatlán de Madero",
+    "estado": "Veracruz",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "coordenadas": { "latitud": 20.8033, "longitud": -98.0244, "altitud_msnm": 260 },
+    "factores_riesgo": {
+      "perfil_pendiente": "alta",
+      "cuenca_inundable": true,
+      "exposicion_heladas": false,
+      "sensibilidad_ciclones": true,
+      "combustible_forestal": "alto"
+    }
+  }
+]
