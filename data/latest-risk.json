@@ -1,7 +1,7 @@
 {
   "meta": {
-    "timestamp_utc": "2026-09-24T13:53:43.166Z",
-    "timestamp_local": "24/9/2026, 7:53:43 a.m.",
+    "timestamp_utc": "2026-09-24T18:44:40.383Z",
+    "timestamp_local": "24/9/2026, 12:44:40 p.m.",
     "institucion": "Cáritas Pastoral Social",
     "total_poblaciones": 78,
     "estado_fuentes": {
@@ -268,8 +268,8 @@
     {
       "zona_id": 8,
       "nucleo_territorial": "Chignahuapan–Aquixtla",
-      "nivel_maximo": 1,
-      "color_maximo_hex": "#3498DB",
+      "nivel_maximo": 0,
+      "color_maximo_hex": "#2ECC71",
       "total_poblaciones": 6,
       "poblaciones_en_alerta": 0,
       "lista_poblaciones_ids": [
@@ -1990,15 +1990,15 @@
         "altitud_msnm": 2140
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -2270,15 +2270,15 @@
         "altitud_msnm": 2180
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -2339,15 +2339,15 @@
         "altitud_msnm": 2140
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -2548,15 +2548,15 @@
         "altitud_msnm": 2180
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -3952,15 +3952,15 @@
         "altitud_msnm": 1600
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -4021,15 +4021,15 @@
         "altitud_msnm": 1480
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -4303,15 +4303,15 @@
         "altitud_msnm": 2180
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -4648,15 +4648,15 @@
         "altitud_msnm": 2160
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -5145,15 +5145,15 @@
         "altitud_msnm": 2200
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -5500,15 +5500,15 @@
         "altitud_msnm": 2120
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -5569,15 +5569,15 @@
         "altitud_msnm": 1440
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
