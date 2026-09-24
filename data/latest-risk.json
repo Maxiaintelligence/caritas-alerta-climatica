@@ -1,7 +1,7 @@
 {
   "meta": {
-    "timestamp_utc": "2026-09-24T07:56:00.538Z",
-    "timestamp_local": "24/9/2026, 1:56:00 a.m.",
+    "timestamp_utc": "2026-09-24T13:53:43.166Z",
+    "timestamp_local": "24/9/2026, 7:53:43 a.m.",
     "institucion": "Cáritas Pastoral Social",
     "total_poblaciones": 78,
     "estado_fuentes": {
@@ -11,20 +11,6 @@
     }
   },
   "alerta_prioritaria": [
-    {
-      "id": "z07_v_avila_camacho",
-      "nombre": "Villa Ávila Camacho",
-      "municipio": "Xicotepec",
-      "estado": "Puebla",
-      "zona_id": 7,
-      "zona_nombre": "Sierra Norte de Puebla",
-      "nivel": 3,
-      "nivel_nombre": "ALTO",
-      "color_hex": "#E67E22",
-      "modulo_dominante": "calor",
-      "accion_inmediata": "Activar protocolos preventivos y restringir traslados.",
-      "sinergias": []
-    },
     {
       "id": "z10_ixhuatlan_madero",
       "nombre": "Ixhuatlán de Madero",
@@ -96,30 +82,16 @@
       "sinergias": []
     },
     {
-      "id": "z07_zihuateutla",
-      "nombre": "Zihuateutla",
-      "municipio": "Zihuateutla",
+      "id": "z07_v_avila_camacho",
+      "nombre": "Villa Ávila Camacho",
+      "municipio": "Xicotepec",
       "estado": "Puebla",
       "zona_id": 7,
       "zona_nombre": "Sierra Norte de Puebla",
       "nivel": 2,
       "nivel_nombre": "MODERADO",
       "color_hex": "#F1C40F",
-      "modulo_dominante": "tormentas",
-      "accion_inmediata": "Preparar protocolos y medidas de protección.",
-      "sinergias": []
-    },
-    {
-      "id": "z07_chiconcuautla",
-      "nombre": "Chiconcuautla",
-      "municipio": "Chiconcuautla",
-      "estado": "Puebla",
-      "zona_id": 7,
-      "zona_nombre": "Sierra Norte de Puebla",
-      "nivel": 2,
-      "nivel_nombre": "MODERADO",
-      "color_hex": "#F1C40F",
-      "modulo_dominante": "tormentas",
+      "modulo_dominante": "calor",
       "accion_inmediata": "Preparar protocolos y medidas de protección.",
       "sinergias": []
     },
@@ -170,8 +142,8 @@
     {
       "zona_id": 1,
       "nucleo_territorial": "Valle de Actopan",
-      "nivel_maximo": 1,
-      "color_maximo_hex": "#3498DB",
+      "nivel_maximo": 0,
+      "color_maximo_hex": "#2ECC71",
       "total_poblaciones": 6,
       "poblaciones_en_alerta": 0,
       "lista_poblaciones_ids": [
@@ -186,8 +158,8 @@
     {
       "zona_id": 2,
       "nucleo_territorial": "Altiplano Hidalguense",
-      "nivel_maximo": 1,
-      "color_maximo_hex": "#3498DB",
+      "nivel_maximo": 0,
+      "color_maximo_hex": "#2ECC71",
       "total_poblaciones": 9,
       "poblaciones_en_alerta": 0,
       "lista_poblaciones_ids": [
@@ -243,8 +215,8 @@
     {
       "zona_id": 5,
       "nucleo_territorial": "Zona Metropolitana de Pachuca",
-      "nivel_maximo": 1,
-      "color_maximo_hex": "#3498DB",
+      "nivel_maximo": 0,
+      "color_maximo_hex": "#2ECC71",
       "total_poblaciones": 4,
       "poblaciones_en_alerta": 0,
       "lista_poblaciones_ids": [
@@ -275,10 +247,10 @@
     {
       "zona_id": 7,
       "nucleo_territorial": "Sierra Norte de Puebla",
-      "nivel_maximo": 3,
-      "color_maximo_hex": "#E67E22",
+      "nivel_maximo": 2,
+      "color_maximo_hex": "#F1C40F",
       "total_poblaciones": 11,
-      "poblaciones_en_alerta": 4,
+      "poblaciones_en_alerta": 2,
       "lista_poblaciones_ids": [
         "z07_huauchinango",
         "z07_xicotepec",
@@ -705,15 +677,15 @@
         "altitud_msnm": 2040
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -774,15 +746,15 @@
         "altitud_msnm": 2490
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -843,15 +815,15 @@
         "altitud_msnm": 2520
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -912,15 +884,15 @@
         "altitud_msnm": 2510
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -981,15 +953,15 @@
         "altitud_msnm": 2450
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -1050,15 +1022,15 @@
         "altitud_msnm": 2500
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -1119,15 +1091,15 @@
         "altitud_msnm": 2460
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -1188,15 +1160,15 @@
         "altitud_msnm": 2620
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -1257,15 +1229,15 @@
         "altitud_msnm": 2460
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -1326,15 +1298,15 @@
         "altitud_msnm": 2470
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -1602,15 +1574,15 @@
         "altitud_msnm": 2130
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -1785,7 +1757,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=450 J/kg"
+              "Inestabilidad ligera: CAPE=340 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1811,15 +1783,15 @@
         "altitud_msnm": 2075
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -1853,11 +1825,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=320 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -1951,15 +1921,15 @@
         "altitud_msnm": 2260
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -2023,9 +1993,9 @@
         "nivel_final": 1,
         "nivel_nombre": "BAJO",
         "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": false,
+        "histeresis_aplicada": true,
         "accion_corta": "Vigilar boletines y avisos preventivos.",
         "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
         "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
@@ -2062,11 +2032,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=320 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -2136,7 +2104,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=350 J/kg"
+              "Inestabilidad ligera: CAPE=410 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2207,7 +2175,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=390 J/kg"
+              "Inestabilidad ligera: CAPE=370 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2233,15 +2201,15 @@
         "altitud_msnm": 2350
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -2305,9 +2273,9 @@
         "nivel_final": 1,
         "nivel_nombre": "BAJO",
         "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": false,
+        "histeresis_aplicada": true,
         "accion_corta": "Vigilar boletines y avisos preventivos.",
         "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
         "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
@@ -2344,11 +2312,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=390 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -2376,9 +2342,9 @@
         "nivel_final": 1,
         "nivel_nombre": "BAJO",
         "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": false,
+        "histeresis_aplicada": true,
         "accion_corta": "Vigilar boletines y avisos preventivos.",
         "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
         "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
@@ -2415,11 +2381,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=390 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -2489,7 +2453,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=450 J/kg"
+              "Inestabilidad ligera: CAPE=340 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2515,15 +2479,15 @@
         "altitud_msnm": 2240
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -2587,9 +2551,9 @@
         "nivel_final": 1,
         "nivel_nombre": "BAJO",
         "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": false,
+        "histeresis_aplicada": true,
         "accion_corta": "Vigilar boletines y avisos preventivos.",
         "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
         "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
@@ -2626,11 +2590,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=300 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -2655,15 +2617,15 @@
         "altitud_msnm": 2420
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -2724,15 +2686,15 @@
         "altitud_msnm": 2380
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -2862,15 +2824,15 @@
         "altitud_msnm": 2390
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -2970,7 +2932,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Sequedad moderada: HR=34%, Días sin lluvia=6"
+              "Sequedad moderada: HR=30%, Días sin lluvia=5"
             ],
             "estado": "nominal"
           },
@@ -3041,7 +3003,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Sequedad moderada: HR=34%, Días sin lluvia=6"
+              "Sequedad moderada: HR=30%, Días sin lluvia=5"
             ],
             "estado": "nominal"
           },
@@ -3073,15 +3035,15 @@
         "altitud_msnm": 2320
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -3142,15 +3104,15 @@
         "altitud_msnm": 2340
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -3211,15 +3173,15 @@
         "altitud_msnm": 2330
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -3319,7 +3281,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Sequedad moderada: HR=28%, Días sin lluvia=6"
+              "Sequedad moderada: HR=24%, Días sin lluvia=6"
             ],
             "estado": "nominal"
           },
@@ -3390,7 +3352,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Sequedad moderada: HR=28%, Días sin lluvia=6"
+              "Sequedad moderada: HR=24%, Días sin lluvia=6"
             ],
             "estado": "nominal"
           },
@@ -3422,15 +3384,15 @@
         "altitud_msnm": 2360
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -3536,7 +3498,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=750 J/kg"
+              "Inestabilidad ligera: CAPE=380 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3607,7 +3569,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1030 J/kg"
+              "Inestabilidad ligera: CAPE=840 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3678,7 +3640,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=750 J/kg"
+              "Inestabilidad ligera: CAPE=380 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3749,7 +3711,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1030 J/kg"
+              "Inestabilidad ligera: CAPE=840 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3775,15 +3737,15 @@
         "altitud_msnm": 280
       },
       "evaluacion": {
-        "nivel_final": 3,
-        "nivel_nombre": "ALTO",
-        "color_hex": "#E67E22",
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
         "modulo_dominante": "calor",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Activar protocolos preventivos y restringir traslados.",
-        "protocolo_comunitario": "Restricción de traslados carreteros; traslado preventivo de personas vulnerables (adultos mayores, menores) a viviendas seguras o albergues.",
-        "protocolo_caritas": "Movilización del Comité Diocesano de Emergencias. Preposicionamiento físico de víveres, agua y botiquines en parroquias estratégicas. Apoyo en evacuación preventiva.",
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -3799,10 +3761,10 @@
             "estado": "nominal"
           },
           "calor": {
-            "nivel": 3,
-            "color_hex": "#E67E22",
+            "nivel": 2,
+            "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Calor muy alto: T_max=29.4°C, Sensación térmica=36.2°C"
+              "Ambiente caluroso: T_max=28.8°C"
             ],
             "estado": "nominal"
           },
@@ -3819,10 +3781,10 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
+            "nivel": 2,
+            "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1400 J/kg"
+              "Probabilidad de tormenta eléctrica: CAPE=1040 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3893,7 +3855,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1030 J/kg"
+              "Inestabilidad ligera: CAPE=840 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3917,77 +3879,6 @@
         "latitud": 20.2547,
         "longitud": -97.8889,
         "altitud_msnm": 940
-      },
-      "evaluacion": {
-        "nivel_final": 2,
-        "nivel_nombre": "MODERADO",
-        "color_hex": "#F1C40F",
-        "modulo_dominante": "tormentas",
-        "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Preparar protocolos y medidas de protección.",
-        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
-        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
-        "confianza": 1,
-        "modulos": {
-          "inundacion": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
-            "estado": "nominal"
-          },
-          "heladas": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
-            "estado": "nominal"
-          },
-          "calor": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
-            "estado": "nominal"
-          },
-          "laderas": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
-            "estado": "nominal"
-          },
-          "incendios": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
-            "estado": "nominal"
-          },
-          "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1000 J/kg"
-            ],
-            "estado": "nominal"
-          },
-          "ciclones": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
-            "estado": "nominal"
-          }
-        }
-      }
-    },
-    "z07_naupan": {
-      "id": "z07_naupan",
-      "nombre": "Naupan",
-      "municipio": "Naupan",
-      "estado": "Puebla",
-      "zona_id": 7,
-      "zona_nombre": "Sierra Norte de Puebla",
-      "coordenadas": {
-        "latitud": 20.2181,
-        "longitud": -98.1189,
-        "altitud_msnm": 1600
       },
       "evaluacion": {
         "nivel_final": 1,
@@ -4035,7 +3926,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=610 J/kg"
+              "Inestabilidad ligera: CAPE=800 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4048,28 +3939,28 @@
         }
       }
     },
-    "z07_chiconcuautla": {
-      "id": "z07_chiconcuautla",
-      "nombre": "Chiconcuautla",
-      "municipio": "Chiconcuautla",
+    "z07_naupan": {
+      "id": "z07_naupan",
+      "nombre": "Naupan",
+      "municipio": "Naupan",
       "estado": "Puebla",
       "zona_id": 7,
       "zona_nombre": "Sierra Norte de Puebla",
       "coordenadas": {
-        "latitud": 20.1008,
-        "longitud": -97.9867,
-        "altitud_msnm": 1480
+        "latitud": 20.2181,
+        "longitud": -98.1189,
+        "altitud_msnm": 1600
       },
       "evaluacion": {
-        "nivel_final": 2,
-        "nivel_nombre": "MODERADO",
-        "color_hex": "#F1C40F",
-        "modulo_dominante": "tormentas",
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": true,
-        "accion_corta": "Preparar protocolos y medidas de protección.",
-        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
-        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -4103,11 +3994,78 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=900 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "ciclones": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          }
+        }
+      }
+    },
+    "z07_chiconcuautla": {
+      "id": "z07_chiconcuautla",
+      "nombre": "Chiconcuautla",
+      "municipio": "Chiconcuautla",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "coordenadas": {
+        "latitud": 20.1008,
+        "longitud": -97.9867,
+        "altitud_msnm": 1480
+      },
+      "evaluacion": {
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": true,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -4177,7 +4135,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=750 J/kg"
+              "Inestabilidad ligera: CAPE=380 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4230,7 +4188,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Ambiente caluroso: T_max=29.0°C"
+              "Ambiente caluroso: T_max=29.6°C"
             ],
             "estado": "nominal"
           },
@@ -4250,7 +4208,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1010 J/kg"
+              "Inestabilidad ligera: CAPE=1550 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4276,15 +4234,15 @@
         "altitud_msnm": 2260
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -4348,9 +4306,9 @@
         "nivel_final": 1,
         "nivel_nombre": "BAJO",
         "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": false,
+        "histeresis_aplicada": true,
         "accion_corta": "Vigilar boletines y avisos preventivos.",
         "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
         "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
@@ -4387,11 +4345,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=600 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -4416,15 +4372,15 @@
         "altitud_msnm": 2300
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -4485,15 +4441,15 @@
         "altitud_msnm": 2320
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -4554,15 +4510,15 @@
         "altitud_msnm": 2380
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -4623,15 +4579,15 @@
         "altitud_msnm": 2240
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
         "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": true,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -4695,9 +4651,9 @@
         "nivel_final": 1,
         "nivel_nombre": "BAJO",
         "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": false,
+        "histeresis_aplicada": true,
         "accion_corta": "Vigilar boletines y avisos preventivos.",
         "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
         "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
@@ -4734,11 +4690,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=320 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -4808,7 +4762,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=950 J/kg"
+              "Inestabilidad ligera: CAPE=1110 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4879,7 +4833,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=730 J/kg"
+              "Inestabilidad ligera: CAPE=300 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4950,7 +4904,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=750 J/kg"
+              "Inestabilidad ligera: CAPE=420 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5021,7 +4975,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=750 J/kg"
+              "Inestabilidad ligera: CAPE=420 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5092,7 +5046,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=890 J/kg"
+              "Inestabilidad ligera: CAPE=830 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5145,7 +5099,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Ambiente caluroso: T_max=28.3°C"
+              "Ambiente caluroso: T_max=28.7°C"
             ],
             "estado": "nominal"
           },
@@ -5165,7 +5119,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1400 J/kg"
+              "Inestabilidad ligera: CAPE=1060 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5194,9 +5148,9 @@
         "nivel_final": 1,
         "nivel_nombre": "BAJO",
         "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": false,
+        "histeresis_aplicada": true,
         "accion_corta": "Vigilar boletines y avisos preventivos.",
         "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
         "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
@@ -5233,11 +5187,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=300 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -5307,7 +5259,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=640 J/kg"
+              "Inestabilidad ligera: CAPE=510 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5378,7 +5330,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=880 J/kg"
+              "Inestabilidad ligera: CAPE=1100 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5431,7 +5383,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Ambiente caluroso: T_max=28.8°C"
+              "Ambiente caluroso: T_max=29.4°C"
             ],
             "estado": "nominal"
           },
@@ -5448,10 +5400,10 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 2,
-            "color_hex": "#F1C40F",
+            "nivel": 1,
+            "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Probabilidad de tormenta eléctrica: CAPE=1460 J/kg"
+              "Inestabilidad ligera: CAPE=1450 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5522,7 +5474,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=310 J/kg"
+              "Inestabilidad ligera: CAPE=330 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5551,9 +5503,9 @@
         "nivel_final": 1,
         "nivel_nombre": "BAJO",
         "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": false,
+        "histeresis_aplicada": true,
         "accion_corta": "Vigilar boletines y avisos preventivos.",
         "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
         "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
@@ -5590,11 +5542,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=590 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -5622,9 +5572,9 @@
         "nivel_final": 1,
         "nivel_nombre": "BAJO",
         "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
-        "histeresis_aplicada": false,
+        "histeresis_aplicada": true,
         "accion_corta": "Vigilar boletines y avisos preventivos.",
         "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
         "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
@@ -5661,11 +5611,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=590 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -5735,7 +5683,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=480 J/kg"
+              "Inestabilidad ligera: CAPE=360 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5788,7 +5736,7 @@
             "nivel": 3,
             "color_hex": "#E67E22",
             "variables_disparadoras": [
-              "Calor muy alto: T_max=30.5°C, Sensación térmica=36.8°C"
+              "Calor muy alto: T_max=30.5°C, Sensación térmica=37.3°C"
             ],
             "estado": "nominal"
           },
@@ -5808,7 +5756,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1380 J/kg"
+              "Inestabilidad ligera: CAPE=1450 J/kg"
             ],
             "estado": "nominal"
           },
