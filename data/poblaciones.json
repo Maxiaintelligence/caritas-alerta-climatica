@@ -1,19 +1,19 @@
 [
   {
     "id": "z01_actopan",
-    "nombre": "Actopan",
+    "nombre": "Actopan (Cabecera)",
     "municipio": "Actopan",
     "estado": "Hidalgo",
     "zona_id": 1,
     "zona_nombre": "Valle de Actopan",
+    "poblacion_censo": 32257,
+    "cuenca_hidrologica_id": "cuenca_actopan",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 20.2686, "longitud": -98.9442, "altitud_msnm": 2010 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z01_san_agustin",
@@ -22,14 +22,14 @@
     "estado": "Hidalgo",
     "zona_id": 1,
     "zona_nombre": "Valle de Actopan",
+    "poblacion_censo": 14000,
+    "cuenca_hidrologica_id": "cuenca_actopan",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.5,
+    "litologia": "roca",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.1136, "longitud": -98.8833, "altitud_msnm": 2360 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z01_chicavasco",
@@ -38,14 +38,14 @@
     "estado": "Hidalgo",
     "zona_id": 1,
     "zona_nombre": "Valle de Actopan",
+    "poblacion_censo": 4200,
+    "cuenca_hidrologica_id": "cuenca_actopan",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.1972, "longitud": -98.9539, "altitud_msnm": 2077 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z01_tornacuxtla",
@@ -54,14 +54,14 @@
     "estado": "Hidalgo",
     "zona_id": 1,
     "zona_nombre": "Valle de Actopan",
+    "poblacion_censo": 3100,
+    "cuenca_hidrologica_id": "cuenca_actopan",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.5,
+    "litologia": "roca",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.1525, "longitud": -98.8707, "altitud_msnm": 2382 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z01_el_arenal",
@@ -70,14 +70,14 @@
     "estado": "Hidalgo",
     "zona_id": 1,
     "zona_nombre": "Valle de Actopan",
+    "poblacion_censo": 8500,
+    "cuenca_hidrologica_id": "cuenca_actopan",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.0,
+    "litologia": "arena",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.2222, "longitud": -98.9114, "altitud_msnm": 2040 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z01_stgo_de_anaya",
@@ -86,30 +86,94 @@
     "estado": "Hidalgo",
     "zona_id": 1,
     "zona_nombre": "Valle de Actopan",
+    "poblacion_censo": 9800,
+    "cuenca_hidrologica_id": "cuenca_actopan",
+    "posicion_cuenca": "alta",
+    "tc_horas": 3.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.3833, "longitud": -98.9667, "altitud_msnm": 2040 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
+  },
+  {
+    "id": "z01_huaxtho",
+    "nombre": "El Huaxtho",
+    "municipio": "Actopan",
+    "estado": "Hidalgo",
+    "zona_id": 1,
+    "zona_nombre": "Valle de Actopan",
+    "poblacion_censo": 3131,
+    "cuenca_hidrologica_id": "cuenca_actopan",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
+    "coordenadas": { "latitud": 20.2528, "longitud": -98.9281, "altitud_msnm": 2015 },
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
+  },
+  {
+    "id": "z01_boxtha",
+    "nombre": "El Boxtha",
+    "municipio": "Actopan",
+    "estado": "Hidalgo",
+    "zona_id": 1,
+    "zona_nombre": "Valle de Actopan",
+    "poblacion_censo": 3034,
+    "cuenca_hidrologica_id": "cuenca_actopan",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
+    "coordenadas": { "latitud": 20.2889, "longitud": -98.9214, "altitud_msnm": 2020 },
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
+  },
+  {
+    "id": "z01_daxtha",
+    "nombre": "El Daxtha",
+    "municipio": "Actopan",
+    "estado": "Hidalgo",
+    "zona_id": 1,
+    "zona_nombre": "Valle de Actopan",
+    "poblacion_censo": 2754,
+    "cuenca_hidrologica_id": "cuenca_actopan",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
+    "coordenadas": { "latitud": 20.2742, "longitud": -98.9694, "altitud_msnm": 2005 },
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
+  },
+  {
+    "id": "z01_dajiedhi",
+    "nombre": "Dajiedhi",
+    "municipio": "Actopan",
+    "estado": "Hidalgo",
+    "zona_id": 1,
+    "zona_nombre": "Valle de Actopan",
+    "poblacion_censo": 2418,
+    "cuenca_hidrologica_id": "cuenca_actopan",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
+    "coordenadas": { "latitud": 20.3111, "longitud": -98.9736, "altitud_msnm": 1995 },
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z02_apan",
-    "nombre": "Apan",
+    "nombre": "Apan (Cabecera)",
     "municipio": "Apan",
     "estado": "Hidalgo",
     "zona_id": 2,
     "zona_nombre": "Altiplano Hidalguense",
+    "poblacion_censo": 29000,
+    "cuenca_hidrologica_id": "cuenca_altiplano",
+    "posicion_cuenca": "baja",
+    "tc_horas": 4.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 19.7114, "longitud": -98.4511, "altitud_msnm": 2490 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z02_almoloya",
@@ -118,14 +182,14 @@
     "estado": "Hidalgo",
     "zona_id": 2,
     "zona_nombre": "Altiplano Hidalguense",
+    "poblacion_censo": 6500,
+    "cuenca_hidrologica_id": "cuenca_altiplano",
+    "posicion_cuenca": "alta",
+    "tc_horas": 2.0,
+    "litologia": "arena",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.7025, "longitud": -98.3411, "altitud_msnm": 2520 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z02_tepeapulco",
@@ -134,14 +198,14 @@
     "estado": "Hidalgo",
     "zona_id": 2,
     "zona_nombre": "Altiplano Hidalguense",
+    "poblacion_censo": 16000,
+    "cuenca_hidrologica_id": "cuenca_altiplano",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 19.785, "longitud": -98.5528, "altitud_msnm": 2510 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z02_cd_sahagun",
@@ -150,14 +214,14 @@
     "estado": "Hidalgo",
     "zona_id": 2,
     "zona_nombre": "Altiplano Hidalguense",
+    "poblacion_censo": 34000,
+    "cuenca_hidrologica_id": "cuenca_altiplano",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 19.7711, "longitud": -98.575, "altitud_msnm": 2450 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z02_emiliano_zapata",
@@ -166,14 +230,14 @@
     "estado": "Hidalgo",
     "zona_id": 2,
     "zona_nombre": "Altiplano Hidalguense",
+    "poblacion_censo": 8200,
+    "cuenca_hidrologica_id": "cuenca_altiplano",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.5,
+    "litologia": "arena",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.6542, "longitud": -98.5447, "altitud_msnm": 2500 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z02_tlanalapa",
@@ -182,14 +246,14 @@
     "estado": "Hidalgo",
     "zona_id": 2,
     "zona_nombre": "Altiplano Hidalguense",
+    "poblacion_censo": 7000,
+    "cuenca_hidrologica_id": "cuenca_altiplano",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.825, "longitud": -98.6014, "altitud_msnm": 2460 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z02_singuilucan",
@@ -198,14 +262,14 @@
     "estado": "Hidalgo",
     "zona_id": 2,
     "zona_nombre": "Altiplano Hidalguense",
+    "poblacion_censo": 4800,
+    "cuenca_hidrologica_id": "cuenca_altiplano",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.8,
+    "litologia": "roca",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 19.9678, "longitud": -98.5186, "altitud_msnm": 2620 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z02_epazoyucan",
@@ -214,14 +278,14 @@
     "estado": "Hidalgo",
     "zona_id": 2,
     "zona_nombre": "Altiplano Hidalguense",
+    "poblacion_censo": 5500,
+    "cuenca_hidrologica_id": "cuenca_altiplano",
+    "posicion_cuenca": "alta",
+    "tc_horas": 2.0,
+    "litologia": "roca",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.0181, "longitud": -98.6367, "altitud_msnm": 2460 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z02_zempoala",
@@ -230,14 +294,30 @@
     "estado": "Hidalgo",
     "zona_id": 2,
     "zona_nombre": "Altiplano Hidalguense",
+    "poblacion_censo": 11000,
+    "cuenca_hidrologica_id": "cuenca_altiplano",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.9142, "longitud": -98.6694, "altitud_msnm": 2470 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
+  },
+  {
+    "id": "z02_chimalpa",
+    "nombre": "Chimalpa Tlalayote",
+    "municipio": "Apan",
+    "estado": "Hidalgo",
+    "zona_id": 2,
+    "zona_nombre": "Altiplano Hidalguense",
+    "poblacion_censo": 2694,
+    "cuenca_hidrologica_id": "cuenca_altiplano",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
+    "coordenadas": { "latitud": 19.6828, "longitud": -98.4128, "altitud_msnm": 2485 },
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z03_mineral_chico",
@@ -246,14 +326,14 @@
     "estado": "Hidalgo",
     "zona_id": 3,
     "zona_nombre": "Corredor de Montaña",
+    "poblacion_censo": 3200,
+    "cuenca_hidrologica_id": "cuenca_montana_hgo",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.0,
+    "litologia": "roca",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.215, "longitud": -98.7314, "altitud_msnm": 2340 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z03_omitlan",
@@ -262,14 +342,14 @@
     "estado": "Hidalgo",
     "zona_id": 3,
     "zona_nombre": "Corredor de Montaña",
+    "poblacion_censo": 4000,
+    "cuenca_hidrologica_id": "cuenca_montana_hgo",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.1706, "longitud": -98.6472, "altitud_msnm": 2400 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z03_atotonilco_gte",
@@ -278,14 +358,14 @@
     "estado": "Hidalgo",
     "zona_id": 3,
     "zona_nombre": "Corredor de Montaña",
+    "poblacion_censo": 13500,
+    "cuenca_hidrologica_id": "cuenca_montana_hgo",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.2,
+    "litologia": "roca",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.2861, "longitud": -98.6681, "altitud_msnm": 2160 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z03_huasca",
@@ -294,14 +374,14 @@
     "estado": "Hidalgo",
     "zona_id": 3,
     "zona_nombre": "Corredor de Montaña",
+    "poblacion_censo": 4500,
+    "cuenca_hidrologica_id": "cuenca_montana_hgo",
+    "posicion_cuenca": "media",
+    "tc_horas": 1.8,
+    "litologia": "roca",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.2047, "longitud": -98.5772, "altitud_msnm": 2130 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z03_san_juan_huey",
@@ -310,14 +390,14 @@
     "estado": "Hidalgo",
     "zona_id": 3,
     "zona_nombre": "Corredor de Montaña",
+    "poblacion_censo": 2100,
+    "cuenca_hidrologica_id": "cuenca_montana_hgo",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.2283, "longitud": -98.5564, "altitud_msnm": 2100 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z03_acatlan",
@@ -326,14 +406,14 @@
     "estado": "Hidalgo",
     "zona_id": 3,
     "zona_nombre": "Corredor de Montaña",
+    "poblacion_censo": 12000,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.1458, "longitud": -98.4414, "altitud_msnm": 2134 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z03_alcholoya",
@@ -342,14 +422,14 @@
     "estado": "Hidalgo",
     "zona_id": 3,
     "zona_nombre": "Corredor de Montaña",
+    "poblacion_censo": 1800,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "baja",
+    "tc_horas": 4.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.2253, "longitud": -98.4531, "altitud_msnm": 2075 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z03_cerro_colorado",
@@ -358,30 +438,30 @@
     "estado": "Hidalgo",
     "zona_id": 3,
     "zona_nombre": "Corredor de Montaña",
+    "poblacion_censo": 1200,
+    "cuenca_hidrologica_id": "cuenca_montana_hgo",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.0,
+    "litologia": "roca",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.1981, "longitud": -98.6189, "altitud_msnm": 2520 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z04_acaxochitlan",
-    "nombre": "Acaxochitlán",
+    "nombre": "Acaxochitlán (Cabecera)",
     "municipio": "Acaxochitlán",
     "estado": "Hidalgo",
     "zona_id": 4,
     "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 11500,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.1578, "longitud": -98.2044, "altitud_msnm": 2260 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z04_los_reyes",
@@ -390,14 +470,14 @@
     "estado": "Hidalgo",
     "zona_id": 4,
     "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 3800,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.3,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.1783, "longitud": -98.175, "altitud_msnm": 2140 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z04_cuautepec",
@@ -406,14 +486,14 @@
     "estado": "Hidalgo",
     "zona_id": 4,
     "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 22000,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 20.0353, "longitud": -98.3106, "altitud_msnm": 2270 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z04_sta_ma_nativitas",
@@ -422,14 +502,14 @@
     "estado": "Hidalgo",
     "zona_id": 4,
     "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 5100,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.0086, "longitud": -98.2831, "altitud_msnm": 2340 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z04_san_lorenzo_say",
@@ -438,14 +518,14 @@
     "estado": "Hidalgo",
     "zona_id": 4,
     "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 4200,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.3,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.967, "longitud": -98.35, "altitud_msnm": 2350 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z04_stgo_tulantepec",
@@ -454,14 +534,14 @@
     "estado": "Hidalgo",
     "zona_id": 4,
     "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 19000,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 20.0369, "longitud": -98.3589, "altitud_msnm": 2180 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z04_tulancingo",
@@ -470,14 +550,14 @@
     "estado": "Hidalgo",
     "zona_id": 4,
     "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 110000,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 20.0833, "longitud": -98.3667, "altitud_msnm": 2140 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z04_jaltepec",
@@ -486,14 +566,14 @@
     "estado": "Hidalgo",
     "zona_id": 4,
     "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 8500,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.1042, "longitud": -98.3967, "altitud_msnm": 2160 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z04_el_susto",
@@ -502,14 +582,14 @@
     "estado": "Hidalgo",
     "zona_id": 4,
     "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 2300,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.5,
+    "litologia": "arena",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.0167, "longitud": -98.4111, "altitud_msnm": 2240 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z04_metepec",
@@ -518,14 +598,78 @@
     "estado": "Hidalgo",
     "zona_id": 4,
     "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 8900,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.2389, "longitud": -98.3278, "altitud_msnm": 2180 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
+  },
+  {
+    "id": "z04_paliseca",
+    "nombre": "Santa Elena Paliseca",
+    "municipio": "Cuautepec de Hinojosa",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 3074,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
+    "coordenadas": { "latitud": 20.0214, "longitud": -98.3289, "altitud_msnm": 2250 },
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
+  },
+  {
+    "id": "z04_hueytlalpan",
+    "nombre": "Santa Ana Hueytlalpan",
+    "municipio": "Tulancingo de Bravo",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 5231,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
+    "coordenadas": { "latitud": 20.1514, "longitud": -98.3097, "altitud_msnm": 2160 },
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
+  },
+  {
+    "id": "z04_rojo_gomez",
+    "nombre": "Javier Rojo Gómez",
+    "municipio": "Tulancingo de Bravo",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 7749,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.4,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
+    "coordenadas": { "latitud": 20.065, "longitud": -98.3583, "altitud_msnm": 2150 },
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
+  },
+  {
+    "id": "z04_napateco",
+    "nombre": "Parque Urbano Napateco",
+    "municipio": "Tulancingo de Bravo",
+    "estado": "Hidalgo",
+    "zona_id": 4,
+    "zona_nombre": "Corredor Acaxochitlán–Tulancingo",
+    "poblacion_censo": 7817,
+    "cuenca_hidrologica_id": "cuenca_rio_san_lorenzo",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
+    "coordenadas": { "latitud": 20.1181, "longitud": -98.3472, "altitud_msnm": 2190 },
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z05_pachuca",
@@ -534,14 +678,14 @@
     "estado": "Hidalgo",
     "zona_id": 5,
     "zona_nombre": "Zona Metropolitana de Pachuca",
+    "poblacion_censo": 315000,
+    "cuenca_hidrologica_id": "cuenca_pachuca",
+    "posicion_cuenca": "baja",
+    "tc_horas": 1.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 20.1167, "longitud": -98.7333, "altitud_msnm": 2420 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z05_m_de_la_reforma",
@@ -550,14 +694,14 @@
     "estado": "Hidalgo",
     "zona_id": 5,
     "zona_nombre": "Zona Metropolitana de Pachuca",
+    "poblacion_censo": 200000,
+    "cuenca_hidrologica_id": "cuenca_pachuca",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 20.0833, "longitud": -98.7167, "altitud_msnm": 2380 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z05_real_del_monte",
@@ -566,14 +710,14 @@
     "estado": "Hidalgo",
     "zona_id": 5,
     "zona_nombre": "Zona Metropolitana de Pachuca",
+    "poblacion_censo": 9000,
+    "cuenca_hidrologica_id": "cuenca_pachuca",
+    "posicion_cuenca": "alta",
+    "tc_horas": 0.8,
+    "litologia": "roca",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.1417, "longitud": -98.6739, "altitud_msnm": 2700 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z05_xochihuacan",
@@ -582,30 +726,30 @@
     "estado": "Hidalgo",
     "zona_id": 5,
     "zona_nombre": "Zona Metropolitana de Pachuca",
+    "poblacion_censo": 2500,
+    "cuenca_hidrologica_id": "cuenca_pachuca",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.0461, "longitud": -98.6811, "altitud_msnm": 2390 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z06_tizayuca",
-    "nombre": "Tizayuca",
+    "nombre": "Tizayuca (Centro)",
     "municipio": "Tizayuca",
     "estado": "Hidalgo",
     "zona_id": 6,
     "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "poblacion_censo": 115000,
+    "cuenca_hidrologica_id": "cuenca_tizayuca",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 19.8375, "longitud": -98.9808, "altitud_msnm": 2270 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z06_nuevo_tizayuca",
@@ -614,14 +758,14 @@
     "estado": "Hidalgo",
     "zona_id": 6,
     "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "poblacion_censo": 25000,
+    "cuenca_hidrologica_id": "cuenca_tizayuca",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 19.8519, "longitud": -98.9714, "altitud_msnm": 2275 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z06_tolcayuca",
@@ -630,14 +774,14 @@
     "estado": "Hidalgo",
     "zona_id": 6,
     "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "poblacion_censo": 15000,
+    "cuenca_hidrologica_id": "cuenca_tizayuca",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.5,
+    "litologia": "arena",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.9575, "longitud": -98.9214, "altitud_msnm": 2320 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z06_zapotlan",
@@ -646,14 +790,14 @@
     "estado": "Hidalgo",
     "zona_id": 6,
     "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "poblacion_censo": 13000,
+    "cuenca_hidrologica_id": "cuenca_tizayuca",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.9739, "longitud": -98.8622, "altitud_msnm": 2340 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z06_v_de_tezontepec",
@@ -662,14 +806,14 @@
     "estado": "Hidalgo",
     "zona_id": 6,
     "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "poblacion_censo": 8500,
+    "cuenca_hidrologica_id": "cuenca_tizayuca",
+    "posicion_cuenca": "alta",
+    "tc_horas": 2.0,
+    "litologia": "roca",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.9281, "longitud": -98.8206, "altitud_msnm": 2330 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z06_huitzila",
@@ -678,14 +822,14 @@
     "estado": "Hidalgo",
     "zona_id": 6,
     "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "poblacion_censo": 6500,
+    "cuenca_hidrologica_id": "cuenca_tizayuca",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.8136, "longitud": -98.9667, "altitud_msnm": 2260 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z06_tepojaco",
@@ -694,14 +838,14 @@
     "estado": "Hidalgo",
     "zona_id": 6,
     "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "poblacion_censo": 18000,
+    "cuenca_hidrologica_id": "cuenca_tizayuca",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 19.8058, "longitud": -98.9408, "altitud_msnm": 2265 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z06_tellez",
@@ -710,14 +854,30 @@
     "estado": "Hidalgo",
     "zona_id": 6,
     "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "poblacion_censo": 7200,
+    "cuenca_hidrologica_id": "cuenca_tizayuca",
+    "posicion_cuenca": "alta",
+    "tc_horas": 2.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.0158, "longitud": -98.7617, "altitud_msnm": 2360 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "bajo"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
+  },
+  {
+    "id": "z06_acayuca",
+    "nombre": "Acayuca",
+    "municipio": "Zapotlán de Juárez",
+    "estado": "Hidalgo",
+    "zona_id": 6,
+    "zona_nombre": "Corredor Tizayuca–Zapotlán",
+    "poblacion_censo": 8470,
+    "cuenca_hidrologica_id": "cuenca_tizayuca",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
+    "coordenadas": { "latitud": 19.9889, "longitud": -98.835, "altitud_msnm": 2335 },
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "bajo" }
   },
   {
     "id": "z07_huauchinango",
@@ -726,14 +886,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 58000,
+    "cuenca_hidrologica_id": "cuenca_rio_necaxa",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.1772, "longitud": -98.0531, "altitud_msnm": 1520 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z07_xicotepec",
@@ -742,14 +902,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 42000,
+    "cuenca_hidrologica_id": "cuenca_rio_san_marcos",
+    "posicion_cuenca": "media",
+    "tc_horas": 1.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.2764, "longitud": -97.9589, "altitud_msnm": 1180 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z07_juan_galindo",
@@ -758,14 +918,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 9500,
+    "cuenca_hidrologica_id": "cuenca_rio_necaxa",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.2103, "longitud": -98.005, "altitud_msnm": 1240 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z07_necaxa",
@@ -774,14 +934,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 3500,
+    "cuenca_hidrologica_id": "cuenca_rio_necaxa",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.2167, "longitud": -97.9897, "altitud_msnm": 1160 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z07_v_avila_camacho",
@@ -790,14 +950,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 12000,
+    "cuenca_hidrologica_id": "cuenca_rio_san_marcos",
+    "posicion_cuenca": "baja",
+    "tc_horas": 4.5,
+    "litologia": "arena",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.3956, "longitud": -97.8864, "altitud_msnm": 280 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "medio" }
   },
   {
     "id": "z07_tlaola",
@@ -806,14 +966,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 3200,
+    "cuenca_hidrologica_id": "cuenca_rio_necaxa",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.1492, "longitud": -97.9131, "altitud_msnm": 1260 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z07_zihuateutla",
@@ -822,14 +982,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 2800,
+    "cuenca_hidrologica_id": "cuenca_rio_necaxa",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.2547, "longitud": -97.8889, "altitud_msnm": 940 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z07_naupan",
@@ -838,14 +998,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 3100,
+    "cuenca_hidrologica_id": "cuenca_rio_necaxa",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.2181, "longitud": -98.1189, "altitud_msnm": 1600 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z07_chiconcuautla",
@@ -854,14 +1014,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 4200,
+    "cuenca_hidrologica_id": "cuenca_rio_necaxa",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.1008, "longitud": -97.9867, "altitud_msnm": 1480 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z07_tenanguito",
@@ -870,14 +1030,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 1500,
+    "cuenca_hidrologica_id": "cuenca_rio_necaxa",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.1,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.2014, "longitud": -98.0289, "altitud_msnm": 1320 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z07_chicontla_jopala",
@@ -886,14 +1046,14 @@
     "estado": "Puebla",
     "zona_id": 7,
     "zona_nombre": "Sierra Norte de Puebla",
+    "poblacion_censo": 6500,
+    "cuenca_hidrologica_id": "cuenca_rio_necaxa",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.2464, "longitud": -97.8389, "altitud_msnm": 440 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z08_chignahuapan",
@@ -902,14 +1062,14 @@
     "estado": "Puebla",
     "zona_id": 8,
     "zona_nombre": "Chignahuapan–Aquixtla",
+    "poblacion_censo": 24000,
+    "cuenca_hidrologica_id": "cuenca_chignahuapan",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "urbana",
     "coordenadas": { "latitud": 19.8375, "longitud": -98.0319, "altitud_msnm": 2260 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z08_aquixtla",
@@ -918,14 +1078,14 @@
     "estado": "Puebla",
     "zona_id": 8,
     "zona_nombre": "Chignahuapan–Aquixtla",
+    "poblacion_censo": 3500,
+    "cuenca_hidrologica_id": "cuenca_chignahuapan",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.5,
+    "litologia": "roca",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 19.7892, "longitud": -97.9406, "altitud_msnm": 2180 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z08_ahuazotepec",
@@ -934,14 +1094,14 @@
     "estado": "Puebla",
     "zona_id": 8,
     "zona_nombre": "Chignahuapan–Aquixtla",
+    "poblacion_censo": 7200,
+    "cuenca_hidrologica_id": "cuenca_chignahuapan",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.0528, "longitud": -98.1489, "altitud_msnm": 2300 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z08_v_cuauhtemoc",
@@ -950,14 +1110,14 @@
     "estado": "Puebla",
     "zona_id": 8,
     "zona_nombre": "Chignahuapan–Aquixtla",
+    "poblacion_censo": 3800,
+    "cuenca_hidrologica_id": "cuenca_chignahuapan",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.5,
+    "litologia": "roca",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 19.8864, "longitud": -98.0811, "altitud_msnm": 2320 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "alto" }
   },
   {
     "id": "z08_paredon",
@@ -966,14 +1126,14 @@
     "estado": "Puebla",
     "zona_id": 8,
     "zona_nombre": "Chignahuapan–Aquixtla",
+    "poblacion_censo": 2100,
+    "cuenca_hidrologica_id": "cuenca_chignahuapan",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.8,
+    "litologia": "arena",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.7542, "longitud": -98.0772, "altitud_msnm": 2380 },
-    "factores_riesgo": {
-      "perfil_pendiente": "baja",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "baja", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z08_ixtacamaxtitlan",
@@ -982,14 +1142,14 @@
     "estado": "Puebla",
     "zona_id": 8,
     "zona_nombre": "Chignahuapan–Aquixtla",
+    "poblacion_censo": 4200,
+    "cuenca_hidrologica_id": "cuenca_chignahuapan",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.0,
+    "litologia": "roca",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 19.6, "longitud": -97.8444, "altitud_msnm": 2240 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": true, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z09_honey",
@@ -998,14 +1158,14 @@
     "estado": "Puebla",
     "zona_id": 9,
     "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "poblacion_censo": 2900,
+    "cuenca_hidrologica_id": "cuenca_rio_cazones",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.2,
+    "litologia": "roca",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.2589, "longitud": -98.2144, "altitud_msnm": 2160 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z09_tlaxco",
@@ -1014,14 +1174,14 @@
     "estado": "Puebla",
     "zona_id": 9,
     "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "poblacion_censo": 2100,
+    "cuenca_hidrologica_id": "cuenca_rio_cazones",
+    "posicion_cuenca": "media",
+    "tc_horas": 1.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.4072, "longitud": -98.0411, "altitud_msnm": 1020 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z09_tlaquilotepec",
@@ -1030,14 +1190,14 @@
     "estado": "Puebla",
     "zona_id": 9,
     "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "poblacion_censo": 3600,
+    "cuenca_hidrologica_id": "cuenca_rio_cazones",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.3547, "longitud": -98.0506, "altitud_msnm": 1220 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z09_san_pablito",
@@ -1046,14 +1206,14 @@
     "estado": "Puebla",
     "zona_id": 9,
     "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "poblacion_censo": 3900,
+    "cuenca_hidrologica_id": "cuenca_rio_cazones",
+    "posicion_cuenca": "media",
+    "tc_horas": 1.6,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.3014, "longitud": -98.1969, "altitud_msnm": 1260 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z09_xolotla",
@@ -1062,14 +1222,14 @@
     "estado": "Puebla",
     "zona_id": 9,
     "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "poblacion_censo": 2400,
+    "cuenca_hidrologica_id": "cuenca_rio_cazones",
+    "posicion_cuenca": "media",
+    "tc_horas": 1.7,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.3167, "longitud": -98.1528, "altitud_msnm": 1180 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z09_pahuatlan",
@@ -1078,14 +1238,14 @@
     "estado": "Puebla",
     "zona_id": 9,
     "zona_nombre": "Sierra de Puebla–Pahuatlán",
+    "poblacion_censo": 4800,
+    "cuenca_hidrologica_id": "cuenca_rio_cazones",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.2781, "longitud": -98.1486, "altitud_msnm": 1100 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z10_san_lorenzo_ach",
@@ -1094,14 +1254,14 @@
     "estado": "Hidalgo",
     "zona_id": 10,
     "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 2100,
+    "cuenca_hidrologica_id": "cuenca_rio_pantepec",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.5974, "longitud": -98.0688, "altitud_msnm": 539 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z10_agua_blanca",
@@ -1110,14 +1270,14 @@
     "estado": "Hidalgo",
     "zona_id": 10,
     "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 6200,
+    "cuenca_hidrologica_id": "cuenca_rio_pantepec",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.2,
+    "litologia": "arcilla",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.3508, "longitud": -98.3589, "altitud_msnm": 2200 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z10_tenango_doria",
@@ -1126,14 +1286,14 @@
     "estado": "Hidalgo",
     "zona_id": 10,
     "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 6800,
+    "cuenca_hidrologica_id": "cuenca_rio_pantepec",
+    "posicion_cuenca": "media",
+    "tc_horas": 1.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.3392, "longitud": -98.2272, "altitud_msnm": 1660 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z10_san_bartolo_tut",
@@ -1142,14 +1302,14 @@
     "estado": "Hidalgo",
     "zona_id": 10,
     "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 5400,
+    "cuenca_hidrologica_id": "cuenca_rio_pantepec",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.4006, "longitud": -98.2017, "altitud_msnm": 1020 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z10_huehuetla",
@@ -1158,14 +1318,14 @@
     "estado": "Hidalgo",
     "zona_id": 10,
     "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 6100,
+    "cuenca_hidrologica_id": "cuenca_rio_pantepec",
+    "posicion_cuenca": "baja",
+    "tc_horas": 3.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.4611, "longitud": -98.0764, "altitud_msnm": 480 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z10_sta_ma_asuncion",
@@ -1174,14 +1334,14 @@
     "estado": "Hidalgo",
     "zona_id": 10,
     "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 2900,
+    "cuenca_hidrologica_id": "cuenca_rio_pantepec",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.1264, "longitud": -98.3142, "altitud_msnm": 2180 },
-    "factores_riesgo": {
-      "perfil_pendiente": "media",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": false,
-      "combustible_forestal": "medio"
-    }
+    "factores_riesgo": { "perfil_pendiente": "media", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": false, "combustible_forestal": "medio" }
   },
   {
     "id": "z10_zacualpan",
@@ -1190,14 +1350,14 @@
     "estado": "Veracruz",
     "zona_id": 10,
     "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 4600,
+    "cuenca_hidrologica_id": "cuenca_rio_vinazco",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.4503, "longitud": -98.3556, "altitud_msnm": 2120 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z10_texcatepec",
@@ -1206,14 +1366,14 @@
     "estado": "Veracruz",
     "zona_id": 10,
     "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 3200,
+    "cuenca_hidrologica_id": "cuenca_rio_vinazco",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
     "coordenadas": { "latitud": 20.5847, "longitud": -98.3478, "altitud_msnm": 1440 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z10_huayacocotla",
@@ -1222,14 +1382,14 @@
     "estado": "Veracruz",
     "zona_id": 10,
     "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 12500,
+    "cuenca_hidrologica_id": "cuenca_rio_vinazco",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.3,
+    "litologia": "arcilla",
+    "tipo_interfaz": "wui",
     "coordenadas": { "latitud": 20.5367, "longitud": -98.49, "altitud_msnm": 2140 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": false,
-      "exposicion_heladas": true,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": true, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   },
   {
     "id": "z10_ixhuatlan_madero",
@@ -1238,13 +1398,61 @@
     "estado": "Veracruz",
     "zona_id": 10,
     "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 18000,
+    "cuenca_hidrologica_id": "cuenca_rio_vinazco",
+    "posicion_cuenca": "baja",
+    "tc_horas": 4.5,
+    "litologia": "arena",
+    "tipo_interfaz": "rural_aluvial",
     "coordenadas": { "latitud": 20.8033, "longitud": -98.0244, "altitud_msnm": 260 },
-    "factores_riesgo": {
-      "perfil_pendiente": "alta",
-      "cuenca_inundable": true,
-      "exposicion_heladas": false,
-      "sensibilidad_ciclones": true,
-      "combustible_forestal": "alto"
-    }
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
+  },
+  {
+    "id": "z10_san_antonio",
+    "nombre": "San Antonio el Grande",
+    "municipio": "Huehuetla",
+    "estado": "Hidalgo",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 2368,
+    "cuenca_hidrologica_id": "cuenca_rio_pantepec",
+    "posicion_cuenca": "media",
+    "tc_horas": 2.0,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
+    "coordenadas": { "latitud": 20.5283, "longitud": -98.1156, "altitud_msnm": 820 },
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
+  },
+  {
+    "id": "z10_san_esteban",
+    "nombre": "San Esteban",
+    "municipio": "Huehuetla",
+    "estado": "Hidalgo",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 1892,
+    "cuenca_hidrologica_id": "cuenca_rio_pantepec",
+    "posicion_cuenca": "baja",
+    "tc_horas": 2.8,
+    "litologia": "arcilla",
+    "tipo_interfaz": "rural_aluvial",
+    "coordenadas": { "latitud": 20.4892, "longitud": -98.0569, "altitud_msnm": 620 },
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": true, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
+  },
+  {
+    "id": "z10_santa_ursula",
+    "nombre": "Santa Úrsula",
+    "municipio": "Huehuetla",
+    "estado": "Hidalgo",
+    "zona_id": 10,
+    "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+    "poblacion_censo": 1432,
+    "cuenca_hidrologica_id": "cuenca_rio_pantepec",
+    "posicion_cuenca": "alta",
+    "tc_horas": 1.5,
+    "litologia": "arcilla",
+    "tipo_interfaz": "forestal",
+    "coordenadas": { "latitud": 20.4289, "longitud": -98.1067, "altitud_msnm": 980 },
+    "factores_riesgo": { "perfil_pendiente": "alta", "cuenca_inundable": false, "exposicion_heladas": false, "sensibilidad_ciclones": true, "combustible_forestal": "alto" }
   }
 ]

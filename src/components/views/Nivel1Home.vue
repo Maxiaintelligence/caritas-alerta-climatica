@@ -1,70 +1,89 @@
 <template>
   <div class="space-y-6">
-    <!-- SECCIÓN 1: ALERTA PRIORITARIA (TRIAJE) -->
+    <!-- CABECERA RESUMEN DE COBERTURA -->
+    <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 rounded-xl bg-blue-600/20 border border-blue-500/40 flex items-center justify-center text-blue-400 font-black">
+          71
+        </div>
+        <div>
+          <p class="text-xs font-bold text-white uppercase">Cobertura Regional Cáritas</p>
+          <p class="text-[11px] text-slate-400">71 poblaciones monitoreadas en 10 Zonas Operativas</p>
+        </div>
+      </div>
+      <div v-if="poblacionEnRiesgoTotal > 0" class="text-right">
+        <span class="text-xs font-black px-3 py-1.5 rounded-lg bg-amber-500/20 border border-amber-500/40 text-amber-300">
+          ⚠️ {{ poblacionEnRiesgoTotal.toLocaleString() }} hab. en Triaje Activo
+        </span>
+      </div>
+    </div>
+
+    <!-- SECCIÓN 1: TRIAJE DE RIESGO REAL (Nivel >= 2) -->
     <section>
       <div class="flex items-center justify-between mb-3">
         <div class="flex items-center space-x-2">
           <span class="w-3 h-3 rounded-full bg-red-500"></span>
           <h2 class="text-base md:text-lg font-bold text-white uppercase tracking-wide">
-            Poblaciones en Alerta Prioritaria (Nivel ≥ 2)
+            Triaje de Alerta Temprana (Nivel 2, 3 y 4)
           </h2>
         </div>
         <span class="text-xs px-2.5 py-1 rounded-full font-bold bg-slate-800 text-slate-300 border border-slate-700">
-          {{ alertaPrioritaria.length }} activas
+          {{ alertaPrioritaria.length }} alertas activas
         </span>
       </div>
 
-      <!-- Tarjetas de alerta -->
-      <div v-if="alertaPrioritaria.length > 0" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+      <!-- Tarjetas de Vectores Activos -->
+      <div v-if="alertaPrioritaria.length > 0" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
         <div
           v-for="item in alertaPrioritaria"
           :key="item.id"
           @click="$emit('select-poblacion', item.id)"
           class="p-4 rounded-xl border bg-slate-900 hover:border-slate-500 transition-all cursor-pointer flex flex-col justify-between"
-          :style="{ borderColor: item.color_hex + '55', borderLeftWidth: '6px', borderLeftColor: item.color_hex }"
+          :style="{ borderLeftWidth: '6px', borderLeftColor: item.color_hex, borderColor: item.color_hex + '44' }"
         >
           <div>
             <div class="flex items-start justify-between">
               <div>
-                <h3 class="font-bold text-white text-base">{{ item.nombre }}</h3>
+                <h3 class="font-black text-white text-base">{{ item.nombre }}</h3>
                 <p class="text-xs text-slate-400">{{ item.municipio }}, {{ item.estado }} (Zona {{ item.zona_id }})</p>
               </div>
               <span
-                class="text-xs font-black px-2.5 py-1 rounded text-white tracking-wider"
+                class="text-xs font-black px-2.5 py-1 rounded text-white tracking-wider shadow uppercase"
                 :style="{ backgroundColor: item.color_hex }"
               >
                 {{ item.nivel_nombre }}
               </span>
             </div>
 
-            <!-- Módulo disparador -->
-            <div class="mt-2.5 flex items-center space-x-2 text-xs text-slate-300">
-              <span class="font-semibold text-slate-400">Riesgo:</span>
-              <span class="capitalize px-2 py-0.5 rounded bg-slate-800 border border-slate-700">{{ item.modulo_dominante }}</span>
-            </div>
-
-            <!-- Sinergias si existen -->
-            <div v-if="item.sinergias && item.sinergias.length > 0" class="mt-2">
-              <span class="text-[11px] font-bold text-amber-400 flex items-center space-x-1">
-                <span>⚠️ {{ item.sinergias[0] }}</span>
-              </span>
+            <!-- Vector Climático -->
+            <div class="mt-3 space-y-1.5 text-xs bg-slate-950 p-2.5 rounded-lg border border-slate-800/80">
+              <p class="text-slate-300">
+                <strong class="text-amber-400 font-bold">Vector:</strong> {{ item.vector_dominante }}
+              </p>
+              <p class="text-slate-300">
+                <strong class="text-slate-400">Magnitud:</strong> {{ item.magnitud }}
+              </p>
+              <p class="text-slate-300">
+                <strong class="text-blue-400">Distancia Temporal:</strong> {{ item.distancia_temporal }}
+              </p>
             </div>
           </div>
 
-          <div class="mt-3 pt-2.5 border-t border-slate-800 text-xs text-slate-300 italic">
-            👉 {{ item.accion_inmediata }}
+          <div class="mt-3 pt-2.5 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+            <span>👥 {{ item.poblacion_censo?.toLocaleString() }} hab.</span>
+            <span class="text-amber-400 font-bold">Ver Ficha y Plan 👉</span>
           </div>
         </div>
       </div>
 
-      <!-- Estado Seguro -->
-      <div v-else class="p-6 rounded-xl bg-slate-900/60 border border-slate-800 text-center text-slate-400">
-        <p class="text-emerald-400 font-semibold mb-1">🟢 Todas las poblaciones se encuentran en niveles Verde / Azul</p>
-        <p class="text-xs">No hay alertas meteorológicas críticas activas en este momento.</p>
+      <!-- Pantalla limpia si no hay peligro real -->
+      <div v-else class="p-8 rounded-2xl bg-slate-900/60 border border-slate-800 text-center space-y-2">
+        <p class="text-emerald-400 font-bold text-base">🟢 Triaje Normal: Sin Amenazas Meteorológicas Críticas</p>
+        <p class="text-xs text-slate-400">Las 71 poblaciones monitoreadas se encuentran en Nivel 1 (Sin Riesgo).</p>
       </div>
     </section>
 
-    <!-- SECCIÓN 2: SELECTOR DE LAS 10 ZONAS OPERATIVAS -->
+    <!-- SECCIÓN 2: EXPLORADOR DE LAS 10 ZONAS -->
     <section>
       <div class="flex items-center space-x-2 mb-3">
         <span class="w-3 h-3 rounded-full bg-blue-500"></span>
@@ -84,17 +103,16 @@
             <span class="text-xs font-bold text-blue-400 uppercase tracking-wider">Zona {{ zona.zona_id }}</span>
             <h3 class="font-bold text-white text-sm mt-0.5 leading-snug">{{ zona.nucleo_territorial }}</h3>
             <p class="text-xs text-slate-400 mt-1">
-              {{ zona.total_poblaciones }} localidades
+              {{ zona.total_poblaciones }} localidades • {{ (zona.poblacion_total_zona / 1000).toFixed(0) }}k hab.
               <span v-if="zona.poblaciones_en_alerta > 0" class="text-amber-400 font-bold ml-1">
-                ({{ zona.poblaciones_en_alerta }} en alerta)
+                ({{ zona.poblaciones_en_alerta }} en triaje)
               </span>
             </p>
           </div>
 
           <div
-            class="w-6 h-6 rounded-full flex-shrink-0 flex items-center justify-center border-2"
+            class="w-6 h-6 rounded-full flex-shrink-0 border-2"
             :style="{ backgroundColor: zona.color_maximo_hex, borderColor: '#ffffff22' }"
-            :title="`Nivel máximo: ${zona.nivel_maximo}`"
           ></div>
         </div>
       </div>
@@ -105,7 +123,8 @@
 <script setup>
 defineProps({
   alertaPrioritaria: { type: Array, default: () => [] },
-  resumenZonas: { type: Array, default: () => [] }
+  resumenZonas: { type: Array, default: () => [] },
+  poblacionEnRiesgoTotal: { type: Number, default: 0 }
 });
 
 defineEmits(['select-poblacion', 'select-zona']);

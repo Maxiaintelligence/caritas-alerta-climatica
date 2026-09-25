@@ -15,12 +15,12 @@
       <!-- Estado de Carga -->
       <div v-if="loading && !riskData" class="flex flex-col items-center justify-center py-20 space-y-3 text-slate-400">
         <div class="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-        <p class="text-sm">Cargando datos de monitoreo...</p>
+        <p class="text-sm">Evaluando vectores climáticos...</p>
       </div>
 
       <!-- Error de Conexión -->
       <div v-else-if="error" class="p-6 rounded-2xl bg-red-950/50 border border-red-800 text-center space-y-3">
-        <p class="text-red-400 font-bold">No se pudieron cargar los datos de monitoreo.</p>
+        <p class="text-red-400 font-bold">No se pudieron sincronizar los datos meteorológicos.</p>
         <p class="text-xs text-slate-400">{{ error }}</p>
         <button
           @click="loadRiskData"
@@ -30,13 +30,14 @@
         </button>
       </div>
 
-      <!-- Vistas Jerárquicas -->
+      <!-- Las 4 Vistas Jerárquicas -->
       <div v-else-if="riskData">
         <!-- Nivel 1: Dashboard Triaje -->
         <Nivel1Home
           v-if="currentView === 'nivel1'"
           :alerta-prioritaria="riskData.alerta_prioritaria"
           :resumen-zonas="riskData.resumen_zonas"
+          :poblacion-en-riesgo-total="riskData.meta.poblacion_en_riesgo_total"
           @select-zona="onSelectZona"
           @select-poblacion="onSelectPoblacion"
         />
@@ -49,9 +50,16 @@
           @select-poblacion="onSelectPoblacion"
         />
 
-        <!-- Nivel 3: Ficha Población -->
+        <!-- Nivel 3: Ficha Población 72h -->
         <Nivel3Poblacion
           v-else-if="currentView === 'nivel3' && selectedPoblacion"
+          :poblacion="selectedPoblacion"
+          @ver-plan-operativo="onVerPlanOperativo"
+        />
+
+        <!-- Nivel 4: Plan Operativo Detallado (Pormenores) -->
+        <Nivel4Detalle
+          v-else-if="currentView === 'nivel4' && selectedPoblacion"
           :poblacion="selectedPoblacion"
         />
       </div>
@@ -59,7 +67,7 @@
 
     <!-- Pie Institucional -->
     <footer class="bg-slate-900 border-t border-slate-800 py-4 text-center text-xs text-slate-500">
-      <p>Cáritas Pastoral Social • Sistema Preventivo v1.0 • Motor determinista cada 3h</p>
+      <p>Cáritas Pastoral Social • Sistema Vectorial de Alerta Temprana v2.0 • 71 Localidades Monitoreadas</p>
     </footer>
   </div>
 </template>
@@ -70,6 +78,7 @@ import HeaderNav from './components/HeaderNav.vue';
 import Nivel1Home from './components/views/Nivel1Home.vue';
 import Nivel2Zona from './components/views/Nivel2Zona.vue';
 import Nivel3Poblacion from './components/views/Nivel3Poblacion.vue';
+import Nivel4Detalle from './components/views/Nivel4Detalle.vue';
 
 const riskData = ref(null);
 const loading = ref(false);
@@ -80,13 +89,12 @@ const currentView = ref('nivel1');
 const selectedZonaId = ref(null);
 const selectedPoblacionId = ref(null);
 
-// Cargar latest-risk.json
 async function loadRiskData() {
   loading.value = true;
   error.value = null;
   try {
     const res = await fetch(`/data/latest-risk.json?t=${Date.now()}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     riskData.value = await res.json();
   } catch (err) {
     error.value = err.message;
@@ -95,7 +103,6 @@ async function loadRiskData() {
   }
 }
 
-// Navegación
 function onSelectZona(zonaId) {
   selectedZonaId.value = zonaId;
   currentView.value = 'nivel2';
@@ -108,8 +115,16 @@ function onSelectPoblacion(poblacionId) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
+function onVerPlanOperativo(poblacionId) {
+  selectedPoblacionId.value = poblacionId;
+  currentView.value = 'nivel4';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 function goBack() {
-  if (currentView.value === 'nivel3') {
+  if (currentView.value === 'nivel4') {
+    currentView.value = 'nivel3';
+  } else if (currentView.value === 'nivel3') {
     currentView.value = selectedZonaId.value ? 'nivel2' : 'nivel1';
   } else if (currentView.value === 'nivel2') {
     currentView.value = 'nivel1';
@@ -118,7 +133,6 @@ function goBack() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Getters computados
 const selectedZona = computed(() => {
   if (!riskData.value || !selectedZonaId.value) return null;
   return riskData.value.resumen_zonas.find(z => z.zona_id === selectedZonaId.value);
@@ -135,7 +149,6 @@ const selectedPoblacion = computed(() => {
   return riskData.value.detalle_poblaciones[selectedPoblacionId.value];
 });
 
-// Eventos de red
 function updateOnlineStatus() {
   isOnline.value = navigator.onLine;
 }
