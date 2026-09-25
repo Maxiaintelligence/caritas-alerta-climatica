@@ -1,5 +1,5 @@
 {
-  "version": "4.0.0",
+  "version": "5.0.0",
   "institucion": "Cáritas Pastoral Social",
   "reglas_histeresis": {
     "ciclos_descenso_requeridos": 2,
@@ -12,31 +12,36 @@
       "color_hex": "#10B981",
       "accion_corta": "Condiciones estables. Operación normal.",
       "protocolo_comunitario": "Condiciones meteorológicas dentro de la normalidad estacional. Monitoreo regular.",
-      "protocolo_caritas": "Registro y monitoreo pasivo cada 3 horas. Cero movilización de personal."
+      "protocolo_caritas": "Registro y monitoreo pasivo cada 3 horas. Cero movilización de personal.",
+      "canales": ["WhatsApp informativo", "Boletín digital"]
     },
     {
       "nivel": 2,
-      "nombre": "MEDIO / MODERADO",
+      "nombre": "MEDIO / ALISTAMIENTO",
       "color_hex": "#F59E0B",
-      "accion_corta": "Fase de preparación y alistamiento preventivo.",
-      "protocolo_comunitario": "Limpieza de drenajes, aseguramiento de techumbres ligeras y preparación de mochila de emergencia con radio, linterna y medicamentos.",
-      "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones como posibles albergues y enlace preventivo con Protección Civil."
+      "accion_corta": "Alistamiento preventivo sin movilización física.",
+      "protocolo_comunitario": "Limpieza de drenajes, aseguramiento de techumbres ligeras y preparación de mochila de emergencia con radio, linterna y medicamentos. Identificar a personas con movilidad reducida.",
+      "protocolo_caritas": "Alistamiento sin movilización física: Notificación a coordinadores parroquiales por WhatsApp/teléfono, verificación de inventario en bodega (reserva 72h para 50 personas) y revisión de transitabilidad de rutas.",
+      "canales": ["WhatsApp Parroquial", "Llamada telefónica a enlaces rurales", "Redes sociales"],
+      "stock_minimo_50p": { "agua_litros": 300, "raciones_comida": 450, "cobijas": 50 }
     },
     {
       "nivel": 3,
-      "nombre": "ALTO",
+      "nombre": "ALTO / MOVILIZACIÓN",
       "color_hex": "#F97316",
-      "accion_corta": "Movilización táctica y restricción de traslados.",
-      "protocolo_comunitario": "Restricción de traslados carreteros; traslado preventivo de personas vulnerables (adultos mayores, menores) a viviendas seguras o albergues.",
-      "protocolo_caritas": "Movilización del Comité Diocesano de Emergencias. Preposicionamiento físico de víveres, agua y botiquines en parroquias estratégicas."
+      "accion_corta": "Movilización táctica y preposicionamiento.",
+      "protocolo_comunitario": "Suspensión de traslados carreteros no esenciales. Evacuación voluntaria de zonas vulnerables hacia viviendas de familiares o albergues durante horas de luz diurna. Resguardo de ganado en zonas altas.",
+      "protocolo_caritas": "Activación formal del Comité Diocesano de Emergencias. Preposicionamiento físico de víveres, agua y botiquines en parroquias nodo. Registro de personas para evacuación asistida.",
+      "canales": ["Perifoneo con bocina", "Radio Comunitaria", "WhatsApp Masivo", "Llamadas a párrocos"]
     },
     {
       "nivel": 4,
-      "nombre": "CRÍTICO",
+      "nombre": "CRÍTICO / EMERGENCIA",
       "color_hex": "#EF4444",
-      "accion_corta": "¡Emergencia! Evacuación preventiva y resguardo total.",
-      "protocolo_comunitario": "Evacuación preventiva prioritaria de zonas de alto riesgo (márgenes de ríos y pies de ladera). Resguardo absoluto en construcciones firmes o albergues.",
-      "protocolo_caritas": "Operación al 100% de la red de albergues y comedores parroquiales. Despliegue de ayuda humanitaria y rescate en coordinación con Protección Civil y autoridades."
+      "accion_corta": "¡Emergencia! Evacuación prioritaria y operación total.",
+      "protocolo_comunitario": "Evacuación preventiva obligatoria de zonas inundables y laderas inestables antes de la hora pico estimada. Resguardo absoluto en construcciones firmes de concreto. Cero cruce de arroyos.",
+      "protocolo_caritas": "Operación al 100% de la red de albergues y comedores parroquiales. Coordinación con Protección Civil y Fuerzas Armadas para rescate y auxilio humanitario. Suspensión de actividades escolares y laborales.",
+      "canales": ["Toque de campanas parroquiales", "Sirena comunitaria", "Brigadas casa por casa", "Radio local"]
     }
   ],
   "vectores_climaticos": {
@@ -108,64 +113,138 @@
   },
   "sinergias": [
     {
-      "id": "sinergia_laderas_inundacion",
-      "vector_a": "v4_laderas",
-      "vector_b": "v1_inundacion",
-      "nivel_minimo": 3,
-      "incremento": 1,
-      "titulo": "ALERTA POR DESLIZAMIENTO DE LADERAS Y CRECIDA DE RÍOS",
-      "diagnostico": "Lluvias torrenciales continuas sobre terrenos con acumulación crítica de humedad.",
-      "peligro": "Alto potencial de desprendimiento de tierra y rocas en taludes; acumulación de sedimentos que obstruyen cauces y puentes, provocando desbordamientos súbitos y cortes en caminos rurales.",
-      "medidas": [
-        "Evacue preventivamente si su vivienda se ubica al pie o sobre laderas inestables, o en las márgenes de ríos y arroyos.",
-        "Realice los traslados hacia los albergues de Cáritas Pastoral Social o inmuebles seguros en zonas altas durante las horas de luz natural.",
-        "Evite estrictamente cruzar arroyos, vados o puentes anegados ante la fuerza de arrastre de la corriente."
-      ]
-    },
-    {
-      "id": "sinergia_ciclon_lluvias",
+      "id": "sinergia_1_ciclon_inundacion_laderas",
+      "prioridad": 1,
       "vector_a": "v7_ciclones",
       "vector_b": "v1_inundacion",
       "nivel_minimo": 3,
       "incremento": 1,
-      "titulo": "ALERTA POR TEMPORAL CICLÓNICO Y VIENTOS SEVEROS",
-      "diagnostico": "Aproximación de un sistema ciclónico con precipitaciones intensas sostenidas y ráfagas de viento de consideración.",
-      "peligro": "Desprendimiento de techumbres y estructuras ligeras; caída de árboles y líneas de transmisión eléctrica con interrupción de energía y telecomunicaciones.",
+      "titulo": "ALERTA CATASTRÓFICA: IMPACTO CICLÓNICO CON INUNDACIÓN Y DESLAVES",
+      "diagnostico": "Vientos huracanados e intensas lluvias orográficas concentradas sobre cuencas y laderas saturadas.",
+      "peligro": "Colapso masivo de caminos, desbordamiento violento de ríos y cortes prolongados de energía y telecomunicaciones.",
       "medidas": [
-        "Permanezca en construcciones sólidas con techo de concreto; manténgase alejado de ventanas y árboles de gran copa.",
-        "Asegure una reserva familiar de agua potable y alimentos no perecederos para un periodo mínimo de 72 horas.",
-        "Concluya cualquier desplazamiento hacia refugios temporales antes del incremento sostenido de la velocidad del viento."
+        "Evacuación obligatoria hacia albergues en losa de concreto antes de que el viento supere 60 km/h.",
+        "Reserva familiar obligatoria de agua potable y alimentos no perecederos para 72 horas.",
+        "Prohibido salir a la intemperie durante la calma del ojo del ciclón."
       ]
     },
     {
-      "id": "sinergia_calor_incendios",
+      "id": "sinergia_2_laderas_inundacion",
+      "prioridad": 2,
+      "vector_a": "v4_laderas",
+      "vector_b": "v1_inundacion",
+      "nivel_minimo": 3,
+      "incremento": 1,
+      "titulo": "ALERTA EXTREMA: DESLIZAMIENTO DE LADERAS Y CRECIDA DE RÍOS",
+      "diagnostico": "Lluvias torrenciales continuas sobre terrenos con acumulación crítica de humedad.",
+      "peligro": "Flujos de lodo destructivos, taponamiento de puentes por escombros y desbordamientos repentinos.",
+      "medidas": [
+        "Evacue preventivamente hacia cotas altas durante las horas de luz natural (nunca de noche).",
+        "No cruce puentes o vados si el nivel del agua supera los 30 cm de altura.",
+        "Asistir de inmediato la evacuación de personas con movilidad reducida y adultos mayores."
+      ]
+    },
+    {
+      "id": "sinergia_3_tormenta_inundacion",
+      "prioridad": 3,
+      "vector_a": "v6_tormentas",
+      "vector_b": "v1_inundacion",
+      "nivel_minimo": 3,
+      "incremento": 1,
+      "titulo": "ALERTA SÚBITA: GRANIZADA CON INUNDACIÓN RELÁMPAGO (FLASH FLOOD)",
+      "diagnostico": "Granizada severa que colmata alcantarillas y drenajes, seguida de lluvia torrencial concentrada.",
+      "peligro": "Anegamiento violento de calles y plantas bajas en menos de 30 minutos.",
+      "medidas": [
+        "Desalojar sótanos y plantas bajas hacia pisos superiores o zonas altas.",
+        "No intentar despejar coladeras durante la tormenta por riesgo de succión o arrastre.",
+        "Desconectar interruptores principales de electricidad ante el ingreso de agua."
+      ]
+    },
+    {
+      "id": "sinergia_4_calor_incendios",
+      "prioridad": 4,
       "vector_a": "v3_calor",
       "vector_b": "v5_incendios",
       "nivel_minimo": 3,
       "incremento": 1,
-      "titulo": "ALERTA POR CONDICIONES FAVORABLES PARA INCENDIOS FORESTALES",
-      "diagnostico": "Altas temperaturas combinadas con baja humedad relativa y presencia de viento continuo.",
-      "peligro": "Condiciones críticas para la generación y propagación acelerada de incendios forestales y de pastizales con avance hacia áreas pobladas y humo denso.",
+      "titulo": "ALERTA EXPLOSIVA: ONDA DE CALOR CON RIESGO CRÍTICO DE INCENDIO",
+      "diagnostico": "Sequedad extrema del combustible forestal combinada con temperaturas >33°C y viento seco.",
+      "peligro": "Generación espontánea de fuego de avance rápido hacia zonas habitadas y humo tóxico.",
       "medidas": [
-        "Prohibición estricta de quemas agrícolas, quema de basura o encendido de fogatas.",
-        "En caso de detectarse un frente de fuego próximo, evacue de manera ordenada en dirección contraria al avance del humo hacia áreas despejadas.",
-        "Utilice protección respiratoria o paños húmedos para proteger vías respiratorias ante la presencia de ceniza y humo."
+        "Prohibición absoluta de quemas agrícolas, fogatas y uso de pirotecnia.",
+        "En caso de fuego cercano, evacuar inmediatamente en dirección perpendicular al viento usando mascarillas N95.",
+        "Habilitar centros parroquiales como puntos de hidratación masiva."
       ]
     },
     {
-      "id": "sinergia_helada_viento",
+      "id": "sinergia_5_helada_viento",
+      "prioridad": 5,
       "vector_a": "v2_heladas",
       "vector_b": "v6_tormentas",
       "nivel_minimo": 3,
       "incremento": 1,
-      "titulo": "ALERTA POR HELADA SEVERA Y BAJA SENSACIÓN TÉRMICA",
-      "diagnostico": "Descenso marcado de temperatura acompañado de ráfagas de viento que reducen significativamente la sensación térmica.",
-      "peligro": "Riesgo agudo de hipotermia en personas vulnerables y formación de placas de hielo sobre puentes y tramos carreteros (pérdida de adherencia vehicular).",
+      "titulo": "ALERTA POR CHOQUE POLAR: HELADA SEVERA CON VIENTO ÁRTICO",
+      "diagnostico": "Descenso térmico bajo cero con viento sostenido que desploma la sensación térmica.",
+      "peligro": "Hipotermia aguda en menos de 30 minutos y formación de placas invisibles de hielo en carreteras.",
       "medidas": [
-        "Evite estrictamente el uso de anafres, carbón o calentadores de combustión en habitaciones cerradas para prevenir intoxicación por monóxido de carbono.",
-        "Acuda a los albergues temporales acondicionados por Cáritas Pastoral Social si habita en viviendas con aislamiento precario.",
-        "Suspenda la circulación vehicular nocturna y matutina en tramos de montaña ante la probabilidad de pavimento congelado."
+        "Prohibición estricta de anafres o fogatas en habitaciones cerradas sin ventilación.",
+        "Resguardo nocturno obligatorio (20:00 a 08:00 hrs) en albergues térmicos parroquiales.",
+        "Suspender la circulación vehicular matutina en tramos de montaña."
+      ]
+    },
+    {
+      "id": "sinergia_6_ciclon_tormenta",
+      "prioridad": 6,
+      "vector_a": "v7_ciclones",
+      "vector_b": "v6_tormentas",
+      "nivel_minimo": 3,
+      "incremento": 1,
+      "titulo": "ALERTA CONVECTIVA: BANDAS CICLÓNICAS CON RIESGO DE TORNADOS",
+      "diagnostico": "Cizalladura severa generada por las bandas espirales exteriores del ciclón.",
+      "peligro": "Formación de ráfagas destructivas descendentes y torbellinos embebidos.",
+      "medidas": [
+        "Permanecer en el centro de la vivienda o baño interior lejos de ventanales y techos de lámina.",
+        "Desconectar la energía eléctrica ante caída de postes o cables en la vía pública."
+      ]
+    },
+    {
+      "id": "sinergia_7_calor_sequia",
+      "prioridad": 7,
+      "vector_a": "v3_calor",
+      "vector_b": "v1_inundacion",
+      "nivel_minimo": 3,
+      "incremento": 1,
+      "titulo": "ALERTA AGROCLIMÁTICA: ESTRÉS TÉRMICO E HÍDRICO PROLONGADO",
+      "diagnostico": "Temperaturas anómalamente altas combinadas con más de 14 días sin precipitación.",
+      "peligro": "Deshidratación severa en jornaleros agrícolas y estrés letal en ganado y aves de corral.",
+      "medidas": [
+        "Suspender faenas agrícolas al aire libre entre las 11:00 y las 16:00 horas.",
+        "Priorizar el racionamiento de agua para consumo humano y bebederos sombreados para animales."
+      ]
+    },
+    {
+      "id": "sinergia_8_helada_sequia",
+      "prioridad": 8,
+      "vector_a": "v2_heladas",
+      "vector_b": "v5_incendios",
+      "nivel_minimo": 3,
+      "incremento": 1,
+      "titulo": "ALERTA AGRÍCOLA: HELADA NEGRA CON DESECACIÓN DE CULTIVOS",
+      "diagnostico": "Ambiente extremadamente seco con temperaturas bajo cero sin formación de escarcha.",
+      "peligro": "Muerte celular irreversible por congelamiento en milpas, frutales y forrajes.",
+      "medidas": [
+        "Cubrir huertos y cultivos estratégicos con doble capa de paja, rastrojo seco o plástico.",
+        "No realizar riegos nocturnos durante el evento para evitar congelamiento de raíces."
       ]
     }
-  ]
+  ],
+  "protocolo_post_evento_edan": {
+    "fases": [
+      { "fase": 1, "ventana": "0 a 24h", "accion": "Censo rápido de damnificados, heridos y ocupación de albergues." },
+      { "fase": 2, "ventana": "24 a 72h", "accion": "Operación de comedores comunitarios y distribución de víveres y agua." },
+      { "fase": 3, "ventana": "72h a 7d", "accion": "Levantamiento formal del Formato EDAN Cáritas para gestión de ayuda." },
+      { "fase": 4, "ventana": "7 a 15d", "accion": "Activación de red de contención psico-espiritual para familias en duelo." },
+      { "fase": 5, "ventana": "Día 15+", "accion": "Plan de reconstrucción comunitaria y reunión de lecciones aprendidas." }
+    ]
+  }
 }
