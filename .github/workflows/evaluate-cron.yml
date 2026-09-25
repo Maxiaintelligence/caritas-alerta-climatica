@@ -21,15 +21,26 @@ jobs:
         with:
           node-version: 22
 
-      - name: 3. Ejecutar Motor de Pronóstico Acoplado
+      - name: 3. Instalar dependencias
+        run: npm install
+
+      - name: 4. Ejecutar Motor de Pronóstico Acoplado
         run: node scripts/evaluate.js
 
-      - name: 4. Ejecutar Robot de Verificación Continua
+      - name: 5. Ejecutar Robot de Verificación Continua
         run: node scripts/verify-forecast.js
 
-      - name: 5. Publicar Datos y Métricas Científicas
+      - name: 6. Despachar Alertas por Correo (Nivel 3 y 4)
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_DESTINATION: ${{ secrets.ALERT_DESTINATION }}
+          VERCEL_APP_URL: ${{ secrets.VERCEL_APP_URL }}
+        run: node scripts/send-alerts.js
+
+      - name: 7. Publicar Datos y Estados en Repositorio
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ public/data/
-          git diff --staged --quiet || (git commit -m "Auto-evaluación y auditoría SatRC Bot [Cron]" && git push)
+          git diff --staged --quiet || (git commit -m "Auto-evaluación, verificación y despacho de alertas SatRC [Cron]" && git push)
