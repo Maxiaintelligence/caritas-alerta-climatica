@@ -15,13 +15,13 @@
       <!-- Estado de Carga -->
       <div v-if="loading && !riskData" class="flex flex-col items-center justify-center py-20 space-y-3 text-slate-400">
         <div class="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-        <p class="text-sm">Evaluando vectores climáticos...</p>
+        <p class="text-sm">Evaluando vectores meteorológicos en SatRC...</p>
       </div>
 
       <!-- Error de Conexión -->
       <div v-else-if="error" class="p-6 rounded-2xl bg-red-950/50 border border-red-800 text-center space-y-3">
         <p class="text-red-400 font-bold">No se pudieron sincronizar los datos meteorológicos.</p>
-        <p class="text-xs text-slate-400">{{ error }}</p>
+        <p class="text-xs text-slate-400">Consulte a sus autoridades locales y medios oficiales para más información.</p>
         <button
           @click="loadRiskData"
           class="px-4 py-2 bg-red-600 hover:bg-red-500 rounded-lg text-xs font-bold text-white transition-colors cursor-pointer"
@@ -65,9 +65,14 @@
       </div>
     </main>
 
-    <!-- Pie Institucional -->
-    <footer class="bg-slate-900 border-t border-slate-800 py-4 text-center text-xs text-slate-500">
-      <p>Cáritas Pastoral Social • Sistema Vectorial de Alerta Temprana v2.0 • 71 Localidades Monitoreadas</p>
+    <!-- Pie Institucional Oficial -->
+    <footer class="bg-slate-900 border-t border-slate-800 py-4 text-center text-xs text-slate-400">
+      <p class="font-medium text-slate-300">
+        SatRC v1.0 • Cáritas Pastoral Social de la Arquidiócesis de Tulancingo • Cobertura Regional (91 Localidades)
+      </p>
+      <p class="text-[11px] text-slate-500 mt-1">
+        Consulte a sus autoridades locales y medios oficiales para más información.
+      </p>
     </footer>
   </div>
 </template>

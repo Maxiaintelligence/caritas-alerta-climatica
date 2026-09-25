@@ -8,7 +8,7 @@
       <div>
         <div class="flex items-center space-x-2">
           <span class="text-[11px] font-black uppercase tracking-widest px-2.5 py-1 rounded bg-black/50 text-amber-300">
-            Nivel 4: Plan Operativo Táctico
+            SatRC • Nivel 4: Plan Operativo Táctico
           </span>
           <span class="text-xs text-slate-300">Zona {{ poblacion.zona_id }} • {{ poblacion.zona_nombre }}</span>
         </div>
@@ -72,7 +72,7 @@
       </div>
     </section>
 
-    <!-- 3. FICHA DE UBICACIÓN Y LOGÍSTICA GEORREFERENCIADA -->
+    <!-- 3. FICHA DE UBICACIÓN Y REFUGIO NODO -->
     <section class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
       <h3 class="text-sm font-black text-cyan-400 uppercase tracking-wider flex items-center space-x-2">
         <span>📍</span>
@@ -137,15 +137,11 @@
             <span class="text-emerald-400 font-bold">3.</span>
             <span>Verificación de reservas de agua embotellada, alimentos no perecederos y lámparas de emergencia.</span>
           </li>
-          <li class="flex items-start space-x-2">
-            <span class="text-emerald-400 font-bold">4.</span>
-            <span>Establecimiento de enlace directo con el Consejo Municipal de Protección Civil y radios comunitarias.</span>
-          </li>
         </ul>
       </div>
     </section>
 
-    <!-- 5. GUÍA FAMILIAR Y GRUPOS ESPECÍFICOS -->
+    <!-- 5. GUÍA FAMILIAR Y AVISO OFICIAL -->
     <section class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
       <h3 class="text-sm font-black text-purple-400 uppercase tracking-wider flex items-center space-x-2">
         <span>👥</span>
@@ -154,25 +150,27 @@
       <p class="text-xs leading-relaxed text-slate-300">
         {{ poblacion.evaluacion.protocolo_comunitario }}
       </p>
-      <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 text-xs text-slate-400 italic space-y-1">
-        <p>⚠️ <strong>Jornaleros y trabajadores al aire libre</strong>: Suspender faenas pesadas ante alertas de calor o tormentas.</p>
-        <p>⚠️ <strong>Ganado y mascotas</strong>: Desplazar animales de granja a zonas altas antes del pico de lluvia.</p>
+      
+      <!-- Mensaje Institucional Oficial -->
+      <div class="p-4 rounded-xl bg-blue-950/40 border border-blue-500/40 text-blue-200 text-xs font-medium flex items-center space-x-2.5">
+        <span class="text-base">📢</span>
+        <span>Consulte a sus autoridades locales y medios oficiales para más información.</span>
       </div>
     </section>
 
-    <!-- 6. PROTOCOLO POST-EVENTO (FICHA EDAN CÁRITAS) -->
+    <!-- 6. PROTOCOLO POST-EVENTO (EDAN) -->
     <section class="p-5 rounded-2xl bg-slate-900 border border-slate-800 space-y-3">
       <h3 class="text-sm font-black text-rose-400 uppercase tracking-wider flex items-center space-x-2">
         <span>📋</span>
-        <span>6. Protocolo de Recuperación Post-Evento (EDAN Cáritas)</span>
+        <span>6. Protocolo de Recuperación Post-Evento (EDAN)</span>
       </h3>
       <div class="space-y-2 text-xs text-slate-300">
         <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-1">
-          <p class="font-bold text-white">Cronograma Humanitario:</p>
-          <p>• <strong>0 a 24h post-impacto</strong>: Censo rápido de familias damnificadas y personas en albergue.</p>
+          <p class="font-bold text-white">Cronograma de Atención:</p>
+          <p>• <strong>0 a 24h</strong>: Censo rápido de familias damnificadas y personas en albergue.</p>
           <p>• <strong>24 a 72h</strong>: Distribución de despensas, agua purificada y cobijas.</p>
-          <p>• <strong>72h a 7 días</strong>: Levantamiento del Formato EDAN Cáritas para gestión de ayuda diocesana.</p>
-          <p>• <strong>Día 15 en adelante</strong>: Plan de reconstrucción y lecciones aprendidas.</p>
+          <p>• <strong>72h a 7 días</strong>: Levantamiento del Formato EDAN para gestión de ayuda diocesana.</p>
+          <p>• <strong>Día 15+</strong>: Plan de reconstrucción comunitaria.</p>
         </div>
       </div>
     </section>

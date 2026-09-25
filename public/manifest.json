@@ -1,7 +1,7 @@
 {
-  "name": "Cáritas Alerta Climática",
-  "short_name": "Cáritas Clima",
-  "description": "Sistema Preventivo de Alerta Temprana y Riesgo Climático",
+  "name": "SatRC — Sistema de Alerta Temprana y Riesgos Climáticos",
+  "short_name": "SatRC",
+  "description": "Sistema de Alerta Temprana y Riesgos Climáticos de Cáritas Pastoral Social de la Arquidiócesis de Tulancingo",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#020617",

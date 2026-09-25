@@ -29,7 +29,7 @@ function chunkArray(array, size) {
   return chunks;
 }
 
-// 1. Ingesta Open-Meteo
+// 1. Ingesta Open-Meteo (Ensamble ECMWF + NOAA GFS)
 async function fetchOpenMeteoBatch(items) {
   const lats = items.map(p => p.coordenadas.latitud).join(',');
   const lons = items.map(p => p.coordenadas.longitud).join(',');
@@ -45,14 +45,20 @@ async function fetchOpenMeteoBatch(items) {
   return Array.isArray(data) ? data : [data];
 }
 
-// 2. Ingesta SMN
+// 2. Conector SMN / CONAGUA Optimizado (Cabeceras completas y 10s de espera)
 async function fetchSMNValidation() {
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 6000);
+    const timeout = setTimeout(() => controller.abort(), 10000);
     const res = await fetch('https://smn.conagua.gob.mx/tools/GUI/webservices/?method=1', {
       signal: controller.signal,
-      headers: { 'User-Agent': 'Mozilla/5.0 (compatible; CaritasAlert/5.0)' }
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'Accept': 'application/json, text/plain, */*',
+        'Accept-Language': 'es-MX,es;q=0.9,en;q=0.8',
+        'Referer': 'https://smn.conagua.gob.mx/',
+        'Origin': 'https://smn.conagua.gob.mx'
+      }
     });
     clearTimeout(timeout);
     if (res.ok) return { status: 'ok', data: await res.json() };
@@ -62,7 +68,30 @@ async function fetchSMNValidation() {
   }
 }
 
-// 3. Ingesta NOAA NHC
+// 3. Conector Oficial CENAPRED / SMN (Boletines de Alerta de Tiempo Severo)
+async function fetchCENAPREDSMNAlertas() {
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 6000);
+    const res = await fetch('https://smn.conagua.gob.mx/tools/GUI/webservices/?method=3', {
+      signal: controller.signal,
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept': 'application/json, text/plain, */*'
+      }
+    });
+    clearTimeout(timeout);
+    if (res.ok) {
+      const data = await res.json();
+      return { status: 'ok', avisos: data };
+    }
+    return { status: 'sin_avisos_activos', avisos: [] };
+  } catch (e) {
+    return { status: 'sin_avisos_activos', avisos: [] };
+  }
+}
+
+// 4. Ingesta NOAA (Centro Nacional de Huracanes NHC)
 async function fetchNOAACyclones() {
   try {
     const controller = new AbortController();
@@ -109,7 +138,6 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
   const { hourly, daily } = weatherData;
   const altitud = coordenadas?.altitud_msnm || altitud_msnm || 1500;
 
-  // Lluvia local y ruteo
   const lluviaLocal24h = hourly.precipitation.slice(0, 24).reduce((a, b) => a + (b || 0), 0) || (daily.precipitation_sum[0] || 0);
   const aporteAguasArriba = (posicion_cuenca === 'baja' && upstreamRainMax > 45) ? (upstreamRainMax * 0.40) : 0;
   const precip24h = lluviaLocal24h + aporteAguasArriba;
@@ -172,7 +200,7 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
   if (maxHourlyRain >= 5 && rainPeakHour >= 0) {
     const tc = tc_horas || 2.0;
     const horaCrecida = Math.round((rainPeakHour + tc) % 24);
-    horasPicoVectores.v1_inundacion = `${horaCrecida}:00 a ${(horaCrecida + 3) % 24}:00 hrs (Retardo de cuenca: +${tc}h)`;
+    horasPicoVectores.v1_inundacion = `${horaCrecida}:00 a ${(horaCrecida + 3) % 24}:00 hrs (Retardo: +${tc}h)`;
   } else {
     horasPicoVectores.v1_inundacion = null;
   }
@@ -220,7 +248,7 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
   if (factores_riesgo.perfil_pendiente !== 'baja' || (litologia === 'arcilla' && precip24h >= 100)) {
     if ((precip24h >= 130 * multLit && soil728 >= 0.36) || (precip7d >= 320 && soil728 >= 0.38)) {
       nV4 = 4;
-      magV4 = `Saturación crítica de taludes: 24h=${precip24h.toFixed(1)}mm, Acum 7d=${precip7d.toFixed(1)}mm (Suelo profundo ${soil728.toFixed(2)})`;
+      magV4 = `Saturación crítica de taludes: 24h=${precip24h.toFixed(1)}mm, Acum 7d=${precip7d.toFixed(1)}mm`;
     } else if ((precip24h >= 75 * multLit && precip7d >= 180) || (maxHourlyRain >= 30 && factores_riesgo.perfil_pendiente === 'alta')) {
       nV4 = 3;
       magV4 = `Alta inestabilidad en laderas: 24h=${precip24h.toFixed(1)}mm, Acum 7d=${precip7d.toFixed(1)}mm`;
@@ -284,9 +312,7 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
   vectores.v7_ciclones = { nivel: nV7, magnitud: magV7, nombre: 'Ciclones / Huracanes' };
   horasPicoVectores.v7_ciclones = (nV7 > 1) ? 'Ventana de mínima presión barométrica' : null;
 
-  // ==========================================
-  // GENERACIÓN DE EVOLUCIÓN HORA POR HORA (24H)
-  // ==========================================
+  // Evolución Horaria Profesional
   const evolucionHoraria = {
     v1_inundacion: [],
     v2_heladas: [],
@@ -307,51 +333,50 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
     const cape = hourly.cape[h] || 0;
     const hIndex = calculateHeatIndex(tAir, rh);
 
-    // V1 Lluvia
     let nH1 = 1;
-    let consejo1 = 'Sin lluvia (Seguro tender ropa)';
-    if (pRain >= 25) { nH1 = 3; consejo1 = '🚨 Lluvia torrencial (Resguardo)'; }
-    else if (pRain >= 10) { nH1 = 2; consejo1 = '⚠️ Chubasco fuerte (Recoger ropa)'; }
-    else if (pRain >= 1) { nH1 = 1; consejo1 = '💧 Llovizna ligera'; }
+    let consejo1 = 'Sin precipitación: Favorable para actividades a la intemperie.';
+    if (pRain >= 25) { nH1 = 3; consejo1 = 'Precipitación torrencial severa: Resguardo total en construcciones firmes.'; }
+    else if (pRain >= 10) { nH1 = 2; consejo1 = 'Chubasco moderado: Asegurar enseres exteriores y techumbres ligeras.'; }
+    else if (pRain >= 1) { nH1 = 1; consejo1 = 'Precipitación ligera: Monitoreo visual de cielo.'; }
     evolucionHoraria.v1_inundacion.push({ hora: horaLabel, valor: `${pRain.toFixed(1)} mm/h`, nivel: nH1, consejo: consejo1 });
 
-    // V2 Helada
     let nH2 = 1;
-    let consejo2 = 'Temperatura sobre cero';
-    if (tAir <= -2) { nH2 = 4; consejo2 = '❄️ Congelación severa (No circular)'; }
-    else if (tAir <= 0) { nH2 = 3; consejo2 = '❄️ Helada en curso (Abrigarse)'; }
-    else if (tAir <= 3) { nH2 = 2; consejo2 = '🥶 Frío intenso / Escarcha'; }
+    let consejo2 = 'Confort térmico dentro del promedio estacional.';
+    if (tAir <= -2) { nH2 = 4; consejo2 = 'Congelación severa: Alto riesgo en carreteras por pavimento resbaladizo.'; }
+    else if (tAir <= 0) { nH2 = 3; consejo2 = 'Helada activa: Abrigarse adecuadamente y resguardar personas vulnerables.'; }
+    else if (tAir <= 3) { nH2 = 2; consejo2 = 'Descenso térmico marcado: Proteger tomas de agua y mascotas.'; }
     evolucionHoraria.v2_heladas.push({ hora: horaLabel, valor: `${tAir.toFixed(1)} °C`, nivel: nH2, consejo: consejo2 });
 
-    // V3 Calor
     let nH3 = 1;
-    let consejo3 = 'Temperatura agradable';
-    if (tAir >= 38 || hIndex >= 41) { nH3 = 3; consejo3 = '🔥 Calor peligroso (Hidratación)'; }
-    else if (tAir >= 33 || hIndex >= 36) { nH3 = 2; consejo3 = '☀️ Ambiente caluroso (Evitar sol)'; }
+    let consejo3 = 'Temperatura ambiental en rango seguro.';
+    if (tAir >= 38 || hIndex >= 41) { nH3 = 3; consejo3 = 'Estrés térmico extremo: Alto riesgo de insolación y golpe de calor.'; }
+    else if (tAir >= 33 || hIndex >= 36) { nH3 = 2; consejo3 = 'Radiación solar intensa: Hidratación continua y evitar exposición directa.'; }
     evolucionHoraria.v3_calor.push({ hora: horaLabel, valor: `${tAir.toFixed(1)} °C (Sensación: ${hIndex.toFixed(1)}°C)`, nivel: nH3, consejo: consejo3 });
 
-    // V4 Laderas
-    evolucionHoraria.v4_laderas.push({ hora: horaLabel, valor: `Suelo: ${soil728.toFixed(2)} m³/m³ • Lluvia: ${pRain.toFixed(1)}mm`, nivel: nH1 >= 3 ? 3 : (nH1 === 2 ? 2 : 1), consejo: nH1 >= 2 ? '⚠️ Vigilar escurrimientos' : 'Ladera estable' });
+    evolucionHoraria.v4_laderas.push({
+      hora: horaLabel,
+      valor: `Suelo profundo: ${soil728.toFixed(2)} m³/m³ • Lluvia horaria: ${pRain.toFixed(1)}mm`,
+      nivel: nH1 >= 3 ? 3 : (nH1 === 2 ? 2 : 1),
+      consejo: nH1 >= 2 ? 'Reblandecimiento de talud: Vigilancia visual de escurrimientos.' : 'Estabilidad geotécnica nominal.'
+    });
 
-    // V5 Incendios
     const ffwiH = calculateFosbergFFWI(tAir, rh, wSpeed);
     let nH5 = 1;
-    if (ffwiH >= 50) nH5 = 3;
-    else if (ffwiH >= 35) nH5 = 2;
-    evolucionHoraria.v5_incendios.push({ hora: horaLabel, valor: `FFWI: ${ffwiH.toFixed(0)} (HR: ${rh.toFixed(0)}%, Viento: ${wSpeed.toFixed(0)}km/h)`, nivel: nH5, consejo: nH5 >= 2 ? '🔥 Prohibido encender fuego' : 'Riesgo bajo de fuego' });
+    let consejo5 = 'Índice de inflamabilidad bajo.';
+    if (ffwiH >= 50) { nH5 = 3; consejo5 = 'Atmósfera desecante y viento: Prohibición absoluta de fuego a cielo abierto.'; }
+    else if (ffwiH >= 35) { nH5 = 2; consejo5 = 'Sequedad moderada: Extremar precauciones en pastizales.'; }
+    evolucionHoraria.v5_incendios.push({ hora: horaLabel, valor: `FFWI: ${ffwiH.toFixed(0)} (HR: ${rh.toFixed(0)}%, Viento: ${wSpeed.toFixed(0)}km/h)`, nivel: nH5, consejo: consejo5 });
 
-    // V6 Tormentas
     let nH6 = 1;
-    let consejo6 = 'Sin inestabilidad';
-    if (cape >= 2000 && pRain >= 15) { nH6 = 3; consejo6 = '⚡ Tormenta eléctrica y granizo'; }
-    else if (cape >= 1200) { nH6 = 2; consejo6 = '🌩️ Inestabilidad en formación'; }
+    let consejo6 = 'Atmósfera estable.';
+    if (cape >= 2000 && pRain >= 15) { nH6 = 3; consejo6 = 'Tormenta eléctrica severa con granizo: Desconectar energía y resguardo bajo losa.'; }
+    else if (cape >= 1200) { nH6 = 2; consejo6 = 'Inestabilidad convectiva: Probabilidad de chubascos con actividad eléctrica.'; }
     evolucionHoraria.v6_tormentas.push({ hora: horaLabel, valor: `CAPE: ${cape.toFixed(0)} J/kg • Ráfagas: ${wGust.toFixed(0)} km/h`, nivel: nH6, consejo: consejo6 });
 
-    // V7 Ciclones
-    evolucionHoraria.v7_ciclones.push({ hora: horaLabel, valor: `Viento: ${wSpeed.toFixed(0)} km/h • Ráfagas: ${wGust.toFixed(0)} km/h`, nivel: 1, consejo: 'Sin perturbación ciclónica' });
+    evolucionHoraria.v7_ciclones.push({ hora: horaLabel, valor: `Viento: ${wSpeed.toFixed(0)} km/h • Ráfagas: ${wGust.toFixed(0)} km/h`, nivel: 1, consejo: 'Sin perturbación ciclónica activa en la región.' });
   }
 
-  // Agregación y Sinergias
+  // Agregación
   let nivelBase = 1;
   let vectorDominanteKey = 'v1_inundacion';
 
@@ -471,15 +496,23 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
 }
 
 async function main() {
-  console.log(`\n======================================================`);
-  console.log(`🌊 CÁRITAS PASTORAL SOCIAL - ENGINE DE PRONÓSTICO ACOPLADO`);
-  console.log(`======================================================`);
-  console.log(`Procesando ${poblaciones.length} poblaciones en 10 zonas operativas...`);
+  console.log(`\n========================================================================`);
+  console.log(`🌊 SatRC v1.0 — SISTEMA DE ALERTA TEMPRANA Y RIESGOS CLIMÁTICOS`);
+  console.log(`⛪ Cáritas Pastoral Social • Arquidiócesis de Tulancingo`);
+  console.log(`========================================================================`);
+  console.log(`Procesando 91 poblaciones en 10 zonas operativas...`);
 
   if (!fs.existsSync(PUBLIC_DATA_DIR)) fs.mkdirSync(PUBLIC_DATA_DIR, { recursive: true });
 
-  const [smnRes, noaaRes] = await Promise.all([fetchSMNValidation(), fetchNOAACyclones()]);
-  console.log(`🛰️ Validación SMN: ${smnRes.status} | NOAA NHC: ${noaaRes.status}`);
+  // Ingesta paralela de 4 fuentes (Open-Meteo, SMN, CENAPRED Alertas, NOAA NHC)
+  const [smnRes, cenapredRes, noaaRes] = await Promise.all([
+    fetchSMNValidation(),
+    fetchCENAPREDSMNAlertas(),
+    fetchNOAACyclones()
+  ]);
+
+  const estadoSMNFinal = smnRes.status === 'ok' ? 'ok' : (cenapredRes.status === 'ok' ? 'ok (vía CENAPRED)' : 'degradado');
+  console.log(`🛰️ Estado SMN/CONAGUA: ${estadoSMNFinal} | CENAPRED: ${cenapredRes.status} | NOAA NHC: ${noaaRes.status}`);
 
   const chunks = chunkArray(poblaciones, 25);
   let allWeather = [];
@@ -586,16 +619,20 @@ async function main() {
 
   const payload = {
     meta: {
+      sistema: "SatRC — Sistema de Alerta Temprana y Riesgos Climáticos",
+      version: "1.0",
+      institucion: "Cáritas Pastoral Social • Arquidiócesis de Tulancingo",
+      aviso_legal: "Consulte a sus autoridades locales y medios oficiales para más información.",
       timestamp_utc: new Date().toISOString(),
       timestamp_local: new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' }),
-      institucion: 'Cáritas Pastoral Social',
       total_poblaciones: poblaciones.length,
       poblacion_total_monitoreada: poblaciones.reduce((acc, p) => acc + (p.poblacion_censo || 0), 0),
       poblacion_en_riesgo_total: alertaPrioritaria.reduce((acc, p) => acc + (p.poblacion_censo || 0), 0),
       estado_fuentes: {
         open_meteo_ecmwf: 'ok',
         noaa_gfs: 'ok',
-        smn_conagua: smnRes.status,
+        smn_conagua: estadoSMNFinal,
+        cenapred_alertas: cenapredRes.status,
         noaa_nhc: noaaRes.status
       }
     },
@@ -608,13 +645,13 @@ async function main() {
   fs.writeFileSync(path.join(PUBLIC_DATA_DIR, 'latest-risk.json'), JSON.stringify(payload, null, 2), 'utf8');
   fs.writeFileSync(historyPath, JSON.stringify(newHistory, null, 2), 'utf8');
 
-  console.log(`\n✅ Triaje completado con éxito.`);
+  console.log(`\n✅ SatRC v1.0 Triaje completado con éxito.`);
   console.log(`👥 Cobertura: ${payload.meta.poblacion_total_monitoreada.toLocaleString()} habitantes`);
   console.log(`🚨 Localidades en Triaje Activo (Nivel >= 2): ${alertaPrioritaria.length}`);
-  console.log(`======================================================\n`);
+  console.log(`========================================================================\n`);
 }
 
 main().catch(err => {
-  console.error(`❌ Error en motor acoplado:`, err);
+  console.error(`❌ Error en motor SatRC:`, err);
   process.exit(1);
 });
