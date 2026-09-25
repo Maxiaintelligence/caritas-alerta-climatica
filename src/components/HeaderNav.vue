@@ -30,9 +30,18 @@
         </div>
       </div>
 
-      <!-- Acciones: Metodología y Actualización -->
-      <div class="flex items-center space-x-2.5">
-        <!-- Botón Metodología / Disclaimer -->
+      <!-- Acciones: Administración, Metodología y Refrescar -->
+      <div class="flex items-center space-x-2">
+        <!-- Botón Candado Administración -->
+        <button
+          @click="$emit('open-admin')"
+          class="p-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-amber-400 transition-colors cursor-pointer shadow-sm"
+          title="Consola de Mando Diocesano"
+        >
+          🔐
+        </button>
+
+        <!-- Botón Metodología -->
         <button
           @click="$emit('open-metodologia')"
           class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs text-slate-200 transition-colors cursor-pointer flex items-center space-x-1.5 shadow-sm"
@@ -74,5 +83,5 @@ defineProps({
   isOnline: { type: Boolean, default: true }
 });
 
-defineEmits(['back', 'refresh', 'open-metodologia']);
+defineEmits(['back', 'refresh', 'open-metodologia', 'open-admin']);
 </script>

@@ -9,6 +9,7 @@
       @back="goBack"
       @refresh="loadRiskData"
       @open-metodologia="isMetodologiaOpen = true"
+      @open-admin="handleOpenAdmin"
     />
 
     <!-- Contenido Principal -->
@@ -66,6 +67,55 @@
       </div>
     </main>
 
+    <!-- Modal de Autenticación de Mando -->
+    <div
+      v-if="isLoginModalOpen"
+      class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+    >
+      <div class="bg-slate-900 border border-slate-700 w-full max-w-sm rounded-2xl p-6 shadow-2xl space-y-4">
+        <div class="text-center space-y-1">
+          <div class="w-12 h-12 rounded-full bg-amber-500/20 border border-amber-500/40 flex items-center justify-center mx-auto text-xl">
+            🔐
+          </div>
+          <h3 class="text-base font-bold text-white">Consola de Mando Diocesano</h3>
+          <p class="text-xs text-slate-400">Ingrese la clave de seguridad para continuar.</p>
+        </div>
+
+        <form @submit.prevent="submitPassword" class="space-y-3">
+          <input
+            v-model="passwordInput"
+            type="password"
+            placeholder="Clave de seguridad"
+            class="w-full p-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:border-amber-500 focus:outline-none"
+            autofocus
+          />
+          <p v-if="passwordError" class="text-xs text-red-400 font-bold text-center">Clave incorrecta.</p>
+
+          <div class="flex items-center space-x-2 pt-1">
+            <button
+              type="button"
+              @click="isLoginModalOpen = false; passwordInput = ''; passwordError = false;"
+              class="w-1/2 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold rounded-xl text-xs cursor-pointer"
+            >
+              Cancelar
+            </button>
+            <button
+              type="submit"
+              class="w-1/2 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow"
+            >
+              Ingresar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal de la Consola de Administración -->
+    <AdminPanelModal
+      v-if="isAdminPanelOpen"
+      @close="isAdminPanelOpen = false"
+    />
+
     <!-- Modal de Metodología y Aviso Legal -->
     <MetodologiaModal
       v-if="isMetodologiaOpen"
@@ -81,12 +131,19 @@
         <p class="text-[11px] text-slate-500">
           Consulte a sus autoridades locales y medios oficiales para más información.
         </p>
-        <div class="pt-1">
+        <div class="pt-1 flex items-center justify-center space-x-4">
           <button
             @click="isMetodologiaOpen = true"
             class="text-[11px] text-blue-400 hover:text-blue-300 underline cursor-pointer"
           >
-            Consultar Metodología, Transparencia de Fuentes y Aviso Legal
+            Metodología y Aviso Legal
+          </button>
+          <span class="text-slate-600">•</span>
+          <button
+            @click="handleOpenAdmin"
+            class="text-[11px] text-amber-400 hover:text-amber-300 underline cursor-pointer"
+          >
+            Consola de Mando 🔐
           </button>
         </div>
       </div>
@@ -102,12 +159,18 @@ import Nivel2Zona from './components/views/Nivel2Zona.vue';
 import Nivel3Poblacion from './components/views/Nivel3Poblacion.vue';
 import Nivel4Detalle from './components/views/Nivel4Detalle.vue';
 import MetodologiaModal from './components/views/MetodologiaModal.vue';
+import AdminPanelModal from './components/views/AdminPanelModal.vue';
 
 const riskData = ref(null);
 const loading = ref(false);
 const error = ref(null);
 const isOnline = ref(navigator.onLine);
+
 const isMetodologiaOpen = ref(false);
+const isLoginModalOpen = ref(false);
+const isAdminPanelOpen = ref(false);
+const passwordInput = ref('');
+const passwordError = ref(false);
 
 const currentView = ref('nivel1');
 const selectedZonaId = ref(null);
@@ -124,6 +187,23 @@ async function loadRiskData() {
     error.value = err.message;
   } finally {
     loading.value = false;
+  }
+}
+
+function handleOpenAdmin() {
+  passwordInput.value = '';
+  passwordError.value = false;
+  isLoginModalOpen.value = true;
+}
+
+function submitPassword() {
+  if (passwordInput.value === 'emergencia') {
+    isLoginModalOpen.value = false;
+    isAdminPanelOpen.value = true;
+    passwordInput.value = '';
+    passwordError.value = false;
+  } else {
+    passwordError.value = true;
   }
 }
 
