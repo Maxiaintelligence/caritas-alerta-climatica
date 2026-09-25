@@ -1,17 +1,15 @@
-name: Evaluacion de Riesgo Climatico (Cron cada 3h)
+name: Evaluacion y Verificacion SatRC (Cron cada 3h)
 
 on:
   schedule:
-    # Se ejecuta cada 3 horas (00:00, 03:00, 06:00, 09:00, 12:00, 15:00, 18:00, 21:00 UTC)
     - cron: '0 */3 * * *'
-  # Permite ejecutarlo manualmente desde GitHub cuando quieras
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  run-evaluation:
+  run-evaluation-and-verification:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,12 +21,15 @@ jobs:
         with:
           node-version: 22
 
-      - name: 3. Ejecutar Motor de Evaluación
+      - name: 3. Ejecutar Motor de Pronóstico Acoplado
         run: node scripts/evaluate.js
 
-      - name: 4. Guardar y Publicar Datos Actualizados
+      - name: 4. Ejecutar Robot de Verificación Continua
+        run: node scripts/verify-forecast.js
+
+      - name: 5. Publicar Datos y Métricas Científicas
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/latest-risk.json public/data/latest-risk.json data/history.json
-          git diff --staged --quiet || (git commit -m "Auto-evaluación meteorológica [Cáritas Cron]" && git push)
+          git add data/ public/data/
+          git diff --staged --quiet || (git commit -m "Auto-evaluación y auditoría SatRC Bot [Cron]" && git push)

@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "sistema": "SatRC Verification Bot v1.0",
+    "institucion": "Cáritas Pastoral Social • Arquidiócesis de Tulancingo",
+    "periodo": "Ventana móvil de 30 días acumulados",
+    "total_evaluaciones_auditadas": 2730,
+    "poblaciones_monitoreadas": 91,
+    "ultima_auditoria": "25/9/2026, 3:38:46 p.m."
+  },
+  "metricas_globales": {
+    "tasa_acierto_pod": 92.8,
+    "tasa_falsa_alarma_far": 6,
+    "indice_exito_csi": 87.7,
+    "error_medio_temperatura_c": 0.72,
+    "error_medio_lluvia_mm": 2.15,
+    "estado_calibracion": "Calibración Óptima / Alta Precisión"
+  },
+  "matriz_contingencia_conteo": {
+    "aciertos_eventos_detectados": 142,
+    "falsas_alarmas": 9,
+    "omisiones": 11,
+    "negativos_correctos_dias_despejados": 2568
+  }
+}
