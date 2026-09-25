@@ -8,6 +8,7 @@
       :is-online="isOnline"
       @back="goBack"
       @refresh="loadRiskData"
+      @open-metodologia="isMetodologiaOpen = true"
     />
 
     <!-- Contenido Principal -->
@@ -65,14 +66,30 @@
       </div>
     </main>
 
+    <!-- Modal de Metodología y Aviso Legal -->
+    <MetodologiaModal
+      v-if="isMetodologiaOpen"
+      @close="isMetodologiaOpen = false"
+    />
+
     <!-- Pie Institucional Oficial -->
-    <footer class="bg-slate-900 border-t border-slate-800 py-4 text-center text-xs text-slate-400">
-      <p class="font-medium text-slate-300">
-        SatRC v1.0 • Cáritas Pastoral Social de la Arquidiócesis de Tulancingo • Cobertura Regional (91 Localidades)
-      </p>
-      <p class="text-[11px] text-slate-500 mt-1">
-        Consulte a sus autoridades locales y medios oficiales para más información.
-      </p>
+    <footer class="bg-slate-900 border-t border-slate-800 py-5 text-center text-xs text-slate-400">
+      <div class="max-w-5xl mx-auto px-4 space-y-2">
+        <p class="font-medium text-slate-300">
+          SatRC v1.0 • Cáritas Pastoral Social de la Arquidiócesis de Tulancingo • Cobertura Regional (91 Localidades)
+        </p>
+        <p class="text-[11px] text-slate-500">
+          Consulte a sus autoridades locales y medios oficiales para más información.
+        </p>
+        <div class="pt-1">
+          <button
+            @click="isMetodologiaOpen = true"
+            class="text-[11px] text-blue-400 hover:text-blue-300 underline cursor-pointer"
+          >
+            Consultar Metodología, Transparencia de Fuentes y Aviso Legal
+          </button>
+        </div>
+      </div>
     </footer>
   </div>
 </template>
@@ -84,11 +101,13 @@ import Nivel1Home from './components/views/Nivel1Home.vue';
 import Nivel2Zona from './components/views/Nivel2Zona.vue';
 import Nivel3Poblacion from './components/views/Nivel3Poblacion.vue';
 import Nivel4Detalle from './components/views/Nivel4Detalle.vue';
+import MetodologiaModal from './components/views/MetodologiaModal.vue';
 
 const riskData = ref(null);
 const loading = ref(false);
 const error = ref(null);
 const isOnline = ref(navigator.onLine);
+const isMetodologiaOpen = ref(false);
 
 const currentView = ref('nivel1');
 const selectedZonaId = ref(null);

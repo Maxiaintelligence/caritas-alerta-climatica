@@ -30,13 +30,19 @@
         </div>
       </div>
 
-      <!-- Estado y Actualización -->
-      <div class="flex items-center space-x-3">
-        <div class="text-right hidden sm:block">
-          <p class="text-[10px] text-slate-400 uppercase tracking-wider">Última evaluación</p>
-          <p class="text-xs font-mono text-slate-200">{{ timestampLocal || 'Sincronizando...' }}</p>
-        </div>
+      <!-- Acciones: Metodología y Actualización -->
+      <div class="flex items-center space-x-2.5">
+        <!-- Botón Metodología / Disclaimer -->
+        <button
+          @click="$emit('open-metodologia')"
+          class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs text-slate-200 transition-colors cursor-pointer flex items-center space-x-1.5 shadow-sm"
+          title="Metodología y Aviso Legal"
+        >
+          <span>ℹ️</span>
+          <span class="hidden md:inline">Metodología y Legal</span>
+        </button>
 
+        <!-- Botón Refrescar -->
         <button
           @click="$emit('refresh')"
           :disabled="loading"
@@ -68,5 +74,5 @@ defineProps({
   isOnline: { type: Boolean, default: true }
 });
 
-defineEmits(['back', 'refresh']);
+defineEmits(['back', 'refresh', 'open-metodologia']);
 </script>
