@@ -1,7 +1,12 @@
 {
   "meta": {
+<<<<<<< HEAD
     "timestamp_utc": "2026-09-25T19:19:49.465Z",
     "timestamp_local": "25/9/2026, 1:19:49 p.m.",
+=======
+    "timestamp_utc": "2026-09-25T19:01:45.275Z",
+    "timestamp_local": "25/9/2026, 1:01:45 p.m.",
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
     "institucion": "Cáritas Pastoral Social",
     "total_poblaciones": 91,
     "poblacion_total_monitoreada": 1496821,
@@ -13,7 +18,138 @@
       "noaa_nhc": "ok"
     }
   },
+<<<<<<< HEAD
   "alerta_prioritaria": [],
+=======
+  "alerta_prioritaria": [
+    {
+      "id": "z07_v_avila_camacho",
+      "nombre": "Villa Ávila Camacho",
+      "municipio": "Xicotepec",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 3,
+      "nivel_nombre": "ALTO",
+      "color_hex": "#E67E22",
+      "modulo_dominante": "calor",
+      "accion_inmediata": "Activar protocolos preventivos y restringir traslados.",
+      "sinergias": []
+    },
+    {
+      "id": "z10_ixhuatlan_madero",
+      "nombre": "Ixhuatlán de Madero",
+      "municipio": "Ixhuatlán de Madero",
+      "estado": "Veracruz",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "nivel": 3,
+      "nivel_nombre": "ALTO",
+      "color_hex": "#E67E22",
+      "modulo_dominante": "calor",
+      "accion_inmediata": "Activar protocolos preventivos y restringir traslados.",
+      "sinergias": []
+    },
+    {
+      "id": "z06_tizayuca",
+      "nombre": "Tizayuca",
+      "municipio": "Tizayuca",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "incendios",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z06_nuevo_tizayuca",
+      "nombre": "Nuevo Tizayuca",
+      "municipio": "Tizayuca",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "incendios",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z06_huitzila",
+      "nombre": "Huitzila",
+      "municipio": "Tizayuca",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "incendios",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z06_tepojaco",
+      "nombre": "Tepojaco",
+      "municipio": "Tizayuca",
+      "estado": "Hidalgo",
+      "zona_id": 6,
+      "zona_nombre": "Corredor Tizayuca–Zapotlán",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "incendios",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z07_chicontla_jopala",
+      "nombre": "Chicontla / Jopala",
+      "municipio": "Jopala",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "calor",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z10_san_lorenzo_ach",
+      "nombre": "San Lorenzo Achiotepec",
+      "municipio": "Huehuetla",
+      "estado": "Hidalgo",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "calor",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z10_huehuetla",
+      "nombre": "Huehuetla",
+      "municipio": "Huehuetla",
+      "estado": "Hidalgo",
+      "zona_id": 10,
+      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "inundacion",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    }
+  ],
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
   "resumen_zonas": [
     {
       "zona_id": 1,
@@ -108,8 +244,13 @@
     {
       "zona_id": 5,
       "nucleo_territorial": "Zona Metropolitana de Pachuca",
+<<<<<<< HEAD
       "nivel_maximo": 1,
       "color_maximo_hex": "#10B981",
+=======
+      "nivel_maximo": 0,
+      "color_maximo_hex": "#2ECC71",
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
       "total_poblaciones": 4,
       "poblaciones_en_alerta": 0,
       "poblacion_total_zona": 526500,
@@ -124,12 +265,19 @@
     {
       "zona_id": 6,
       "nucleo_territorial": "Corredor Tizayuca–Zapotlán",
+<<<<<<< HEAD
       "nivel_maximo": 1,
       "color_maximo_hex": "#10B981",
       "total_poblaciones": 9,
       "poblaciones_en_alerta": 0,
       "poblacion_total_zona": 216670,
       "poblacion_en_riesgo": 0,
+=======
+      "nivel_maximo": 2,
+      "color_maximo_hex": "#F1C40F",
+      "total_poblaciones": 8,
+      "poblaciones_en_alerta": 4,
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
       "lista_poblaciones_ids": [
         "z06_tizayuca",
         "z06_nuevo_tizayuca",
@@ -145,12 +293,19 @@
     {
       "zona_id": 7,
       "nucleo_territorial": "Sierra Norte de Puebla",
+<<<<<<< HEAD
       "nivel_maximo": 1,
       "color_maximo_hex": "#10B981",
       "total_poblaciones": 11,
       "poblaciones_en_alerta": 0,
       "poblacion_total_zona": 146300,
       "poblacion_en_riesgo": 0,
+=======
+      "nivel_maximo": 3,
+      "color_maximo_hex": "#E67E22",
+      "total_poblaciones": 11,
+      "poblaciones_en_alerta": 2,
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
       "lista_poblaciones_ids": [
         "z07_huauchinango",
         "z07_xicotepec",
@@ -243,6 +398,7 @@
       },
       "evaluacion": {
         "nivel_final": 1,
+<<<<<<< HEAD
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
         "vector_dominante": "Inundaciones / Tormentas Torrenciales",
@@ -258,6 +414,23 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -279,10 +452,20 @@
             "magnitud": "Bajo riesgo de fuego",
             "nombre": "Incendios Forestales y de Malezas"
           },
+<<<<<<< HEAD
           "v6_tormentas": {
             "nivel": 1,
             "magnitud": "Sin inestabilidad convectiva severa",
             "nombre": "Tormentas Eléctricas / Granizo"
+=======
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=420 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v7_ciclones": {
             "nivel": 1,
@@ -459,6 +642,7 @@
       },
       "evaluacion": {
         "nivel_final": 1,
+<<<<<<< HEAD
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
         "vector_dominante": "Inundaciones / Tormentas Torrenciales",
@@ -474,6 +658,23 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -495,10 +696,20 @@
             "magnitud": "Bajo riesgo de fuego",
             "nombre": "Incendios Forestales y de Malezas"
           },
+<<<<<<< HEAD
           "v6_tormentas": {
             "nivel": 1,
             "magnitud": "Sin inestabilidad convectiva severa",
             "nombre": "Tormentas Eléctricas / Granizo"
+=======
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=360 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v7_ciclones": {
             "nivel": 1,
@@ -675,6 +886,7 @@
       },
       "evaluacion": {
         "nivel_final": 1,
+<<<<<<< HEAD
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
         "vector_dominante": "Inundaciones / Tormentas Torrenciales",
@@ -690,6 +902,23 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -711,10 +940,20 @@
             "magnitud": "Bajo riesgo de fuego",
             "nombre": "Incendios Forestales y de Malezas"
           },
+<<<<<<< HEAD
           "v6_tormentas": {
             "nivel": 1,
             "magnitud": "Sin inestabilidad convectiva severa",
             "nombre": "Tormentas Eléctricas / Granizo"
+=======
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=360 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v7_ciclones": {
             "nivel": 1,
@@ -796,8 +1035,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=500 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -1322,6 +1569,7 @@
         "altitud_msnm": 2490
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -1338,6 +1586,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -1430,6 +1726,7 @@
         "altitud_msnm": 2520
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -1446,6 +1743,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -1538,6 +1883,7 @@
         "altitud_msnm": 2510
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -1554,6 +1900,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -1660,8 +2054,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=320 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -1768,8 +2170,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=360 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -1876,8 +2286,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=320 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -1984,8 +2402,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=340 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -2092,8 +2518,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=310 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -2200,8 +2634,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=330 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -2403,6 +2845,7 @@
       },
       "evaluacion": {
         "nivel_final": 1,
+<<<<<<< HEAD
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
         "vector_dominante": "Inundaciones / Tormentas Torrenciales",
@@ -2418,6 +2861,23 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -2439,10 +2899,20 @@
             "magnitud": "Bajo riesgo de fuego",
             "nombre": "Incendios Forestales y de Malezas"
           },
+<<<<<<< HEAD
           "v6_tormentas": {
             "nivel": 1,
             "magnitud": "Sin inestabilidad convectiva severa",
             "nombre": "Tormentas Eléctricas / Granizo"
+=======
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=310 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v7_ciclones": {
             "nivel": 1,
@@ -2619,6 +3089,7 @@
       },
       "evaluacion": {
         "nivel_final": 1,
+<<<<<<< HEAD
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
         "vector_dominante": "Inundaciones / Tormentas Torrenciales",
@@ -2634,6 +3105,23 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -2655,10 +3143,20 @@
             "magnitud": "Bajo riesgo de fuego",
             "nombre": "Incendios Forestales y de Malezas"
           },
+<<<<<<< HEAD
           "v6_tormentas": {
             "nivel": 1,
             "magnitud": "Sin inestabilidad convectiva severa",
             "nombre": "Tormentas Eléctricas / Granizo"
+=======
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=360 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v7_ciclones": {
             "nivel": 1,
@@ -2956,8 +3454,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=310 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -3051,6 +3557,7 @@
       },
       "evaluacion": {
         "nivel_final": 1,
+<<<<<<< HEAD
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
         "vector_dominante": "Inundaciones / Tormentas Torrenciales",
@@ -3066,6 +3573,23 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -3087,10 +3611,20 @@
             "magnitud": "Bajo riesgo de fuego",
             "nombre": "Incendios Forestales y de Malezas"
           },
+<<<<<<< HEAD
           "v6_tormentas": {
             "nivel": 1,
             "magnitud": "Sin inestabilidad convectiva severa",
             "nombre": "Tormentas Eléctricas / Granizo"
+=======
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=390 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v7_ciclones": {
             "nivel": 1,
@@ -3280,8 +3814,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=440 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -3388,8 +3930,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=350 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -3496,8 +4046,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=440 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -3604,8 +4162,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=460 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -3712,8 +4278,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=360 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -3820,8 +4394,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=300 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -3928,8 +4510,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=300 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -4036,8 +4626,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=310 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -4144,8 +4742,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=350 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -4252,8 +4858,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=640 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -4778,6 +5392,7 @@
         "altitud_msnm": 2420
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -4794,6 +5409,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -4886,6 +5549,7 @@
         "altitud_msnm": 2380
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -4902,6 +5566,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -5102,6 +5814,7 @@
         "altitud_msnm": 2390
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -5118,6 +5831,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -5210,6 +5971,7 @@
         "altitud_msnm": 2270
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -5226,6 +5988,56 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "incendios",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Sequedad moderada: HR=39%, Días sin lluvia=3"
+            ],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -5318,6 +6130,7 @@
         "altitud_msnm": 2275
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -5334,6 +6147,56 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "incendios",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Sequedad moderada: HR=39%, Días sin lluvia=3"
+            ],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -5426,6 +6289,7 @@
         "altitud_msnm": 2320
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -5442,6 +6306,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -5534,6 +6446,7 @@
         "altitud_msnm": 2340
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -5550,6 +6463,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -5642,6 +6603,7 @@
         "altitud_msnm": 2330
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -5658,6 +6620,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -5750,6 +6760,7 @@
         "altitud_msnm": 2260
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -5766,6 +6777,56 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "incendios",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Sequedad moderada: HR=36%, Días sin lluvia=3"
+            ],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -5858,6 +6919,7 @@
         "altitud_msnm": 2265
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -5874,6 +6936,56 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "incendios",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Sequedad moderada: HR=36%, Días sin lluvia=3"
+            ],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -5966,6 +7078,7 @@
         "altitud_msnm": 2360
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -5982,6 +7095,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -6196,8 +7357,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=900 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -6304,8 +7473,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1100 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -6412,8 +7589,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=900 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -6520,8 +7705,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1100 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -6614,6 +7807,7 @@
         "altitud_msnm": 280
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -6630,16 +7824,44 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 3,
+        "nivel_nombre": "ALTO",
+        "color_hex": "#E67E22",
+        "modulo_dominante": "calor",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Activar protocolos preventivos y restringir traslados.",
+        "protocolo_comunitario": "Restricción de traslados carreteros; traslado preventivo de personas vulnerables (adultos mayores, menores) a viviendas seguras o albergues.",
+        "protocolo_caritas": "Movilización del Comité Diocesano de Emergencias. Preposicionamiento físico de víveres, agua y botiquines en parroquias estratégicas. Apoyo en evacuación preventiva.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
             "magnitud": "T_mín 22.3°C (Sin helada)",
             "nombre": "Bajas Temperaturas / Heladas"
           },
+<<<<<<< HEAD
           "v3_calor": {
             "nivel": 1,
             "magnitud": "T_máx 29.9°C (Rango térmico normal)",
             "nombre": "Ondas de Calor"
+=======
+          "calor": {
+            "nivel": 3,
+            "color_hex": "#E67E22",
+            "variables_disparadoras": [
+              "Calor muy alto: T_max=29.9°C, Sensación térmica=36.4°C"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v4_laderas": {
             "nivel": 1,
@@ -6651,10 +7873,20 @@
             "magnitud": "Bajo riesgo de fuego",
             "nombre": "Incendios Forestales y de Malezas"
           },
+<<<<<<< HEAD
           "v6_tormentas": {
             "nivel": 1,
             "magnitud": "Sin inestabilidad convectiva severa",
             "nombre": "Tormentas Eléctricas / Granizo"
+=======
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1820 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v7_ciclones": {
             "nivel": 1,
@@ -6736,8 +7968,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1100 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -6831,6 +8071,7 @@
       },
       "evaluacion": {
         "nivel_final": 1,
+<<<<<<< HEAD
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
         "vector_dominante": "Inundaciones / Tormentas Torrenciales",
@@ -6846,6 +8087,23 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -6867,10 +8125,20 @@
             "magnitud": "Bajo riesgo de fuego",
             "nombre": "Incendios Forestales y de Malezas"
           },
+<<<<<<< HEAD
           "v6_tormentas": {
             "nivel": 1,
             "magnitud": "Sin inestabilidad convectiva severa",
             "nombre": "Tormentas Eléctricas / Granizo"
+=======
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1080 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v7_ciclones": {
             "nivel": 1,
@@ -6952,8 +8220,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=360 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -7047,6 +8323,7 @@
       },
       "evaluacion": {
         "nivel_final": 1,
+<<<<<<< HEAD
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
         "vector_dominante": "Inundaciones / Tormentas Torrenciales",
@@ -7062,6 +8339,23 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -7083,10 +8377,20 @@
             "magnitud": "Bajo riesgo de fuego",
             "nombre": "Incendios Forestales y de Malezas"
           },
+<<<<<<< HEAD
           "v6_tormentas": {
             "nivel": 1,
             "magnitud": "Sin inestabilidad convectiva severa",
             "nombre": "Tormentas Eléctricas / Granizo"
+=======
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1300 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v7_ciclones": {
             "nivel": 1,
@@ -7168,8 +8472,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=900 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -7270,6 +8582,7 @@
         "magnitud_principal": "Condiciones normales de precipitación",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
+<<<<<<< HEAD
         "accion_corta": "Condiciones estables. Operación normal.",
         "protocolo_comunitario": "Condiciones meteorológicas dentro de la normalidad estacional. Monitoreo regular.",
         "protocolo_caritas": "Registro y monitoreo pasivo cada 3 horas. Cero movilización de personal.",
@@ -7278,6 +8591,52 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Ambiente caluroso: T_max=29.6°C"
+            ],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1620 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -7384,8 +8743,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=470 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -7492,8 +8859,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=680 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -7600,8 +8975,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=310 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -7708,8 +9091,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=320 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -7816,8 +9207,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=320 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -7924,8 +9323,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=570 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -8032,8 +9439,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=350 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -8140,8 +9555,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1830 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -8248,8 +9671,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=610 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -8356,8 +9787,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=830 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -8464,8 +9903,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=830 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -8572,8 +10019,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1080 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -8666,6 +10121,7 @@
         "altitud_msnm": 539
       },
       "evaluacion": {
+<<<<<<< HEAD
         "nivel_final": 1,
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
@@ -8682,6 +10138,58 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "calor",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Ambiente caluroso: T_max=27.8°C"
+            ],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1780 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -8896,8 +10404,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=760 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -9004,8 +10520,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1420 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -9106,6 +10630,7 @@
         "magnitud_principal": "Condiciones normales de precipitación",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
+<<<<<<< HEAD
         "accion_corta": "Condiciones estables. Operación normal.",
         "protocolo_comunitario": "Condiciones meteorológicas dentro de la normalidad estacional. Monitoreo regular.",
         "protocolo_caritas": "Registro y monitoreo pasivo cada 3 horas. Cero movilización de personal.",
@@ -9114,6 +10639,54 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Lluvia moderada: 24h=17.1mm, Humedad suelo=0.44"
+            ],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Ambiente caluroso: T_max=28.1°C"
+            ],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=1910 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -9207,6 +10780,7 @@
       },
       "evaluacion": {
         "nivel_final": 1,
+<<<<<<< HEAD
         "nivel_nombre": "SIN RIESGO",
         "color_hex": "#10B981",
         "vector_dominante": "Inundaciones / Tormentas Torrenciales",
@@ -9222,6 +10796,23 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
+        "sinergias_activas": [],
+        "histeresis_aplicada": false,
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -9243,10 +10834,20 @@
             "magnitud": "Bajo riesgo de fuego",
             "nombre": "Incendios Forestales y de Malezas"
           },
+<<<<<<< HEAD
           "v6_tormentas": {
             "nivel": 1,
             "magnitud": "Sin inestabilidad convectiva severa",
             "nombre": "Tormentas Eléctricas / Granizo"
+=======
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=400 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v7_ciclones": {
             "nivel": 1,
@@ -9328,8 +10929,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=440 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -9436,8 +11045,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=440 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -9544,8 +11161,16 @@
         "vectores": {
           "v1_inundacion": {
             "nivel": 1,
+<<<<<<< HEAD
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=620 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
@@ -9646,6 +11271,7 @@
         "magnitud_principal": "Condiciones normales de precipitación",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
+<<<<<<< HEAD
         "accion_corta": "Condiciones estables. Operación normal.",
         "protocolo_comunitario": "Condiciones meteorológicas dentro de la normalidad estacional. Monitoreo regular.",
         "protocolo_caritas": "Registro y monitoreo pasivo cada 3 horas. Cero movilización de personal.",
@@ -9654,6 +11280,52 @@
             "nivel": 1,
             "magnitud": "Condiciones normales de precipitación",
             "nombre": "Inundaciones / Tormentas Torrenciales"
+=======
+        "accion_corta": "Activar protocolos preventivos y restringir traslados.",
+        "protocolo_comunitario": "Restricción de traslados carreteros; traslado preventivo de personas vulnerables (adultos mayores, menores) a viviendas seguras o albergues.",
+        "protocolo_caritas": "Movilización del Comité Diocesano de Emergencias. Preposicionamiento físico de víveres, agua y botiquines en parroquias estratégicas. Apoyo en evacuación preventiva.",
+        "confianza": 1,
+        "modulos": {
+          "inundacion": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "heladas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "calor": {
+            "nivel": 3,
+            "color_hex": "#E67E22",
+            "variables_disparadoras": [
+              "Calor muy alto: T_max=30.5°C, Sensación térmica=36.5°C"
+            ],
+            "estado": "nominal"
+          },
+          "laderas": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "incendios": {
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
+            "estado": "nominal"
+          },
+          "tormentas": {
+            "nivel": 1,
+            "color_hex": "#3498DB",
+            "variables_disparadoras": [
+              "Inestabilidad ligera: CAPE=2140 J/kg"
+            ],
+            "estado": "nominal"
+>>>>>>> 8e7e82cf7d2f74c0da7085e0b2a8bd0d585a60c3
           },
           "v2_heladas": {
             "nivel": 1,
