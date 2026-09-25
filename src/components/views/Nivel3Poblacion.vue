@@ -32,7 +32,7 @@
           <span>📋</span>
           <span>Plan Operativo Detallado de Emergencia (Nivel 4)</span>
         </h3>
-        <p class="text-xs text-slate-400 mt-0.5">Pormenores: Cuándo (T₀), Cómo, Refugios Nodos, Raciones y Formato EDAN.</p>
+        <p class="text-xs text-slate-400 mt-0.5">Pormenores: Cuándo (T₀), Refugio Nodo, Raciones de Alimento y Formato EDAN.</p>
       </div>
       <button
         @click="$emit('ver-plan-operativo', poblacion.id)"
@@ -72,37 +72,28 @@
       </div>
     </section>
 
-    <!-- SINERGIAS ACTIVAS SI EXISTEN -->
-    <div
-      v-if="poblacion.evaluacion.sinergias_activas && poblacion.evaluacion.sinergias_activas.length > 0"
-      class="p-5 rounded-2xl bg-amber-950/40 border-2 border-amber-500 text-amber-100 space-y-2"
-    >
-      <div class="flex items-center space-x-2 text-amber-400 font-black text-sm uppercase">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
-        </svg>
-        <span>{{ poblacion.evaluacion.sinergias_activas[0].titulo }}</span>
-      </div>
-      <p class="text-xs leading-relaxed text-amber-200">
-        {{ poblacion.evaluacion.sinergias_activas[0].peligro }}
-      </p>
-    </div>
-
-    <!-- DESGLOSE DE LOS 7 VECTORES CLIMÁTICOS -->
+    <!-- DESGLOSE DE LOS 7 VECTORES CLIMÁTICOS (INTERACTIVOS CON CLIC) -->
     <section class="space-y-3">
-      <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider">
-        Diagnóstico de los 7 Vectores Climáticos
-      </h3>
+      <div class="flex items-center justify-between">
+        <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider">
+          Diagnóstico de los 7 Vectores Climáticos
+        </h3>
+        <span class="text-[11px] text-amber-400 font-semibold">👉 Toca un vector para ver hora por hora</span>
+      </div>
+
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
         <div
           v-for="(vec, key) in poblacion.evaluacion.vectores"
           :key="key"
-          class="p-4 rounded-xl bg-slate-900 border border-slate-800 flex flex-col justify-between"
+          @click="abrirVectorHorario(key)"
+          class="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/80 transition-all cursor-pointer flex flex-col justify-between group shadow-sm hover:shadow-md"
           :style="{ borderLeftWidth: '4px', borderLeftColor: colorNivel(vec.nivel) }"
         >
           <div>
             <div class="flex items-center justify-between">
-              <h4 class="text-xs font-bold text-white uppercase">{{ vec.nombre }}</h4>
+              <h4 class="text-xs font-bold text-white uppercase group-hover:text-amber-300 transition-colors">
+                {{ vec.nombre }}
+              </h4>
               <span
                 class="text-[10px] font-bold px-2 py-0.5 rounded text-white"
                 :style="{ backgroundColor: colorNivel(vec.nivel) }"
@@ -112,18 +103,88 @@
             </div>
             <p class="mt-2 text-xs text-slate-300">{{ vec.magnitud }}</p>
           </div>
+
+          <div class="mt-3 pt-2 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400 group-hover:text-amber-400 transition-colors">
+            <span>Ver evolución 24h</span>
+            <span>🔍 ➔</span>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- MODAL DE DESGLOSE HORA POR HORA DEL VECTOR -->
+    <div
+      v-if="vectorSeleccionado"
+      class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+    >
+      <div class="bg-slate-900 border border-slate-700 w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col">
+        <!-- Encabezado Modal -->
+        <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Cronología Hora por Hora (24h)</span>
+            <h3 class="text-base font-bold text-white">{{ poblacion.evaluacion.vectores[vectorSeleccionado]?.nombre }}</h3>
+            <p class="text-xs text-slate-400">{{ poblacion.nombre }}, {{ poblacion.municipio }}</p>
+          </div>
+          <button
+            @click="vectorSeleccionado = null"
+            class="p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800 hover:bg-slate-700 cursor-pointer"
+          >
+            ✕
+          </button>
+        </div>
+
+        <!-- Lista Horaria Desplazable -->
+        <div class="p-4 overflow-y-auto space-y-2 flex-1 divide-y divide-slate-800/60">
+          <div
+            v-for="(item, idx) in poblacion.evaluacion.evolucion_horaria?.[vectorSeleccionado] || []"
+            :key="idx"
+            class="pt-2 first:pt-0 flex items-center justify-between text-xs"
+          >
+            <div class="flex items-center space-x-3">
+              <span class="font-mono font-bold text-slate-200 text-sm w-12">{{ item.hora }}</span>
+              <div>
+                <p class="font-bold text-white">{{ item.valor }}</p>
+                <p class="text-[11px] text-slate-400">{{ item.consejo }}</p>
+              </div>
+            </div>
+
+            <span
+              class="text-[10px] font-black px-2 py-0.5 rounded text-white"
+              :style="{ backgroundColor: colorNivel(item.nivel) }"
+            >
+              Nivel {{ item.nivel }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Pie Modal -->
+        <div class="p-3 bg-slate-950 border-t border-slate-800 text-center">
+          <button
+            @click="vectorSeleccionado = null"
+            class="px-5 py-1.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold cursor-pointer"
+          >
+            Cerrar cronología
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
 defineProps({
   poblacion: { type: Object, required: true }
 });
 
 defineEmits(['ver-plan-operativo']);
+
+const vectorSeleccionado = ref(null);
+
+function abrirVectorHorario(key) {
+  vectorSeleccionado.value = key;
+}
 
 function colorNivel(nivel) {
   if (nivel === 4) return '#EF4444';
