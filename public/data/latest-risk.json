@@ -1,7 +1,7 @@
 {
   "meta": {
-    "timestamp_utc": "2026-09-25T08:19:19.944Z",
-    "timestamp_local": "25/9/2026, 2:19:19 a.m.",
+    "timestamp_utc": "2026-09-25T14:17:46.689Z",
+    "timestamp_local": "25/9/2026, 8:17:46 a.m.",
     "institucion": "Cáritas Pastoral Social",
     "total_poblaciones": 78,
     "estado_fuentes": {
@@ -11,6 +11,20 @@
     }
   },
   "alerta_prioritaria": [
+    {
+      "id": "z07_v_avila_camacho",
+      "nombre": "Villa Ávila Camacho",
+      "municipio": "Xicotepec",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 3,
+      "nivel_nombre": "ALTO",
+      "color_hex": "#E67E22",
+      "modulo_dominante": "calor",
+      "accion_inmediata": "Activar protocolos preventivos y restringir traslados.",
+      "sinergias": []
+    },
     {
       "id": "z10_ixhuatlan_madero",
       "nombre": "Ixhuatlán de Madero",
@@ -82,9 +96,79 @@
       "sinergias": []
     },
     {
-      "id": "z07_v_avila_camacho",
-      "nombre": "Villa Ávila Camacho",
+      "id": "z07_huauchinango",
+      "nombre": "Huauchinango",
+      "municipio": "Huauchinango",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "inundacion",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z07_xicotepec",
+      "nombre": "Xicotepec de Juárez",
       "municipio": "Xicotepec",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "tormentas",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z07_juan_galindo",
+      "nombre": "Juan Galindo (Necaxa)",
+      "municipio": "Juan Galindo",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "inundacion",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z07_necaxa",
+      "nombre": "Necaxa",
+      "municipio": "Juan Galindo",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "inundacion",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z07_tlaola",
+      "nombre": "Tlaola",
+      "municipio": "Tlaola",
+      "estado": "Puebla",
+      "zona_id": 7,
+      "zona_nombre": "Sierra Norte de Puebla",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "tormentas",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z07_tenanguito",
+      "nombre": "Tenanguito",
+      "municipio": "Huauchinango",
       "estado": "Puebla",
       "zona_id": 7,
       "zona_nombre": "Sierra Norte de Puebla",
@@ -110,6 +194,34 @@
       "sinergias": []
     },
     {
+      "id": "z09_san_pablito",
+      "nombre": "San Pablito",
+      "municipio": "Pahuatlán",
+      "estado": "Puebla",
+      "zona_id": 9,
+      "zona_nombre": "Sierra de Puebla–Pahuatlán",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "tormentas",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
+      "id": "z09_xolotla",
+      "nombre": "Xolotla",
+      "municipio": "Pahuatlán",
+      "estado": "Puebla",
+      "zona_id": 9,
+      "zona_nombre": "Sierra de Puebla–Pahuatlán",
+      "nivel": 2,
+      "nivel_nombre": "MODERADO",
+      "color_hex": "#F1C40F",
+      "modulo_dominante": "tormentas",
+      "accion_inmediata": "Preparar protocolos y medidas de protección.",
+      "sinergias": []
+    },
+    {
       "id": "z10_san_lorenzo_ach",
       "nombre": "San Lorenzo Achiotepec",
       "municipio": "Huehuetla",
@@ -124,20 +236,6 @@
       "sinergias": []
     },
     {
-      "id": "z10_tenango_doria",
-      "nombre": "Tenango de Doria",
-      "municipio": "Tenango de Doria",
-      "estado": "Hidalgo",
-      "zona_id": 10,
-      "zona_nombre": "Sierra Otomí-Tepehua y Norte de Veracruz",
-      "nivel": 2,
-      "nivel_nombre": "MODERADO",
-      "color_hex": "#F1C40F",
-      "modulo_dominante": "inundacion",
-      "accion_inmediata": "Preparar protocolos y medidas de protección.",
-      "sinergias": []
-    },
-    {
       "id": "z10_san_bartolo_tut",
       "nombre": "San Bartolo Tutotepec",
       "municipio": "San Bartolo Tutotepec",
@@ -147,7 +245,7 @@
       "nivel": 2,
       "nivel_nombre": "MODERADO",
       "color_hex": "#F1C40F",
-      "modulo_dominante": "tormentas",
+      "modulo_dominante": "inundacion",
       "accion_inmediata": "Preparar protocolos y medidas de protección.",
       "sinergias": []
     },
@@ -275,10 +373,10 @@
     {
       "zona_id": 7,
       "nucleo_territorial": "Sierra Norte de Puebla",
-      "nivel_maximo": 2,
-      "color_maximo_hex": "#F1C40F",
+      "nivel_maximo": 3,
+      "color_maximo_hex": "#E67E22",
       "total_poblaciones": 11,
-      "poblaciones_en_alerta": 2,
+      "poblaciones_en_alerta": 8,
       "lista_poblaciones_ids": [
         "z07_huauchinango",
         "z07_xicotepec",
@@ -312,10 +410,10 @@
     {
       "zona_id": 9,
       "nucleo_territorial": "Sierra de Puebla–Pahuatlán",
-      "nivel_maximo": 1,
-      "color_maximo_hex": "#3498DB",
+      "nivel_maximo": 2,
+      "color_maximo_hex": "#F1C40F",
       "total_poblaciones": 6,
-      "poblaciones_en_alerta": 0,
+      "poblaciones_en_alerta": 2,
       "lista_poblaciones_ids": [
         "z09_honey",
         "z09_tlaxco",
@@ -331,7 +429,7 @@
       "nivel_maximo": 3,
       "color_maximo_hex": "#E67E22",
       "total_poblaciones": 10,
-      "poblaciones_en_alerta": 5,
+      "poblaciones_en_alerta": 4,
       "lista_poblaciones_ids": [
         "z10_san_lorenzo_ach",
         "z10_agua_blanca",
@@ -405,7 +503,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=490 J/kg"
+              "Inestabilidad ligera: CAPE=440 J/kg"
             ],
             "estado": "nominal"
           },
@@ -476,7 +574,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=370 J/kg"
+              "Inestabilidad ligera: CAPE=330 J/kg"
             ],
             "estado": "nominal"
           },
@@ -547,7 +645,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=460 J/kg"
+              "Inestabilidad ligera: CAPE=400 J/kg"
             ],
             "estado": "nominal"
           },
@@ -573,15 +671,15 @@
         "altitud_msnm": 2382
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -615,11 +713,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=310 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -689,7 +785,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=460 J/kg"
+              "Inestabilidad ligera: CAPE=400 J/kg"
             ],
             "estado": "nominal"
           },
@@ -760,7 +856,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=610 J/kg"
+              "Inestabilidad ligera: CAPE=480 J/kg"
             ],
             "estado": "nominal"
           },
@@ -924,15 +1020,15 @@
         "altitud_msnm": 2510
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -966,11 +1062,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=370 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -1040,7 +1134,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=390 J/kg"
+              "Inestabilidad ligera: CAPE=300 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1066,15 +1160,15 @@
         "altitud_msnm": 2500
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -1108,11 +1202,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=430 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -1182,7 +1274,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=390 J/kg"
+              "Inestabilidad ligera: CAPE=300 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1253,7 +1345,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=510 J/kg"
+              "Inestabilidad ligera: CAPE=440 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1324,7 +1416,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=480 J/kg"
+              "Inestabilidad ligera: CAPE=490 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1395,7 +1487,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=540 J/kg"
+              "Inestabilidad ligera: CAPE=420 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1421,15 +1513,15 @@
         "altitud_msnm": 2340
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "nivel_final": 0,
+        "nivel_nombre": "SIN RIESGO",
+        "color_hex": "#2ECC71",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Condiciones estables. Monitoreo rutinario.",
+        "protocolo_comunitario": "Monitoreo regular y seguimiento a los canales informativos habituales.",
+        "protocolo_caritas": "Registro y monitoreo rutinario del sistema cada 3 horas. Cero movilización de personal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -1463,11 +1555,9 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
-            "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=310 J/kg"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "ciclones": {
@@ -1537,7 +1627,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=320 J/kg"
+              "Inestabilidad ligera: CAPE=380 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1608,7 +1698,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=420 J/kg"
+              "Inestabilidad ligera: CAPE=320 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1679,7 +1769,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=650 J/kg"
+              "Inestabilidad ligera: CAPE=550 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1819,7 +1909,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=930 J/kg"
+              "Inestabilidad ligera: CAPE=470 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1890,7 +1980,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=680 J/kg"
+              "Inestabilidad ligera: CAPE=580 J/kg"
             ],
             "estado": "nominal"
           },
@@ -1961,7 +2051,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=320 J/kg"
+              "Inestabilidad ligera: CAPE=380 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2032,7 +2122,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=940 J/kg"
+              "Inestabilidad ligera: CAPE=400 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2103,7 +2193,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=810 J/kg"
+              "Inestabilidad ligera: CAPE=460 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2174,7 +2264,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=890 J/kg"
+              "Inestabilidad ligera: CAPE=490 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2245,7 +2335,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=460 J/kg"
+              "Inestabilidad ligera: CAPE=580 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2316,7 +2406,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=360 J/kg"
+              "Inestabilidad ligera: CAPE=390 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2387,7 +2477,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=830 J/kg"
+              "Inestabilidad ligera: CAPE=700 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2458,7 +2548,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=830 J/kg"
+              "Inestabilidad ligera: CAPE=700 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2529,7 +2619,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=930 J/kg"
+              "Inestabilidad ligera: CAPE=470 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2600,7 +2690,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=460 J/kg"
+              "Inestabilidad ligera: CAPE=580 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2671,7 +2761,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=840 J/kg"
+              "Inestabilidad ligera: CAPE=680 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2742,7 +2832,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=330 J/kg"
+              "Inestabilidad ligera: CAPE=400 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2813,7 +2903,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=330 J/kg"
+              "Inestabilidad ligera: CAPE=400 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2884,7 +2974,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=350 J/kg"
+              "Inestabilidad ligera: CAPE=520 J/kg"
             ],
             "estado": "nominal"
           },
@@ -2955,7 +3045,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=430 J/kg"
+              "Inestabilidad ligera: CAPE=360 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3020,7 +3110,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Sequedad moderada: HR=37%, Días sin lluvia=5"
+              "Sequedad moderada: HR=36%, Días sin lluvia=4"
             ],
             "estado": "nominal"
           },
@@ -3028,7 +3118,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=310 J/kg"
+              "Inestabilidad ligera: CAPE=360 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3093,7 +3183,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Sequedad moderada: HR=37%, Días sin lluvia=5"
+              "Sequedad moderada: HR=36%, Días sin lluvia=4"
             ],
             "estado": "nominal"
           },
@@ -3101,7 +3191,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=310 J/kg"
+              "Inestabilidad ligera: CAPE=360 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3241,7 +3331,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=360 J/kg"
+              "Inestabilidad ligera: CAPE=340 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3312,7 +3402,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=430 J/kg"
+              "Inestabilidad ligera: CAPE=460 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3377,7 +3467,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Sequedad moderada: HR=35%, Días sin lluvia=3"
+              "Sequedad moderada: HR=33%, Días sin lluvia=5"
             ],
             "estado": "nominal"
           },
@@ -3385,7 +3475,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=450 J/kg"
+              "Inestabilidad ligera: CAPE=360 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3450,7 +3540,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Sequedad moderada: HR=35%, Días sin lluvia=3"
+              "Sequedad moderada: HR=33%, Días sin lluvia=5"
             ],
             "estado": "nominal"
           },
@@ -3458,7 +3548,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=450 J/kg"
+              "Inestabilidad ligera: CAPE=360 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3529,7 +3619,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=430 J/kg"
+              "Inestabilidad ligera: CAPE=360 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3555,21 +3645,23 @@
         "altitud_msnm": 1520
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Lluvia moderada: 24h=18.3mm, Humedad suelo=0.44"
+            ],
             "estado": "nominal"
           },
           "heladas": {
@@ -3600,7 +3692,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1080 J/kg"
+              "Inestabilidad ligera: CAPE=530 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3626,15 +3718,15 @@
         "altitud_msnm": 1180
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
         "modulo_dominante": "tormentas",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -3668,10 +3760,10 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
+            "nivel": 2,
+            "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1140 J/kg"
+              "Probabilidad de tormenta eléctrica: CAPE=1000 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3697,21 +3789,23 @@
         "altitud_msnm": 1240
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Lluvia moderada: 24h=18.3mm, Humedad suelo=0.44"
+            ],
             "estado": "nominal"
           },
           "heladas": {
@@ -3742,7 +3836,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1080 J/kg"
+              "Inestabilidad ligera: CAPE=530 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3768,21 +3862,23 @@
         "altitud_msnm": 1160
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Lluvia moderada: 24h=18.8mm, Humedad suelo=0.44"
+            ],
             "estado": "nominal"
           },
           "heladas": {
@@ -3810,10 +3906,10 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
+            "nivel": 2,
+            "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1140 J/kg"
+              "Probabilidad de tormenta eléctrica: CAPE=1000 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3839,23 +3935,21 @@
         "altitud_msnm": 280
       },
       "evaluacion": {
-        "nivel_final": 2,
-        "nivel_nombre": "MODERADO",
-        "color_hex": "#F1C40F",
-        "modulo_dominante": "inundacion",
+        "nivel_final": 3,
+        "nivel_nombre": "ALTO",
+        "color_hex": "#E67E22",
+        "modulo_dominante": "calor",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Preparar protocolos y medidas de protección.",
-        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
-        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "accion_corta": "Activar protocolos preventivos y restringir traslados.",
+        "protocolo_comunitario": "Restricción de traslados carreteros; traslado preventivo de personas vulnerables (adultos mayores, menores) a viviendas seguras o albergues.",
+        "protocolo_caritas": "Movilización del Comité Diocesano de Emergencias. Preposicionamiento físico de víveres, agua y botiquines en parroquias estratégicas. Apoyo en evacuación preventiva.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
-            "nivel": 2,
-            "color_hex": "#F1C40F",
-            "variables_disparadoras": [
-              "Lluvia moderada: 24h=20.2mm, Humedad suelo=0.44"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "heladas": {
@@ -3865,10 +3959,10 @@
             "estado": "nominal"
           },
           "calor": {
-            "nivel": 2,
-            "color_hex": "#F1C40F",
+            "nivel": 3,
+            "color_hex": "#E67E22",
             "variables_disparadoras": [
-              "Ambiente caluroso: T_max=29.5°C"
+              "Calor muy alto: T_max=29.4°C, Sensación térmica=36.2°C"
             ],
             "estado": "nominal"
           },
@@ -3885,10 +3979,10 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 2,
-            "color_hex": "#F1C40F",
+            "nivel": 1,
+            "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Probabilidad de tormenta eléctrica: CAPE=1600 J/kg"
+              "Inestabilidad ligera: CAPE=1430 J/kg"
             ],
             "estado": "nominal"
           },
@@ -3914,15 +4008,15 @@
         "altitud_msnm": 1260
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
         "modulo_dominante": "tormentas",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -3956,10 +4050,10 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
+            "nivel": 2,
+            "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1140 J/kg"
+              "Probabilidad de tormenta eléctrica: CAPE=1000 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4030,7 +4124,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1170 J/kg"
+              "Inestabilidad ligera: CAPE=970 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4101,7 +4195,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1050 J/kg"
+              "Inestabilidad ligera: CAPE=620 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4172,7 +4266,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=620 J/kg"
+              "Inestabilidad ligera: CAPE=570 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4198,21 +4292,23 @@
         "altitud_msnm": 1320
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
-        "modulo_dominante": "tormentas",
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Lluvia moderada: 24h=18.3mm, Humedad suelo=0.44"
+            ],
             "estado": "nominal"
           },
           "heladas": {
@@ -4243,7 +4339,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1080 J/kg"
+              "Inestabilidad ligera: CAPE=530 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4296,7 +4392,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Ambiente caluroso: T_max=29.2°C"
+              "Ambiente caluroso: T_max=29.3°C"
             ],
             "estado": "nominal"
           },
@@ -4316,7 +4412,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1500 J/kg"
+              "Inestabilidad ligera: CAPE=1660 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4387,7 +4483,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=550 J/kg"
+              "Inestabilidad ligera: CAPE=380 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4458,7 +4554,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=740 J/kg"
+              "Inestabilidad ligera: CAPE=810 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4529,7 +4625,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=590 J/kg"
+              "Inestabilidad ligera: CAPE=480 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4600,7 +4696,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=430 J/kg"
+              "Inestabilidad ligera: CAPE=300 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4671,7 +4767,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=410 J/kg"
+              "Inestabilidad ligera: CAPE=310 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4742,7 +4838,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=330 J/kg"
+              "Inestabilidad ligera: CAPE=360 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4813,7 +4909,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=810 J/kg"
+              "Inestabilidad ligera: CAPE=460 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4884,7 +4980,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1260 J/kg"
+              "Inestabilidad ligera: CAPE=1510 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4955,7 +5051,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=930 J/kg"
+              "Inestabilidad ligera: CAPE=660 J/kg"
             ],
             "estado": "nominal"
           },
@@ -4981,15 +5077,15 @@
         "altitud_msnm": 1260
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
         "modulo_dominante": "tormentas",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -5023,10 +5119,10 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
+            "nivel": 2,
+            "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=860 J/kg"
+              "Probabilidad de tormenta eléctrica: CAPE=1130 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5052,15 +5148,15 @@
         "altitud_msnm": 1180
       },
       "evaluacion": {
-        "nivel_final": 1,
-        "nivel_nombre": "BAJO",
-        "color_hex": "#3498DB",
+        "nivel_final": 2,
+        "nivel_nombre": "MODERADO",
+        "color_hex": "#F1C40F",
         "modulo_dominante": "tormentas",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Vigilar boletines y avisos preventivos.",
-        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
-        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
+        "accion_corta": "Preparar protocolos y medidas de protección.",
+        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
+        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
@@ -5094,10 +5190,10 @@
             "estado": "nominal"
           },
           "tormentas": {
-            "nivel": 1,
-            "color_hex": "#3498DB",
+            "nivel": 2,
+            "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=860 J/kg"
+              "Probabilidad de tormenta eléctrica: CAPE=1130 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5168,7 +5264,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1240 J/kg"
+              "Inestabilidad ligera: CAPE=1180 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5221,7 +5317,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Ambiente caluroso: T_max=27.5°C"
+              "Ambiente caluroso: T_max=28.4°C"
             ],
             "estado": "nominal"
           },
@@ -5241,7 +5337,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1440 J/kg"
+              "Inestabilidad ligera: CAPE=1570 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5312,7 +5408,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=640 J/kg"
+              "Inestabilidad ligera: CAPE=680 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5338,23 +5434,21 @@
         "altitud_msnm": 1660
       },
       "evaluacion": {
-        "nivel_final": 2,
-        "nivel_nombre": "MODERADO",
-        "color_hex": "#F1C40F",
-        "modulo_dominante": "inundacion",
+        "nivel_final": 1,
+        "nivel_nombre": "BAJO",
+        "color_hex": "#3498DB",
+        "modulo_dominante": "tormentas",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
-        "accion_corta": "Preparar protocolos y medidas de protección.",
-        "protocolo_comunitario": "Limpieza de drenajes y techumbres; preparación de mochila de emergencia con linterna, radio y medicamentos prioritarios.",
-        "protocolo_caritas": "ACTIVACIÓN FORMAL de coordinadores parroquiales. Inspección de salones y comedores como posibles refugios temporales. Enlace con Protección Civil Municipal.",
+        "accion_corta": "Vigilar boletines y avisos preventivos.",
+        "protocolo_comunitario": "Manténgase informado y verifique que la documentación familiar importante esté en bolsa de plástico cerrada.",
+        "protocolo_caritas": "Enlace técnico de guardia monitorea evolución de modelos meteorológicos. Verificación de inventario en almacenes.",
         "confianza": 1,
         "modulos": {
           "inundacion": {
-            "nivel": 2,
-            "color_hex": "#F1C40F",
-            "variables_disparadoras": [
-              "Lluvia moderada: 24h=15.2mm, Humedad suelo=0.43"
-            ],
+            "nivel": 0,
+            "color_hex": "#2ECC71",
+            "variables_disparadoras": [],
             "estado": "nominal"
           },
           "heladas": {
@@ -5385,7 +5479,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=440 J/kg"
+              "Inestabilidad ligera: CAPE=530 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5414,7 +5508,7 @@
         "nivel_final": 2,
         "nivel_nombre": "MODERADO",
         "color_hex": "#F1C40F",
-        "modulo_dominante": "tormentas",
+        "modulo_dominante": "inundacion",
         "sinergias_activas": [],
         "histeresis_aplicada": false,
         "accion_corta": "Preparar protocolos y medidas de protección.",
@@ -5423,9 +5517,11 @@
         "confianza": 1,
         "modulos": {
           "inundacion": {
-            "nivel": 0,
-            "color_hex": "#2ECC71",
-            "variables_disparadoras": [],
+            "nivel": 2,
+            "color_hex": "#F1C40F",
+            "variables_disparadoras": [
+              "Lluvia moderada: 24h=17.4mm, Humedad suelo=0.43"
+            ],
             "estado": "nominal"
           },
           "heladas": {
@@ -5456,7 +5552,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Probabilidad de tormenta eléctrica: CAPE=1140 J/kg"
+              "Probabilidad de tormenta eléctrica: CAPE=1750 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5497,7 +5593,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Lluvia moderada: 24h=21.3mm, Humedad suelo=0.44"
+              "Lluvia moderada: 24h=15.1mm, Humedad suelo=0.44"
             ],
             "estado": "nominal"
           },
@@ -5511,7 +5607,7 @@
             "nivel": 2,
             "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Ambiente caluroso: T_max=27.1°C"
+              "Ambiente caluroso: T_max=29.1°C"
             ],
             "estado": "nominal"
           },
@@ -5531,7 +5627,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1510 J/kg"
+              "Inestabilidad ligera: CAPE=1940 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5602,7 +5698,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1090 J/kg"
+              "Inestabilidad ligera: CAPE=430 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5673,7 +5769,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=620 J/kg"
+              "Inestabilidad ligera: CAPE=520 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5744,7 +5840,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=620 J/kg"
+              "Inestabilidad ligera: CAPE=520 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5815,7 +5911,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=710 J/kg"
+              "Inestabilidad ligera: CAPE=820 J/kg"
             ],
             "estado": "nominal"
           },
@@ -5846,7 +5942,7 @@
         "color_hex": "#E67E22",
         "modulo_dominante": "calor",
         "sinergias_activas": [],
-        "histeresis_aplicada": false,
+        "histeresis_aplicada": true,
         "accion_corta": "Activar protocolos preventivos y restringir traslados.",
         "protocolo_comunitario": "Restricción de traslados carreteros; traslado preventivo de personas vulnerables (adultos mayores, menores) a viviendas seguras o albergues.",
         "protocolo_caritas": "Movilización del Comité Diocesano de Emergencias. Preposicionamiento físico de víveres, agua y botiquines en parroquias estratégicas. Apoyo en evacuación preventiva.",
@@ -5865,10 +5961,10 @@
             "estado": "nominal"
           },
           "calor": {
-            "nivel": 3,
-            "color_hex": "#E67E22",
+            "nivel": 2,
+            "color_hex": "#F1C40F",
             "variables_disparadoras": [
-              "Calor muy alto: T_max=30.3°C, Sensación térmica=36.0°C"
+              "Ambiente caluroso: T_max=29.8°C"
             ],
             "estado": "nominal"
           },
@@ -5888,7 +5984,7 @@
             "nivel": 1,
             "color_hex": "#3498DB",
             "variables_disparadoras": [
-              "Inestabilidad ligera: CAPE=1980 J/kg"
+              "Inestabilidad ligera: CAPE=1410 J/kg"
             ],
             "estado": "nominal"
           },
