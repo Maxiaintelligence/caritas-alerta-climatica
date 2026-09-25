@@ -14,7 +14,7 @@ const activeAlertsPath = path.join(DATA_DIR, 'active_alerts.json');
 const SMTP_USER = process.env.SMTP_USER || 'pescolaboral@gmail.com';
 const SMTP_PASS = process.env.SMTP_PASS || 'ycqv kwsf rsmd iuwh';
 const DESTINATION_EMAIL = process.env.ALERT_DESTINATION || 'antoniogmadrigal@gmail.com';
-const VERCEL_URL = process.env.VERCEL_APP_URL || 'https://caritas-alerta-climatica.vercel.app';
+const VERCEL_URL = process.env.VERCEL_APP_URL || 'https://caritas-alerta-climatica.vercel.app/';
 
 if (!fs.existsSync(latestRiskPath)) {
   console.log('⚠️ No existe latest-risk.json para evaluar alertas.');
