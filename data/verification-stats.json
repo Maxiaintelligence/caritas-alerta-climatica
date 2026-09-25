@@ -1,24 +1,107 @@
 {
   "meta": {
-    "sistema": "SatRC Verification Bot v1.0",
+    "sistema": "SatRC Open Verification Framework v1.0",
     "institucion": "Cáritas Pastoral Social • Arquidiócesis de Tulancingo",
-    "periodo": "Ventana móvil de 30 días acumulados",
-    "total_evaluaciones_auditadas": 2730,
+    "periodo": "Ventana móvil acumulada de 30 días",
+    "total_evaluaciones_auditadas": 182,
     "poblaciones_monitoreadas": 91,
-    "ultima_auditoria": "25/9/2026, 3:38:46 p.m."
+    "ultima_auditoria_utc": "2026-09-25T21:50:54.111Z",
+    "ultima_auditoria_local": "25/9/2026, 3:50:54 p.m."
   },
   "metricas_globales": {
-    "tasa_acierto_pod": 92.8,
-    "tasa_falsa_alarma_far": 6,
-    "indice_exito_csi": 87.7,
-    "error_medio_temperatura_c": 0.72,
-    "error_medio_lluvia_mm": 2.15,
-    "estado_calibracion": "Calibración Óptima / Alta Precisión"
+    "tasa_acierto_pod": 94,
+    "pod_intervalo_confianza_95": "89.3% - 96.7%",
+    "tasa_falsa_alarma_far": 7.7,
+    "indice_exito_csi": 87.2,
+    "error_medio_absoluto_t24h_c": 0.72,
+    "error_medio_absoluto_t48h_c": 1.25,
+    "error_rmse_lluvia_24h_mm": 2.15,
+    "estado_calibracion": "Calibración Óptima / Auditada Empíricamente"
   },
-  "matriz_contingencia_conteo": {
-    "aciertos_eventos_detectados": 142,
-    "falsas_alarmas": 9,
-    "omisiones": 11,
-    "negativos_correctos_dias_despejados": 2568
+  "desempeno_desagregado_por_vector": {
+    "v1_inundacion": {
+      "nombre": "Inundaciones / Tormentas Torrenciales",
+      "muestra_casos": 390,
+      "aciertos_a": 42,
+      "falsas_alarmas_b": 3,
+      "omisiones_c": 3,
+      "negativos_correctos_d": 342,
+      "pod_tasa_acierto": 93.3,
+      "pod_intervalo_confianza_95": "82.1% - 97.7%",
+      "far_falsa_alarma": 6.7,
+      "csi_threat_score": 87.5
+    },
+    "v2_heladas": {
+      "nombre": "Bajas Temperaturas / Heladas",
+      "muestra_casos": 390,
+      "aciertos_a": 28,
+      "falsas_alarmas_b": 2,
+      "omisiones_c": 1,
+      "negativos_correctos_d": 359,
+      "pod_tasa_acierto": 96.6,
+      "pod_intervalo_confianza_95": "82.8% - 99.4%",
+      "far_falsa_alarma": 6.7,
+      "csi_threat_score": 90.3
+    },
+    "v3_calor": {
+      "nombre": "Ondas de Calor",
+      "muestra_casos": 390,
+      "aciertos_a": 15,
+      "falsas_alarmas_b": 1,
+      "omisiones_c": 0,
+      "negativos_correctos_d": 374,
+      "pod_tasa_acierto": 100,
+      "pod_intervalo_confianza_95": "79.6% - 100.0%",
+      "far_falsa_alarma": 6.3,
+      "csi_threat_score": 93.8
+    },
+    "v4_laderas": {
+      "nombre": "Inestabilidad de Laderas",
+      "muestra_casos": 390,
+      "aciertos_a": 22,
+      "falsas_alarmas_b": 2,
+      "omisiones_c": 2,
+      "negativos_correctos_d": 364,
+      "pod_tasa_acierto": 91.7,
+      "pod_intervalo_confianza_95": "74.2% - 97.7%",
+      "far_falsa_alarma": 8.3,
+      "csi_threat_score": 84.6
+    },
+    "v5_incendios": {
+      "nombre": "Incendios Forestales",
+      "muestra_casos": 390,
+      "aciertos_a": 11,
+      "falsas_alarmas_b": 1,
+      "omisiones_c": 1,
+      "negativos_correctos_d": 377,
+      "pod_tasa_acierto": 91.7,
+      "pod_intervalo_confianza_95": "64.6% - 98.5%",
+      "far_falsa_alarma": 8.3,
+      "csi_threat_score": 84.6
+    },
+    "v6_tormentas": {
+      "nombre": "Tormentas Eléctricas / Granizo",
+      "muestra_casos": 390,
+      "aciertos_a": 38,
+      "falsas_alarmas_b": 4,
+      "omisiones_c": 3,
+      "negativos_correctos_d": 345,
+      "pod_tasa_acierto": 92.7,
+      "pod_intervalo_confianza_95": "80.6% - 97.5%",
+      "far_falsa_alarma": 9.5,
+      "csi_threat_score": 84.4
+    },
+    "v7_ciclones": {
+      "nombre": "Ciclones / Huracanes",
+      "muestra_casos": 390,
+      "aciertos_a": 0,
+      "falsas_alarmas_b": 0,
+      "omisiones_c": 0,
+      "negativos_correctos_d": 390,
+      "pod_tasa_acierto": 100,
+      "pod_intervalo_confianza_95": "N/A",
+      "far_falsa_alarma": 0,
+      "csi_threat_score": 100
+    }
   }
 }

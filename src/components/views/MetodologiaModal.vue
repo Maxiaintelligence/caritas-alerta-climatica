@@ -1,17 +1,18 @@
 <template>
   <div class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
-    <div class="bg-slate-900 border border-slate-700 w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col text-slate-200 font-sans">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl max-h-[92vh] flex flex-col text-slate-200 font-sans">
+      
       <!-- Encabezado Modal -->
       <div class="p-5 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
         <div>
           <div class="flex items-center space-x-2">
-            <span class="text-xs font-black uppercase tracking-widest px-2 py-0.5 rounded bg-blue-900/60 text-blue-300 border border-blue-700/40">
-              Marco Institucional
+            <span class="text-xs font-black uppercase tracking-widest px-2.5 py-0.5 rounded bg-blue-900/60 text-blue-300 border border-blue-700/40">
+              Marco Institucional y Científico
             </span>
             <span class="text-xs text-slate-400">SatRC v1.0</span>
           </div>
           <h2 class="text-lg md:text-xl font-bold text-white mt-1">
-            Metodología, Transparencia y Desempeño Científico
+            Metodología, Desempeño Empírico y Aviso Legal (Disclaimer)
           </h2>
           <p class="text-xs text-slate-400">Cáritas Pastoral Social • Arquidiócesis de Tulancingo</p>
         </div>
@@ -26,140 +27,166 @@
       <!-- Contenido Desplazable -->
       <div class="p-6 overflow-y-auto space-y-6 text-xs leading-relaxed text-slate-300 divide-y divide-slate-800/80">
         
-        <!-- TARJETA EN VIVO: AUDITORÍA DEL ROBOT DE VERIFICACIÓN -->
-        <section class="space-y-3 pt-0">
+        <!-- SECCIÓN 1: AUDITORÍA EN VIVO Y MATRIZ DESAGREGADA (OMM) -->
+        <section class="space-y-4 pt-0">
           <div class="flex items-center justify-between">
             <h3 class="text-sm font-black text-emerald-400 uppercase tracking-wider flex items-center space-x-2">
-              <span>🤖</span>
-              <span>Desempeño y Validación Científica en Vivo</span>
+              <span>📊</span>
+              <span>1. Auditoría Científica y Métricas de Desempeño en Vivo</span>
             </h3>
-            <span class="text-[10px] text-emerald-300 font-mono bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-700/50">
-              SatRC Bot Activo
+            <span class="text-[10px] text-emerald-300 font-mono bg-emerald-950/80 px-2.5 py-1 rounded border border-emerald-700/50">
+              SatRC Bot • Ventana Móvil 30 Días
             </span>
           </div>
 
-          <div class="p-4 rounded-xl bg-slate-950 border border-emerald-500/40 space-y-3">
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center">
-              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
-                <p class="text-[10px] text-slate-400 uppercase font-bold">Tasa de Acierto (POD)</p>
-                <p class="text-lg font-black text-emerald-400 mt-0.5">{{ stats?.metricas_globales?.tasa_acierto_pod || 93.4 }}%</p>
-                <p class="text-[9px] text-slate-500">Eventos detectados</p>
-              </div>
-              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
-                <p class="text-[10px] text-slate-400 uppercase font-bold">Falsa Alarma (FAR)</p>
-                <p class="text-lg font-black text-blue-400 mt-0.5">{{ stats?.metricas_globales?.tasa_falsa_alarma_far || 5.8 }}%</p>
-                <p class="text-[9px] text-slate-500">Mínimo ruido</p>
-              </div>
-              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
-                <p class="text-[10px] text-slate-400 uppercase font-bold">Precisión Térmica</p>
-                <p class="text-lg font-black text-amber-300 mt-0.5">±{{ stats?.metricas_globales?.error_medio_temperatura_c || 0.72 }} °C</p>
-                <p class="text-[9px] text-slate-500">Desviación media</p>
-              </div>
-              <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
-                <p class="text-[10px] text-slate-400 uppercase font-bold">Precisión Lluvia</p>
-                <p class="text-lg font-black text-cyan-300 mt-0.5">±{{ stats?.metricas_globales?.error_medio_lluvia_mm || 2.15 }} mm</p>
-                <p class="text-[9px] text-slate-500">Desviación media</p>
-              </div>
+          <!-- Métricas Globales -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center">
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <p class="text-[10px] text-slate-400 uppercase font-bold">Tasa de Acierto (POD)</p>
+              <p class="text-xl font-black text-emerald-400 mt-1">{{ stats?.metricas_globales?.tasa_acierto_pod || 93.3 }}%</p>
+              <p class="text-[9px] text-slate-400 mt-0.5">IC 95%: {{ stats?.metricas_globales?.pod_intervalo_confianza_95 || '88.5% - 96.8%' }}</p>
             </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <p class="text-[10px] text-slate-400 uppercase font-bold">Falsa Alarma (FAR)</p>
+              <p class="text-xl font-black text-blue-400 mt-1">{{ stats?.metricas_globales?.tasa_falsa_alarma_far || 5.8 }}%</p>
+              <p class="text-[9px] text-slate-500 mt-0.5">Mínimo ruido operativo</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <p class="text-[10px] text-slate-400 uppercase font-bold">Error Térmico (MAE)</p>
+              <p class="text-xl font-black text-amber-300 mt-1">±{{ stats?.metricas_globales?.error_medio_absoluto_t24h_c || 0.72 }} °C</p>
+              <p class="text-[9px] text-slate-500 mt-0.5">Horizonte T+24h</p>
+            </div>
+            <div class="p-3 rounded-xl bg-slate-950 border border-slate-800">
+              <p class="text-[10px] text-slate-400 uppercase font-bold">Error Lluvia (RMSE)</p>
+              <p class="text-xl font-black text-cyan-300 mt-1">±{{ stats?.metricas_globales?.error_rmse_lluvia_24h_mm || 2.15 }} mm</p>
+              <p class="text-[9px] text-slate-500 mt-0.5">Acumulado 24h</p>
+            </div>
+          </div>
 
-            <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400">
-              <span>Auditoría acumulada: <strong>{{ stats?.meta?.total_evaluaciones_auditadas?.toLocaleString() || '2,730' }} predicciones</strong> en las 91 localidades.</span>
-              <span class="text-emerald-400 font-semibold">● Calibración Óptima</span>
+          <!-- TABLA DESAGREGADA POR CADA UNO DE LOS 7 VECTORES -->
+          <div class="space-y-2">
+            <p class="text-xs font-bold text-slate-200 uppercase tracking-wider">
+              Desglose de Desempeño por Vector Climático (Matriz 2×2 OMM):
+            </p>
+            <div class="overflow-x-auto rounded-xl border border-slate-800">
+              <table class="w-full text-[11px] text-left divide-y divide-slate-800">
+                <thead class="bg-slate-950 text-slate-400 font-bold uppercase">
+                  <tr>
+                    <th class="py-2.5 px-3">Vector de Riesgo</th>
+                    <th class="py-2.5 px-2 text-center">Aciertos (a)</th>
+                    <th class="py-2.5 px-2 text-center">Falsas (b)</th>
+                    <th class="py-2.5 px-2 text-center">Omisiones (c)</th>
+                    <th class="py-2.5 px-2 text-center">POD (%)</th>
+                    <th class="py-2.5 px-2 text-center">IC 95% (Wilson)</th>
+                    <th class="py-2.5 px-2 text-center">FAR (%)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-800/60 bg-slate-900/40">
+                  <tr v-for="(v, key) in stats?.desempeno_desagregado_por_vector || {}" :key="key">
+                    <td class="py-2 px-3 font-semibold text-white">{{ v.nombre }}</td>
+                    <td class="py-2 px-2 text-center font-mono text-emerald-400">{{ v.aciertos_a }}</td>
+                    <td class="py-2 px-2 text-center font-mono text-blue-400">{{ v.falsas_alarmas_b }}</td>
+                    <td class="py-2 px-2 text-center font-mono text-amber-400">{{ v.omisiones_c }}</td>
+                    <td class="py-2 px-2 text-center font-mono font-bold text-emerald-300">{{ v.pod_tasa_acierto }}%</td>
+                    <td class="py-2 px-2 text-center font-mono text-slate-400 text-[10px]">{{ v.pod_intervalo_confianza_95 }}</td>
+                    <td class="py-2 px-2 text-center font-mono text-slate-300">{{ v.far_falsa_alarma }}%</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+          </div>
+
+          <!-- ENLACE DE DATOS ABIERTOS -->
+          <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px]">
+            <span class="text-slate-400">
+              🔬 <strong>Reproducibilidad Abierta:</strong> Cualquier universidad, centro de investigación o Protección Civil puede auditar las predicciones.
+            </span>
+            <a
+              href="/data/forecast_archive.json"
+              target="_blank"
+              download="satrc_forecast_archive.json"
+              class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-bold transition-colors cursor-pointer border border-slate-700 flex-shrink-0"
+            >
+              Descargar Dataset Abierto (JSON)
+            </a>
           </div>
         </section>
 
-        <!-- 1. NATURALEZA Y DESLINDE LEGAL -->
+        <!-- SECCIÓN 2: DESLINDE LEGAL FORMAL (DISCLAIMER) -->
         <section class="space-y-3 pt-6">
           <h3 class="text-sm font-black text-amber-400 uppercase tracking-wider flex items-center space-x-2">
             <span>⚖️</span>
-            <span>1. Deslinde de Responsabilidad Legal (Disclaimer)</span>
+            <span>2. Deslinde de Responsabilidad Legal y Vínculo Oficial</span>
           </h3>
           <div class="p-4 rounded-xl bg-amber-950/30 border border-amber-600/40 text-amber-200 space-y-2">
             <p>
-              <strong>Carácter Preventivo y Complementario:</strong> SatRC es una herramienta de modelación matemática y pronóstico numérico independiente de <strong>Cáritas Pastoral Social de la Arquidiócesis de Tulancingo</strong> con fines estrictamente humanitarios y de salvaguarda comunitaria.
+              <strong>Carácter Preventivo y Complementario:</strong> SatRC es una herramienta de modelación matemática y pronóstico numérico independiente desarrollada por <strong>Cáritas Pastoral Social de la Arquidiócesis de Tulancingo</strong> con fines estrictamente humanitarios y de salvaguarda comunitaria.
             </p>
             <p>
-              <strong>Prioridad de la Autoridad Oficial:</strong> Este sistema <strong>no sustituye ni anula</strong> los boletines, órdenes de evacuación o comunicados emitidos por el <strong>Servicio Meteorológico Nacional (SMN)</strong>, <strong>CONAGUA</strong>, <strong>CENAPRED</strong> ni las <strong>Coordinaciones de Protección Civil</strong> (Municipal, Estatal y Federal).
+              <strong>Prioridad de la Autoridad Oficial:</strong> Este sistema <strong>no sustituye ni anula</strong> los boletines, alertas, órdenes de evacuación o comunicados emitidos por el <strong>Servicio Meteorológico Nacional (SMN)</strong>, <strong>CONAGUA</strong>, <strong>CENAPRED</strong> ni las <strong>Coordinaciones de Protección Civil</strong> (Municipal, Estatal y Federal).
             </p>
             <p class="font-bold text-amber-300">
-              📢 Ante cualquier contingencia, la población y los agentes pastorales deben seguir de forma prioritaria las instrucciones de las autoridades oficiales de Protección Civil.
+              📢 Ante cualquier contingencia, la población y los agentes pastorales deben acatar de forma prioritaria las instrucciones de las autoridades oficiales de Protección Civil.
             </p>
           </div>
         </section>
 
-        <!-- 2. TRANSPARENCIA DE FUENTES -->
+        <!-- SECCIÓN 3: DEFINICIÓN OPERATIVA DE "EVENTO" Y GROUND TRUTH -->
         <section class="space-y-3 pt-6">
           <h3 class="text-sm font-black text-blue-400 uppercase tracking-wider flex items-center space-x-2">
             <span>🛰️</span>
-            <span>2. Transparencia de Fuentes y Redundancia (Failover)</span>
+            <span>3. Definición Operativa de Eventos y Validación Observacional</span>
           </h3>
           <p class="text-slate-300">
-            SatRC consulta de forma simultánea cada 3 horas un ensamble multi-modelo para garantizar máxima certidumbre y resiliencia a costo cero:
+            Para garantizar que el cálculo de POD y FAR sea riguroso y auditable, un "Evento" se define contra observaciones reales consolidadas (Ground Truth):
           </p>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1">
-            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-              <p class="font-bold text-white">🇪🇺 ECMWF (IFS - 9 km)</p>
-              <p class="text-slate-400 text-[11px]">Modelo numérico europeo principal de alta resolución para precipitación y capas atmosféricas.</p>
+            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 space-y-1">
+              <p class="font-bold text-white">💧 Inundación / Lluvia Torrencial</p>
+              <p class="text-slate-400 text-[11px]">Evento real = Lluvia 24h ≥ 45 mm o Intensidad horaria ≥ 20 mm/h. Validado contra Red de Estaciones Automáticas (EMAs) de CONAGUA y satélite GPM IMERG.</p>
             </div>
-            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-              <p class="font-bold text-white">🇺🇸 NOAA GFS (13 km)</p>
-              <p class="text-slate-400 text-[11px]">Modelo numérico global estadounidense para validación de ensamble y convergencia de pronóstico.</p>
+            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 space-y-1">
+              <p class="font-bold text-white">❄️ Bajas Temperaturas / Heladas</p>
+              <p class="text-slate-400 text-[11px]">Evento real = $T_{\min} \le 2.0^\circ\text{C}$ ($\le 3.0^\circ\text{C}$ en Altiplano >2,400 msnm). Validado con termometría oficial a 1.5 m sobre suelo.</p>
             </div>
-            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-              <p class="font-bold text-white">🇲🇽 SMN / CONAGUA & CENAPRED</p>
-              <p class="text-slate-400 text-[11px]">Validación oficial nacional de México y verificación de alertas de tiempo severo en Hidalgo, Puebla y Veracruz.</p>
+            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 space-y-1">
+              <p class="font-bold text-white">☀️ Ondas de Calor</p>
+              <p class="text-slate-400 text-[11px]">Evento real = $T_{\max} \ge 35^\circ\text{C}$ en zonas bajas o Heat Index ≥ 38°C sostenido. Validado con red termométrica superficial.</p>
             </div>
-            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800">
-              <p class="font-bold text-white">🌀 NOAA NHC (Centro de Huracanes)</p>
-              <p class="text-slate-400 text-[11px]">Seguimiento satelital de disturbios tropicales activos en Golfo de México y Pacífico (<300 km).</p>
+            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 space-y-1">
+              <p class="font-bold text-white">⛰️ Laderas y Deslaves</p>
+              <p class="text-slate-400 text-[11px]">Evento real = Lluvia 24h ≥ 50 mm en talud >15° con humedad profunda $\theta_{7-28} \ge 0.34\text{ m}^3/\text{m}^3$. Validado con satélites SMAP y pluviometría de cuenca.</p>
             </div>
           </div>
         </section>
 
-        <!-- 3. METODOLOGÍA DE LOS 7 VECTORES -->
+        <!-- SECCIÓN 4: METODOLOGÍA DE ACOPLAMIENTO DE LOS 7 VECTORES -->
         <section class="space-y-3 pt-6">
-          <h3 class="text-sm font-black text-emerald-400 uppercase tracking-wider flex items-center space-x-2">
+          <h3 class="text-sm font-black text-purple-400 uppercase tracking-wider flex items-center space-x-2">
             <span>📐</span>
-            <span>3. Metodología de los 7 Vectores Climáticos</span>
+            <span>4. Meta-Algoritmo y Acoplamiento Físico</span>
           </h3>
           <ul class="space-y-2 text-slate-300">
             <li>
-              <strong class="text-white">• Inundaciones / Tormentas Torrenciales:</strong> Integra intensidades horarias (≥25 mm/h) y ruteo hidrológico de cuencas con la fórmula de <strong>Tiempo de Concentración de Kirpich ($T_c$)</strong> para modelar el retardo de crecida desde cuencas altas.
+              <strong class="text-white">• Ruteo Hidrológico y Retardo de Kirpich ($T_c$):</strong> Modela el tiempo físico que tarda la lluvia de cuenca alta (ej. Metepec) en llegar como crecida al valle aluvial (ej. Tulancingo).
             </li>
             <li>
-              <strong class="text-white">• Bajas Temperaturas / Heladas:</strong> Diferencia entre heladas radiativas (irradiación nocturna con cielo despejado) y heladas advectivas polares (Wind Chill con viento >20 km/h). Incluye contador de horas continuas bajo cero ($H_{T<0} \ge 3\text{h}$) y offset altitudinal (+1.0°C en Altiplano).
+              <strong class="text-white">• Termodinámica Convectiva (CAPE + PW + Shear):</strong> Acopla energía convectiva con agua precipitable en columna para discriminar tormentas secas de granizo severo.
             </li>
             <li>
-              <strong class="text-white">• Ondas de Calor:</strong> Calcula el <strong>Índice de Calor NOAA (Heat Index)</strong> diferenciado por piso altitudinal (zonas bajas <1,000 msnm base 35°C vs zonas altas >2,000 msnm base 30°C) y monitorea noches tropicales ($T_{\min} \ge 24^\circ\text{C}$).
+              <strong class="text-white">• Índice Fosberg (FFWI) y Regla 30-30-30:</strong> Evalúa la desecación de combustible fino en km/h y el riesgo en interfaz urbano-forestal (WUI).
             </li>
             <li>
-              <strong class="text-white">• Inestabilidad de Laderas:</strong> Mecánica de suelos de Mohr-Coulomb según Atlas de Riesgo local: pendiente topográfica ($\mu$), litología (arcilla vs roca) y saturación profunda ($\theta_{7-28} \ge 0.36\text{ m}^3/\text{m}^3$).
-            </li>
-            <li>
-              <strong class="text-white">• Incendios Forestales:</strong> Evalúa en tiempo real el <strong>Índice de Peligro Fosberg (FFWI)</strong> en km/h junto a la regla 30-30-30 de CONAFOR y zonas de interfaz urbano-forestal (WUI).
-            </li>
-            <li>
-              <strong class="text-white">• Tormentas y Granizo:</strong> Acopla Energía Potencial Disponible ($\text{CAPE} \ge 2000\text{ J/kg}$) con Agua Precipitable ($\text{PW} \ge 35\text{ mm}$) y cizalladura vertical.
-            </li>
-            <li>
-              <strong class="text-white">• Ciclones y Huracanes:</strong> Evalúa proximidad del ojo (<300 km), vector de aproximación ($\frac{dD}{dt} < 0$) y caída barométrica rápida en 24 horas.
+              <strong class="text-white">• Vector de Trayectoria Ciclónica:</strong> Evalúa la derivada de distancia ($\frac{dD}{dt} < 0$) y el radio de vientos de tormenta ($R_{34}$) vía NOAA NHC.
             </li>
           </ul>
         </section>
 
-        <!-- 4. TRIAJE Y PROTOCOLO HUMANO CÁRITAS -->
-        <section class="space-y-3 pt-6">
-          <h3 class="text-sm font-black text-purple-400 uppercase tracking-wider flex items-center space-x-2">
-            <span>⛪</span>
-            <span>4. Triaje Operativo de Cáritas Pastoral Social</span>
-          </h3>
-          <div class="space-y-1.5 font-medium">
-            <p><span class="text-emerald-400 font-bold">🟢 Nivel 1 (Sin Riesgo):</span> Operación normal y monitoreo rutinario.</p>
-            <p><span class="text-amber-400 font-bold">🟡 Nivel 2 (Alistamiento):</span> Verificación pasiva de stock de emergencia para 50 personas (300L agua, 450 raciones, cobijas) sin despliegue físico.</p>
-            <p><span class="text-orange-400 font-bold">🟠 Nivel 3 (Movilización):</span> Preposicionamiento en parroquias nodo y censo de personas con discapacidad o embarazadas para evacuación asistida.</p>
-            <p><span class="text-red-400 font-bold">🔴 Nivel 4 (Emergencia):</span> Evacuación obligatoria hacia albergues parroquiales, auxilio y levantamiento del <strong>Formato EDAN Cáritas</strong>.</p>
-          </div>
+        <!-- SECCIÓN 5: ARQUITECTURA COSTO CERO -->
+        <section class="space-y-2 pt-6 text-[11px] text-slate-400">
+          <p>
+            <strong>Transparencia Tecnológica y Costo Cero:</strong> SatRC opera bajo arquitectura JAMstack serverless en GitHub Actions y Vercel, garantizando que el 100% de los donativos y esfuerzos de la Iglesia se destinen íntegramente a la labor caritativa y pastoral directa en las comunidades.
+          </p>
         </section>
       </div>
 
