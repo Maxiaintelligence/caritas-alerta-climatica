@@ -12,6 +12,23 @@
       @open-admin="handleOpenAdmin"
     />
 
+    <!-- BANNER DE SIMULACRO ACTIVO SI SE DISPARÓ DESDE EL PANEL -->
+    <div
+      v-if="simulacroActivo"
+      class="bg-purple-900 border-b border-purple-600 text-white px-4 py-2 text-xs font-bold flex items-center justify-between shadow-lg animate-pulse"
+    >
+      <div class="flex items-center space-x-2">
+        <span class="text-base">🚨</span>
+        <span>MODO SIMULACRO ACTIVO — {{ simulacroInfo?.nombre }} en {{ simulacroInfo?.nivel_nombre }} ({{ simulacroInfo?.vector }})</span>
+      </div>
+      <button
+        @click="desactivarSimulacro"
+        class="px-3 py-1 bg-black/40 hover:bg-black/60 rounded-lg text-purple-200 border border-purple-400/50 cursor-pointer"
+      >
+        ✕ Desactivar Simulacro
+      </button>
+    </div>
+
     <!-- Contenido Principal -->
     <main class="flex-1 max-w-5xl w-full mx-auto px-4 py-6">
       <!-- Estado de Carga -->
@@ -33,13 +50,13 @@
       </div>
 
       <!-- Las 4 Vistas Jerárquicas -->
-      <div v-else-if="riskData">
+      <div v-else-if="displayRiskData">
         <!-- Nivel 1: Dashboard Triaje -->
         <Nivel1Home
           v-if="currentView === 'nivel1'"
-          :alerta-prioritaria="riskData.alerta_prioritaria"
-          :resumen-zonas="riskData.resumen_zonas"
-          :poblacion-en-riesgo-total="riskData.meta.poblacion_en_riesgo_total"
+          :alerta-prioritaria="displayRiskData.alerta_prioritaria"
+          :resumen-zonas="displayRiskData.resumen_zonas"
+          :poblacion-en-riesgo-total="displayRiskData.meta.poblacion_en_riesgo_total"
           @select-zona="onSelectZona"
           @select-poblacion="onSelectPoblacion"
         />
@@ -113,7 +130,11 @@
     <!-- Modal de la Consola de Administración -->
     <AdminPanelModal
       v-if="isAdminPanelOpen"
+      :risk-data="riskData"
+      :simulacro-activo-global="simulacroActivo"
       @close="isAdminPanelOpen = false"
+      @activar-simulacro="activarSimulacro"
+      @desactivar-simulacro="desactivarSimulacro"
     />
 
     <!-- Modal de Metodología y Aviso Legal -->
@@ -172,6 +193,9 @@ const isAdminPanelOpen = ref(false);
 const passwordInput = ref('');
 const passwordError = ref(false);
 
+const simulacroActivo = ref(false);
+const simulacroInfo = ref(null);
+
 const currentView = ref('nivel1');
 const selectedZonaId = ref(null);
 const selectedPoblacionId = ref(null);
@@ -189,6 +213,80 @@ async function loadRiskData() {
     loading.value = false;
   }
 }
+
+// Simulador Reactivo en Toda la PWA
+function activarSimulacro(payload) {
+  const { poblacionId, nivel, vector } = payload;
+  if (!riskData.value) return;
+
+  simulacroActivo.value = true;
+  const p = riskData.value.detalle_poblaciones[poblacionId];
+
+  simulacroInfo.value = {
+    poblacionId,
+    nombre: p?.nombre || 'Localidad',
+    nivel,
+    nivel_nombre: nivel === 4 ? 'CRÍTICO' : 'ALTO',
+    vector
+  };
+}
+
+function desactivarSimulacro() {
+  simulacroActivo.value = false;
+  simulacroInfo.value = null;
+}
+
+// Datos calculados que inyectan el simulacro en vivo en las pantallas
+const displayRiskData = computed(() => {
+  if (!riskData.value) return null;
+  if (!simulacroActivo.value || !simulacroInfo.value) return riskData.value;
+
+  const clone = JSON.parse(JSON.stringify(riskData.value));
+  const sim = simulacroInfo.value;
+  const p = clone.detalle_poblaciones[sim.poblacionId];
+
+  if (p) {
+    const colorHex = sim.nivel === 4 ? '#EF4444' : '#F97316';
+    p.evaluacion.nivel_final = sim.nivel;
+    p.evaluacion.nivel_nombre = sim.nivel_nombre;
+    p.evaluacion.color_hex = colorHex;
+    p.evaluacion.vector_dominante = sim.vector + ' (SIMULACRO ACTIVO)';
+    p.evaluacion.magnitud_principal = 'Escenario de prueba táctica diocesana inyectado';
+    p.evaluacion.temporalidad.ventana_impacto = 'Impacto en 2 horas (Simulación)';
+    p.evaluacion.temporalidad.hora_pico_estimada = '16:00 a 19:00 hrs';
+
+    // Inyectar en Triaje Nivel 1
+    clone.alerta_prioritaria = clone.alerta_prioritaria.filter(a => a.id !== p.id);
+    clone.alerta_prioritaria.unshift({
+      id: p.id,
+      nombre: p.nombre,
+      municipio: p.municipio,
+      estado: p.estado,
+      zona_id: p.zona_id,
+      zona_nombre: p.zona_nombre,
+      poblacion_censo: p.poblacion_censo,
+      nivel: sim.nivel,
+      nivel_nombre: sim.nivel_nombre,
+      color_hex: colorHex,
+      vector_dominante: sim.vector + ' (SIMULACRO)',
+      magnitud: 'Escenario de prueba táctica diocesana inyectado',
+      distancia_temporal: 'Pico estimado: 16:00 a 19:00 hrs (Simulación)',
+      hora_pico: '16:00 a 19:00 hrs',
+      accion_inmediata: sim.nivel === 4 ? '¡Emergencia simulada! Evacuación obligatoria a albergues.' : 'Movilización táctica de brigadas.'
+    });
+
+    // Inyectar en Zona Nivel 2
+    const z = clone.resumen_zonas.find(item => item.zona_id === p.zona_id);
+    if (z) {
+      z.nivel_maximo = sim.nivel;
+      z.color_maximo_hex = colorHex;
+      z.poblaciones_en_alerta = 1;
+      z.poblacion_en_riesgo = p.poblacion_censo;
+    }
+  }
+
+  return clone;
+});
 
 function handleOpenAdmin() {
   passwordInput.value = '';
@@ -238,19 +336,19 @@ function goBack() {
 }
 
 const selectedZona = computed(() => {
-  if (!riskData.value || !selectedZonaId.value) return null;
-  return riskData.value.resumen_zonas.find(z => z.zona_id === selectedZonaId.value);
+  if (!displayRiskData.value || !selectedZonaId.value) return null;
+  return displayRiskData.value.resumen_zonas.find(z => z.zona_id === selectedZonaId.value);
 });
 
 const poblacionesDeZona = computed(() => {
-  if (!riskData.value || !selectedZona.value) return [];
+  if (!displayRiskData.value || !selectedZona.value) return [];
   const ids = selectedZona.value.lista_poblaciones_ids || [];
-  return ids.map(id => riskData.value.detalle_poblaciones[id]).filter(Boolean);
+  return ids.map(id => displayRiskData.value.detalle_poblaciones[id]).filter(Boolean);
 });
 
 const selectedPoblacion = computed(() => {
-  if (!riskData.value || !selectedPoblacionId.value) return null;
-  return riskData.value.detalle_poblaciones[selectedPoblacionId.value];
+  if (!displayRiskData.value || !selectedPoblacionId.value) return null;
+  return displayRiskData.value.detalle_poblaciones[selectedPoblacionId.value];
 });
 
 function updateOnlineStatus() {
