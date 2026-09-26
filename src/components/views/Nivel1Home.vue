@@ -123,7 +123,7 @@
 
           <div
             :class="[
-              'w-6 h-6 rounded-full flex-shrink-0 border-2',
+              'w-6 h-6 rounded-full shrink-0 border-2',
               zona.nivel_maximo >= 3 ? 'badge-sirena' : ''
             ]"
             :style="{ backgroundColor: zona.color_maximo_hex, borderColor: '#ffffff22' }"

@@ -30,24 +30,24 @@
         </button>
       </div>
 
-      <!-- Barra de Pestañas -->
-      <div class="bg-slate-950/80 px-4 pt-2 border-b border-slate-800 flex items-center space-x-1 overflow-x-auto">
-        <button
-          type="button"
-          v-for="tab in tabs"
-          :key="tab.id"
-          @click="activeTab = tab.id"
-          :class="[
-            'px-3.5 py-2 text-xs font-bold rounded-t-xl transition-all cursor-pointer whitespace-nowrap flex items-center space-x-1.5',
-            activeTab === tab.id
-              ? 'bg-slate-900 text-amber-400 border-t-2 border-amber-500 border-x border-slate-800'
-              : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900/50'
-          ]"
-        >
-          <span>{{ tab.icono }}</span>
-          <span>{{ tab.nombre }}</span>
-        </button>
-      </div>
+    <!-- Barra de Pestañas -->
+          <div class="bg-slate-950/80 px-4 pt-2 border-b border-slate-800 flex items-center space-x-1 overflow-x-auto">
+            <button
+              type="button"
+              v-for="tab in tabs"
+              :key="tab.id"
+              @click="activeTab = tab.id"
+              :class="[
+                'px-3.5 py-2 text-xs font-bold rounded-t-xl transition-all cursor-pointer whitespace-nowrap flex items-center space-x-1.5',
+                activeTab === tab.id
+                  ? 'bg-slate-900 text-amber-400 border-t-2 border-t-amber-500 border-x border-x-slate-800'
+                  : 'text-slate-400 hover:text-slate-200 hover:bg-slate-900/50'
+              ]"
+            >
+              <span>{{ tab.icono }}</span>
+              <span>{{ tab.nombre }}</span>
+            </button>
+          </div>
 
       <!-- Contenido de las Pestañas -->
       <div class="p-5 overflow-y-auto flex-1 space-y-5 text-xs leading-relaxed">

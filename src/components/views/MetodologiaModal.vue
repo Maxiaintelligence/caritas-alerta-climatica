@@ -17,6 +17,7 @@
           <p class="text-xs text-slate-400">Cáritas Pastoral Social • Arquidiócesis de Tulancingo</p>
         </div>
         <button
+          type="button"
           @click="$emit('close')"
           class="p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800 hover:bg-slate-700 cursor-pointer"
         >
@@ -105,7 +106,7 @@
               href="/data/forecast_archive.json"
               target="_blank"
               download="satrc_forecast_archive.json"
-              class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-bold transition-colors cursor-pointer border border-slate-700 flex-shrink-0"
+              class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-cyan-300 rounded-lg font-bold transition-colors cursor-pointer border border-slate-700 shrink-0"
             >
               Descargar Dataset Abierto (JSON)
             </a>
@@ -137,7 +138,7 @@
           </div>
         </section>
 
-        <!-- SECCIÓN 3: DEFINICIÓN OPERATIVA DE EVENTOS Y GROUND TRUTH (LOS 7 VECTORES) -->
+        <!-- SECCIÓN 3: DEFINICIÓN OPERATIVA DE EVENTOS Y GROUND TRUTH -->
         <section class="space-y-3 pt-6">
           <h3 class="text-sm font-black text-blue-400 uppercase tracking-wider flex items-center space-x-2">
             <span>🛰️</span>
@@ -158,7 +159,7 @@
             </div>
             <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 space-y-1">
               <p class="font-bold text-white">☀️ 3. Ondas de Calor</p>
-              <p class="text-slate-400 text-[11px]">• <em>Evento Real:</em> $T_{\max} \ge 35^\circ\text{C}$ en zonas bajas (<1,000m) o $T_{\max} \ge 30^\circ\text{C}$ en zonas altas (>2,000m) O Heat Index $\ge 38^\circ\text{C}$ sostenido.<br>• <em>Ground Truth:</em> Sensores termométricos y psicrométricos de superficie.</p>
+              <p class="text-slate-400 text-[11px]">• <em>Evento Real:</em> $T_{\max} \ge 35^\circ\text{C}$ en zonas bajas (<1,000m) o $T_{\max} \ge 30^\circ\text{C}$ en zonas altas (>2,000m) O Heat Index ≥ 38°C sostenido.<br>• <em>Ground Truth:</em> Sensores termométricos y psicrométricos de superficie.</p>
             </div>
             <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 space-y-1">
               <p class="font-bold text-white">⛰️ 4. Inestabilidad de Laderas</p>
@@ -189,8 +190,9 @@
 
       <!-- Pie Modal -->
       <div class="p-4 bg-slate-950 border-t border-slate-800 flex items-center justify-between">
-        <p class="text-[11px] text-slate-500">Arquidiócesis de Tulancingo • Cobertura 91 Localidades</p>
+        <p class="text-[11px] text-slate-500">Arquidiócesis de Tulancingo • Cobertura 84 Nodos</p>
         <button
+          type="button"
           @click="$emit('close')"
           class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-xl text-xs font-bold cursor-pointer transition-colors shadow"
         >
