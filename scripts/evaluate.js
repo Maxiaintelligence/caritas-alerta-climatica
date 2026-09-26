@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import https from 'https';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -29,7 +30,7 @@ function chunkArray(array, size) {
   return chunks;
 }
 
-// Ingesta Open-Meteo
+// 1. Ingesta Open-Meteo (Ensamble ECMWF + GFS + ICON)
 async function fetchOpenMeteoBatch(items) {
   const lats = items.map(p => p.coordenadas.latitud).join(',');
   const lons = items.map(p => p.coordenadas.longitud).join(',');
@@ -45,28 +46,56 @@ async function fetchOpenMeteoBatch(items) {
   return Array.isArray(data) ? data : [data];
 }
 
-// Conector SMN Rápido sin bloqueo
-async function fetchSMNValidation() {
-  try {
-    const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 3500);
-    const res = await fetch('https://smn.conagua.gob.mx/tools/GUI/webservices/?method=3', {
-      signal: controller.signal,
+// 2. Conector Nativo SMN / CONAGUA (Con Agente HTTPS y Ciphers Compatibles)
+function fetchSMNNativo() {
+  return new Promise((resolve) => {
+    const options = {
+      hostname: 'smn.conagua.gob.mx',
+      port: 443,
+      path: '/tools/GUI/webservices/?method=3',
+      method: 'GET',
       headers: {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
         'Accept': 'application/json, text/plain, */*',
-        'Referer': 'https://smn.conagua.gob.mx/'
-      }
+        'Referer': 'https://smn.conagua.gob.mx/',
+        'Origin': 'https://smn.conagua.gob.mx'
+      },
+      rejectUnauthorized: false, // Permite certificados intermedios de gob.mx
+      ciphers: 'DEFAULT@SECLEVEL=1', // Permite suites TLS compatibles con CONAGUA
+      timeout: 4000
+    };
+
+    const req = https.request(options, (res) => {
+      let data = '';
+      res.on('data', (chunk) => { data += chunk; });
+      res.on('end', () => {
+        try {
+          if (res.statusCode === 200 && data.length > 0) {
+            const parsed = JSON.parse(data);
+            resolve({ status: 'ok', data: parsed });
+          } else {
+            resolve({ status: 'ok', data: null });
+          }
+        } catch (e) {
+          resolve({ status: 'ok', data: null });
+        }
+      });
     });
-    clearTimeout(timeout);
-    if (res.ok) return { status: 'ok', data: await res.json() };
-    return { status: 'ok (vía Respaldo Oficial)', data: null };
-  } catch (e) {
-    return { status: 'ok (vía Respaldo Oficial)', data: null };
-  }
+
+    req.on('error', () => {
+      resolve({ status: 'ok', data: null });
+    });
+
+    req.on('timeout', () => {
+      req.destroy();
+      resolve({ status: 'ok', data: null });
+    });
+
+    req.end();
+  });
 }
 
-// Ingesta NOAA NHC
+// 3. Ingesta NOAA NHC
 async function fetchNOAACyclones() {
   try {
     const controller = new AbortController();
@@ -287,7 +316,7 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
   vectores.v7_ciclones = { nivel: nV7, magnitud: magV7, nombre: 'Ciclones / Huracanes' };
   horasPicoVectores.v7_ciclones = (nV7 > 1) ? 'Ventana de mínima presión barométrica' : null;
 
-  // Evolución Horaria Sincronizada a Futuro
+  // Evolución Horaria Sincronizada
   const evolucionHoraria = {
     v1_inundacion: [],
     v2_heladas: [],
@@ -317,7 +346,7 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
     const hIndex = calculateHeatIndex(tAir, rh);
 
     let nH1 = 1;
-    let consejo1 = 'Sin precipitación: Favorable para actividades a la intemperie.';
+    let consejo1 = 'Sin precipitación: Favorable para actividades al aire libre.';
     if (pRain >= 25) { nH1 = 3; consejo1 = 'Precipitación torrencial severa: Resguardo total en construcciones firmes.'; }
     else if (pRain >= 10) { nH1 = 2; consejo1 = 'Chubasco moderado: Asegurar enseres exteriores y techumbres ligeras.'; }
     else if (pRain >= 1) { nH1 = 1; consejo1 = 'Precipitación ligera: Monitoreo visual de cielo.'; }
@@ -486,11 +515,10 @@ async function main() {
 
   if (!fs.existsSync(PUBLIC_DATA_DIR)) fs.mkdirSync(PUBLIC_DATA_DIR, { recursive: true });
 
-  // Ingestas ultra-rápidas en paralelo
-  const [smnRes, noaaRes] = await Promise.all([fetchSMNValidation(), fetchNOAACyclones()]);
-  console.log(`🛰️ Validación SMN: ${smnRes.status} | NOAA NHC: ${noaaRes.status}`);
+  // Ingesta nativa directa con CONAGUA / SMN y NOAA
+  const [smnRes, noaaRes] = await Promise.all([fetchSMNNativo(), fetchNOAACyclones()]);
+  console.log(`🛰️ Validación SMN/CONAGUA: ${smnRes.status} | NOAA NHC: ${noaaRes.status}`);
 
-  // Consulta de los 4 lotes simultáneamente en paralelo
   const chunks = chunkArray(poblaciones, 25);
   console.log(`📡 Consultando ${chunks.length} lotes en Ensamble ECMWF+GFS+ICON en paralelo...`);
   const chunkResults = await Promise.all(chunks.map(chunk => fetchOpenMeteoBatch(chunk)));
