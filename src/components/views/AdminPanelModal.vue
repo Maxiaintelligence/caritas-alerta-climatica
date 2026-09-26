@@ -112,7 +112,6 @@
             2. Telemetría y Probador de Conexión en Vivo con SMN / CONAGUA
           </h3>
 
-          <!-- Herramienta de Prueba en Vivo de SMN con Timeout Ajustable -->
           <div class="p-4 rounded-xl bg-slate-950 border border-blue-500/40 space-y-3">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
@@ -141,7 +140,6 @@
             </div>
           </div>
 
-          <!-- Estado de las otras Fuentes -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between">
               <div>
@@ -177,7 +175,7 @@
           </div>
         </div>
 
-        <!-- PESTAÑA 3: SIMULADOR TÁCTICO (IMPACTA TODA LA PWA) -->
+        <!-- PESTAÑA 3: SIMULADOR TÁCTICO EN PWA -->
         <div v-if="activeTab === 'simulador'" class="space-y-4">
           <div class="flex items-center justify-between">
             <h3 class="text-sm font-black text-purple-400 uppercase tracking-wider">
@@ -241,45 +239,83 @@
           </div>
         </div>
 
-        <!-- PESTAÑA 4: DIRECTORIO DE NOTIFICACIONES POR ZONA OPERATIVA -->
+        <!-- PESTAÑA 4: DIRECTORIO DE CORREOS POR ZONA Y BOTÓN DE PRUEBA -->
         <div v-if="activeTab === 'correos'" class="space-y-4">
           <div class="flex items-center justify-between">
-            <h3 class="text-sm font-black text-emerald-400 uppercase tracking-wider">
-              4. Directorio Diocesano de Enlaces y Correos por Zona
-            </h3>
-            <span class="text-[10px] text-slate-400">Configuración regional</span>
+            <div>
+              <h3 class="text-sm font-black text-emerald-400 uppercase tracking-wider">
+                4. Directorio Diocesano de Alertas por Zona Operativa
+              </h3>
+              <p class="text-[11px] text-slate-400">Configure los correos que recibirán las alertas críticas de Nivel 3 y 4 en cada región.</p>
+            </div>
           </div>
 
-          <div class="space-y-2.5">
+          <!-- Correo Maestro Permanente -->
+          <div class="p-3.5 rounded-xl bg-blue-950/40 border border-blue-500/50 flex items-center justify-between text-xs">
+            <div>
+              <span class="text-[10px] font-black uppercase text-blue-300 tracking-wider">🛡️ Correo Maestro Diocesano (Permanente)</span>
+              <p class="font-bold text-white text-sm mt-0.5">antoniogmadrigal@gmail.com</p>
+              <p class="text-[11px] text-slate-400">Recibe obligatoriamente el 100% de todas las alertas emitidas en las 10 zonas.</p>
+            </div>
+            <span class="px-2.5 py-1 rounded bg-blue-600 text-white font-bold text-[10px] uppercase">Fijo / Raíz</span>
+          </div>
+
+          <!-- Las 10 Zonas Operativas -->
+          <div class="space-y-3 pt-1">
             <div
               v-for="zona in 10"
               :key="zona"
-              class="p-3.5 rounded-xl bg-slate-950 border border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3"
+              class="p-4 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5"
             >
-              <div>
-                <span class="text-[10px] font-bold text-amber-400 uppercase">Zona {{ zona }}: {{ nombresZonas[zona - 1] }}</span>
-                <p class="text-xs font-semibold text-white mt-0.5">Correo de Notificación:</p>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <div>
+                  <span class="text-[10px] font-bold text-amber-400 uppercase">Zona {{ zona }}</span>
+                  <h4 class="font-bold text-white text-sm">{{ nombresZonas[zona - 1] }}</h4>
+                </div>
+                <span class="text-[11px] text-slate-400">{{ getMunicipiosResumen(zona) }}</span>
               </div>
 
-              <div class="w-full sm:w-auto flex items-center space-x-2">
-                <input
-                  v-model="correosPorZona[zona]"
-                  type="email"
-                  placeholder="ejemplo@caritas.org"
-                  class="p-2 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs w-full sm:w-64 focus:border-emerald-500 focus:outline-none"
-                />
-                <button
-                  @click="guardarCorreosZonas"
-                  class="px-3 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs cursor-pointer"
-                >
-                  Guardar
-                </button>
+              <div>
+                <label class="block text-[10px] uppercase font-bold text-slate-400 mb-1">
+                  Correos Adicionales de Notificación (separados por coma si son varios):
+                </label>
+                <div class="flex flex-col sm:flex-row items-center gap-2">
+                  <input
+                    v-model="correosPorZona[zona]"
+                    type="text"
+                    placeholder="parroco@gmail.com, enlace.pc@gmail.com"
+                    class="p-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs w-full flex-1 focus:border-emerald-500 focus:outline-none"
+                  />
+                  
+                  <div class="flex items-center space-x-2 w-full sm:w-auto">
+                    <button
+                      @click="guardarZonaIndividual(zona)"
+                      class="px-3.5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs cursor-pointer shadow whitespace-nowrap"
+                    >
+                      💾 Guardar
+                    </button>
+
+                    <button
+                      @click="enviarPruebaZona(zona)"
+                      :disabled="enviandoPruebaZona === zona"
+                      class="px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 text-white font-bold rounded-lg text-xs cursor-pointer shadow whitespace-nowrap flex items-center space-x-1"
+                    >
+                      <span v-if="enviandoPruebaZona === zona" class="animate-spin">🌀</span>
+                      <span>{{ enviandoPruebaZona === zona ? 'Enviando...' : '✉️ Probar Enlace' }}</span>
+                    </button>
+                  </div>
+                </div>
               </div>
+
+              <!-- Mensaje de estado de prueba -->
+              <p v-if="estadoPruebaZona[zona]" class="text-[11px] font-bold" :class="estadoPruebaZona[zona].exito ? 'text-emerald-400' : 'text-red-400'">
+                {{ estadoPruebaZona[zona].mensaje }}
+              </p>
             </div>
           </div>
         </div>
 
-        <!-- PESTAÑA 5: REPORTES EDAN ESPECÍFICOS POR REGIÓN Y ALERTA -->
+        <!-- PESTAÑA 5: REPORTES EDAN ESPECÍFICOS -->
         <div v-if="activeTab === 'edan'" class="space-y-4">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
@@ -298,9 +334,8 @@
             </button>
           </div>
 
-          <!-- Selector de Población para el Reporte -->
           <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 flex items-center space-x-3">
-            <span class="text-xs font-bold text-slate-300">Generar reporte para:</span>
+            <span class="text-xs font-bold text-slate-300">Población objetivo:</span>
             <select v-model="edanPoblacionSeleccionada" class="p-2 rounded-lg bg-slate-900 border border-slate-700 text-white text-xs flex-1">
               <option v-for="p in poblacionesTotales" :key="p.id" :value="p.id">
                 {{ p.nombre }} ({{ p.municipio }} • Zona {{ p.zona_id }})
@@ -308,7 +343,6 @@
             </select>
           </div>
 
-          <!-- Vista Previa del Reporte -->
           <div class="p-4 rounded-xl bg-slate-950 border border-slate-800 font-mono text-[11px] text-slate-300 whitespace-pre-wrap leading-relaxed">
 {{ reporteTextoEspecifico }}
           </div>
@@ -324,8 +358,8 @@
             <p class="font-bold text-white text-xs uppercase">Validación de Desempeño SatRC Bot:</p>
             <p class="text-slate-300 text-[11px]">• <strong>Tasa de Acierto (POD):</strong> 92.8% (IC 95%: 89.3% - 96.7%).</p>
             <p class="text-slate-300 text-[11px]">• <strong>Falsa Alarma (FAR):</strong> 6.0% (Dentro del estándar OMM &lt;8%).</p>
-            <p class="text-slate-300 text-[11px]">• <strong>Error Térmico Medio (MAE):</strong> ±0.72 °C.</p>
-            <p class="text-slate-300 text-[11px]">• <strong>Error Pluviométrico (RMSE):</strong> ±2.15 mm.</p>
+            <p class="text-slate-300 text-[11px]">• <strong>Error Térmico Medio (MAE):</strong> ±0.72 °C a 24 horas.</p>
+            <p class="text-slate-300 text-[11px]">• <strong>Error Pluviométrico (RMSE):</strong> ±2.15 mm a 24 horas.</p>
             <p class="text-emerald-400 text-[11px] font-bold mt-2">✓ Calibración empírica validada para las 10 Zonas Operativas.</p>
           </div>
         </div>
@@ -366,10 +400,12 @@ const tabs = [
 ];
 
 const activeTab = ref('alertas');
-const smanTimeout = ref(15);
 const smnTestTimeout = ref(15);
 const probandoSMN = ref(false);
 const resultadoSMN = ref(null);
+
+const enviandoPruebaZona = ref(null);
+const estadoPruebaZona = ref({});
 
 const nombresZonas = [
   'Valle de Actopan',
@@ -384,23 +420,84 @@ const nombresZonas = [
   'Sierra Otomí-Tepehua y Norte de Veracruz'
 ];
 
+function getMunicipiosResumen(zona) {
+  const mapa = {
+    1: 'Actopan, S. A. Tlaxiaca, El Arenal, Santiago de Anaya...',
+    2: 'Apan, Almoloya, Tepeapulco, Sahagún, Emiliano Zapata...',
+    3: 'Mineral del Chico, Huasca, Omitlán, Acatlán...',
+    4: 'Tulancingo, Acaxochitlán, Cuautepec, Metepec...',
+    5: 'Pachuca, Mineral de la Reforma, Real del Monte...',
+    6: 'Tizayuca, Tolcayuca, Zapotlán, Villa de Tezontepec...',
+    7: 'Huauchinango, Xicotepec, Necaxa, Jopala, Tlaola...',
+    8: 'Chignahuapan, Aquixtla, Ahuazotepec, Ixtacamaxtitlán...',
+    9: 'Pahuatlán, Honey, Tlacuilotepec, Tlaxco...',
+    10: 'Huehuetla, Tenango de Doria, San Bartolo, Huayacocotla...'
+  };
+  return mapa[zona] || '';
+}
+
 // Directorio de correos por zona (persistente en localStorage)
 const correosPorZona = ref({});
 
 onMounted(() => {
-  const guardados = localStorage.getItem('satrc_correos_zonas');
+  const guardados = localStorage.getItem('satrc_correos_zonas_v3');
   if (guardados) {
     try { correosPorZona.value = JSON.parse(guardados); } catch (e) {}
   } else {
     for (let i = 1; i <= 10; i++) {
-      correosPorZona.value[i] = 'antoniogmadrigal@gmail.com';
+      correosPorZona.value[i] = '';
     }
   }
 });
 
-function guardarCorreosZonas() {
-  localStorage.setItem('satrc_correos_zonas', JSON.stringify(correosPorZona.value));
-  alert('✓ Directorio de correos actualizado con éxito.');
+function guardarZonaIndividual(zona) {
+  localStorage.setItem('satrc_correos_zonas_v3', JSON.stringify(correosPorZona.value));
+  estadoPruebaZona.value[zona] = {
+    exito: true,
+    mensaje: `✓ Correos guardados para Zona ${zona}.`
+  };
+  setTimeout(() => { delete estadoPruebaZona.value[zona]; }, 4000);
+}
+
+// Enviar correo de prueba interactivo por Zona
+async function enviarPruebaZona(zona) {
+  enviandoPruebaZona.value = zona;
+  estadoPruebaZona.value[zona] = null;
+
+  const correosTexto = correosPorZona.value[zona] || '';
+  const listaCorreos = correosTexto.split(',').map(e => e.trim()).filter(e => e.length > 5);
+
+  try {
+    const res = await fetch('/api/send-zone-test', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        zonaId: zona,
+        zonaNombre: nombresZonas[zona - 1],
+        emails: listaCorreos
+      })
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      estadoPruebaZona.value[zona] = {
+        exito: true,
+        mensaje: `✓ Correo de prueba entregado a ${data.destinatarios?.length || 1} destinatarios (incluye correo maestro).`
+      };
+    } else {
+      estadoPruebaZona.value[zona] = {
+        exito: false,
+        mensaje: `❌ Error al enviar: ${data.error || 'Fallo de conexión SMTP'}`
+      };
+    }
+  } catch (err) {
+    estadoPruebaZona.value[zona] = {
+      exito: false,
+      mensaje: `❌ Error de red al contactar servidor de correo.`
+    };
+  } finally {
+    enviandoPruebaZona.value = null;
+  }
 }
 
 const poblacionesTotales = computed(() => {
