@@ -2,26 +2,29 @@
   "z01_actopan_centro": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.191Z"
+    "updated_at": "2026-09-26T02:29:40.097Z"
   },
   "z01_actopan_poniente": {
     "ultimos_niveles": [
       1,
-      1
-    ],
-    "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.192Z"
-  },
-  "z01_actopan_norte": {
-    "ultimos_niveles": [
       1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.195Z"
+    "updated_at": "2026-09-26T02:29:40.098Z"
+  },
+  "z01_actopan_norte": {
+    "ultimos_niveles": [
+      1,
+      1,
+      1
+    ],
+    "nivel_actual": 1,
+    "updated_at": "2026-09-26T02:29:40.098Z"
   },
   "z01_san_agustin": {
     "ultimos_niveles": [
@@ -33,7 +36,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.196Z"
+    "updated_at": "2026-09-26T02:29:40.099Z"
   },
   "z01_chicavasco": {
     "ultimos_niveles": [
@@ -45,7 +48,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.196Z"
+    "updated_at": "2026-09-26T02:29:40.099Z"
   },
   "z01_tornacuxtla": {
     "ultimos_niveles": [
@@ -57,7 +60,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.197Z"
+    "updated_at": "2026-09-26T02:29:40.099Z"
   },
   "z01_el_arenal": {
     "ultimos_niveles": [
@@ -69,7 +72,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.197Z"
+    "updated_at": "2026-09-26T02:29:40.099Z"
   },
   "z01_stgo_de_anaya": {
     "ultimos_niveles": [
@@ -81,7 +84,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.197Z"
+    "updated_at": "2026-09-26T02:29:40.100Z"
   },
   "z01_daxtha": {
     "ultimos_niveles": [
@@ -93,23 +96,25 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.197Z"
+    "updated_at": "2026-09-26T02:29:40.100Z"
   },
   "z02_apan_cabecera": {
     "ultimos_niveles": [
       1,
-      1
-    ],
-    "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.198Z"
-  },
-  "z02_apan_llanura_alta": {
-    "ultimos_niveles": [
       1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.198Z"
+    "updated_at": "2026-09-26T02:29:40.100Z"
+  },
+  "z02_apan_llanura_alta": {
+    "ultimos_niveles": [
+      1,
+      1,
+      1
+    ],
+    "nivel_actual": 1,
+    "updated_at": "2026-09-26T02:29:40.100Z"
   },
   "z02_almoloya": {
     "ultimos_niveles": [
@@ -121,15 +126,16 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.198Z"
+    "updated_at": "2026-09-26T02:29:40.100Z"
   },
   "z02_tepeapulco_cabecera": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.199Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z02_cd_sahagun": {
     "ultimos_niveles": [
@@ -141,7 +147,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.199Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z02_emiliano_zapata": {
     "ultimos_niveles": [
@@ -153,7 +159,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.199Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z02_tlanalapa": {
     "ultimos_niveles": [
@@ -165,7 +171,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.199Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z02_singuilucan": {
     "ultimos_niveles": [
@@ -177,7 +183,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.200Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z02_epazoyucan": {
     "ultimos_niveles": [
@@ -189,7 +195,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.200Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z02_zempoala": {
     "ultimos_niveles": [
@@ -201,7 +207,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.201Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z02_chimalpa": {
     "ultimos_niveles": [
@@ -213,7 +219,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.201Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z03_mineral_chico": {
     "ultimos_niveles": [
@@ -225,7 +231,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.201Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z03_omitlan": {
     "ultimos_niveles": [
@@ -237,7 +243,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.201Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z03_atotonilco_gte": {
     "ultimos_niveles": [
@@ -249,7 +255,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.202Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z03_huasca": {
     "ultimos_niveles": [
@@ -261,7 +267,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.202Z"
+    "updated_at": "2026-09-26T02:29:40.101Z"
   },
   "z03_san_juan_huey": {
     "ultimos_niveles": [
@@ -273,7 +279,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.203Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z03_acatlan": {
     "ultimos_niveles": [
@@ -285,7 +291,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.203Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z03_alcholoya": {
     "ultimos_niveles": [
@@ -297,7 +303,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.203Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z03_cerro_colorado": {
     "ultimos_niveles": [
@@ -309,39 +315,43 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.204Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z04_tulancingo_centro": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.204Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z04_tulancingo_norte_napateco": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.204Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z04_tulancingo_sur_jaltepec": {
     "ultimos_niveles": [
       1,
-      1
-    ],
-    "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.204Z"
-  },
-  "z04_tulancingo_oriente_hueytlalpan": {
-    "ultimos_niveles": [
       1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.205Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
+  },
+  "z04_tulancingo_oriente_hueytlalpan": {
+    "ultimos_niveles": [
+      1,
+      1,
+      1
+    ],
+    "nivel_actual": 1,
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z04_rojo_gomez": {
     "ultimos_niveles": [
@@ -353,7 +363,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.205Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z04_acaxochitlan": {
     "ultimos_niveles": [
@@ -365,7 +375,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.205Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z04_los_reyes": {
     "ultimos_niveles": [
@@ -377,7 +387,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.206Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z04_cuautepec": {
     "ultimos_niveles": [
@@ -389,7 +399,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.206Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z04_sta_ma_nativitas": {
     "ultimos_niveles": [
@@ -401,7 +411,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.206Z"
+    "updated_at": "2026-09-26T02:29:40.102Z"
   },
   "z04_san_lorenzo_say": {
     "ultimos_niveles": [
@@ -413,7 +423,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.206Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z04_stgo_tulantepec": {
     "ultimos_niveles": [
@@ -425,7 +435,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.206Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z04_el_susto": {
     "ultimos_niveles": [
@@ -437,7 +447,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.207Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z04_metepec": {
     "ultimos_niveles": [
@@ -449,7 +459,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.207Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z04_paliseca": {
     "ultimos_niveles": [
@@ -461,55 +471,61 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.207Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z05_pachuca_norte_barrios": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.210Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z05_pachuca_centro": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.210Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z05_pachuca_sur_matilde": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.210Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z05_m_reforma_pachuquilla": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.210Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z05_m_reforma_poniente": {
     "ultimos_niveles": [
       1,
-      1
-    ],
-    "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.211Z"
-  },
-  "z05_m_reforma_sur_tuzos": {
-    "ultimos_niveles": [
       1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.211Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
+  },
+  "z05_m_reforma_sur_tuzos": {
+    "ultimos_niveles": [
+      1,
+      1,
+      1
+    ],
+    "nivel_actual": 1,
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z05_real_del_monte": {
     "ultimos_niveles": [
@@ -521,7 +537,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.211Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z05_xochihuacan": {
     "ultimos_niveles": [
@@ -533,23 +549,25 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.211Z"
+    "updated_at": "2026-09-26T02:29:40.103Z"
   },
   "z06_tizayuca_centro": {
     "ultimos_niveles": [
       1,
-      1
-    ],
-    "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.212Z"
-  },
-  "z06_tizayuca_sur_huitzila": {
-    "ultimos_niveles": [
       1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.212Z"
+    "updated_at": "2026-09-26T02:29:40.105Z"
+  },
+  "z06_tizayuca_sur_huitzila": {
+    "ultimos_niveles": [
+      1,
+      1,
+      1
+    ],
+    "nivel_actual": 1,
+    "updated_at": "2026-09-26T02:29:40.105Z"
   },
   "z06_tolcayuca": {
     "ultimos_niveles": [
@@ -561,7 +579,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.212Z"
+    "updated_at": "2026-09-26T02:29:40.105Z"
   },
   "z06_zapotlan": {
     "ultimos_niveles": [
@@ -573,7 +591,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.212Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
   },
   "z06_v_de_tezontepec": {
     "ultimos_niveles": [
@@ -585,7 +603,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.213Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
   },
   "z06_tepojaco": {
     "ultimos_niveles": [
@@ -597,7 +615,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.213Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
   },
   "z06_tellez": {
     "ultimos_niveles": [
@@ -609,7 +627,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.213Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
   },
   "z06_acayuca": {
     "ultimos_niveles": [
@@ -621,63 +639,70 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.213Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
   },
   "z07_huauchinango_centro": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.214Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
   },
   "z07_huauchinango_sierra_alta": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.214Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
   },
   "z07_huauchinango_tenango": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.214Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
   },
   "z07_juan_galindo_necaxa": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.214Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
   },
   "z07_juan_galindo_laderas": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.215Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
   },
   "z07_xicotepec_cumbre": {
     "ultimos_niveles": [
       1,
-      1
-    ],
-    "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.215Z"
-  },
-  "z07_xicotepec_vertiente_media": {
-    "ultimos_niveles": [
       1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.215Z"
+    "updated_at": "2026-09-26T02:29:40.106Z"
+  },
+  "z07_xicotepec_vertiente_media": {
+    "ultimos_niveles": [
+      1,
+      1,
+      1
+    ],
+    "nivel_actual": 1,
+    "updated_at": "2026-09-26T02:29:40.107Z"
   },
   "z07_v_avila_camacho": {
     "ultimos_niveles": [
@@ -689,7 +714,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.215Z"
+    "updated_at": "2026-09-26T02:29:40.107Z"
   },
   "z07_tlaola": {
     "ultimos_niveles": [
@@ -701,7 +726,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.215Z"
+    "updated_at": "2026-09-26T02:29:40.107Z"
   },
   "z07_zihuateutla": {
     "ultimos_niveles": [
@@ -713,7 +738,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.216Z"
+    "updated_at": "2026-09-26T02:29:40.107Z"
   },
   "z07_naupan": {
     "ultimos_niveles": [
@@ -725,7 +750,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.216Z"
+    "updated_at": "2026-09-26T02:29:40.107Z"
   },
   "z07_chiconcuautla": {
     "ultimos_niveles": [
@@ -737,7 +762,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.216Z"
+    "updated_at": "2026-09-26T02:29:40.107Z"
   },
   "z07_tenanguito": {
     "ultimos_niveles": [
@@ -749,7 +774,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.216Z"
+    "updated_at": "2026-09-26T02:29:40.107Z"
   },
   "z07_chicontla_jopala": {
     "ultimos_niveles": [
@@ -761,7 +786,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.216Z"
+    "updated_at": "2026-09-26T02:29:40.107Z"
   },
   "z08_chignahuapan": {
     "ultimos_niveles": [
@@ -773,7 +798,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.217Z"
+    "updated_at": "2026-09-26T02:29:40.107Z"
   },
   "z08_aquixtla": {
     "ultimos_niveles": [
@@ -785,7 +810,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.217Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z08_ahuazotepec": {
     "ultimos_niveles": [
@@ -797,7 +822,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.217Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z08_v_cuauhtemoc": {
     "ultimos_niveles": [
@@ -809,7 +834,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.217Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z08_paredon": {
     "ultimos_niveles": [
@@ -821,7 +846,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.217Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z08_ixtacamaxtitlan": {
     "ultimos_niveles": [
@@ -833,7 +858,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.218Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z09_pahuatlan": {
     "ultimos_niveles": [
@@ -845,7 +870,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.218Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z09_san_pablito": {
     "ultimos_niveles": [
@@ -857,7 +882,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.218Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z09_xolotla": {
     "ultimos_niveles": [
@@ -869,7 +894,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.218Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z09_honey": {
     "ultimos_niveles": [
@@ -881,7 +906,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.218Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z09_tlaxco": {
     "ultimos_niveles": [
@@ -893,7 +918,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.218Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z09_tlaquilotepec": {
     "ultimos_niveles": [
@@ -905,7 +930,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.219Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z10_san_lorenzo_ach": {
     "ultimos_niveles": [
@@ -917,7 +942,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.219Z"
+    "updated_at": "2026-09-26T02:29:40.108Z"
   },
   "z10_agua_blanca": {
     "ultimos_niveles": [
@@ -929,7 +954,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.219Z"
+    "updated_at": "2026-09-26T02:29:40.109Z"
   },
   "z10_tenango_doria": {
     "ultimos_niveles": [
@@ -941,7 +966,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.220Z"
+    "updated_at": "2026-09-26T02:29:40.109Z"
   },
   "z10_san_bartolo_tut": {
     "ultimos_niveles": [
@@ -953,7 +978,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.220Z"
+    "updated_at": "2026-09-26T02:29:40.109Z"
   },
   "z10_huehuetla": {
     "ultimos_niveles": [
@@ -965,7 +990,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.220Z"
+    "updated_at": "2026-09-26T02:29:40.109Z"
   },
   "z10_san_antonio": {
     "ultimos_niveles": [
@@ -977,7 +1002,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.220Z"
+    "updated_at": "2026-09-26T02:29:40.109Z"
   },
   "z10_san_esteban": {
     "ultimos_niveles": [
@@ -989,7 +1014,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.220Z"
+    "updated_at": "2026-09-26T02:29:40.109Z"
   },
   "z10_santa_ursula": {
     "ultimos_niveles": [
@@ -1001,7 +1026,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.221Z"
+    "updated_at": "2026-09-26T02:29:40.109Z"
   },
   "z10_sta_ma_asuncion": {
     "ultimos_niveles": [
@@ -1013,7 +1038,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.221Z"
+    "updated_at": "2026-09-26T02:29:40.109Z"
   },
   "z10_zacualpan": {
     "ultimos_niveles": [
@@ -1025,7 +1050,7 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.221Z"
+    "updated_at": "2026-09-26T02:29:40.109Z"
   },
   "z10_texcatepec": {
     "ultimos_niveles": [
@@ -1037,15 +1062,16 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.221Z"
+    "updated_at": "2026-09-26T02:29:40.110Z"
   },
   "z10_huayacocotla_cumbre": {
     "ultimos_niveles": [
       1,
+      1,
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.222Z"
+    "updated_at": "2026-09-26T02:29:40.110Z"
   },
   "z10_ixhuatlan_madero": {
     "ultimos_niveles": [
@@ -1057,6 +1083,6 @@
       1
     ],
     "nivel_actual": 1,
-    "updated_at": "2026-09-26T01:36:18.222Z"
+    "updated_at": "2026-09-26T02:29:40.110Z"
   }
 }
