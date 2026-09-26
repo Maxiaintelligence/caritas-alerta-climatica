@@ -22,6 +22,7 @@
         </div>
 
         <button
+          type="button"
           @click="$emit('close')"
           class="p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800 hover:bg-slate-700 cursor-pointer"
         >
@@ -32,6 +33,7 @@
       <!-- Barra de Pestañas -->
       <div class="bg-slate-950/80 px-4 pt-2 border-b border-slate-800 flex items-center space-x-1 overflow-x-auto">
         <button
+          type="button"
           v-for="tab in tabs"
           :key="tab.id"
           @click="activeTab = tab.id"
@@ -84,6 +86,7 @@
 
               <div class="flex items-center space-x-2">
                 <button
+                  type="button"
                   v-if="!alerta.confirmado"
                   @click="marcarAcuse(alerta.id)"
                   class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg cursor-pointer"
@@ -91,6 +94,7 @@
                   ✓ Confirmar Acuse
                 </button>
                 <button
+                  type="button"
                   @click="desactivarAlerta(alerta.id)"
                   class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg cursor-pointer"
                 >
@@ -126,6 +130,7 @@
 
             <div class="flex items-center space-x-3 pt-1">
               <button
+                type="button"
                 @click="probarConexionSMN"
                 :disabled="probandoSMN"
                 class="px-4 py-2 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 text-white font-bold rounded-xl text-xs cursor-pointer flex items-center space-x-1.5 shadow"
@@ -222,6 +227,7 @@
 
             <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
               <button
+                type="button"
                 @click="activarSimulacroEnPWA"
                 class="w-full sm:w-auto px-5 py-2.5 bg-purple-600 hover:bg-purple-500 text-white font-black rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow-lg"
               >
@@ -229,6 +235,7 @@
               </button>
 
               <button
+                type="button"
                 v-if="simulacroActivoGlobal"
                 @click="cancelarSimulacroEnPWA"
                 class="w-full sm:w-auto px-4 py-2 bg-slate-800 hover:bg-slate-700 text-red-300 font-bold rounded-xl text-xs cursor-pointer border border-red-800/40"
@@ -239,7 +246,7 @@
           </div>
         </div>
 
-        <!-- PESTAÑA 4: DIRECTORIO DE CORREOS POR ZONA Y BOTÓN DE PRUEBA -->
+        <!-- PESTAÑA 4: DIRECTORIO DE CORREOS POR ZONA -->
         <div v-if="activeTab === 'correos'" class="space-y-4">
           <div class="flex items-center justify-between">
             <div>
@@ -289,6 +296,7 @@
                   
                   <div class="flex items-center space-x-2 w-full sm:w-auto">
                     <button
+                      type="button"
                       @click="guardarZonaIndividual(zona)"
                       class="px-3.5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg text-xs cursor-pointer shadow whitespace-nowrap"
                     >
@@ -296,6 +304,7 @@
                     </button>
 
                     <button
+                      type="button"
                       @click="enviarPruebaZona(zona)"
                       :disabled="enviandoPruebaZona === zona"
                       class="px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 text-white font-bold rounded-lg text-xs cursor-pointer shadow whitespace-nowrap flex items-center space-x-1"
@@ -307,7 +316,7 @@
                 </div>
               </div>
 
-              <!-- Mensaje de estado de prueba -->
+              <!-- Mensaje de estado -->
               <p v-if="estadoPruebaZona[zona]" class="text-[11px] font-bold" :class="estadoPruebaZona[zona].exito ? 'text-emerald-400' : 'text-red-400'">
                 {{ estadoPruebaZona[zona].mensaje }}
               </p>
@@ -326,6 +335,7 @@
             </div>
             
             <button
+              type="button"
               @click="copiarReporte"
               class="px-4 py-2 bg-rose-600 hover:bg-rose-500 text-white font-bold rounded-xl text-xs cursor-pointer shadow flex items-center space-x-1.5"
             >
@@ -370,6 +380,7 @@
       <div class="p-4 bg-slate-950 border-t border-slate-800 flex items-center justify-between">
         <p class="text-[11px] text-slate-500">Consola de Mando Diocesana • Cáritas Tulancingo</p>
         <button
+          type="button"
           @click="$emit('close')"
           class="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold cursor-pointer"
         >
@@ -436,7 +447,6 @@ function getMunicipiosResumen(zona) {
   return mapa[zona] || '';
 }
 
-// Directorio de correos por zona (Carga desde servidor central)
 const correosPorZona = ref({});
 
 onMounted(async () => {
