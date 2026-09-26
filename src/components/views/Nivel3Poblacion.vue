@@ -105,24 +105,28 @@
           </div>
 
           <div class="mt-3 pt-2 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400 group-hover:text-amber-400 transition-colors">
-            <span>Ver evolución 24h</span>
-            <span>🔍 ➔</span>
+            <span>Evolución a futuro (24h)</span>
+            <span>⏱️ ➔</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- MODAL DE DESGLOSE HORA POR HORA DEL VECTOR -->
+    <!-- MODAL DE DESGLOSE HORA POR HORA (A PARTIR DE LA HORA ACTUAL) -->
     <div
       v-if="vectorSeleccionado"
-      class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
+      class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4"
     >
       <div class="bg-slate-900 border border-slate-700 w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col">
         <!-- Encabezado Modal -->
         <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
           <div>
-            <span class="text-[10px] font-bold text-amber-400 uppercase tracking-widest">Cronología Hora por Hora (24h)</span>
-            <h3 class="text-base font-bold text-white">{{ poblacion.evaluacion.vectores[vectorSeleccionado]?.nombre }}</h3>
+            <div class="flex items-center space-x-2">
+              <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">
+                Hora Actual ➔ Próximas 24 Horas
+              </span>
+            </div>
+            <h3 class="text-base font-bold text-white mt-1">{{ poblacion.evaluacion.vectores[vectorSeleccionado]?.nombre }}</h3>
             <p class="text-xs text-slate-400">{{ poblacion.nombre }}, {{ poblacion.municipio }}</p>
           </div>
           <button
@@ -133,35 +137,44 @@
           </button>
         </div>
 
-        <!-- Lista Horaria Desplazable -->
-        <div class="p-4 overflow-y-auto space-y-2 flex-1 divide-y divide-slate-800/60">
-          <div
-            v-for="(item, idx) in poblacion.evaluacion.evolucion_horaria?.[vectorSeleccionado] || []"
-            :key="idx"
-            class="pt-2 first:pt-0 flex items-center justify-between text-xs"
-          >
-            <div class="flex items-center space-x-3">
-              <span class="font-mono font-bold text-slate-200 text-sm w-12">{{ item.hora }}</span>
-              <div>
-                <p class="font-bold text-white">{{ item.valor }}</p>
-                <p class="text-[11px] text-slate-400">{{ item.consejo }}</p>
-              </div>
+        <!-- Lista Horaria Desplazable con Separadores Hoy / Mañana -->
+        <div class="p-4 overflow-y-auto space-y-2 flex-1">
+          <template v-for="(item, idx) in poblacion.evaluacion.evolucion_horaria?.[vectorSeleccionado] || []" :key="idx">
+            
+            <!-- Separador Visual de Día cuando cambia de Hoy a Mañana -->
+            <div
+              v-if="idx === 0 || item.dia !== poblacion.evaluacion.evolucion_horaria?.[vectorSeleccionado]?.[idx - 1]?.dia"
+              class="py-1 px-3 my-2 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between font-bold text-[11px] text-amber-400 uppercase tracking-wider"
+            >
+              <span>📅 {{ item.dia === 'Hoy' ? 'Evolución para el resto del día de Hoy' : 'Pronóstico para el día de Mañana' }}</span>
+              <span class="text-[10px] text-slate-500 font-mono">{{ item.dia }}</span>
             </div>
 
-            <span
-              class="text-[10px] font-black px-2 py-0.5 rounded text-white"
-              :style="{ backgroundColor: colorNivel(item.nivel) }"
-            >
-              Nivel {{ item.nivel }}
-            </span>
-          </div>
+            <!-- Fila Horaria -->
+            <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between text-xs hover:border-slate-700 transition-colors">
+              <div class="flex items-center space-x-3">
+                <span class="font-mono font-bold text-slate-100 text-sm w-12">{{ item.hora }}</span>
+                <div>
+                  <p class="font-bold text-white">{{ item.valor }}</p>
+                  <p class="text-[11px] text-slate-400">{{ item.consejo }}</p>
+                </div>
+              </div>
+
+              <span
+                class="text-[10px] font-black px-2 py-0.5 rounded text-white"
+                :style="{ backgroundColor: colorNivel(item.nivel) }"
+              >
+                Nivel {{ item.nivel }}
+              </span>
+            </div>
+          </template>
         </div>
 
         <!-- Pie Modal -->
         <div class="p-3 bg-slate-950 border-t border-slate-800 text-center">
           <button
             @click="vectorSeleccionado = null"
-            class="px-5 py-1.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold cursor-pointer"
+            class="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold cursor-pointer"
           >
             Cerrar cronología
           </button>
