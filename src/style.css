@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+/* Animación Sirena Crítica Roja (Nivel 4) */
+@keyframes sirenaRoja {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+    border-color: #ef4444;
+  }
+  50% {
+    box-shadow: 0 0 24px 6px rgba(239, 68, 68, 0.85);
+    border-color: #fca5a5;
+  }
+}
+
+/* Animación Sirena Alta Naranja (Nivel 3) */
+@keyframes sirenaNaranja {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.3);
+    border-color: #f97316;
+  }
+  50% {
+    box-shadow: 0 0 18px 4px rgba(249, 115, 22, 0.75);
+    border-color: #fdba74;
+  }
+}
+
+.sirena-roja {
+  animation: sirenaRoja 1.2s infinite ease-in-out;
+}
+
+.sirena-naranja {
+  animation: sirenaNaranja 1.6s infinite ease-in-out;
+}
+
+.badge-sirena {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
