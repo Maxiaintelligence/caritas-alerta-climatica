@@ -436,30 +436,48 @@ function getMunicipiosResumen(zona) {
   return mapa[zona] || '';
 }
 
-// Directorio de correos por zona (persistente en localStorage)
+// Directorio de correos por zona (Carga desde servidor central)
 const correosPorZona = ref({});
 
-onMounted(() => {
-  const guardados = localStorage.getItem('satrc_correos_zonas_v3');
-  if (guardados) {
-    try { correosPorZona.value = JSON.parse(guardados); } catch (e) {}
-  } else {
-    for (let i = 1; i <= 10; i++) {
-      correosPorZona.value[i] = '';
+onMounted(async () => {
+  actualizarAlertasLista();
+
+  try {
+    const res = await fetch(`/data/zone_contacts.json?t=${Date.now()}`);
+    if (res.ok) {
+      const data = await res.json();
+      correosPorZona.value = data.zonas || {};
+    }
+  } catch (e) {
+    const guardados = localStorage.getItem('satrc_correos_zonas_v3');
+    if (guardados) {
+      try { correosPorZona.value = JSON.parse(guardados); } catch (err) {}
+    } else {
+      for (let i = 1; i <= 10; i++) {
+        correosPorZona.value[i] = '';
+      }
     }
   }
 });
 
-function guardarZonaIndividual(zona) {
+async function guardarZonaIndividual(zona) {
   localStorage.setItem('satrc_correos_zonas_v3', JSON.stringify(correosPorZona.value));
+
+  try {
+    await fetch('/api/save-zone-contacts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ zonas: correosPorZona.value })
+    });
+  } catch (e) {}
+
   estadoPruebaZona.value[zona] = {
     exito: true,
-    mensaje: `✓ Correos guardados para Zona ${zona}.`
+    mensaje: `✓ Guardado permanente para Zona ${zona}.`
   };
   setTimeout(() => { delete estadoPruebaZona.value[zona]; }, 4000);
 }
 
-// Enviar correo de prueba interactivo por Zona
 async function enviarPruebaZona(zona) {
   enviandoPruebaZona.value = zona;
   estadoPruebaZona.value[zona] = null;
@@ -507,7 +525,6 @@ const poblacionesTotales = computed(() => {
 
 const edanPoblacionSeleccionada = ref('z04_tulancingo');
 
-// Alertas activas reales y simuladas
 const alertasActivas = ref([]);
 
 function actualizarAlertasLista() {
@@ -530,10 +547,6 @@ function actualizarAlertasLista() {
   alertasActivas.value = lista;
 }
 
-onMounted(() => {
-  actualizarAlertasLista();
-});
-
 function marcarAcuse(id) {
   const alerta = alertasActivas.value.find(a => a.id === id);
   if (alerta) {
@@ -547,7 +560,6 @@ function desactivarAlerta(id) {
   emit('desactivar-simulacro');
 }
 
-// Simulador en vivo
 const simulacion = ref({
   poblacionId: 'z07_huauchinango',
   nivel: 4,
@@ -584,7 +596,6 @@ function cancelarSimulacroEnPWA() {
   emit('desactivar-simulacro');
 }
 
-// Probador de SMN en vivo
 async function probarConexionSMN() {
   probandoSMN.value = true;
   resultadoSMN.value = null;
@@ -606,14 +617,12 @@ async function probarConexionSMN() {
       resultadoSMN.value = { exito: false, mensaje: `⚠️ Servidor SMN respondió con HTTP ${res.status} (${latencia} ms).` };
     }
   } catch (err) {
-    const latencia = Date.now() - start;
     resultadoSMN.value = { exito: false, mensaje: `❌ Tiempo de espera agotado (>${smnTestTimeout.value}s) o servidor CONAGUA fuera de línea.` };
   } finally {
     probandoSMN.value = false;
   }
 }
 
-// Reporte EDAN Específico
 const reporteTextoEspecifico = computed(() => {
   const p = poblacionesTotales.value.find(item => item.id === edanPoblacionSeleccionada.value) || poblacionesTotales.value[0];
   if (!p) return 'Seleccione una población para generar el reporte.';

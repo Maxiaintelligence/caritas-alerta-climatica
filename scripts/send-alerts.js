@@ -9,12 +9,12 @@ const __dirname = path.dirname(__filename);
 const DATA_DIR = path.join(__dirname, '..', 'data');
 const latestRiskPath = path.join(DATA_DIR, 'latest-risk.json');
 const activeAlertsPath = path.join(DATA_DIR, 'active_alerts.json');
+const zoneContactsPath = path.join(DATA_DIR, 'zone_contacts.json');
 
-// Credenciales y URLs
 const SMTP_USER = process.env.SMTP_USER || 'pescolaboral@gmail.com';
 const SMTP_PASS = process.env.SMTP_PASS || 'ycqv kwsf rsmd iuwh';
-const DESTINATION_EMAIL = process.env.ALERT_DESTINATION || 'antoniogmadrigal@gmail.com';
-const VERCEL_URL = process.env.VERCEL_APP_URL || 'https://caritas-alerta-climatica.vercel.app/';
+const MASTER_EMAIL = process.env.ALERT_DESTINATION || 'antoniogmadrigal@gmail.com';
+const VERCEL_URL = process.env.VERCEL_APP_URL || 'https://caritas-alerta-climatica.vercel.app';
 
 if (!fs.existsSync(latestRiskPath)) {
   console.log('⚠️ No existe latest-risk.json para evaluar alertas.');
@@ -23,7 +23,14 @@ if (!fs.existsSync(latestRiskPath)) {
 
 const latestRisk = JSON.parse(fs.readFileSync(latestRiskPath, 'utf8'));
 
-// Cargar o inicializar estado de alertas activas
+// Cargar directorio permanente de contactos por zona
+let zoneContacts = { master_email: MASTER_EMAIL, zonas: {} };
+if (fs.existsSync(zoneContactsPath)) {
+  try {
+    zoneContacts = JSON.parse(fs.readFileSync(zoneContactsPath, 'utf8'));
+  } catch (e) {}
+}
+
 let activeAlerts = {};
 if (fs.existsSync(activeAlertsPath)) {
   try {
@@ -33,7 +40,6 @@ if (fs.existsSync(activeAlertsPath)) {
   }
 }
 
-// Configurar transportador SMTP seguro (IPv4 y Puerto 587)
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 587,
@@ -45,18 +51,23 @@ const transporter = nodemailer.createTransport({
   tls: {
     rejectUnauthorized: false
   },
-  family: 4 // Fuerza IPv4 para evitar el bloqueo ETIMEDOUT de IPv6
+  family: 4
 });
 
 const isTestMode = process.argv.includes('--test');
 
 async function sendEmailAlert(poblacion, isReminder = false) {
-  const { evaluacion } = poblacion;
+  const { evaluacion, zona_id } = poblacion;
   const colorBadge = evaluacion.nivel_final === 4 ? '#EF4444' : '#F97316';
   const ackUrl = `${VERCEL_URL}/api/ack-alert?id=${poblacion.id}&level=${evaluacion.nivel_final}&ts=${Date.now()}`;
 
+  // Obtener correos asignados a esta zona específica + Correo Maestro
+  const correosZonaTexto = zoneContacts.zonas?.[zona_id] || '';
+  const correosZonaLista = correosZonaTexto.split(',').map(e => e.trim()).filter(e => e.length > 5 && e.includes('@'));
+  const destinatariosFinales = Array.from(new Set([MASTER_EMAIL, ...correosZonaLista]));
+
   const subject = isReminder
-    ? `🚨 [RECORDATORIO URGENTE NO CONFIRMADO] ${evaluacion.nivel_nombre}: ${poblacion.nombre} (${poblacion.municipio})`
+    ? `🚨 [RECORDATORIO NO CONFIRMADO] ${evaluacion.nivel_nombre}: ${poblacion.nombre} (${poblacion.municipio})`
     : `🚨 ALERTA TEMPRANA SatRC: ${evaluacion.nivel_nombre} en ${poblacion.nombre} (${poblacion.municipio})`;
 
   const plainText = `
@@ -64,7 +75,7 @@ async function sendEmailAlert(poblacion, isReminder = false) {
 Cáritas Pastoral Social • Arquidiócesis de Tulancingo
 
 NIVEL: ${evaluacion.nivel_nombre} (Nivel ${evaluacion.nivel_final})
-POBLACIÓN: ${poblacion.nombre}, ${poblacion.municipio} (${poblacion.estado})
+POBLACIÓN: ${poblacion.nombre}, ${poblacion.municipio} (${poblacion.estado} • Zona ${zona_id})
 
 1. DIAGNÓSTICO DEL VECTOR:
 - Vector Dominante: ${evaluacion.vector_dominante}
@@ -110,7 +121,7 @@ Consulte a sus autoridades locales y medios oficiales para más información.
       <div class="header">
         <div class="tag">SatRC v1.0 • ALERTA DE EMERGENCIA</div>
         <h1 style="margin: 8px 0 0 0; font-size: 24px; font-weight: 900;">${evaluacion.nivel_nombre} (Nivel ${evaluacion.nivel_final})</h1>
-        <p style="margin: 4px 0 0 0; font-size: 16px; font-weight: bold;">${poblacion.nombre}, ${poblacion.municipio} (${poblacion.estado})</p>
+        <p style="margin: 4px 0 0 0; font-size: 16px; font-weight: bold;">${poblacion.nombre}, ${poblacion.municipio} (Zona ${zona_id})</p>
       </div>
 
       <div class="content">
@@ -158,7 +169,7 @@ Consulte a sus autoridades locales y medios oficiales para más información.
 
   await transporter.sendMail({
     from: `"SatRC Alerta Temprana" <${SMTP_USER}>`,
-    to: DESTINATION_EMAIL,
+    to: destinatariosFinales.join(', '),
     replyTo: SMTP_USER,
     subject: subject,
     text: plainText,
@@ -171,18 +182,17 @@ Consulte a sus autoridades locales y medios oficiales para más información.
     }
   });
 
-  console.log(`✉️ Correo entregado exitosamente para ${poblacion.nombre} a ${DESTINATION_EMAIL}`);
+  console.log(`✉️ Correo entregado para ${poblacion.nombre} (Zona ${zona_id}) a: ${destinatariosFinales.join(', ')}`);
 }
 
 async function processAlerts() {
   console.log(`\n========================================================================`);
   console.log(`🚨 SatRC — DESPACHADOR DE ALERTAS POR CORREO ELECTRÓNICO`);
-  console.log(`De: ${SMTP_USER} ➔ Para: ${DESTINATION_EMAIL}`);
+  console.log(`De: ${SMTP_USER} ➔ Correo Maestro: ${MASTER_EMAIL}`);
   console.log(`========================================================================`);
 
   const poblacionesAlerta = Object.values(latestRisk.detalle_poblaciones).filter(p => p.evaluacion.nivel_final >= 3);
 
-  // MODO TEST MANUAL: Simulación de prueba con --test
   if (isTestMode && poblacionesAlerta.length === 0) {
     const primeraPoblacion = Object.values(latestRisk.detalle_poblaciones)[0];
     const poblacionTest = JSON.parse(JSON.stringify(primeraPoblacion));
@@ -195,7 +205,7 @@ async function processAlerts() {
 
     console.log(`🧪 Modo de prueba activo: Enviando correo de simulación para ${poblacionTest.nombre}...`);
     await sendEmailAlert(poblacionTest, false);
-    console.log(`✅ Correo de prueba entregado exitosamente a ${DESTINATION_EMAIL}.\n`);
+    console.log(`✅ Correo de prueba entregado exitosamente.\n`);
     return;
   }
 
@@ -210,7 +220,6 @@ async function processAlerts() {
     const estadoPrevio = activeAlerts[p.id];
 
     if (!estadoPrevio) {
-      // Alerta nueva: Enviar primer aviso
       await sendEmailAlert(p, false);
       activeAlerts[p.id] = {
         nivel: p.evaluacion.nivel_final,
@@ -220,7 +229,6 @@ async function processAlerts() {
         ack_timestamp: null
       };
     } else if (estadoPrevio.acknowledged === false) {
-      // Reincidencia no confirmada: Enviar recordatorio
       console.log(`⏰ Reenviando recordatorio no confirmado para ${p.nombre}...`);
       await sendEmailAlert(p, true);
       activeAlerts[p.id].ultimo_envio = new Date().toISOString();
@@ -229,7 +237,6 @@ async function processAlerts() {
     }
   }
 
-  // Limpiar poblaciones que ya volvieron a Nivel 1 o 2
   const idsActualesAlerta = poblacionesAlerta.map(p => p.id);
   Object.keys(activeAlerts).forEach(id => {
     if (!idsActualesAlerta.includes(id)) {

@@ -2,6 +2,12 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import tailwindcss from '@tailwindcss/vite'
 import nodemailer from 'nodemailer'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [
@@ -11,6 +17,36 @@ export default defineConfig({
       name: 'api-server-local',
       configureServer(server) {
         server.middlewares.use(async (req, res, next) => {
+          // Endpoint de guardado permanente de correos en disco
+          if (req.url === '/api/save-zone-contacts' && req.method === 'POST') {
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+              try {
+                const { zonas } = JSON.parse(body || '{}');
+                const payload = {
+                  master_email: 'antoniogmadrigal@gmail.com',
+                  zonas: zonas || {},
+                  ultima_actualizacion: new Date().toISOString()
+                };
+                const dataPath = path.join(__dirname, 'data', 'zone_contacts.json');
+                const publicPath = path.join(__dirname, 'public', 'data', 'zone_contacts.json');
+                
+                fs.writeFileSync(dataPath, JSON.stringify(payload, null, 2), 'utf8');
+                fs.writeFileSync(publicPath, JSON.stringify(payload, null, 2), 'utf8');
+                
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({ success: true }));
+              } catch (err) {
+                res.statusCode = 500;
+                res.setHeader('Content-Type', 'application/json');
+                res.end(JSON.stringify({ error: err.message }));
+              }
+            });
+            return;
+          }
+
+          // Endpoint de prueba de correos interactiva
           if (req.url === '/api/send-zone-test' && req.method === 'POST') {
             let body = '';
             req.on('data', chunk => { body += chunk; });
@@ -31,7 +67,7 @@ export default defineConfig({
                   secure: false,
                   auth: { user: SMTP_USER, pass: SMTP_PASS },
                   tls: { rejectUnauthorized: false },
-                  family: 4
+                  family: 4 // Fuerza IPv4
                 });
 
                 const fechaActual = new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' });
