@@ -5,12 +5,11 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Método no permitido' });
   }
 
-  const { zonaId, zonaNombre, emails } = req.body;
+  const { zonaId, zonaNombre, emails, esSimulacro, poblacionNombre, nivel, vector } = req.body;
   const MASTER_EMAIL = 'antoniogmadrigal@gmail.com';
   const SMTP_USER = process.env.SMTP_USER || 'pescolaboral@gmail.com';
   const SMTP_PASS = process.env.SMTP_PASS || 'ycqv kwsf rsmd iuwh';
 
-  // Combinar el correo maestro permanente con los correos de la zona
   const listaDestinatarios = Array.from(new Set([MASTER_EMAIL, ...(emails || [])]))
     .map(e => e.trim())
     .filter(e => e.length > 5 && e.includes('@'));
@@ -26,10 +25,14 @@ export default async function handler(req, res) {
     tls: {
       rejectUnauthorized: false
     },
-    family: 4 // Fuerza IPv4
+    family: 4
   });
 
   const fechaActual = new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' });
+
+  const asunto = esSimulacro
+    ? `🚨 [SIMULACRO DIOCESANO ACTIVADO] Nivel ${nivel || 4} en ${poblacionNombre || 'Zona ' + zonaId}`
+    : `🧪 [SatRC VERIFICACIÓN] Enlace de Notificaciones — Zona ${zonaId} (${zonaNombre})`;
 
   const htmlContent = `
   <!DOCTYPE html>
@@ -39,7 +42,7 @@ export default async function handler(req, res) {
     <style>
       body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #020617; color: #f8fafc; margin: 0; padding: 20px; }
       .card { max-width: 580px; margin: 0 auto; background-color: #0f172a; border-radius: 16px; border: 1px solid #334155; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
-      .header { background-color: #2563eb; padding: 20px; text-align: center; color: #ffffff; }
+      .header { background-color: ${esSimulacro ? '#ef4444' : '#2563eb'}; padding: 20px; text-align: center; color: #ffffff; }
       .content { padding: 24px; font-size: 13px; line-height: 1.6; color: #cbd5e1; }
       .box { background-color: #020617; border: 1px solid #1e293b; border-radius: 12px; padding: 16px; margin: 16px 0; }
       .tag { display: inline-block; background-color: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 6px; font-size: 11px; font-weight: bold; text-transform: uppercase; }
@@ -49,26 +52,27 @@ export default async function handler(req, res) {
   <body>
     <div class="card">
       <div class="header">
-        <div class="tag">SatRC v1.0 • VERIFICACIÓN DE ENLACE</div>
-        <h1 style="margin: 8px 0 0 0; font-size: 20px; font-weight: 900;">Confirmación de Notificaciones — Zona ${zonaId}</h1>
-        <p style="margin: 4px 0 0 0; font-size: 14px;">${zonaNombre}</p>
+        <div class="tag">SatRC v1.0 • ${esSimulacro ? 'EJERCICIO DE SIMULACRO' : 'VERIFICACIÓN DE ENLACE'}</div>
+        <h1 style="margin: 8px 0 0 0; font-size: 20px; font-weight: 900;">${asunto}</h1>
+        <p style="margin: 4px 0 0 0; font-size: 14px;">${poblacionNombre || zonaNombre}</p>
       </div>
 
       <div class="content">
-        <p>Este correo confirma que su dirección electrónica ha sido registrada y validada exitosamente en la consola de mando de <strong>Cáritas Pastoral Social (Arquidiócesis de Tulancingo)</strong>.</p>
+        <p>${esSimulacro ? 'Se ha activado un ejercicio de <strong>Simulacro Táctico Diocesano</strong> en la plataforma SatRC v1.0.' : 'Se ha verificado la vinculación de correos para esta zona operativa.'}</p>
 
         <div class="box">
-          <p style="margin: 0 0 4px 0; color: #38bdf8;"><strong>Zona Asignada:</strong> Zona ${zonaId} — ${zonaNombre}</p>
-          <p style="margin: 0 0 4px 0; color: #f8fafc;"><strong>Correo Maestro Diocesano:</strong> ${MASTER_EMAIL} (Permanente)</p>
-          <p style="margin: 0 0 4px 0; color: #f8fafc;"><strong>Destinatarios de esta Zona:</strong> ${listaDestinatarios.join(', ')}</p>
-          <p style="margin: 0; color: #94a3b8;"><strong>Fecha de Verificación:</strong> ${fechaActual} (Centro de México)</p>
+          <p style="margin: 0 0 4px 0; color: #38bdf8;"><strong>Zona:</strong> Zona ${zonaId} — ${zonaNombre}</p>
+          <p style="margin: 0 0 4px 0; color: #f8fafc;"><strong>Nivel Simulado:</strong> Nivel ${nivel || 4} (${nivel === 4 ? 'CRÍTICO' : 'ALTO'})</p>
+          <p style="margin: 0 0 4px 0; color: #f8fafc;"><strong>Vector de Amenaza:</strong> ${vector || 'Inundaciones / Tormentas'}</p>
+          <p style="margin: 0 0 4px 0; color: #f8fafc;"><strong>Destinatarios Notificados:</strong> ${listaDestinatarios.join(', ')}</p>
+          <p style="margin: 0; color: #94a3b8;"><strong>Fecha de Emisión:</strong> ${fechaActual} (Centro de México)</p>
         </div>
 
-        <p>A partir de este momento, este canal recibirá de forma automática los reportes de emergencia cuando cualquier localidad de la <strong>Zona ${zonaId}</strong> entre en <strong>Nivel 3 (Alto)</strong> o <strong>Nivel 4 (Crítico)</strong>.</p>
+        <p style="font-size: 11px; color: #94a3b8;">Este es un mensaje automático de control generado por la consola de mando de Cáritas Pastoral Social de la Arquidiócesis de Tulancingo.</p>
       </div>
 
       <div class="footer">
-        <p style="margin: 0;">SatRC v1.0 • Cáritas Pastoral Social de la Arquidiócesis de Tulancingo</p>
+        <p style="margin: 0;">SatRC v1.0 • Cáritas Pastoral Social • Arquidiócesis de Tulancingo</p>
       </div>
     </div>
   </body>
@@ -76,17 +80,17 @@ export default async function handler(req, res) {
   `;
 
   try {
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
       from: `"SatRC Alerta Temprana" <${SMTP_USER}>`,
       to: listaDestinatarios.join(', '),
-      subject: `🧪 [SatRC VERIFICACIÓN] Enlace Activo — Zona ${zonaId} (${zonaNombre})`,
+      subject: asunto,
       html: htmlContent,
-      text: `SatRC v1.0 — Verificación exitosa para Zona ${zonaId} (${zonaNombre}). Destinatarios vinculados: ${listaDestinatarios.join(', ')}`
+      text: `${asunto}\nDestinatarios: ${listaDestinatarios.join(', ')}\nFecha: ${fechaActual}`
     });
 
-    return res.status(200).json({ success: true, destinatarios: listaDestinatarios });
+    return res.status(200).json({ success: true, destinatarios: listaDestinatarios, messageId: info.messageId });
   } catch (error) {
-    console.error('Error enviando correo de prueba de zona:', error);
+    console.error('Error enviando correo:', error);
     return res.status(500).json({ error: error.message });
   }
 }

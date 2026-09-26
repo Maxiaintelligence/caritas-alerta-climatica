@@ -38,7 +38,7 @@
           <span class="text-base animate-bounce">🚨</span>
           <h3 class="text-sm font-black text-white">Plan Operativo Detallado de Emergencia (Nivel {{ poblacion.evaluacion.nivel_final }})</h3>
         </div>
-        <p class="text-xs text-slate-300 mt-0.5">Pormenores: Hora Cero T₀, Refugios Nodos, Raciones y Formato EDAN.</p>
+        <p class="text-xs text-slate-300 mt-0.5">Pormenores: Hora Cero T₀, Refugios Nodos, Raciones y Formato de Situación.</p>
       </div>
       <button
         type="button"

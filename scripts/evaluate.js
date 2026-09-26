@@ -29,6 +29,7 @@ function chunkArray(array, size) {
   return chunks;
 }
 
+// Ingesta Multimodelo Ensamble (ECMWF + GFS + ICON)
 async function fetchOpenMeteoBatch(items) {
   const lats = items.map(p => p.coordenadas.latitud).join(',');
   const lons = items.map(p => p.coordenadas.longitud).join(',');
@@ -47,8 +48,8 @@ async function fetchOpenMeteoBatch(items) {
 async function fetchSMNValidation() {
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 6000);
-    const res = await fetch('https://smn.conagua.gob.mx/tools/GUI/webservices/?method=1', {
+    const timeout = setTimeout(() => controller.abort(), 8000);
+    const res = await fetch('https://smn.conagua.gob.mx/tools/GUI/webservices/?method=3', {
       signal: controller.signal,
       headers: { 'User-Agent': 'Mozilla/5.0 (compatible; SatRC/1.0)' }
     });
@@ -280,9 +281,7 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
   vectores.v7_ciclones = { nivel: nV7, magnitud: magV7, nombre: 'Ciclones / Huracanes' };
   horasPicoVectores.v7_ciclones = (nV7 > 1) ? 'Ventana de mínima presión barométrica' : null;
 
-  // =========================================================================
-  // GENERACIÓN DE EVOLUCIÓN HORA POR HORA (DESDE LA HORA ACTUAL EN ADELANTE)
-  // =========================================================================
+  // Evolución Horaria Sincronizada a Futuro
   const evolucionHoraria = {
     v1_inundacion: [],
     v2_heladas: [],
@@ -293,11 +292,9 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
     v7_ciclones: []
   };
 
-  // Calcular hora actual en horario de México (UTC-6)
   const fechaMexico = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Mexico_City' }));
   const horaActualMexico = fechaMexico.getHours();
 
-  // Generar las próximas 24 horas consecutivas a partir de este momento
   for (let offset = 0; offset < 24; offset++) {
     const idx = (horaActualMexico + offset) % (hourly.time ? hourly.time.length : 168);
     const horaDia = (horaActualMexico + offset) % 24;
@@ -313,15 +310,13 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
     const cape = hourly.cape[idx] || 0;
     const hIndex = calculateHeatIndex(tAir, rh);
 
-    // V1 Lluvia
     let nH1 = 1;
-    let consejo1 = 'Sin precipitación: Favorable para actividades al aire libre.';
+    let consejo1 = 'Sin precipitación: Favorable para actividades a la intemperie.';
     if (pRain >= 25) { nH1 = 3; consejo1 = 'Precipitación torrencial severa: Resguardo total en construcciones firmes.'; }
     else if (pRain >= 10) { nH1 = 2; consejo1 = 'Chubasco moderado: Asegurar enseres exteriores y techumbres ligeras.'; }
     else if (pRain >= 1) { nH1 = 1; consejo1 = 'Precipitación ligera: Monitoreo visual de cielo.'; }
     evolucionHoraria.v1_inundacion.push({ dia: diaLabel, hora: horaLabel, valor: `${pRain.toFixed(1)} mm/h`, nivel: nH1, consejo: consejo1 });
 
-    // V2 Helada
     let nH2 = 1;
     let consejo2 = 'Confort térmico dentro del promedio estacional.';
     if (tAir <= -2) { nH2 = 4; consejo2 = 'Congelación severa: Alto riesgo en carreteras por pavimento resbaladizo.'; }
@@ -329,14 +324,12 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
     else if (tAir <= 3) { nH2 = 2; consejo2 = 'Descenso térmico marcado: Proteger tomas de agua y mascotas.'; }
     evolucionHoraria.v2_heladas.push({ dia: diaLabel, hora: horaLabel, valor: `${tAir.toFixed(1)} °C`, nivel: nH2, consejo: consejo2 });
 
-    // V3 Calor
     let nH3 = 1;
     let consejo3 = 'Temperatura ambiental en rango seguro.';
     if (tAir >= 38 || hIndex >= 41) { nH3 = 3; consejo3 = 'Estrés térmico extremo: Alto riesgo de insolación y golpe de calor.'; }
     else if (tAir >= 33 || hIndex >= 36) { nH3 = 2; consejo3 = 'Radiación solar intensa: Hidratación continua y evitar exposición directa.'; }
     evolucionHoraria.v3_calor.push({ dia: diaLabel, hora: horaLabel, valor: `${tAir.toFixed(1)} °C (Sensación: ${hIndex.toFixed(1)}°C)`, nivel: nH3, consejo: consejo3 });
 
-    // V4 Laderas
     evolucionHoraria.v4_laderas.push({
       dia: diaLabel,
       hora: horaLabel,
@@ -345,7 +338,6 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
       consejo: nH1 >= 2 ? 'Reblandecimiento de talud: Vigilancia visual de escurrimientos.' : 'Estabilidad geotécnica nominal.'
     });
 
-    // V5 Incendios
     const ffwiH = calculateFosbergFFWI(tAir, rh, wSpeed);
     let nH5 = 1;
     let consejo5 = 'Índice de inflamabilidad bajo.';
@@ -353,18 +345,15 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
     else if (ffwiH >= 35) { nH5 = 2; consejo5 = 'Sequedad moderada: Extremar precauciones en pastizales.'; }
     evolucionHoraria.v5_incendios.push({ dia: diaLabel, hora: horaLabel, valor: `FFWI: ${ffwiH.toFixed(0)} (HR: ${rh.toFixed(0)}%, Viento: ${wSpeed.toFixed(0)}km/h)`, nivel: nH5, consejo: consejo5 });
 
-    // V6 Tormentas
     let nH6 = 1;
     let consejo6 = 'Atmósfera estable.';
     if (cape >= 2000 && pRain >= 15) { nH6 = 3; consejo6 = 'Tormenta eléctrica severa con granizo: Desconectar energía y resguardo.'; }
     else if (cape >= 1200) { nH6 = 2; consejo6 = 'Inestabilidad convectiva: Probabilidad de chubascos con actividad eléctrica.'; }
     evolucionHoraria.v6_tormentas.push({ dia: diaLabel, hora: horaLabel, valor: `CAPE: ${cape.toFixed(0)} J/kg • Ráfagas: ${wGust.toFixed(0)} km/h`, nivel: nH6, consejo: consejo6 });
 
-    // V7 Ciclones
     evolucionHoraria.v7_ciclones.push({ dia: diaLabel, hora: horaLabel, valor: `Viento: ${wSpeed.toFixed(0)} km/h • Ráfagas: ${wGust.toFixed(0)} km/h`, nivel: 1, consejo: 'Sin perturbación ciclónica activa en la región.' });
   }
 
-  // Agregación
   let nivelBase = 1;
   let vectorDominanteKey = 'v1_inundacion';
 
@@ -388,7 +377,6 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
 
   const nivelPropuesto = Math.min(nivelBase + bonoSinergia, 4);
 
-  // Histéresis
   const pastLevels = prevHistory?.ultimos_niveles || [];
   let nivelFinal = nivelPropuesto;
   let histeresisAplicada = false;
@@ -411,7 +399,6 @@ function evaluateVectorPoblacion(poblacion, weatherData, prevHistory, upstreamRa
   const semaforoDef = thresholds.triaje_niveles.find(t => t.nivel === nivelFinal) || thresholds.triaje_niveles[0];
   const horaPicoReal = horasPicoVectores[vectorDominanteKey] || (nivelFinal === 1 ? 'Sin horario crítico' : '14:00 a 18:00 hrs');
 
-  // Pronóstico 72h
   const pronostico72h = [
     {
       dia: 'Hoy',
@@ -498,7 +485,7 @@ async function main() {
   const chunks = chunkArray(poblaciones, 25);
   let allWeather = [];
   for (let i = 0; i < chunks.length; i++) {
-    console.log(`📡 Consultando lote ${i + 1}/${chunks.length} en Ensamble ECMWF+GFS...`);
+    console.log(`📡 Consultando lote ${i + 1}/${chunks.length} en Ensamble ECMWF+GFS+ICON...`);
     const cData = await fetchOpenMeteoBatch(chunks[i]);
     allWeather = allWeather.concat(cData);
   }
@@ -612,6 +599,7 @@ async function main() {
       estado_fuentes: {
         open_meteo_ecmwf: 'ok',
         noaa_gfs: 'ok',
+        dwd_icon: 'ok',
         smn_conagua: smnRes.status,
         noaa_nhc: noaaRes.status
       }
