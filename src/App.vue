@@ -12,7 +12,7 @@
       @open-admin="handleOpenAdmin"
     />
 
-    <!-- BANNER DE SIMULACRO ACTIVO SI SE DISPARÓ DESDE EL PANEL -->
+    <!-- BANNER DE SIMULACRO ACTIVO -->
     <div
       v-if="simulacroActivo"
       class="bg-purple-900 border-b border-purple-600 text-white px-4 py-2 text-xs font-bold flex items-center justify-between shadow-lg animate-pulse"
@@ -22,6 +22,7 @@
         <span>MODO SIMULACRO ACTIVO — {{ simulacroInfo?.nombre }} en {{ simulacroInfo?.nivel_nombre }} ({{ simulacroInfo?.vector }})</span>
       </div>
       <button
+        type="button"
         @click="desactivarSimulacro"
         class="px-3 py-1 bg-black/40 hover:bg-black/60 rounded-lg text-purple-200 border border-purple-400/50 cursor-pointer"
       >
@@ -31,17 +32,16 @@
 
     <!-- Contenido Principal -->
     <main class="flex-1 max-w-5xl w-full mx-auto px-4 py-6">
-      <!-- Estado de Carga -->
       <div v-if="loading && !riskData" class="flex flex-col items-center justify-center py-20 space-y-3 text-slate-400">
         <div class="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         <p class="text-sm">Evaluando vectores meteorológicos en SatRC...</p>
       </div>
 
-      <!-- Error de Conexión -->
       <div v-else-if="error" class="p-6 rounded-2xl bg-red-950/50 border border-red-800 text-center space-y-3">
         <p class="text-red-400 font-bold">No se pudieron sincronizar los datos meteorológicos.</p>
         <p class="text-xs text-slate-400">Consulte a sus autoridades locales y medios oficiales para más información.</p>
         <button
+          type="button"
           @click="loadRiskData"
           class="px-4 py-2 bg-red-600 hover:bg-red-500 rounded-lg text-xs font-bold text-white transition-colors cursor-pointer"
         >
@@ -49,7 +49,6 @@
         </button>
       </div>
 
-      <!-- Las 4 Vistas Jerárquicas -->
       <div v-else-if="displayRiskData">
         <!-- Nivel 1: Dashboard Triaje -->
         <Nivel1Home
@@ -76,13 +75,45 @@
           @ver-plan-operativo="onVerPlanOperativo"
         />
 
-        <!-- Nivel 4: Plan Operativo Detallado (Pormenores) -->
+        <!-- Nivel 4: Plan Operativo Detallado -->
         <Nivel4Detalle
           v-else-if="currentView === 'nivel4' && selectedPoblacion"
           :poblacion="selectedPoblacion"
         />
       </div>
     </main>
+
+    <!-- POP-UP MODAL PREVENTIVO EN POBLACIONES CON NIVEL 3 Y 4 -->
+    <div
+      v-if="isWarningModalOpen"
+      class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4"
+    >
+      <div class="bg-slate-900 border-2 border-red-500 w-full max-w-md rounded-2xl p-6 shadow-2xl space-y-4 text-center sirena-roja">
+        <div class="w-14 h-14 rounded-full bg-red-600/20 border-2 border-red-500 flex items-center justify-center mx-auto text-3xl animate-bounce">
+          🚨
+        </div>
+        
+        <div class="space-y-1">
+          <span class="text-[10px] font-black uppercase tracking-widest px-2.5 py-0.5 rounded bg-red-950 text-red-300 border border-red-800">
+            Aviso Preventivo Oficial
+          </span>
+          <h3 class="text-lg font-black text-white mt-2">Condición de Riesgo Activo</h3>
+          <p class="text-xs text-amber-300 font-bold">{{ warningModalInfo?.nombre }} • {{ warningModalInfo?.nivel_nombre }}</p>
+        </div>
+
+        <p class="text-xs text-slate-300 leading-relaxed bg-slate-950 p-3 rounded-xl border border-slate-800">
+          Consulte de forma prioritaria las instrucciones de las <strong>autoridades de Protección Civil (Municipal, Estatal y Federal)</strong> y los medios oficiales del Gobierno Mexicano antes de tomar decisiones de movilidad o resguardo.
+        </p>
+
+        <button
+          type="button"
+          @click="isWarningModalOpen = false"
+          class="w-full py-2.5 bg-red-600 hover:bg-red-500 text-white font-black rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow-lg transition-colors"
+        >
+          Entendido • Continuar a la Ficha
+        </button>
+      </div>
+    </div>
 
     <!-- Modal de Autenticación de Mando -->
     <div
@@ -127,7 +158,7 @@
       </div>
     </div>
 
-    <!-- Modal de la Consola de Administración -->
+    <!-- Modal Consola de Administración -->
     <AdminPanelModal
       v-if="isAdminPanelOpen"
       :risk-data="riskData"
@@ -137,7 +168,7 @@
       @desactivar-simulacro="desactivarSimulacro"
     />
 
-    <!-- Modal de Metodología y Aviso Legal -->
+    <!-- Modal Metodología -->
     <MetodologiaModal
       v-if="isMetodologiaOpen"
       @close="isMetodologiaOpen = false"
@@ -147,13 +178,14 @@
     <footer class="bg-slate-900 border-t border-slate-800 py-5 text-center text-xs text-slate-400">
       <div class="max-w-5xl mx-auto px-4 space-y-2">
         <p class="font-medium text-slate-300">
-          SatRC v1.0 • Cáritas Pastoral Social de la Arquidiócesis de Tulancingo • Cobertura Regional (91 Localidades)
+          SatRC v1.0 • Cáritas Pastoral Social de la Arquidiócesis de Tulancingo • Cobertura Regional (84 Nodos)
         </p>
         <p class="text-[11px] text-slate-500">
           Consulte a sus autoridades locales y medios oficiales para más información.
         </p>
         <div class="pt-1 flex items-center justify-center space-x-4">
           <button
+            type="button"
             @click="isMetodologiaOpen = true"
             class="text-[11px] text-blue-400 hover:text-blue-300 underline cursor-pointer"
           >
@@ -161,6 +193,7 @@
           </button>
           <span class="text-slate-600">•</span>
           <button
+            type="button"
             @click="handleOpenAdmin"
             class="text-[11px] text-amber-400 hover:text-amber-300 underline cursor-pointer"
           >
@@ -196,6 +229,9 @@ const passwordError = ref(false);
 const simulacroActivo = ref(false);
 const simulacroInfo = ref(null);
 
+const isWarningModalOpen = ref(false);
+const warningModalInfo = ref(null);
+
 const currentView = ref('nivel1');
 const selectedZonaId = ref(null);
 const selectedPoblacionId = ref(null);
@@ -214,7 +250,6 @@ async function loadRiskData() {
   }
 }
 
-// Simulador Reactivo en Toda la PWA
 function activarSimulacro(payload) {
   const { poblacionId, nivel, vector } = payload;
   if (!riskData.value) return;
@@ -236,7 +271,6 @@ function desactivarSimulacro() {
   simulacroInfo.value = null;
 }
 
-// Datos calculados que inyectan el simulacro en vivo en las pantallas
 const displayRiskData = computed(() => {
   if (!riskData.value) return null;
   if (!simulacroActivo.value || !simulacroInfo.value) return riskData.value;
@@ -255,7 +289,6 @@ const displayRiskData = computed(() => {
     p.evaluacion.temporalidad.ventana_impacto = 'Impacto en 2 horas (Simulación)';
     p.evaluacion.temporalidad.hora_pico_estimada = '16:00 a 19:00 hrs';
 
-    // Inyectar en Triaje Nivel 1
     clone.alerta_prioritaria = clone.alerta_prioritaria.filter(a => a.id !== p.id);
     clone.alerta_prioritaria.unshift({
       id: p.id,
@@ -275,7 +308,6 @@ const displayRiskData = computed(() => {
       accion_inmediata: sim.nivel === 4 ? '¡Emergencia simulada! Evacuación obligatoria a albergues.' : 'Movilización táctica de brigadas.'
     });
 
-    // Inyectar en Zona Nivel 2
     const z = clone.resumen_zonas.find(item => item.zona_id === p.zona_id);
     if (z) {
       z.nivel_maximo = sim.nivel;
@@ -313,6 +345,18 @@ function onSelectZona(zonaId) {
 
 function onSelectPoblacion(poblacionId) {
   selectedPoblacionId.value = poblacionId;
+  const p = displayRiskData.value?.detalle_poblaciones[poblacionId];
+
+  // Disparar Pop-up de Advertencia Oficial si la población está en Nivel 3 o 4
+  if (p && p.evaluacion.nivel_final >= 3) {
+    warningModalInfo.value = {
+      nombre: p.nombre,
+      nivel: p.evaluacion.nivel_final,
+      nivel_nombre: p.evaluacion.nivel_nombre
+    };
+    isWarningModalOpen.value = true;
+  }
+
   currentView.value = 'nivel3';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }

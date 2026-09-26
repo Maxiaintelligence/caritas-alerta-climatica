@@ -17,7 +17,10 @@
 
       <div class="flex items-center space-x-3">
         <span
-          class="text-sm font-black px-4 py-2 rounded-xl text-white tracking-wider shadow-md uppercase"
+          :class="[
+            'text-sm font-black px-4 py-2 rounded-xl text-white tracking-wider shadow-md uppercase',
+            poblacion.evaluacion.nivel_final >= 3 ? 'badge-sirena' : ''
+          ]"
           :style="{ backgroundColor: poblacion.evaluacion.color_hex }"
         >
           {{ poblacion.evaluacion.nivel_nombre }}
@@ -25,21 +28,24 @@
       </div>
     </div>
 
-    <!-- BOTÓN A NIVEL 4: PLAN OPERATIVO -->
-    <div class="p-4 rounded-2xl bg-slate-900 border border-amber-500/50 flex flex-col sm:flex-row items-center justify-between gap-3">
+    <!-- BOTÓN DE PLAN OPERATIVO (SOLO VISIBLE EN NIVEL 3 Y 4) -->
+    <div
+      v-if="poblacion.evaluacion.nivel_final >= 3"
+      class="p-4 rounded-2xl bg-slate-900 border border-amber-500/80 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-lg sirena-naranja"
+    >
       <div>
-        <h3 class="text-sm font-bold text-white flex items-center space-x-1.5">
-          <span>📋</span>
-          <span>Plan Operativo Detallado de Emergencia (Nivel 4)</span>
-        </h3>
-        <p class="text-xs text-slate-400 mt-0.5">Pormenores: Cuándo (T₀), Refugio Nodo, Raciones de Alimento y Formato EDAN.</p>
+        <div class="flex items-center space-x-2">
+          <span class="text-base animate-bounce">🚨</span>
+          <h3 class="text-sm font-black text-white">Plan Operativo Detallado de Emergencia (Nivel {{ poblacion.evaluacion.nivel_final }})</h3>
+        </div>
+        <p class="text-xs text-slate-300 mt-0.5">Pormenores: Hora Cero T₀, Refugios Nodos, Raciones y Formato EDAN.</p>
       </div>
       <button
+        type="button"
         @click="$emit('ver-plan-operativo', poblacion.id)"
         class="w-full sm:w-auto px-4 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs uppercase tracking-wider transition-all cursor-pointer shadow-lg flex items-center justify-center space-x-1.5"
       >
-        <span>Consultar Pormenores</span>
-        <span>👉</span>
+        <span>Consultar Pormenores 👉</span>
       </button>
     </div>
 
@@ -72,7 +78,7 @@
       </div>
     </section>
 
-    <!-- DESGLOSE DE LOS 7 VECTORES CLIMÁTICOS (INTERACTIVOS CON CLIC) -->
+    <!-- DESGLOSE DE LOS 7 VECTORES CLIMÁTICOS -->
     <section class="space-y-3">
       <div class="flex items-center justify-between">
         <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider">
@@ -105,31 +111,29 @@
           </div>
 
           <div class="mt-3 pt-2 border-t border-slate-800 flex items-center justify-between text-[11px] text-slate-400 group-hover:text-amber-400 transition-colors">
-            <span>Evolución a futuro (24h)</span>
+            <span>Próximas 24 horas</span>
             <span>⏱️ ➔</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- MODAL DE DESGLOSE HORA POR HORA (A PARTIR DE LA HORA ACTUAL) -->
+    <!-- MODAL DE DESGLOSE HORA POR HORA (HOY Y MAÑANA) -->
     <div
       v-if="vectorSeleccionado"
       class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-4"
     >
       <div class="bg-slate-900 border border-slate-700 w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col">
-        <!-- Encabezado Modal -->
         <div class="p-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between">
           <div>
-            <div class="flex items-center space-x-2">
-              <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">
-                Hora Actual ➔ Próximas 24 Horas
-              </span>
-            </div>
+            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-950 px-2 py-0.5 rounded border border-emerald-800">
+              Hora Actual ➔ Próximas 24 Horas
+            </span>
             <h3 class="text-base font-bold text-white mt-1">{{ poblacion.evaluacion.vectores[vectorSeleccionado]?.nombre }}</h3>
             <p class="text-xs text-slate-400">{{ poblacion.nombre }}, {{ poblacion.municipio }}</p>
           </div>
           <button
+            type="button"
             @click="vectorSeleccionado = null"
             class="p-2 text-slate-400 hover:text-white rounded-lg bg-slate-800 hover:bg-slate-700 cursor-pointer"
           >
@@ -137,11 +141,8 @@
           </button>
         </div>
 
-        <!-- Lista Horaria Desplazable con Separadores Hoy / Mañana -->
         <div class="p-4 overflow-y-auto space-y-2 flex-1">
           <template v-for="(item, idx) in poblacion.evaluacion.evolucion_horaria?.[vectorSeleccionado] || []" :key="idx">
-            
-            <!-- Separador Visual de Día cuando cambia de Hoy a Mañana -->
             <div
               v-if="idx === 0 || item.dia !== poblacion.evaluacion.evolucion_horaria?.[vectorSeleccionado]?.[idx - 1]?.dia"
               class="py-1 px-3 my-2 rounded-lg bg-slate-950 border border-slate-800 flex items-center justify-between font-bold text-[11px] text-amber-400 uppercase tracking-wider"
@@ -150,7 +151,6 @@
               <span class="text-[10px] text-slate-500 font-mono">{{ item.dia }}</span>
             </div>
 
-            <!-- Fila Horaria -->
             <div class="p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 flex items-center justify-between text-xs hover:border-slate-700 transition-colors">
               <div class="flex items-center space-x-3">
                 <span class="font-mono font-bold text-slate-100 text-sm w-12">{{ item.hora }}</span>
@@ -170,9 +170,9 @@
           </template>
         </div>
 
-        <!-- Pie Modal -->
         <div class="p-3 bg-slate-950 border-t border-slate-800 text-center">
           <button
+            type="button"
             @click="vectorSeleccionado = null"
             class="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold cursor-pointer"
           >
