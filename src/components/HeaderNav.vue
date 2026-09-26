@@ -5,6 +5,7 @@
       <div class="flex items-center space-x-3">
         <button
           v-if="currentView !== 'nivel1'"
+          type="button"
           @click="$emit('back')"
           class="p-2 bg-slate-800 hover:bg-slate-700 rounded-lg text-slate-300 transition-colors cursor-pointer"
           title="Regresar"
@@ -30,33 +31,36 @@
         </div>
       </div>
 
-      <!-- Acciones: Administración, Metodología y Refrescar -->
+      <!-- Acciones Separadas -->
       <div class="flex items-center space-x-2">
-        <!-- Botón Candado Administración -->
+        <!-- 1. Botón Exclusivo de Metodología y Aviso Legal (100% Público) -->
         <button
-          @click="$emit('open-admin')"
-          class="p-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-amber-400 transition-colors cursor-pointer shadow-sm"
-          title="Consola de Mando Diocesano"
-        >
-          🔐
-        </button>
-
-        <!-- Botón Metodología -->
-        <button
+          type="button"
           @click="$emit('open-metodologia')"
           class="px-2.5 py-1.5 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-xs text-slate-200 transition-colors cursor-pointer flex items-center space-x-1.5 shadow-sm"
-          title="Metodología y Aviso Legal"
+          title="Metodología Científica y Aviso Legal"
         >
           <span>ℹ️</span>
           <span class="hidden md:inline">Metodología y Legal</span>
         </button>
 
-        <!-- Botón Refrescar -->
+        <!-- 2. Botón Exclusivo de Consola de Mando (Protegido con Candado) -->
         <button
+          type="button"
+          @click="$emit('open-admin')"
+          class="p-2 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg text-amber-400 transition-colors cursor-pointer shadow-sm"
+          title="Consola de Mando Diocesana (Requiere Clave)"
+        >
+          🔐
+        </button>
+
+        <!-- 3. Botón de Actualizar Datos -->
+        <button
+          type="button"
           @click="$emit('refresh')"
           :disabled="loading"
           class="p-2 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-700 rounded-lg text-white transition-colors cursor-pointer flex items-center space-x-1 shadow-sm"
-          title="Actualizar datos"
+          title="Sincronizar datos"
         >
           <svg :class="['w-4 h-4', { 'animate-spin': loading }]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
