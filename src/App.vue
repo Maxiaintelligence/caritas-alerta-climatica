@@ -239,11 +239,53 @@ const selectedPoblacionId = ref(null);
 async function loadRiskData() {
   loading.value = true;
   error.value = null;
+  const timestamp = Date.now();
+  
+  // URL local / Vercel
+  const localUrl = `/data/latest-risk.json?t=${timestamp}`;
+  // URL de respaldo directo en vivo desde el CDN de GitHub
+  const githubRawUrl = `https://raw.githubusercontent.com/Maxiaintelligence/caritas-alerta-climatica/main/public/data/latest-risk.json?t=${timestamp}`;
+
   try {
-    const res = await fetch(`/data/latest-risk.json?t=${Date.now()}`);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    riskData.value = await res.json();
+    // 1. Intentar cargar desde Vercel / local
+    const res = await fetch(localUrl);
+    if (res.ok) {
+      const data = await res.json();
+      
+      // Comprobar si el archivo de Vercel está desfasado (más de 3.5 horas)
+      const fechaArchivo = new Date(data.meta?.timestamp_utc || 0).getTime();
+      const horasDiferencia = (Date.now() - fechaArchivo) / (1000 * 60 * 60);
+
+      if (horasDiferencia > 3.5 && navigator.onLine) {
+        // Vercel tiene datos viejos: traer inmediatamente el archivo vivo de GitHub
+        try {
+          const rawRes = await fetch(githubRawUrl);
+          if (rawRes.ok) {
+            riskData.value = await rawRes.json();
+            return;
+          }
+        } catch (e) {}
+      }
+
+      riskData.value = data;
+    } else {
+      // Si Vercel falla, consultar directamente el CDN de GitHub
+      const rawRes = await fetch(githubRawUrl);
+      if (rawRes.ok) {
+        riskData.value = await rawRes.json();
+      } else {
+        throw new Error(`HTTP ${res.status}`);
+      }
+    }
   } catch (err) {
+    // Intento final contra GitHub Raw
+    try {
+      const rawRes = await fetch(githubRawUrl);
+      if (rawRes.ok) {
+        riskData.value = await rawRes.json();
+        return;
+      }
+    } catch (e) {}
     error.value = err.message;
   } finally {
     loading.value = false;
