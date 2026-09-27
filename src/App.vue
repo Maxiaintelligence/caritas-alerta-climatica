@@ -4,11 +4,11 @@
     <HeaderNav
       :current-view="currentView"
       :timestamp-local="riskData?.meta?.timestamp_local"
-      :loading="loading"
+      :loading="loading && !riskData"
       :is-online="isOnline"
       @back="goBack"
-      @refresh="loadRiskData"
-      @open-metodologia="isMetodologiaOpen = true"
+      @refresh="() => loadRiskData(false)"
+      @open-metodologia="openMetodologiaDirecto"
       @open-admin="handleOpenAdmin"
     />
 
@@ -32,23 +32,26 @@
 
     <!-- Contenido Principal -->
     <main class="flex-1 max-w-5xl w-full mx-auto px-4 py-6">
+      <!-- Estado de Carga Inicial -->
       <div v-if="loading && !riskData" class="flex flex-col items-center justify-center py-20 space-y-3 text-slate-400">
         <div class="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-        <p class="text-sm">Evaluando vectores meteorológicos en SatRC...</p>
+        <p class="text-sm font-medium">Sincronizando con SatRC v1.0...</p>
       </div>
 
-      <div v-else-if="error" class="p-6 rounded-2xl bg-red-950/50 border border-red-800 text-center space-y-3">
+      <!-- Error de Conexión -->
+      <div v-else-if="error && !riskData" class="p-6 rounded-2xl bg-red-950/50 border border-red-800 text-center space-y-3">
         <p class="text-red-400 font-bold">No se pudieron sincronizar los datos meteorológicos.</p>
         <p class="text-xs text-slate-400">Consulte a sus autoridades locales y medios oficiales para más información.</p>
         <button
           type="button"
-          @click="loadRiskData"
+          @click="() => loadRiskData(false)"
           class="px-4 py-2 bg-red-600 hover:bg-red-500 rounded-lg text-xs font-bold text-white transition-colors cursor-pointer"
         >
           Reintentar
         </button>
       </div>
 
+      <!-- Las 4 Vistas Jerárquicas -->
       <div v-else-if="displayRiskData">
         <!-- Nivel 1: Dashboard Triaje -->
         <Nivel1Home
@@ -186,10 +189,10 @@
         <div class="pt-1 flex items-center justify-center space-x-4">
           <button
             type="button"
-            @click="isMetodologiaOpen = true"
-            class="text-[11px] text-blue-400 hover:text-blue-300 underline cursor-pointer"
+            @click="openMetodologiaDirecto"
+            class="text-[11px] text-blue-400 hover:text-blue-300 underline cursor-pointer font-bold"
           >
-            Metodología y Aviso Legal
+            Metodología, Transparencia y Aviso Legal
           </button>
           <span class="text-slate-600">•</span>
           <button
@@ -236,28 +239,25 @@ const currentView = ref('nivel1');
 const selectedZonaId = ref(null);
 const selectedPoblacionId = ref(null);
 
-async function loadRiskData() {
-  loading.value = true;
+let autoRefreshInterval = null;
+
+// Carga de datos no bloqueante con soporte silencioso
+async function loadRiskData(isSilent = false) {
+  if (!isSilent) loading.value = true;
   error.value = null;
   const timestamp = Date.now();
   
-  // URL local / Vercel
   const localUrl = `/data/latest-risk.json?t=${timestamp}`;
-  // URL de respaldo directo en vivo desde el CDN de GitHub
   const githubRawUrl = `https://raw.githubusercontent.com/Maxiaintelligence/caritas-alerta-climatica/main/public/data/latest-risk.json?t=${timestamp}`;
 
   try {
-    // 1. Intentar cargar desde Vercel / local
     const res = await fetch(localUrl);
     if (res.ok) {
       const data = await res.json();
-      
-      // Comprobar si el archivo de Vercel está desfasado (más de 3.5 horas)
       const fechaArchivo = new Date(data.meta?.timestamp_utc || 0).getTime();
       const horasDiferencia = (Date.now() - fechaArchivo) / (1000 * 60 * 60);
 
       if (horasDiferencia > 3.5 && navigator.onLine) {
-        // Vercel tiene datos viejos: traer inmediatamente el archivo vivo de GitHub
         try {
           const rawRes = await fetch(githubRawUrl);
           if (rawRes.ok) {
@@ -269,7 +269,6 @@ async function loadRiskData() {
 
       riskData.value = data;
     } else {
-      // Si Vercel falla, consultar directamente el CDN de GitHub
       const rawRes = await fetch(githubRawUrl);
       if (rawRes.ok) {
         riskData.value = await rawRes.json();
@@ -278,7 +277,6 @@ async function loadRiskData() {
       }
     }
   } catch (err) {
-    // Intento final contra GitHub Raw
     try {
       const rawRes = await fetch(githubRawUrl);
       if (rawRes.ok) {
@@ -286,9 +284,42 @@ async function loadRiskData() {
         return;
       }
     } catch (e) {}
-    error.value = err.message;
+    if (!riskData.value) {
+      error.value = err.message;
+    }
   } finally {
     loading.value = false;
+  }
+}
+
+// Auto-sincronización al desbloquear el celular o volver a la pestaña
+function handleVisibilityChange() {
+  if (document.visibilityState === 'visible' && navigator.onLine) {
+    loadRiskData(true); // Sincronización silenciosa inmediata
+  }
+}
+
+function openMetodologiaDirecto() {
+  isAdminPanelOpen.value = false;
+  isLoginModalOpen.value = false;
+  isMetodologiaOpen.value = true;
+}
+
+function handleOpenAdmin() {
+  isMetodologiaOpen.value = false;
+  passwordInput.value = '';
+  passwordError.value = false;
+  isLoginModalOpen.value = true;
+}
+
+function submitPassword() {
+  if (passwordInput.value === 'emergencia') {
+    isLoginModalOpen.value = false;
+    isAdminPanelOpen.value = true;
+    passwordInput.value = '';
+    passwordError.value = false;
+  } else {
+    passwordError.value = true;
   }
 }
 
@@ -362,23 +393,6 @@ const displayRiskData = computed(() => {
   return clone;
 });
 
-function handleOpenAdmin() {
-  passwordInput.value = '';
-  passwordError.value = false;
-  isLoginModalOpen.value = true;
-}
-
-function submitPassword() {
-  if (passwordInput.value === 'emergencia') {
-    isLoginModalOpen.value = false;
-    isAdminPanelOpen.value = true;
-    passwordInput.value = '';
-    passwordError.value = false;
-  } else {
-    passwordError.value = true;
-  }
-}
-
 function onSelectZona(zonaId) {
   selectedZonaId.value = zonaId;
   currentView.value = 'nivel2';
@@ -389,7 +403,6 @@ function onSelectPoblacion(poblacionId) {
   selectedPoblacionId.value = poblacionId;
   const p = displayRiskData.value?.detalle_poblaciones[poblacionId];
 
-  // Disparar Pop-up de Advertencia Oficial si la población está en Nivel 3 o 4
   if (p && p.evaluacion.nivel_final >= 3) {
     warningModalInfo.value = {
       nombre: p.nombre,
@@ -439,15 +452,32 @@ const selectedPoblacion = computed(() => {
 
 function updateOnlineStatus() {
   isOnline.value = navigator.onLine;
+  if (isOnline.value) {
+    loadRiskData(true);
+  }
 }
 
 onMounted(() => {
-  loadRiskData();
+  loadRiskData(false);
+
+  // 1. Temporizador silencioso en segundo plano cada 10 minutos (600,000 ms)
+  autoRefreshInterval = setInterval(() => {
+    if (navigator.onLine) {
+      loadRiskData(true);
+    }
+  }, 10 * 60 * 1000);
+
+  // 2. Eventos de visibilidad (al desbloquear el celular o volver a la pestaña)
+  document.addEventListener('visibilitychange', handleVisibilityChange);
+  window.addEventListener('focus', handleVisibilityChange);
   window.addEventListener('online', updateOnlineStatus);
   window.addEventListener('offline', updateOnlineStatus);
 });
 
 onUnmounted(() => {
+  if (autoRefreshInterval) clearInterval(autoRefreshInterval);
+  document.removeEventListener('visibilitychange', handleVisibilityChange);
+  window.removeEventListener('focus', handleVisibilityChange);
   window.removeEventListener('online', updateOnlineStatus);
   window.removeEventListener('offline', updateOnlineStatus);
 });
