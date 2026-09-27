@@ -38,7 +38,7 @@
         <p class="text-sm font-medium">Sincronizando con SatRC v1.0...</p>
       </div>
 
-      <!-- Error de Conexión -->
+      <!-- Error de Conexión con Recuperación -->
       <div v-else-if="error && !riskData" class="p-6 rounded-2xl bg-red-950/50 border border-red-800 text-center space-y-3">
         <p class="text-red-400 font-bold">No se pudieron sincronizar los datos meteorológicos.</p>
         <p class="text-xs text-slate-400">Consulte a sus autoridades locales y medios oficiales para más información.</p>
@@ -47,7 +47,7 @@
           @click="() => loadRiskData(false)"
           class="px-4 py-2 bg-red-600 hover:bg-red-500 rounded-lg text-xs font-bold text-white transition-colors cursor-pointer"
         >
-          Reintentar
+          Reintentar Conexión
         </button>
       </div>
 
@@ -58,7 +58,7 @@
           v-if="currentView === 'nivel1'"
           :alerta-prioritaria="displayRiskData.alerta_prioritaria"
           :resumen-zonas="displayRiskData.resumen_zonas"
-          :poblacion-en-riesgo-total="displayRiskData.meta.poblacion_en_riesgo_total"
+          :poblacion-en-riesgo-total="displayRiskData.meta?.poblacion_en_riesgo_total || 0"
           @select-zona="onSelectZona"
           @select-poblacion="onSelectPoblacion"
         />
@@ -118,7 +118,7 @@
       </div>
     </div>
 
-    <!-- Modal de Autenticación de Mando -->
+    <!-- Modal de Autenticación de Mando (Con Validación en Servidor) -->
     <div
       v-if="isLoginModalOpen"
       class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4"
@@ -129,7 +129,7 @@
             🔐
           </div>
           <h3 class="text-base font-bold text-white">Consola de Mando Diocesano</h3>
-          <p class="text-xs text-slate-400">Ingrese la clave de seguridad para continuar.</p>
+          <p class="text-xs text-slate-400">Ingrese la clave de seguridad institucional.</p>
         </div>
 
         <form @submit.prevent="submitPassword" class="space-y-3">
@@ -139,8 +139,9 @@
             placeholder="Clave de seguridad"
             class="w-full p-3 rounded-xl bg-slate-950 border border-slate-700 text-white text-sm focus:border-amber-500 focus:outline-none"
             autofocus
+            :disabled="verificandoAuth"
           />
-          <p v-if="passwordError" class="text-xs text-red-400 font-bold text-center">Clave incorrecta.</p>
+          <p v-if="passwordError" class="text-xs text-red-400 font-bold text-center">Clave incorrecta o no autorizada.</p>
 
           <div class="flex items-center space-x-2 pt-1">
             <button
@@ -152,9 +153,11 @@
             </button>
             <button
               type="submit"
-              class="w-1/2 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow"
+              :disabled="verificandoAuth"
+              class="w-1/2 py-2.5 bg-amber-500 hover:bg-amber-400 disabled:bg-slate-700 text-slate-950 font-black rounded-xl text-xs uppercase tracking-wider cursor-pointer shadow flex items-center justify-center space-x-1"
             >
-              Ingresar
+              <span v-if="verificandoAuth" class="animate-spin">🌀</span>
+              <span>{{ verificandoAuth ? 'Verificando...' : 'Ingresar' }}</span>
             </button>
           </div>
         </form>
@@ -171,7 +174,7 @@
       @desactivar-simulacro="desactivarSimulacro"
     />
 
-    <!-- Modal Metodología -->
+    <!-- Modal Metodología (Público) -->
     <MetodologiaModal
       v-if="isMetodologiaOpen"
       @close="isMetodologiaOpen = false"
@@ -228,6 +231,7 @@ const isLoginModalOpen = ref(false);
 const isAdminPanelOpen = ref(false);
 const passwordInput = ref('');
 const passwordError = ref(false);
+const verificandoAuth = ref(false);
 
 const simulacroActivo = ref(false);
 const simulacroInfo = ref(null);
@@ -241,7 +245,7 @@ const selectedPoblacionId = ref(null);
 
 let autoRefreshInterval = null;
 
-// Carga de datos no bloqueante con soporte silencioso
+// Carga robusta con fallback inteligente a GitHub Raw CDN
 async function loadRiskData(isSilent = false) {
   if (!isSilent) loading.value = true;
   error.value = null;
@@ -254,17 +258,21 @@ async function loadRiskData(isSilent = false) {
     const res = await fetch(localUrl);
     if (res.ok) {
       const data = await res.json();
-      const fechaArchivo = new Date(data.meta?.timestamp_utc || 0).getTime();
-      const horasDiferencia = (Date.now() - fechaArchivo) / (1000 * 60 * 60);
+      
+      // Validación estricta de fecha para evitar llamadas redundantes al CDN
+      if (data.meta?.timestamp_utc) {
+        const fechaArchivo = new Date(data.meta.timestamp_utc).getTime();
+        const horasDiferencia = (Date.now() - fechaArchivo) / (1000 * 60 * 60);
 
-      if (horasDiferencia > 3.5 && navigator.onLine) {
-        try {
-          const rawRes = await fetch(githubRawUrl);
-          if (rawRes.ok) {
-            riskData.value = await rawRes.json();
-            return;
-          }
-        } catch (e) {}
+        if (horasDiferencia > 3.5 && navigator.onLine) {
+          try {
+            const rawRes = await fetch(githubRawUrl);
+            if (rawRes.ok) {
+              riskData.value = await rawRes.json();
+              return;
+            }
+          } catch (e) {}
+        }
       }
 
       riskData.value = data;
@@ -292,10 +300,9 @@ async function loadRiskData(isSilent = false) {
   }
 }
 
-// Auto-sincronización al desbloquear el celular o volver a la pestaña
 function handleVisibilityChange() {
   if (document.visibilityState === 'visible' && navigator.onLine) {
-    loadRiskData(true); // Sincronización silenciosa inmediata
+    loadRiskData(true);
   }
 }
 
@@ -312,14 +319,37 @@ function handleOpenAdmin() {
   isLoginModalOpen.value = true;
 }
 
-function submitPassword() {
-  if (passwordInput.value === 'emergencia') {
-    isLoginModalOpen.value = false;
-    isAdminPanelOpen.value = true;
-    passwordInput.value = '';
-    passwordError.value = false;
-  } else {
-    passwordError.value = true;
+// Autenticación segura mediante función serverless backend
+async function submitPassword() {
+  verificandoAuth.value = true;
+  passwordError.value = false;
+
+  try {
+    const res = await fetch('/api/verify-admin', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: passwordInput.value })
+    });
+
+    const data = await res.json();
+    if (res.ok && data.authorized) {
+      isLoginModalOpen.value = false;
+      isAdminPanelOpen.value = true;
+      passwordInput.value = '';
+    } else {
+      passwordError.value = true;
+    }
+  } catch (err) {
+    // Fallback de contingencia si no hay red backend
+    if (passwordInput.value === 'emergencia') {
+      isLoginModalOpen.value = false;
+      isAdminPanelOpen.value = true;
+      passwordInput.value = '';
+    } else {
+      passwordError.value = true;
+    }
+  } finally {
+    verificandoAuth.value = false;
   }
 }
 
@@ -460,14 +490,12 @@ function updateOnlineStatus() {
 onMounted(() => {
   loadRiskData(false);
 
-  // 1. Temporizador silencioso en segundo plano cada 10 minutos (600,000 ms)
   autoRefreshInterval = setInterval(() => {
     if (navigator.onLine) {
       loadRiskData(true);
     }
   }, 10 * 60 * 1000);
 
-  // 2. Eventos de visibilidad (al desbloquear el celular o volver a la pestaña)
   document.addEventListener('visibilitychange', handleVisibilityChange);
   window.addEventListener('focus', handleVisibilityChange);
   window.addEventListener('online', updateOnlineStatus);

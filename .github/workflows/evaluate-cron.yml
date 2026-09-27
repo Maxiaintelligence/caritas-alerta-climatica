@@ -15,6 +15,7 @@ permissions:
 jobs:
   run-evaluation-and-verification:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: 1. Descargar repositorio
@@ -22,13 +23,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 2. Configurar Node.js
+      - name: 2. Configurar Node.js con Caché
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'npm'
 
       - name: 3. Instalar dependencias
-        run: npm install --no-audit --prefer-offline
+        run: npm install --no-audit
 
       - name: 4. Ejecutar Motor de Pronóstico Acoplado
         run: node scripts/evaluate.js
@@ -44,10 +46,32 @@ jobs:
           VERCEL_APP_URL: ${{ secrets.VERCEL_APP_URL }}
         run: node scripts/send-alerts.js
 
-      - name: 7. Publicar Datos y Estados en Repositorio (Con Rebase Automático)
+      - name: 7. Publicar Datos y Estados en Repositorio (Con Rebase Limpio)
         run: |
           git config --global user.name "SatRC-Bot"
           git config --global user.email "satrc-bot@caritas.org"
           git add -A data/ public/data/
-          git pull --rebase origin main || true
+          git pull --rebase --autostash origin main
           git diff --staged --quiet || (git commit -m "Auto-evaluación meteorológica SatRC [Cron]" && git push origin main)
+
+      - name: 8. Notificación Automática en Caso de Fallo de Servidor
+        if: failure()
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          ALERT_DESTINATION: ${{ secrets.ALERT_DESTINATION }}
+        run: |
+          node -e '
+            const nodemailer = require("nodemailer");
+            const transporter = nodemailer.createTransport({
+              host: "smtp.gmail.com", port: 587, secure: false,
+              auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+              family: 4
+            });
+            transporter.sendMail({
+              from: "\"SatRC Sentry\" <" + process.env.SMTP_USER + ">",
+              to: process.env.ALERT_DESTINATION || "antoniogmadrigal@gmail.com",
+              subject: "⚠️ [SatRC ALERTA SISTEMA] Fallo en la Ejecución Automática del Cron",
+              text: "El workflow de evaluación de SatRC v1.0 en GitHub Actions ha fallado. Verifique la consola de Actions en GitHub."
+            }).catch(e => console.error(e));
+          '

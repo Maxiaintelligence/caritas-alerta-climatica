@@ -17,7 +17,31 @@ export default defineConfig({
       name: 'api-server-local',
       configureServer(server) {
         server.middlewares.use(async (req, res, next) => {
-          // Endpoint de prueba de telemetría completa
+          // 1. Verificación segura de contraseña en backend local
+          if (req.url === '/api/verify-admin' && req.method === 'POST') {
+            let body = '';
+            req.on('data', chunk => { body += chunk; });
+            req.on('end', () => {
+              try {
+                const { password } = JSON.parse(body || '{}');
+                const ADMIN_PASS = process.env.ADMIN_PASSWORD || 'emergencia';
+                if (password === ADMIN_PASS) {
+                  res.setHeader('Content-Type', 'application/json');
+                  res.end(JSON.stringify({ authorized: true, token: 'satrc_auth_' + Date.now() }));
+                } else {
+                  res.statusCode = 401;
+                  res.setHeader('Content-Type', 'application/json');
+                  res.end(JSON.stringify({ authorized: false, error: 'Clave incorrecta' }));
+                }
+              } catch (err) {
+                res.statusCode = 500;
+                res.end(JSON.stringify({ error: err.message }));
+              }
+            });
+            return;
+          }
+
+          // 2. Telemetría completa
           if (req.url.startsWith('/api/test-telemetry')) {
             const urlObj = new URL(req.url, 'http://localhost');
             const timeoutMs = Number(urlObj.searchParams.get('timeout')) || 15000;
@@ -70,7 +94,7 @@ export default defineConfig({
             return;
           }
 
-          // Guardado permanente de correos
+          // 3. Guardado permanente de correos
           if (req.url === '/api/save-zone-contacts' && req.method === 'POST') {
             let body = '';
             req.on('data', chunk => { body += chunk; });
@@ -90,14 +114,13 @@ export default defineConfig({
                 res.end(JSON.stringify({ success: true }));
               } catch (err) {
                 res.statusCode = 500;
-                res.setHeader('Content-Type', 'application/json');
                 res.end(JSON.stringify({ error: err.message }));
               }
             });
             return;
           }
 
-          // Envío de correos de prueba o simulacro
+          // 4. Envío de correos de prueba o simulacro
           if (req.url === '/api/send-zone-test' && req.method === 'POST') {
             let body = '';
             req.on('data', chunk => { body += chunk; });
