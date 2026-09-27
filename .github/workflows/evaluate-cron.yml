@@ -23,11 +23,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 2. Configurar Node.js con Caché
+      - name: 2. Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'npm'
 
       - name: 3. Instalar dependencias
         run: npm install
@@ -54,7 +53,7 @@ jobs:
           git pull --rebase --autostash origin main
           git diff --staged --quiet || (git commit -m "Auto-evaluación meteorológica SatRC [Cron]" && git push origin main)
 
-      - name: 8. Notificación Automática en Caso de Fallo de Servidor
+      - name: 8. Notificación en Caso de Fallo
         if: failure()
         env:
           SMTP_USER: ${{ secrets.SMTP_USER }}
