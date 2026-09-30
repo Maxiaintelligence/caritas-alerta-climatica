@@ -1,5 +1,5 @@
 {
-  "version": "5.0.0",
+  "version": "6.0.0",
   "institucion": "Cáritas Pastoral Social",
   "reglas_histeresis": {
     "ciclos_descenso_requeridos": 2,
@@ -81,6 +81,7 @@
     },
     "v4_laderas": {
       "nombre": "Inestabilidad de Laderas",
+      "amplificacion_sierra": 1.35,
       "multiplicadores_litologia": {
         "alta_arcilla": 0.85,
         "alta_roca": 1.00,
@@ -89,8 +90,18 @@
         "baja_arcilla": 1.50,
         "baja_roca": 999.0
       },
-      "humedad_profunda_critica": { "nivel_2": 0.34, "nivel_3": 0.36, "nivel_4": 0.38 },
-      "intensidad_horaria_disparo": 30.0
+      "umbrales_lluvia_disyuntivos_mm": {
+        "nivel_2_24h": 40,
+        "nivel_2_7d": 90,
+        "nivel_3_24h": 60,
+        "nivel_3_48h": 90,
+        "nivel_3_7d": 150,
+        "nivel_3_intensidad_horaria": 25,
+        "nivel_4_24h": 110,
+        "nivel_4_48h": 160,
+        "nivel_4_7d": 250,
+        "nivel_4_intensidad_horaria": 35
+      }
     },
     "v5_incendios": {
       "nombre": "Incendios Forestales y de Malezas",
@@ -242,7 +253,7 @@
     "fases": [
       { "fase": 1, "ventana": "0 a 24h", "accion": "Censo rápido de damnificados, heridos y ocupación de albergues." },
       { "fase": 2, "ventana": "24 a 72h", "accion": "Operación de comedores comunitarios y distribución de víveres y agua." },
-      { "fase": 3, "ventana": "72h a 7d", "accion": "Levantamiento formal del Formato EDAN Cáritas para gestión de ayuda." },
+      { "fase": 3, "ventana": "72h a 7d", "accion": "Levantamiento formal del Formato de Situación y Necesidades para gestión de ayuda." },
       { "fase": 4, "ventana": "7 a 15d", "accion": "Activación de red de contención psico-espiritual para familias en duelo." },
       { "fase": 5, "ventana": "Día 15+", "accion": "Plan de reconstrucción comunitaria y reunión de lecciones aprendidas." }
     ]
