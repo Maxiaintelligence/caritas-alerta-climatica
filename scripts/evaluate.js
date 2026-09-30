@@ -30,8 +30,8 @@ function chunkArray(array, size) {
   return chunks;
 }
 
-// 1. Ingesta Open-Meteo (Ensamble ECMWF + GFS + ICON)
-async function fetchOpenMeteoBatch(items) {
+// Ingesta Robusta con Reintentos y Timeout de 20s (Anti-Truncamiento)
+async function fetchOpenMeteoBatchWithRetry(items, maxRetries = 3) {
   const lats = items.map(p => p.coordenadas.latitud).join(',');
   const lons = items.map(p => p.coordenadas.longitud).join(',');
   
@@ -40,13 +40,40 @@ async function fetchOpenMeteoBatch(items) {
     `&daily=temperature_2m_max,temperature_2m_min,apparent_temperature_max,relative_humidity_2m_min,relative_humidity_2m_max,wind_speed_10m_max,precipitation_sum` +
     `&timezone=auto&forecast_days=7`;
 
-  const response = await fetch(url);
-  if (!response.ok) throw new Error(`Open-Meteo HTTP ${response.status}`);
-  const data = await response.json();
-  return Array.isArray(data) ? data : [data];
+  for (let attempt = 1; attempt <= maxRetries; attempt++) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000); // 20s límite
+
+    try {
+      const response = await fetch(url, {
+        signal: controller.signal,
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) SatRC/1.0',
+          'Accept': 'application/json'
+        }
+      });
+      clearTimeout(timeout);
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status} en Open-Meteo`);
+      }
+
+      const rawText = await response.text();
+      const data = JSON.parse(rawText);
+      return Array.isArray(data) ? data : [data];
+    } catch (err) {
+      clearTimeout(timeout);
+      console.log(`⚠️ Intento ${attempt}/${maxRetries} fallido para lote de ${items.length} nodos: ${err.message}`);
+      if (attempt === maxRetries) {
+        throw new Error(`Fallo definitivo en Open-Meteo tras ${maxRetries} intentos: ${err.message}`);
+      }
+      // Esperar 1.5 segundos antes de reintentar
+      await new Promise(r => setTimeout(r, 1500 * attempt));
+    }
+  }
 }
 
-// 2. Conector Nativo SMN / CONAGUA (Con Agente HTTPS y Ciphers Compatibles)
+// Conector Nativo SMN / CONAGUA
 function fetchSMNNativo() {
   return new Promise((resolve) => {
     const options = {
@@ -55,13 +82,12 @@ function fetchSMNNativo() {
       path: '/tools/GUI/webservices/?method=3',
       method: 'GET',
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
         'Accept': 'application/json, text/plain, */*',
-        'Referer': 'https://smn.conagua.gob.mx/',
-        'Origin': 'https://smn.conagua.gob.mx'
+        'Referer': 'https://smn.conagua.gob.mx/'
       },
-      rejectUnauthorized: false, // Permite certificados intermedios de gob.mx
-      ciphers: 'DEFAULT@SECLEVEL=1', // Permite suites TLS compatibles con CONAGUA
+      rejectUnauthorized: false,
+      ciphers: 'DEFAULT@SECLEVEL=1',
       timeout: 4000
     };
 
@@ -82,24 +108,17 @@ function fetchSMNNativo() {
       });
     });
 
-    req.on('error', () => {
-      resolve({ status: 'ok', data: null });
-    });
-
-    req.on('timeout', () => {
-      req.destroy();
-      resolve({ status: 'ok', data: null });
-    });
-
+    req.on('error', () => { resolve({ status: 'ok', data: null }); });
+    req.on('timeout', () => { req.destroy(); resolve({ status: 'ok', data: null }); });
     req.end();
   });
 }
 
-// 3. Ingesta NOAA NHC
+// Ingesta NOAA NHC
 async function fetchNOAACyclones() {
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 3500);
+    const timeout = setTimeout(() => controller.abort(), 4000);
     const res = await fetch('https://www.nhc.noaa.gov/CurrentStorms.json', { signal: controller.signal });
     clearTimeout(timeout);
     if (res.ok) {
@@ -515,13 +534,15 @@ async function main() {
 
   if (!fs.existsSync(PUBLIC_DATA_DIR)) fs.mkdirSync(PUBLIC_DATA_DIR, { recursive: true });
 
-  // Ingesta nativa directa con CONAGUA / SMN y NOAA
+  // 1. Ingestas rápidas paralelas con respaldo
   const [smnRes, noaaRes] = await Promise.all([fetchSMNNativo(), fetchNOAACyclones()]);
   console.log(`🛰️ Validación SMN/CONAGUA: ${smnRes.status} | NOAA NHC: ${noaaRes.status}`);
 
-  const chunks = chunkArray(poblaciones, 25);
-  console.log(`📡 Consultando ${chunks.length} lotes en Ensamble ECMWF+GFS+ICON en paralelo...`);
-  const chunkResults = await Promise.all(chunks.map(chunk => fetchOpenMeteoBatch(chunk)));
+  // 2. Lotes ultra-ligeros de 12 nodos con reintentos automáticos (Anti-Truncamiento)
+  const chunks = chunkArray(poblaciones, 12);
+  console.log(`📡 Consultando ${chunks.length} lotes ligeros en Ensamble ECMWF+GFS+ICON...`);
+  
+  const chunkResults = await Promise.all(chunks.map(chunk => fetchOpenMeteoBatchWithRetry(chunk)));
   const allWeather = chunkResults.flat();
 
   const cuencasLluviaMax = {};
