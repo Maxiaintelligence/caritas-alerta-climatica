@@ -538,12 +538,19 @@ async function main() {
   const [smnRes, noaaRes] = await Promise.all([fetchSMNNativo(), fetchNOAACyclones()]);
   console.log(`🛰️ Validación SMN/CONAGUA: ${smnRes.status} | NOAA NHC: ${noaaRes.status}`);
 
-  // 2. Lotes ultra-ligeros de 12 nodos con reintentos automáticos (Anti-Truncamiento)
+// 2. Lotes de 12 nodos consultados con control de flujo (3 concurrentes)
   const chunks = chunkArray(poblaciones, 12);
   console.log(`📡 Consultando ${chunks.length} lotes ligeros en Ensamble ECMWF+GFS+ICON...`);
   
-  const chunkResults = await Promise.all(chunks.map(chunk => fetchOpenMeteoBatchWithRetry(chunk)));
-  const allWeather = chunkResults.flat();
+  let allWeather = [];
+  for (let i = 0; i < chunks.length; i += 3) {
+    const batchGroup = chunks.slice(i, i + 3);
+    const groupResults = await Promise.all(batchGroup.map(chunk => fetchOpenMeteoBatchWithRetry(chunk)));
+    allWeather = allWeather.concat(groupResults.flat());
+    if (i + 3 < chunks.length) {
+      await new Promise(r => setTimeout(r, 350)); // Pausa de 350ms anti-429
+    }
+  }
 
   const cuencasLluviaMax = {};
   poblaciones.forEach((p, idx) => {
