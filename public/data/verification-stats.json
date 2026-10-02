@@ -3,10 +3,10 @@
     "sistema": "SatRC Open Verification Framework v1.0",
     "institucion": "Cáritas Pastoral Social • Arquidiócesis de Tulancingo",
     "periodo": "Ventana móvil acumulada de 30 días",
-    "total_evaluaciones_auditadas": 2595,
+    "total_evaluaciones_auditadas": 2692,
     "poblaciones_monitoreadas": 97,
-    "ultima_auditoria_utc": "2026-10-01T18:26:55.344Z",
-    "ultima_auditoria_local": "1/10/2026, 12:26:55 p.m."
+    "ultima_auditoria_utc": "2026-10-02T00:50:15.342Z",
+    "ultima_auditoria_local": "1/10/2026, 6:50:15 p.m."
   },
   "metricas_globales": {
     "tasa_acierto_pod": 94,
