@@ -2,308 +2,399 @@
   "z10_ixhuatlan_madero": {
     "nivel": 3,
     "primer_envio": "2026-09-28T21:15:45.188Z",
-    "ultimo_envio": "2026-10-02T09:52:53.232Z",
+    "ultimo_envio": "2026-10-02T17:55:10.817Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z01_actopan_centro": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:16.089Z",
-    "ultimo_envio": "2026-10-02T09:51:11.006Z",
+    "ultimo_envio": "2026-10-02T17:54:03.967Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z01_actopan_poniente": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:17.552Z",
-    "ultimo_envio": "2026-10-02T09:51:13.646Z",
+    "ultimo_envio": "2026-10-02T17:54:05.377Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z01_actopan_norte": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:19.002Z",
-    "ultimo_envio": "2026-10-02T09:51:15.937Z",
+    "ultimo_envio": "2026-10-02T17:54:06.605Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z01_stgo_de_anaya": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:20.351Z",
-    "ultimo_envio": "2026-10-02T09:51:17.734Z",
+    "ultimo_envio": "2026-10-02T17:54:10.038Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z01_daxtha": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:21.687Z",
-    "ultimo_envio": "2026-10-02T09:51:20.566Z",
+    "ultimo_envio": "2026-10-02T17:54:11.226Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z03_acatlan": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:23.163Z",
-    "ultimo_envio": "2026-10-02T09:51:30.860Z",
+    "ultimo_envio": "2026-10-02T17:54:12.346Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z04_tulancingo_sur_jaltepec": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:24.555Z",
-    "ultimo_envio": "2026-10-02T09:51:43.171Z",
+    "ultimo_envio": "2026-10-02T17:54:17.359Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z04_tulancingo_oriente_hueytlalpan": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:25.940Z",
-    "ultimo_envio": "2026-10-02T09:51:44.955Z",
+    "ultimo_envio": "2026-10-02T17:54:18.472Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z04_acaxochitlan": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:27.306Z",
-    "ultimo_envio": "2026-10-02T09:51:48.551Z",
+    "ultimo_envio": "2026-10-02T17:54:20.758Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z04_los_reyes": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:28.665Z",
-    "ultimo_envio": "2026-10-02T09:51:50.050Z",
+    "ultimo_envio": "2026-10-02T17:54:21.919Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z04_metepec": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:30.020Z",
-    "ultimo_envio": "2026-10-02T09:51:53.103Z",
+    "ultimo_envio": "2026-10-02T17:54:24.314Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z07_huauchinango_sierra_alta": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:32.924Z",
-    "ultimo_envio": "2026-10-02T09:51:58.833Z",
+    "ultimo_envio": "2026-10-02T17:54:31.539Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z07_xicotepec_cumbre": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:35:38.346Z",
-    "ultimo_envio": "2026-10-02T09:52:00.242Z",
+    "ultimo_envio": "2026-10-02T17:54:36.302Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z07_xicotepec_vertiente_media": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:35:39.614Z",
-    "ultimo_envio": "2026-10-02T09:52:01.306Z",
+    "ultimo_envio": "2026-10-02T17:54:37.392Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z07_v_avila_camacho": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:35:41.005Z",
-    "ultimo_envio": "2026-10-02T09:52:02.284Z",
+    "ultimo_envio": "2026-10-02T17:54:38.537Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z07_tlaola": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:35:42.433Z",
-    "ultimo_envio": "2026-10-02T09:52:03.563Z",
+    "ultimo_envio": "2026-10-02T17:54:39.662Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z07_zihuateutla": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:35:43.697Z",
-    "ultimo_envio": "2026-10-02T09:52:04.907Z",
+    "ultimo_envio": "2026-10-02T17:54:40.715Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z07_naupan": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:44.962Z",
-    "ultimo_envio": "2026-10-02T09:52:06.345Z",
+    "ultimo_envio": "2026-10-02T17:54:41.953Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z07_chiconcuautla": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:35:46.150Z",
-    "ultimo_envio": "2026-10-02T09:52:07.370Z",
+    "ultimo_envio": "2026-10-02T17:54:43.094Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z07_chicontla_jopala": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:35:48.737Z",
-    "ultimo_envio": "2026-10-02T09:52:08.540Z",
+    "ultimo_envio": "2026-10-02T17:54:45.502Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z08_chignahuapan": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:50.075Z",
-    "ultimo_envio": "2026-10-02T09:52:09.643Z",
+    "ultimo_envio": "2026-10-02T17:54:46.651Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z08_aquixtla": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:51.425Z",
-    "ultimo_envio": "2026-10-02T09:52:10.944Z",
+    "ultimo_envio": "2026-10-02T17:54:47.888Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z08_ahuazotepec": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:52.742Z",
-    "ultimo_envio": "2026-10-02T09:52:12.049Z",
+    "ultimo_envio": "2026-10-02T17:54:49.055Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z09_pahuatlan": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:35:53.958Z",
-    "ultimo_envio": "2026-10-02T09:52:13.542Z",
+    "ultimo_envio": "2026-10-02T17:54:50.253Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z09_honey": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:35:58.181Z",
-    "ultimo_envio": "2026-10-02T09:52:14.638Z",
+    "ultimo_envio": "2026-10-02T17:54:53.819Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z09_tlaxco": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:35:59.365Z",
-    "ultimo_envio": "2026-10-02T09:52:15.861Z",
+    "ultimo_envio": "2026-10-02T17:54:54.889Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z10_san_lorenzo_ach": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:36:01.852Z",
-    "ultimo_envio": "2026-10-02T09:52:17.098Z",
+    "ultimo_envio": "2026-10-02T17:54:57.139Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z10_agua_blanca": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:36:03.160Z",
-    "ultimo_envio": "2026-10-02T09:52:18.100Z",
+    "ultimo_envio": "2026-10-02T17:54:58.317Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z10_san_bartolo_tut": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:36:05.641Z",
-    "ultimo_envio": "2026-10-02T09:52:19.474Z",
+    "ultimo_envio": "2026-10-02T17:55:00.624Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z10_huehuetla": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:36:07.476Z",
-    "ultimo_envio": "2026-10-02T09:52:26.928Z",
+    "ultimo_envio": "2026-10-02T17:55:01.719Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z10_san_antonio": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:36:10.048Z",
-    "ultimo_envio": "2026-10-02T09:52:35.181Z",
+    "ultimo_envio": "2026-10-02T17:55:02.874Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z10_san_esteban": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:36:11.854Z",
-    "ultimo_envio": "2026-10-02T09:52:41.024Z",
+    "ultimo_envio": "2026-10-02T17:55:03.962Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z10_santa_ursula": {
     "nivel": 4,
     "primer_envio": "2026-10-01T00:36:14.060Z",
-    "ultimo_envio": "2026-10-02T09:52:47.655Z",
+    "ultimo_envio": "2026-10-02T17:55:05.075Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z10_sta_ma_asuncion": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:36:15.454Z",
-    "ultimo_envio": "2026-10-02T09:52:50.707Z",
+    "ultimo_envio": "2026-10-02T17:55:06.149Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z10_huayacocotla_cumbre": {
     "nivel": 3,
     "primer_envio": "2026-10-01T00:36:19.473Z",
-    "ultimo_envio": "2026-10-02T09:52:51.883Z",
+    "ultimo_envio": "2026-10-02T17:55:09.657Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z04_tulancingo_centro": {
     "nivel": 3,
     "primer_envio": "2026-10-01T10:13:45.398Z",
-    "ultimo_envio": "2026-10-02T09:51:35.037Z",
+    "ultimo_envio": "2026-10-02T17:54:14.921Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z04_tulancingo_norte_napateco": {
     "nivel": 3,
     "primer_envio": "2026-10-01T10:13:46.345Z",
-    "ultimo_envio": "2026-10-02T09:51:39.646Z",
+    "ultimo_envio": "2026-10-02T17:54:16.105Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z04_rojo_gomez": {
     "nivel": 3,
     "primer_envio": "2026-10-01T10:13:49.229Z",
-    "ultimo_envio": "2026-10-02T09:51:47.045Z",
+    "ultimo_envio": "2026-10-02T17:54:19.629Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z04_stgo_tulantepec": {
     "nivel": 3,
     "primer_envio": "2026-10-01T10:13:51.987Z",
-    "ultimo_envio": "2026-10-02T09:51:51.730Z",
+    "ultimo_envio": "2026-10-02T17:54:23.117Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z04_paliseca": {
     "nivel": 3,
     "primer_envio": "2026-10-01T10:13:53.780Z",
-    "ultimo_envio": "2026-10-02T09:51:54.224Z",
+    "ultimo_envio": "2026-10-02T17:54:25.471Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z05_pachuca_sur_matilde": {
     "nivel": 3,
     "primer_envio": "2026-10-01T10:13:54.707Z",
-    "ultimo_envio": "2026-10-02T09:51:55.498Z",
+    "ultimo_envio": "2026-10-02T17:54:26.719Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z06_zapotlan": {
     "nivel": 3,
     "primer_envio": "2026-10-01T10:13:55.623Z",
-    "ultimo_envio": "2026-10-02T09:51:56.670Z",
+    "ultimo_envio": "2026-10-02T17:54:27.956Z",
     "acknowledged": false,
     "ack_timestamp": null
   },
   "z06_acayuca": {
     "nivel": 3,
     "primer_envio": "2026-10-01T10:13:57.271Z",
-    "ultimo_envio": "2026-10-02T09:51:57.518Z",
+    "ultimo_envio": "2026-10-02T17:54:29.237Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z01_chicavasco": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:07.753Z",
+    "ultimo_envio": "2026-10-02T17:54:07.753Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z01_el_arenal": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:08.930Z",
+    "ultimo_envio": "2026-10-02T17:54:08.930Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z07_huauchinango_centro": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:30.355Z",
+    "ultimo_envio": "2026-10-02T17:54:30.355Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z07_huauchinango_tenango": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:32.774Z",
+    "ultimo_envio": "2026-10-02T17:54:32.774Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z07_juan_galindo_necaxa": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:33.915Z",
+    "ultimo_envio": "2026-10-02T17:54:33.915Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z07_juan_galindo_laderas": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:35.137Z",
+    "ultimo_envio": "2026-10-02T17:54:35.137Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z07_tenanguito": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:44.345Z",
+    "ultimo_envio": "2026-10-02T17:54:44.345Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z09_san_pablito": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:51.338Z",
+    "ultimo_envio": "2026-10-02T17:54:51.338Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z09_xolotla": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:52.607Z",
+    "ultimo_envio": "2026-10-02T17:54:52.607Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z09_tlaquilotepec": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:56.015Z",
+    "ultimo_envio": "2026-10-02T17:54:56.015Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z10_tenango_doria": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:54:59.442Z",
+    "ultimo_envio": "2026-10-02T17:54:59.442Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z10_zacualpan": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:55:07.278Z",
+    "ultimo_envio": "2026-10-02T17:55:07.278Z",
+    "acknowledged": false,
+    "ack_timestamp": null
+  },
+  "z10_texcatepec": {
+    "nivel": 3,
+    "primer_envio": "2026-10-02T17:55:08.456Z",
+    "ultimo_envio": "2026-10-02T17:55:08.456Z",
     "acknowledged": false,
     "ack_timestamp": null
   }
